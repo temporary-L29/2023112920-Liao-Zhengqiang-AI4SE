@@ -1,0 +1,566 @@
+2026-07-03 13:38:14 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 300 条 PR...
+2026-07-03 13:38:14 [INFO] experiment1: 获取 PR 列表: https://api.github.com/repos/kubernetes/kubernetes/pulls?state=all&sort=updated&direction=desc&per_page=100
+2026-07-03 13:38:57 [INFO] experiment1: kubernetes/kubernetes: 列表获取到 600 条 PR
+2026-07-03 13:38:57 [INFO] experiment1: [kubernetes/kubernetes] PR #140054 (1/300)
+2026-07-03 13:39:03 [INFO] experiment1: [kubernetes/kubernetes] PR #140203 (2/300)
+2026-07-03 13:39:09 [INFO] experiment1: [kubernetes/kubernetes] PR #139450 (3/300)
+2026-07-03 13:39:14 [INFO] experiment1: [kubernetes/kubernetes] PR #140204 (4/300)
+2026-07-03 13:39:35 [INFO] experiment1: [kubernetes/kubernetes] PR #138096 (5/300)
+2026-07-03 13:39:40 [INFO] experiment1: [kubernetes/kubernetes] PR #140163 (6/300)
+2026-07-03 13:39:46 [INFO] experiment1: [kubernetes/kubernetes] PR #140188 (7/300)
+2026-07-03 13:39:55 [INFO] experiment1: [kubernetes/kubernetes] PR #139558 (8/300)
+2026-07-03 13:40:05 [INFO] experiment1: [kubernetes/kubernetes] PR #139556 (9/300)
+2026-07-03 13:40:11 [INFO] experiment1: [kubernetes/kubernetes] PR #138452 (10/300)
+2026-07-03 13:40:16 [INFO] experiment1: [kubernetes/kubernetes] PR #139459 (11/300)
+2026-07-03 13:40:21 [INFO] experiment1: [kubernetes/kubernetes] PR #140138 (12/300)
+2026-07-03 13:40:27 [INFO] experiment1: [kubernetes/kubernetes] PR #139781 (13/300)
+2026-07-03 13:40:32 [INFO] experiment1: [kubernetes/kubernetes] PR #140196 (14/300)
+2026-07-03 13:40:38 [INFO] experiment1: [kubernetes/kubernetes] PR #125932 (15/300)
+2026-07-03 13:40:44 [INFO] experiment1: [kubernetes/kubernetes] PR #140177 (16/300)
+2026-07-03 13:40:49 [INFO] experiment1: [kubernetes/kubernetes] PR #51618 (17/300)
+2026-07-03 13:40:55 [INFO] experiment1: [kubernetes/kubernetes] PR #140061 (18/300)
+2026-07-03 13:41:00 [INFO] experiment1: [kubernetes/kubernetes] PR #140202 (19/300)
+2026-07-03 13:41:05 [INFO] experiment1: [kubernetes/kubernetes] PR #140201 (20/300)
+2026-07-03 13:41:10 [INFO] experiment1: [kubernetes/kubernetes] PR #139864 (21/300)
+2026-07-03 13:41:15 [INFO] experiment1: [kubernetes/kubernetes] PR #132885 (22/300)
+2026-07-03 13:41:21 [INFO] experiment1: [kubernetes/kubernetes] PR #140192 (23/300)
+2026-07-03 13:41:28 [INFO] experiment1: [kubernetes/kubernetes] PR #139242 (24/300)
+2026-07-03 13:41:38 [INFO] experiment1: [kubernetes/kubernetes] PR #138198 (25/300)
+2026-07-03 13:41:49 [INFO] experiment1: [kubernetes/kubernetes] PR #139018 (26/300)
+2026-07-03 13:41:56 [INFO] experiment1: [kubernetes/kubernetes] PR #140199 (27/300)
+2026-07-03 13:42:03 [INFO] experiment1: [kubernetes/kubernetes] PR #140200 (28/300)
+2026-07-03 13:42:08 [INFO] experiment1: [kubernetes/kubernetes] PR #140067 (29/300)
+2026-07-03 13:42:14 [INFO] experiment1: [kubernetes/kubernetes] PR #140194 (30/300)
+2026-07-03 13:42:29 [INFO] experiment1: [kubernetes/kubernetes] PR #137030 (31/300)
+2026-07-03 13:42:34 [INFO] experiment1: [kubernetes/kubernetes] PR #136019 (32/300)
+2026-07-03 13:42:40 [INFO] experiment1: [kubernetes/kubernetes] PR #139889 (33/300)
+2026-07-03 13:42:46 [INFO] experiment1: [kubernetes/kubernetes] PR #139773 (34/300)
+2026-07-03 13:42:51 [INFO] experiment1: [kubernetes/kubernetes] PR #140198 (35/300)
+2026-07-03 13:42:57 [INFO] experiment1: [kubernetes/kubernetes] PR #138564 (36/300)
+2026-07-03 13:43:03 [INFO] experiment1: [kubernetes/kubernetes] PR #140197 (37/300)
+2026-07-03 13:43:08 [INFO] experiment1: [kubernetes/kubernetes] PR #139715 (38/300)
+2026-07-03 13:43:13 [INFO] experiment1: [kubernetes/kubernetes] PR #139758 (39/300)
+2026-07-03 13:43:19 [INFO] experiment1: [kubernetes/kubernetes] PR #140016 (40/300)
+2026-07-03 13:43:25 [INFO] experiment1: [kubernetes/kubernetes] PR #136004 (41/300)
+2026-07-03 13:43:30 [INFO] experiment1: [kubernetes/kubernetes] PR #135943 (42/300)
+2026-07-03 13:43:37 [INFO] experiment1: [kubernetes/kubernetes] PR #134846 (43/300)
+2026-07-03 13:43:43 [INFO] experiment1: [kubernetes/kubernetes] PR #135866 (44/300)
+2026-07-03 13:43:49 [INFO] experiment1: [kubernetes/kubernetes] PR #137513 (45/300)
+2026-07-03 13:44:01 [INFO] experiment1: [kubernetes/kubernetes] PR #140195 (46/300)
+2026-07-03 13:44:06 [INFO] experiment1: [kubernetes/kubernetes] PR #140007 (47/300)
+2026-07-03 13:44:12 [INFO] experiment1: [kubernetes/kubernetes] PR #139821 (48/300)
+2026-07-03 13:44:33 [INFO] experiment1: [kubernetes/kubernetes] PR #140171 (49/300)
+2026-07-03 13:44:39 [INFO] experiment1: [kubernetes/kubernetes] PR #139874 (50/300)
+2026-07-03 13:44:44 [INFO] experiment1: [kubernetes/kubernetes] PR #140186 (51/300)
+2026-07-03 13:45:01 [INFO] experiment1: [kubernetes/kubernetes] PR #140099 (52/300)
+2026-07-03 13:45:07 [INFO] experiment1: [kubernetes/kubernetes] PR #140193 (53/300)
+2026-07-03 13:58:29 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 300 条 PR（3 线程并行）...
+2026-07-03 13:58:49 [INFO] experiment1: kubernetes/kubernetes: 列表获取到 600 条 PR
+2026-07-03 13:58:49 [INFO] experiment1: kubernetes/kubernetes: 需采集 300 条（跳过 0 条）
+2026-07-03 13:59:02 [INFO] experiment1: [kubernetes/kubernetes] 20/300
+2026-07-03 13:59:13 [INFO] experiment1: [kubernetes/kubernetes] 40/300
+2026-07-03 13:59:32 [INFO] experiment1: [kubernetes/kubernetes] 60/300
+2026-07-03 13:59:52 [INFO] experiment1: [kubernetes/kubernetes] 80/300
+2026-07-03 14:00:49 [INFO] experiment1: [kubernetes/kubernetes] 100/300
+2026-07-03 14:00:59 [INFO] experiment1: [kubernetes/kubernetes] 120/300
+2026-07-03 14:01:14 [INFO] experiment1: [kubernetes/kubernetes] 140/300
+2026-07-03 14:01:31 [INFO] experiment1: [kubernetes/kubernetes] 160/300
+2026-07-03 14:01:43 [INFO] experiment1: [kubernetes/kubernetes] 180/300
+2026-07-03 14:02:17 [INFO] experiment1: [kubernetes/kubernetes] 200/300
+2026-07-03 14:02:36 [INFO] experiment1: [kubernetes/kubernetes] 220/300
+2026-07-03 14:02:54 [INFO] experiment1: [kubernetes/kubernetes] 240/300
+2026-07-03 14:03:18 [INFO] experiment1: [kubernetes/kubernetes] 260/300
+2026-07-03 14:03:32 [INFO] experiment1: [kubernetes/kubernetes] 280/300
+2026-07-03 14:04:08 [INFO] experiment1: [kubernetes/kubernetes] 300/300
+2026-07-03 14:04:08 [INFO] experiment1: kubernetes/kubernetes: 完成，共采集 300 条 PR
+2026-07-03 14:04:09 [INFO] experiment1: 开始采集 pytorch/pytorch，目标 300 条 PR（3 线程并行）...
+2026-07-03 14:04:31 [INFO] experiment1: pytorch/pytorch: 列表获取到 600 条 PR
+2026-07-03 14:04:31 [INFO] experiment1: pytorch/pytorch: 需采集 300 条（跳过 0 条）
+2026-07-03 14:04:41 [INFO] experiment1: [pytorch/pytorch] 20/300
+2026-07-03 14:04:52 [INFO] experiment1: [pytorch/pytorch] 40/300
+2026-07-03 14:05:00 [INFO] experiment1: [pytorch/pytorch] 60/300
+2026-07-03 14:05:08 [INFO] experiment1: [pytorch/pytorch] 80/300
+2026-07-03 14:05:18 [INFO] experiment1: [pytorch/pytorch] 100/300
+2026-07-03 14:05:26 [INFO] experiment1: [pytorch/pytorch] 120/300
+2026-07-03 14:05:37 [INFO] experiment1: [pytorch/pytorch] 140/300
+2026-07-03 14:05:46 [INFO] experiment1: [pytorch/pytorch] 160/300
+2026-07-03 14:05:56 [INFO] experiment1: [pytorch/pytorch] 180/300
+2026-07-03 14:06:04 [INFO] experiment1: [pytorch/pytorch] 200/300
+2026-07-03 14:06:13 [INFO] experiment1: [pytorch/pytorch] 220/300
+2026-07-03 14:06:21 [INFO] experiment1: [pytorch/pytorch] 240/300
+2026-07-03 14:06:31 [INFO] experiment1: [pytorch/pytorch] 260/300
+2026-07-03 14:06:42 [INFO] experiment1: [pytorch/pytorch] 280/300
+2026-07-03 14:06:51 [INFO] experiment1: [pytorch/pytorch] 300/300
+2026-07-03 14:06:51 [INFO] experiment1: pytorch/pytorch: 完成，共采集 300 条 PR
+2026-07-03 14:06:51 [INFO] experiment1: 开始采集 microsoft/vscode，目标 300 条 PR（3 线程并行）...
+2026-07-03 14:07:13 [INFO] experiment1: microsoft/vscode: 列表获取到 600 条 PR
+2026-07-03 14:07:13 [INFO] experiment1: microsoft/vscode: 需采集 300 条（跳过 0 条）
+2026-07-03 14:07:22 [INFO] experiment1: [microsoft/vscode] 20/300
+2026-07-03 14:07:30 [INFO] experiment1: [microsoft/vscode] 40/300
+2026-07-03 14:07:39 [INFO] experiment1: [microsoft/vscode] 60/300
+2026-07-03 14:07:48 [INFO] experiment1: [microsoft/vscode] 80/300
+2026-07-03 14:07:57 [INFO] experiment1: [microsoft/vscode] 100/300
+2026-07-03 14:08:06 [INFO] experiment1: [microsoft/vscode] 120/300
+2026-07-03 14:08:14 [INFO] experiment1: [microsoft/vscode] 140/300
+2026-07-03 14:08:22 [INFO] experiment1: [microsoft/vscode] 160/300
+2026-07-03 14:08:32 [INFO] experiment1: [microsoft/vscode] 180/300
+2026-07-03 14:08:41 [INFO] experiment1: [microsoft/vscode] 200/300
+2026-07-03 14:08:51 [INFO] experiment1: [microsoft/vscode] 220/300
+2026-07-03 14:09:00 [INFO] experiment1: [microsoft/vscode] 240/300
+2026-07-03 14:09:09 [INFO] experiment1: [microsoft/vscode] 260/300
+2026-07-03 14:09:18 [INFO] experiment1: [microsoft/vscode] 280/300
+2026-07-03 14:09:26 [INFO] experiment1: [microsoft/vscode] 300/300
+2026-07-03 14:09:26 [INFO] experiment1: microsoft/vscode: 完成，共采集 300 条 PR
+2026-07-03 14:09:26 [INFO] experiment1: 开始采集 tensorflow/tensorflow，目标 300 条 PR（3 线程并行）...
+2026-07-03 14:09:50 [INFO] experiment1: tensorflow/tensorflow: 列表获取到 600 条 PR
+2026-07-03 14:09:50 [INFO] experiment1: tensorflow/tensorflow: 需采集 300 条（跳过 0 条）
+2026-07-03 14:09:59 [INFO] experiment1: [tensorflow/tensorflow] 20/300
+2026-07-03 14:10:08 [INFO] experiment1: [tensorflow/tensorflow] 40/300
+2026-07-03 14:10:16 [INFO] experiment1: [tensorflow/tensorflow] 60/300
+2026-07-03 14:10:24 [INFO] experiment1: [tensorflow/tensorflow] 80/300
+2026-07-03 14:10:32 [INFO] experiment1: [tensorflow/tensorflow] 100/300
+2026-07-03 14:10:40 [INFO] experiment1: [tensorflow/tensorflow] 120/300
+2026-07-03 14:10:54 [INFO] experiment1: [tensorflow/tensorflow] 140/300
+2026-07-03 14:11:05 [INFO] experiment1: [tensorflow/tensorflow] 160/300
+2026-07-03 14:11:20 [INFO] experiment1: [tensorflow/tensorflow] 180/300
+2026-07-03 14:11:30 [INFO] experiment1: [tensorflow/tensorflow] 200/300
+2026-07-03 14:11:52 [INFO] experiment1: [tensorflow/tensorflow] 220/300
+2026-07-03 14:12:14 [INFO] experiment1: [tensorflow/tensorflow] 240/300
+2026-07-03 14:12:28 [INFO] experiment1: [tensorflow/tensorflow] 260/300
+2026-07-03 14:12:39 [INFO] experiment1: [tensorflow/tensorflow] 280/300
+2026-07-03 14:15:09 [INFO] experiment1: [tensorflow/tensorflow] 300/300
+2026-07-03 14:15:09 [INFO] experiment1: tensorflow/tensorflow: 完成，共采集 300 条 PR
+2026-07-03 14:15:09 [INFO] experiment1: 开始采集 facebook/react，目标 300 条 PR（3 线程并行）...
+2026-07-03 14:15:35 [INFO] experiment1: facebook/react: 列表获取到 600 条 PR
+2026-07-03 14:15:35 [INFO] experiment1: facebook/react: 需采集 300 条（跳过 0 条）
+2026-07-03 14:15:48 [INFO] experiment1: [facebook/react] 20/300
+2026-07-03 14:16:01 [INFO] experiment1: [facebook/react] 40/300
+2026-07-03 14:16:14 [INFO] experiment1: [facebook/react] 60/300
+2026-07-03 14:16:29 [INFO] experiment1: [facebook/react] 80/300
+2026-07-03 14:16:46 [INFO] experiment1: [facebook/react] 100/300
+2026-07-03 14:16:57 [INFO] experiment1: [facebook/react] 120/300
+2026-07-03 14:17:10 [INFO] experiment1: [facebook/react] 140/300
+2026-07-03 14:17:23 [INFO] experiment1: [facebook/react] 160/300
+2026-07-03 14:17:36 [INFO] experiment1: [facebook/react] 180/300
+2026-07-03 14:17:47 [INFO] experiment1: [facebook/react] 200/300
+2026-07-03 14:17:48 [INFO] experiment1: 限速预警：剩余 5 次，休眠 1277 秒至重置时间...
+2026-07-03 14:17:48 [INFO] experiment1: 限速预警：剩余 5 次，休眠 1277 秒至重置时间...
+2026-07-03 14:17:48 [INFO] experiment1: 限速预警：剩余 5 次，休眠 1277 秒至重置时间...
+2026-07-03 14:17:48 [INFO] experiment1: 限速预警：剩余 5 次，休眠 1277 秒至重置时间...
+2026-07-03 14:17:48 [INFO] experiment1: 限速预警：剩余 5 次，休眠 1277 秒至重置时间...
+2026-07-03 14:17:54 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1271 秒至重置时间...
+2026-07-03 14:17:54 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1271 秒至重置时间...
+2026-07-03 14:17:54 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1271 秒至重置时间...
+2026-07-03 14:17:54 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1271 秒至重置时间...
+2026-07-03 14:39:17 [INFO] experiment1: [facebook/react] 220/300
+2026-07-03 14:39:30 [INFO] experiment1: [facebook/react] 240/300
+2026-07-03 14:39:56 [INFO] experiment1: [facebook/react] 260/300
+2026-07-03 14:40:37 [INFO] experiment1: [facebook/react] 280/300
+2026-07-03 14:41:31 [INFO] experiment1: [facebook/react] 300/300
+2026-07-03 14:41:31 [INFO] experiment1: facebook/react: 完成，共采集 300 条 PR
+2026-07-03 14:41:34 [INFO] experiment1: 全部采集完成！总计 1500 条 PR
+2026-07-03 14:42:35 [INFO] experiment1: ==================================================
+2026-07-03 14:42:35 [INFO] experiment1: 步骤 2/4: 特征提取
+2026-07-03 14:42:35 [INFO] experiment1: ==================================================
+2026-07-03 14:42:35 [INFO] experiment1: 加载原始数据: E:\latex\projects\experiment1\data\raw\merged_raw.json
+2026-07-03 14:42:37 [INFO] experiment1: 共 1500 条原始 PR 记录，开始特征提取...
+2026-07-03 14:42:37 [INFO] experiment1: 已处理 100/1500...
+2026-07-03 14:42:38 [INFO] experiment1: 已处理 200/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 300/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 400/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 500/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 600/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 700/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 800/1500...
+2026-07-03 14:42:39 [INFO] experiment1: 已处理 900/1500...
+2026-07-03 14:42:40 [INFO] experiment1: 已处理 1000/1500...
+2026-07-03 14:42:40 [INFO] experiment1: 已处理 1100/1500...
+2026-07-03 14:42:41 [INFO] experiment1: 已处理 1200/1500...
+2026-07-03 14:42:42 [INFO] experiment1: 已处理 1300/1500...
+2026-07-03 14:42:42 [INFO] experiment1: 已处理 1400/1500...
+2026-07-03 14:42:43 [INFO] experiment1: 已处理 1500/1500...
+2026-07-03 14:42:43 [INFO] experiment1: 特征提取完成: 1500 条有效记录（跳过 0 条）
+2026-07-03 14:42:43 [INFO] experiment1: CSV 已保存至 E:\latex\projects\experiment1\data\processed\dataset.csv
+2026-07-03 14:42:43 [INFO] experiment1: JSON 已保存至 E:\latex\projects\experiment1\data\processed\dataset.json
+2026-07-03 14:42:43 [INFO] experiment1: 摘要: 总计=1500, 合并=320 (21.3%), AI Reviewer=531, AI 代码=97
+2026-07-03 14:42:43 [INFO] experiment1: ==================================================
+2026-07-03 14:42:43 [INFO] experiment1: 步骤 3/4: 统计分析
+2026-07-03 14:42:43 [INFO] experiment1: ==================================================
+2026-07-03 14:42:44 [INFO] experiment1: 加载数据集: E:\latex\projects\experiment1\data\processed\dataset.csv
+2026-07-03 14:42:44 [INFO] experiment1: 加载完成: 1500 行 × 26 列
+2026-07-03 14:42:44 [INFO] experiment1: 计算统计指标...
+2026-07-03 14:42:44 [INFO] experiment1: 统计 JSON 已保存至 E:\latex\projects\experiment1\data\processed\dataset_stats.json
+2026-07-03 14:42:44 [INFO] experiment1: 统计文本报告已保存至 E:\latex\projects\experiment1\data\processed\dataset_stats.txt
+2026-07-03 14:42:44 [INFO] experiment1: ==================================================
+2026-07-03 14:42:44 [INFO] experiment1: 步骤 4/4: 可视化
+2026-07-03 14:42:44 [INFO] experiment1: ==================================================
+2026-07-03 14:42:46 [INFO] experiment1: 开始生成可视化图表...
+2026-07-03 14:42:46 [INFO] experiment1: 加载 1500 条数据用于可视化
+2026-07-03 14:42:46 [INFO] experiment1: 生成图1: 合并状态柱状图
+2026-07-03 14:42:47 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\01_merge_status_bar.png
+2026-07-03 14:42:47 [INFO] experiment1: 生成图2: 评论数量分布
+2026-07-03 14:42:47 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\02_comment_distribution_hist.png
+2026-07-03 14:42:47 [INFO] experiment1: 生成图3: 标签分布饼图
+2026-07-03 14:42:47 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\03_label_distribution_pie.png
+2026-07-03 14:42:47 [INFO] experiment1: 生成图4: Reviewer 数量分布
+2026-07-03 14:42:47 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\04_reviewer_count_distribution.png
+2026-07-03 14:42:47 [INFO] experiment1: 生成图5: PR 长度分布
+2026-07-03 14:42:48 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\05_pr_length_distribution.png
+2026-07-03 14:42:48 [INFO] experiment1: 生成图6: AI vs 人类对比
+2026-07-03 14:42:48 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\06_ai_vs_human_comparison.png
+2026-07-03 14:42:48 [INFO] experiment1: 全部图表生成完成！
+2026-07-03 15:31:20 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:32:34 [INFO] experiment1: kubernetes/kubernetes: 获取到 1200 条 closed PR
+2026-07-03 15:32:34 [INFO] experiment1: kubernetes/kubernetes: 筛选出 merged=150, unmerged=150
+2026-07-03 15:32:44 [INFO] experiment1: [kubernetes/kubernetes] 20/300
+2026-07-03 15:32:54 [INFO] experiment1: [kubernetes/kubernetes] 40/300
+2026-07-03 15:33:05 [INFO] experiment1: [kubernetes/kubernetes] 60/300
+2026-07-03 15:33:14 [INFO] experiment1: [kubernetes/kubernetes] 80/300
+2026-07-03 15:33:23 [INFO] experiment1: [kubernetes/kubernetes] 100/300
+2026-07-03 15:33:35 [INFO] experiment1: [kubernetes/kubernetes] 120/300
+2026-07-03 15:33:46 [INFO] experiment1: [kubernetes/kubernetes] 140/300
+2026-07-03 15:33:56 [INFO] experiment1: [kubernetes/kubernetes] 160/300
+2026-07-03 15:34:06 [INFO] experiment1: [kubernetes/kubernetes] 180/300
+2026-07-03 15:34:15 [INFO] experiment1: [kubernetes/kubernetes] 200/300
+2026-07-03 15:34:28 [INFO] experiment1: [kubernetes/kubernetes] 220/300
+2026-07-03 15:34:44 [INFO] experiment1: [kubernetes/kubernetes] 240/300
+2026-07-03 15:34:55 [INFO] experiment1: [kubernetes/kubernetes] 260/300
+2026-07-03 15:35:06 [INFO] experiment1: [kubernetes/kubernetes] 280/300
+2026-07-03 15:35:25 [INFO] experiment1: [kubernetes/kubernetes] 300/300
+2026-07-03 15:35:25 [INFO] experiment1: kubernetes/kubernetes: 完成，共采集 300 条 PR
+2026-07-03 15:35:25 [INFO] experiment1: 开始采集 pytorch/pytorch，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:36:12 [INFO] experiment1: pytorch/pytorch: 获取到 1200 条 closed PR
+2026-07-03 15:36:12 [INFO] experiment1: pytorch/pytorch: 筛选出 merged=15, unmerged=150
+2026-07-03 15:36:21 [INFO] experiment1: [pytorch/pytorch] 20/165
+2026-07-03 15:36:30 [INFO] experiment1: [pytorch/pytorch] 40/165
+2026-07-03 15:36:39 [INFO] experiment1: [pytorch/pytorch] 60/165
+2026-07-03 15:36:49 [INFO] experiment1: [pytorch/pytorch] 80/165
+2026-07-03 15:36:57 [INFO] experiment1: [pytorch/pytorch] 100/165
+2026-07-03 15:37:06 [INFO] experiment1: [pytorch/pytorch] 120/165
+2026-07-03 15:37:16 [INFO] experiment1: [pytorch/pytorch] 140/165
+2026-07-03 15:37:25 [INFO] experiment1: [pytorch/pytorch] 160/165
+2026-07-03 15:37:28 [INFO] experiment1: [pytorch/pytorch] 165/165
+2026-07-03 15:37:28 [INFO] experiment1: pytorch/pytorch: 完成，共采集 165 条 PR
+2026-07-03 15:37:29 [INFO] experiment1: 开始采集 microsoft/vscode，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:38:24 [INFO] experiment1: microsoft/vscode: 获取到 1200 条 closed PR
+2026-07-03 15:38:24 [INFO] experiment1: microsoft/vscode: 筛选出 merged=150, unmerged=150
+2026-07-03 15:38:34 [INFO] experiment1: [microsoft/vscode] 20/300
+2026-07-03 15:38:42 [INFO] experiment1: [microsoft/vscode] 40/300
+2026-07-03 15:38:50 [INFO] experiment1: [microsoft/vscode] 60/300
+2026-07-03 15:38:58 [INFO] experiment1: [microsoft/vscode] 80/300
+2026-07-03 15:39:06 [INFO] experiment1: [microsoft/vscode] 100/300
+2026-07-03 15:39:16 [INFO] experiment1: [microsoft/vscode] 120/300
+2026-07-03 15:39:24 [INFO] experiment1: [microsoft/vscode] 140/300
+2026-07-03 15:39:34 [INFO] experiment1: [microsoft/vscode] 160/300
+2026-07-03 15:39:43 [INFO] experiment1: [microsoft/vscode] 180/300
+2026-07-03 15:39:52 [INFO] experiment1: [microsoft/vscode] 200/300
+2026-07-03 15:40:02 [INFO] experiment1: [microsoft/vscode] 220/300
+2026-07-03 15:40:10 [INFO] experiment1: [microsoft/vscode] 240/300
+2026-07-03 15:40:22 [INFO] experiment1: [microsoft/vscode] 260/300
+2026-07-03 15:40:51 [INFO] experiment1: [microsoft/vscode] 280/300
+2026-07-03 15:42:47 [INFO] experiment1: [microsoft/vscode] 300/300
+2026-07-03 15:42:47 [INFO] experiment1: microsoft/vscode: 完成，共采集 300 条 PR
+2026-07-03 15:42:48 [INFO] experiment1: 开始采集 tensorflow/tensorflow，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:44:15 [INFO] experiment1: tensorflow/tensorflow: 获取到 1200 条 closed PR
+2026-07-03 15:44:15 [INFO] experiment1: tensorflow/tensorflow: 筛选出 merged=150, unmerged=150
+2026-07-03 15:44:23 [INFO] experiment1: [tensorflow/tensorflow] 20/300
+2026-07-03 15:44:30 [INFO] experiment1: [tensorflow/tensorflow] 40/300
+2026-07-03 15:44:38 [INFO] experiment1: [tensorflow/tensorflow] 60/300
+2026-07-03 15:44:46 [INFO] experiment1: [tensorflow/tensorflow] 80/300
+2026-07-03 15:44:54 [INFO] experiment1: [tensorflow/tensorflow] 100/300
+2026-07-03 15:45:02 [INFO] experiment1: [tensorflow/tensorflow] 120/300
+2026-07-03 15:45:09 [INFO] experiment1: [tensorflow/tensorflow] 140/300
+2026-07-03 15:45:24 [INFO] experiment1: [tensorflow/tensorflow] 160/300
+2026-07-03 15:45:53 [INFO] experiment1: [tensorflow/tensorflow] 180/300
+2026-07-03 15:46:13 [INFO] experiment1: [tensorflow/tensorflow] 200/300
+2026-07-03 15:46:46 [INFO] experiment1: [tensorflow/tensorflow] 220/300
+2026-07-03 15:47:04 [INFO] experiment1: [tensorflow/tensorflow] 240/300
+2026-07-03 15:47:22 [INFO] experiment1: [tensorflow/tensorflow] 260/300
+2026-07-03 15:47:35 [INFO] experiment1: [tensorflow/tensorflow] 280/300
+2026-07-03 15:49:06 [INFO] experiment1: [tensorflow/tensorflow] 300/300
+2026-07-03 15:49:06 [INFO] experiment1: tensorflow/tensorflow: 完成，共采集 300 条 PR
+2026-07-03 15:49:06 [INFO] experiment1: 开始采集 facebook/react，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:50:05 [INFO] experiment1: facebook/react: 获取到 1200 条 closed PR
+2026-07-03 15:50:05 [INFO] experiment1: facebook/react: 筛选出 merged=150, unmerged=150
+2026-07-03 15:50:17 [INFO] experiment1: [facebook/react] 20/300
+2026-07-03 15:50:34 [INFO] experiment1: [facebook/react] 40/300
+2026-07-03 15:50:50 [INFO] experiment1: [facebook/react] 60/300
+2026-07-03 15:51:08 [INFO] experiment1: [facebook/react] 80/300
+2026-07-03 15:51:19 [INFO] experiment1: [facebook/react] 100/300
+2026-07-03 15:51:31 [INFO] experiment1: [facebook/react] 120/300
+2026-07-03 15:51:46 [INFO] experiment1: [facebook/react] 140/300
+2026-07-03 15:51:54 [INFO] experiment1: 开始采集 pytorch/pytorch，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:51:55 [INFO] experiment1: pytorch/pytorch: 获取到 0 条 closed PR
+2026-07-03 15:51:55 [INFO] experiment1: pytorch/pytorch: merged 不足 (0/150)，补充搜索 150 条...
+2026-07-03 15:51:55 [INFO] experiment1: pytorch/pytorch: unmerged 不足 (0/150)，补充搜索 150 条...
+2026-07-03 15:51:56 [INFO] experiment1: pytorch/pytorch: 筛选出 merged=0, unmerged=0
+2026-07-03 15:51:56 [INFO] experiment1: pytorch/pytorch: 完成，共采集 0 条 PR
+2026-07-03 15:51:58 [INFO] experiment1: [facebook/react] 160/300
+2026-07-03 15:52:09 [INFO] experiment1: [facebook/react] 180/300
+2026-07-03 15:52:21 [INFO] experiment1: [facebook/react] 200/300
+2026-07-03 15:52:34 [INFO] experiment1: [facebook/react] 220/300
+2026-07-03 15:52:59 [INFO] experiment1: [facebook/react] 240/300
+2026-07-03 15:53:34 [INFO] experiment1: [facebook/react] 260/300
+2026-07-03 15:54:01 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 15:54:09 [INFO] experiment1: [facebook/react] 280/300
+2026-07-03 15:54:32 [INFO] experiment1: [facebook/react] 300/300
+2026-07-03 15:54:32 [INFO] experiment1: facebook/react: 完成，共采集 300 条 PR
+2026-07-03 15:54:36 [INFO] experiment1: 全部采集完成！总计 1365 条 PR
+2026-07-03 15:55:16 [INFO] experiment1: kubernetes/kubernetes: 获取到 1800 条 closed PR
+2026-07-03 15:55:16 [INFO] experiment1: kubernetes/kubernetes: 筛选出 merged=150, unmerged=150
+2026-07-03 15:55:25 [INFO] experiment1: [kubernetes/kubernetes] 20/300
+2026-07-03 15:55:34 [INFO] experiment1: [kubernetes/kubernetes] 40/300
+2026-07-03 15:55:44 [INFO] experiment1: [kubernetes/kubernetes] 60/300
+2026-07-03 15:55:55 [INFO] experiment1: [kubernetes/kubernetes] 80/300
+2026-07-03 15:56:04 [INFO] experiment1: [kubernetes/kubernetes] 100/300
+2026-07-03 15:56:12 [INFO] experiment1: [kubernetes/kubernetes] 120/300
+2026-07-03 15:56:20 [INFO] experiment1: [kubernetes/kubernetes] 140/300
+2026-07-03 15:56:31 [INFO] experiment1: [kubernetes/kubernetes] 160/300
+2026-07-03 15:56:44 [INFO] experiment1: [kubernetes/kubernetes] 180/300
+2026-07-03 15:56:56 [INFO] experiment1: [kubernetes/kubernetes] 200/300
+2026-07-03 15:57:25 [INFO] experiment1: [kubernetes/kubernetes] 220/300
+2026-07-03 15:57:40 [INFO] experiment1: [kubernetes/kubernetes] 240/300
+2026-07-03 15:58:04 [INFO] experiment1: [kubernetes/kubernetes] 260/300
+2026-07-03 15:58:24 [INFO] experiment1: [kubernetes/kubernetes] 280/300
+2026-07-03 16:42:50 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 16:45:39 [INFO] experiment1: kubernetes/kubernetes: 获取到 3000 条 closed PR
+2026-07-03 16:45:39 [INFO] experiment1: kubernetes/kubernetes: 筛选出 merged=150, unmerged=150
+2026-07-03 16:45:49 [INFO] experiment1: [kubernetes/kubernetes] 20/300
+2026-07-03 16:46:20 [INFO] experiment1: [kubernetes/kubernetes] 40/300
+2026-07-03 16:46:59 [INFO] experiment1: [kubernetes/kubernetes] 60/300
+2026-07-03 16:47:11 [INFO] experiment1: [kubernetes/kubernetes] 80/300
+2026-07-03 16:47:21 [INFO] experiment1: [kubernetes/kubernetes] 100/300
+2026-07-03 16:47:29 [INFO] experiment1: [kubernetes/kubernetes] 120/300
+2026-07-03 16:47:38 [INFO] experiment1: [kubernetes/kubernetes] 140/300
+2026-07-03 16:47:48 [INFO] experiment1: [kubernetes/kubernetes] 160/300
+2026-07-03 16:48:03 [INFO] experiment1: [kubernetes/kubernetes] 180/300
+2026-07-03 16:48:15 [INFO] experiment1: [kubernetes/kubernetes] 200/300
+2026-07-03 16:48:45 [INFO] experiment1: [kubernetes/kubernetes] 220/300
+2026-07-03 16:49:00 [INFO] experiment1: [kubernetes/kubernetes] 240/300
+2026-07-03 16:49:21 [INFO] experiment1: [kubernetes/kubernetes] 260/300
+2026-07-03 16:49:38 [INFO] experiment1: [kubernetes/kubernetes] 280/300
+2026-07-03 16:52:02 [INFO] experiment1: [kubernetes/kubernetes] 300/300
+2026-07-03 16:52:02 [INFO] experiment1: kubernetes/kubernetes: 完成，共采集 300 条 PR
+2026-07-03 16:52:03 [INFO] experiment1: 开始采集 pytorch/pytorch，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 16:54:20 [INFO] experiment1: pytorch/pytorch: 获取到 3000 条 closed PR
+2026-07-03 16:54:20 [INFO] experiment1: pytorch/pytorch: merged 不足 (45/150)，补充搜索 105 条...
+2026-07-03 16:54:46 [INFO] experiment1: pytorch/pytorch: 筛选出 merged=150, unmerged=150
+2026-07-03 16:54:55 [INFO] experiment1: [pytorch/pytorch] 20/300
+2026-07-03 16:55:03 [INFO] experiment1: [pytorch/pytorch] 40/300
+2026-07-03 16:55:14 [INFO] experiment1: [pytorch/pytorch] 60/300
+2026-07-03 16:55:23 [INFO] experiment1: [pytorch/pytorch] 80/300
+2026-07-03 16:55:31 [INFO] experiment1: [pytorch/pytorch] 100/300
+2026-07-03 16:55:42 [INFO] experiment1: [pytorch/pytorch] 120/300
+2026-07-03 16:55:50 [INFO] experiment1: [pytorch/pytorch] 140/300
+2026-07-03 16:56:01 [INFO] experiment1: [pytorch/pytorch] 160/300
+2026-07-03 16:56:11 [INFO] experiment1: [pytorch/pytorch] 180/300
+2026-07-03 16:56:19 [INFO] experiment1: [pytorch/pytorch] 200/300
+2026-07-03 16:56:29 [INFO] experiment1: [pytorch/pytorch] 220/300
+2026-07-03 16:56:38 [INFO] experiment1: [pytorch/pytorch] 240/300
+2026-07-03 16:56:46 [INFO] experiment1: [pytorch/pytorch] 260/300
+2026-07-03 16:56:55 [INFO] experiment1: [pytorch/pytorch] 280/300
+2026-07-03 16:57:08 [INFO] experiment1: [pytorch/pytorch] 300/300
+2026-07-03 16:57:08 [INFO] experiment1: pytorch/pytorch: 完成，共采集 300 条 PR
+2026-07-03 16:57:08 [INFO] experiment1: 开始采集 microsoft/vscode，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 16:59:13 [INFO] experiment1: microsoft/vscode: 获取到 3000 条 closed PR
+2026-07-03 16:59:13 [INFO] experiment1: microsoft/vscode: 筛选出 merged=150, unmerged=150
+2026-07-03 16:59:22 [INFO] experiment1: [microsoft/vscode] 20/300
+2026-07-03 16:59:29 [INFO] experiment1: [microsoft/vscode] 40/300
+2026-07-03 16:59:38 [INFO] experiment1: [microsoft/vscode] 60/300
+2026-07-03 16:59:46 [INFO] experiment1: [microsoft/vscode] 80/300
+2026-07-03 16:59:54 [INFO] experiment1: [microsoft/vscode] 100/300
+2026-07-03 17:00:02 [INFO] experiment1: [microsoft/vscode] 120/300
+2026-07-03 17:00:10 [INFO] experiment1: [microsoft/vscode] 140/300
+2026-07-03 17:00:19 [INFO] experiment1: [microsoft/vscode] 160/300
+2026-07-03 17:00:36 [INFO] experiment1: [microsoft/vscode] 180/300
+2026-07-03 17:00:56 [INFO] experiment1: [microsoft/vscode] 200/300
+2026-07-03 17:01:11 [INFO] experiment1: [microsoft/vscode] 220/300
+2026-07-03 17:01:33 [INFO] experiment1: [microsoft/vscode] 240/300
+2026-07-03 17:02:39 [INFO] experiment1: [microsoft/vscode] 260/300
+2026-07-03 17:03:14 [INFO] experiment1: [microsoft/vscode] 280/300
+2026-07-03 17:04:25 [INFO] experiment1: [microsoft/vscode] 300/300
+2026-07-03 17:04:25 [INFO] experiment1: microsoft/vscode: 完成，共采集 300 条 PR
+2026-07-03 17:04:26 [INFO] experiment1: 开始采集 tensorflow/tensorflow，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 17:05:44 [INFO] experiment1: tensorflow/tensorflow: 获取到 3000 条 closed PR
+2026-07-03 17:05:44 [INFO] experiment1: tensorflow/tensorflow: 筛选出 merged=150, unmerged=150
+2026-07-03 17:05:53 [INFO] experiment1: [tensorflow/tensorflow] 20/300
+2026-07-03 17:06:00 [INFO] experiment1: [tensorflow/tensorflow] 40/300
+2026-07-03 17:06:08 [INFO] experiment1: [tensorflow/tensorflow] 60/300
+2026-07-03 17:06:16 [INFO] experiment1: [tensorflow/tensorflow] 80/300
+2026-07-03 17:06:24 [INFO] experiment1: [tensorflow/tensorflow] 100/300
+2026-07-03 17:06:32 [INFO] experiment1: [tensorflow/tensorflow] 120/300
+2026-07-03 17:06:40 [INFO] experiment1: [tensorflow/tensorflow] 140/300
+2026-07-03 17:06:47 [INFO] experiment1: [tensorflow/tensorflow] 160/300
+2026-07-03 17:07:19 [INFO] experiment1: [tensorflow/tensorflow] 180/300
+2026-07-03 17:07:33 [INFO] experiment1: [tensorflow/tensorflow] 200/300
+2026-07-03 17:07:40 [INFO] experiment1: [tensorflow/tensorflow] 220/300
+2026-07-03 17:07:48 [INFO] experiment1: [tensorflow/tensorflow] 240/300
+2026-07-03 17:07:56 [INFO] experiment1: [tensorflow/tensorflow] 260/300
+2026-07-03 17:08:04 [INFO] experiment1: [tensorflow/tensorflow] 280/300
+2026-07-03 17:08:13 [INFO] experiment1: [tensorflow/tensorflow] 300/300
+2026-07-03 17:08:13 [INFO] experiment1: tensorflow/tensorflow: 完成，共采集 300 条 PR
+2026-07-03 17:08:13 [INFO] experiment1: 开始采集 facebook/react，目标 merged=150, unmerged=150（3 线程并行）...
+2026-07-03 17:09:55 [INFO] experiment1: facebook/react: 获取到 3000 条 closed PR
+2026-07-03 17:09:55 [INFO] experiment1: facebook/react: 筛选出 merged=150, unmerged=150
+2026-07-03 17:10:07 [INFO] experiment1: [facebook/react] 20/300
+2026-07-03 17:10:20 [INFO] experiment1: [facebook/react] 40/300
+2026-07-03 17:10:37 [INFO] experiment1: [facebook/react] 60/300
+2026-07-03 17:10:49 [INFO] experiment1: [facebook/react] 80/300
+2026-07-03 17:10:59 [INFO] experiment1: [facebook/react] 100/300
+2026-07-03 17:11:11 [INFO] experiment1: [facebook/react] 120/300
+2026-07-03 17:11:27 [INFO] experiment1: [facebook/react] 140/300
+2026-07-03 17:11:44 [INFO] experiment1: [facebook/react] 160/300
+2026-07-03 17:11:56 [INFO] experiment1: [facebook/react] 180/300
+2026-07-03 17:12:09 [INFO] experiment1: [facebook/react] 200/300
+2026-07-03 17:12:42 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1982 秒至重置时间...
+2026-07-03 17:13:04 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1961 秒至重置时间...
+2026-07-03 17:13:06 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1958 秒至重置时间...
+2026-07-03 17:13:06 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1958 秒至重置时间...
+2026-07-03 17:13:07 [INFO] experiment1: 限速预警：剩余 0 次，休眠 1958 秒至重置时间...
+2026-07-03 18:17:58 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 300 条 closed PR（3 线程并行）...
+2026-07-03 18:18:08 [INFO] experiment1: kubernetes/kubernetes: 获取到 300 条 closed PR
+2026-07-03 18:18:09 [INFO] experiment1: kubernetes/kubernetes: 300 条 PR，其中 merged≈229（76%）
+2026-07-03 18:18:51 [INFO] experiment1: 开始采集 kubernetes/kubernetes，目标 300 条 closed PR（3 线程并行）...
+2026-07-03 18:18:59 [INFO] experiment1: kubernetes/kubernetes: 获取到 300 条 closed PR
+2026-07-03 18:18:59 [INFO] experiment1: kubernetes/kubernetes: 300 条 PR，其中 merged≈229（76%）
+2026-07-03 18:19:08 [INFO] experiment1: [kubernetes/kubernetes] 20/300
+2026-07-03 18:19:20 [INFO] experiment1: [kubernetes/kubernetes] 40/300
+2026-07-03 18:19:31 [INFO] experiment1: [kubernetes/kubernetes] 60/300
+2026-07-03 18:19:41 [INFO] experiment1: [kubernetes/kubernetes] 80/300
+2026-07-03 18:19:51 [INFO] experiment1: [kubernetes/kubernetes] 100/300
+2026-07-03 18:20:02 [INFO] experiment1: [kubernetes/kubernetes] 120/300
+2026-07-03 18:20:12 [INFO] experiment1: [kubernetes/kubernetes] 140/300
+2026-07-03 18:20:23 [INFO] experiment1: [kubernetes/kubernetes] 160/300
+2026-07-03 18:20:32 [INFO] experiment1: [kubernetes/kubernetes] 180/300
+2026-07-03 18:20:42 [INFO] experiment1: [kubernetes/kubernetes] 200/300
+2026-07-03 18:20:53 [INFO] experiment1: [kubernetes/kubernetes] 220/300
+2026-07-03 18:21:02 [INFO] experiment1: [kubernetes/kubernetes] 240/300
+2026-07-03 18:21:11 [INFO] experiment1: [kubernetes/kubernetes] 260/300
+2026-07-03 18:21:29 [INFO] experiment1: [kubernetes/kubernetes] 280/300
+2026-07-03 18:24:35 [INFO] experiment1: [kubernetes/kubernetes] 300/300
+2026-07-03 18:24:35 [INFO] experiment1: kubernetes/kubernetes: 完成，共采集 300 条 PR
+2026-07-03 18:24:35 [INFO] experiment1: 开始采集 pytorch/pytorch，目标 300 条 closed PR（3 线程并行）...
+2026-07-03 18:24:45 [INFO] experiment1: pytorch/pytorch: 获取到 300 条 closed PR
+2026-07-03 18:24:45 [INFO] experiment1: pytorch/pytorch: 300 条 PR，其中 merged≈14（5%）
+2026-07-03 18:24:56 [INFO] experiment1: [pytorch/pytorch] 20/300
+2026-07-03 18:25:05 [INFO] experiment1: [pytorch/pytorch] 40/300
+2026-07-03 18:25:14 [INFO] experiment1: [pytorch/pytorch] 60/300
+2026-07-03 18:25:24 [INFO] experiment1: [pytorch/pytorch] 80/300
+2026-07-03 18:25:32 [INFO] experiment1: [pytorch/pytorch] 100/300
+2026-07-03 18:25:41 [INFO] experiment1: [pytorch/pytorch] 120/300
+2026-07-03 18:25:53 [INFO] experiment1: [pytorch/pytorch] 140/300
+2026-07-03 18:26:07 [INFO] experiment1: [pytorch/pytorch] 160/300
+2026-07-03 18:26:16 [INFO] experiment1: [pytorch/pytorch] 180/300
+2026-07-03 18:26:25 [INFO] experiment1: [pytorch/pytorch] 200/300
+2026-07-03 18:26:36 [INFO] experiment1: [pytorch/pytorch] 220/300
+2026-07-03 18:26:47 [INFO] experiment1: [pytorch/pytorch] 240/300
+2026-07-03 18:27:00 [INFO] experiment1: [pytorch/pytorch] 260/300
+2026-07-03 18:27:14 [INFO] experiment1: [pytorch/pytorch] 280/300
+2026-07-03 18:29:03 [INFO] experiment1: [pytorch/pytorch] 300/300
+2026-07-03 18:29:03 [INFO] experiment1: pytorch/pytorch: 完成，共采集 300 条 PR
+2026-07-03 18:29:04 [INFO] experiment1: 开始采集 microsoft/vscode，目标 300 条 closed PR（3 线程并行）...
+2026-07-03 18:29:14 [INFO] experiment1: microsoft/vscode: 获取到 300 条 closed PR
+2026-07-03 18:29:14 [INFO] experiment1: microsoft/vscode: 300 条 PR，其中 merged≈275（92%）
+2026-07-03 18:29:22 [INFO] experiment1: [microsoft/vscode] 20/300
+2026-07-03 18:29:31 [INFO] experiment1: [microsoft/vscode] 40/300
+2026-07-03 18:29:40 [INFO] experiment1: [microsoft/vscode] 60/300
+2026-07-03 18:29:49 [INFO] experiment1: [microsoft/vscode] 80/300
+2026-07-03 18:29:59 [INFO] experiment1: [microsoft/vscode] 100/300
+2026-07-03 18:30:08 [INFO] experiment1: [microsoft/vscode] 120/300
+2026-07-03 18:30:20 [INFO] experiment1: [microsoft/vscode] 140/300
+2026-07-03 18:30:32 [INFO] experiment1: [microsoft/vscode] 160/300
+2026-07-03 18:30:48 [INFO] experiment1: [microsoft/vscode] 180/300
+2026-07-03 18:31:01 [INFO] experiment1: [microsoft/vscode] 200/300
+2026-07-03 18:31:12 [INFO] experiment1: [microsoft/vscode] 220/300
+2026-07-03 18:31:25 [INFO] experiment1: [microsoft/vscode] 240/300
+2026-07-03 18:31:37 [INFO] experiment1: [microsoft/vscode] 260/300
+2026-07-03 18:31:49 [INFO] experiment1: [microsoft/vscode] 280/300
+2026-07-03 18:32:20 [INFO] experiment1: [microsoft/vscode] 300/300
+2026-07-03 18:32:20 [INFO] experiment1: microsoft/vscode: 完成，共采集 300 条 PR
+2026-07-03 18:32:20 [INFO] experiment1: 开始采集 tensorflow/tensorflow，目标 300 条 closed PR（3 线程并行）...
+2026-07-03 18:32:27 [INFO] experiment1: tensorflow/tensorflow: 获取到 300 条 closed PR
+2026-07-03 18:32:27 [INFO] experiment1: tensorflow/tensorflow: 300 条 PR，其中 merged≈284（95%）
+2026-07-03 18:32:35 [INFO] experiment1: [tensorflow/tensorflow] 20/300
+2026-07-03 18:32:43 [INFO] experiment1: [tensorflow/tensorflow] 40/300
+2026-07-03 18:32:52 [INFO] experiment1: [tensorflow/tensorflow] 60/300
+2026-07-03 18:33:01 [INFO] experiment1: [tensorflow/tensorflow] 80/300
+2026-07-03 18:33:08 [INFO] experiment1: [tensorflow/tensorflow] 100/300
+2026-07-03 18:33:16 [INFO] experiment1: [tensorflow/tensorflow] 120/300
+2026-07-03 18:33:23 [INFO] experiment1: [tensorflow/tensorflow] 140/300
+2026-07-03 18:33:31 [INFO] experiment1: [tensorflow/tensorflow] 160/300
+2026-07-03 18:33:39 [INFO] experiment1: [tensorflow/tensorflow] 180/300
+2026-07-03 18:33:47 [INFO] experiment1: [tensorflow/tensorflow] 200/300
+2026-07-03 18:33:56 [INFO] experiment1: [tensorflow/tensorflow] 220/300
+2026-07-03 18:34:04 [INFO] experiment1: [tensorflow/tensorflow] 240/300
+2026-07-03 18:34:12 [INFO] experiment1: [tensorflow/tensorflow] 260/300
+2026-07-03 18:34:19 [INFO] experiment1: [tensorflow/tensorflow] 280/300
+2026-07-03 18:34:27 [INFO] experiment1: [tensorflow/tensorflow] 300/300
+2026-07-03 18:34:27 [INFO] experiment1: tensorflow/tensorflow: 完成，共采集 300 条 PR
+2026-07-03 18:34:27 [INFO] experiment1: 开始采集 facebook/react，目标 300 条 closed PR（3 线程并行）...
+2026-07-03 18:34:39 [INFO] experiment1: facebook/react: 获取到 300 条 closed PR
+2026-07-03 18:34:39 [INFO] experiment1: facebook/react: 300 条 PR，其中 merged≈146（49%）
+2026-07-03 18:34:52 [INFO] experiment1: [facebook/react] 20/300
+2026-07-03 18:35:06 [INFO] experiment1: [facebook/react] 40/300
+2026-07-03 18:35:19 [INFO] experiment1: [facebook/react] 60/300
+2026-07-03 18:35:36 [INFO] experiment1: [facebook/react] 80/300
+2026-07-03 18:35:48 [INFO] experiment1: [facebook/react] 100/300
+2026-07-03 18:35:59 [INFO] experiment1: [facebook/react] 120/300
+2026-07-03 18:36:11 [INFO] experiment1: [facebook/react] 140/300
+2026-07-03 18:36:23 [INFO] experiment1: [facebook/react] 160/300
+2026-07-03 18:36:55 [INFO] experiment1: [facebook/react] 180/300
+2026-07-03 18:38:17 [INFO] experiment1: [facebook/react] 200/300
+2026-07-03 18:38:35 [INFO] experiment1: [facebook/react] 220/300
+2026-07-03 18:38:37 [INFO] experiment1: 限速预警：剩余 7 次，休眠 2427 秒至重置时间...
+2026-07-03 18:38:38 [INFO] experiment1: 限速预警：剩余 1 次，休眠 2427 秒至重置时间...
+2026-07-03 18:38:38 [INFO] experiment1: 限速预警：剩余 1 次，休眠 2427 秒至重置时间...
+2026-07-03 18:38:38 [INFO] experiment1: 限速预警：剩余 1 次，休眠 2427 秒至重置时间...
+2026-07-03 18:38:38 [INFO] experiment1: 限速预警：剩余 1 次，休眠 2427 秒至重置时间...
+2026-07-03 18:38:38 [INFO] experiment1: 限速预警：剩余 1 次，休眠 2427 秒至重置时间...
+2026-07-03 18:38:43 [INFO] experiment1: 限速预警：剩余 0 次，休眠 2422 秒至重置时间...
+2026-07-03 19:19:21 [INFO] experiment1: [facebook/react] 240/300
+2026-07-03 19:19:42 [INFO] experiment1: [facebook/react] 260/300
+2026-07-03 19:20:03 [INFO] experiment1: [facebook/react] 280/300
+2026-07-03 19:20:17 [INFO] experiment1: [facebook/react] 300/300
+2026-07-03 19:20:17 [INFO] experiment1: facebook/react: 完成，共采集 300 条 PR
+2026-07-03 19:20:21 [INFO] experiment1: 全部采集完成！总计 1500 条 PR
+2026-07-03 19:20:44 [INFO] experiment1: 加载原始数据: E:\latex\projects\experiment1\data\raw\merged_raw.json
+2026-07-03 19:20:45 [INFO] experiment1: 共 1500 条原始 PR 记录，开始特征提取...
+2026-07-03 19:20:45 [INFO] experiment1: 已处理 100/1500...
+2026-07-03 19:20:45 [INFO] experiment1: 已处理 200/1500...
+2026-07-03 19:20:47 [INFO] experiment1: 已处理 300/1500...
+2026-07-03 19:20:47 [INFO] experiment1: 已处理 400/1500...
+2026-07-03 19:20:47 [INFO] experiment1: 已处理 500/1500...
+2026-07-03 19:20:49 [INFO] experiment1: 已处理 600/1500...
+2026-07-03 19:20:49 [INFO] experiment1: 已处理 700/1500...
+2026-07-03 19:20:49 [INFO] experiment1: 已处理 800/1500...
+2026-07-03 19:20:50 [INFO] experiment1: 已处理 900/1500...
+2026-07-03 19:20:50 [INFO] experiment1: 已处理 1000/1500...
+2026-07-03 19:20:50 [INFO] experiment1: 已处理 1100/1500...
+2026-07-03 19:20:50 [INFO] experiment1: 已处理 1200/1500...
+2026-07-03 19:20:50 [INFO] experiment1: 已处理 1300/1500...
+2026-07-03 19:20:51 [INFO] experiment1: 已处理 1400/1500...
+2026-07-03 19:20:52 [INFO] experiment1: 已处理 1500/1500...
+2026-07-03 19:20:52 [INFO] experiment1: 特征提取完成: 1500 条有效记录（跳过 0 条）
+2026-07-03 19:20:52 [INFO] experiment1: CSV 已保存至 E:\latex\projects\experiment1\data\processed\dataset.csv
+2026-07-03 19:20:52 [INFO] experiment1: JSON 已保存至 E:\latex\projects\experiment1\data\processed\dataset.json
+2026-07-03 19:20:52 [INFO] experiment1: 摘要: 总计=1500, 合并=948 (63.2%), AI Reviewer=459, AI 代码=103
+2026-07-03 19:20:55 [INFO] experiment1: 加载数据集: E:\latex\projects\experiment1\data\processed\dataset.csv
+2026-07-03 19:20:55 [INFO] experiment1: 加载完成: 1500 行 × 26 列
+2026-07-03 19:20:55 [INFO] experiment1: 计算统计指标...
+2026-07-03 19:20:55 [INFO] experiment1: 统计 JSON 已保存至 E:\latex\projects\experiment1\data\processed\dataset_stats.json
+2026-07-03 19:20:55 [INFO] experiment1: 统计文本报告已保存至 E:\latex\projects\experiment1\data\processed\dataset_stats.txt
+2026-07-03 19:21:00 [INFO] experiment1: 开始生成可视化图表...
+2026-07-03 19:21:00 [INFO] experiment1: 加载 1500 条数据用于可视化
+2026-07-03 19:21:00 [INFO] experiment1: 生成图1: 合并状态柱状图
+2026-07-03 19:21:01 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\01_merge_status_bar.png
+2026-07-03 19:21:01 [INFO] experiment1: 生成图2: 评论数量分布
+2026-07-03 19:21:01 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\02_comment_distribution_hist.png
+2026-07-03 19:21:01 [INFO] experiment1: 生成图3: 标签分布饼图
+2026-07-03 19:21:01 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\03_label_distribution_pie.png
+2026-07-03 19:21:01 [INFO] experiment1: 生成图4: Reviewer 数量分布
+2026-07-03 19:21:02 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\04_reviewer_count_distribution.png
+2026-07-03 19:21:02 [INFO] experiment1: 生成图5: PR 长度分布
+2026-07-03 19:21:02 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\05_pr_length_distribution.png
+2026-07-03 19:21:02 [INFO] experiment1: 生成图6: AI vs 人类对比
+2026-07-03 19:21:02 [INFO] experiment1: 图表已保存: E:\latex\projects\experiment1\figures\06_ai_vs_human_comparison.png
+2026-07-03 19:21:02 [INFO] experiment1: 全部图表生成完成！

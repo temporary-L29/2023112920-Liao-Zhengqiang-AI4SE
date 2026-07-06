@@ -1,0 +1,208 @@
+{
+  "title": "实验一：数据集统计报告",
+  "generated_at": "2026-07-03T19:20:55.225450",
+  "overall": {
+    "total_prs": 1500,
+    "merged_count": 948,
+    "merged_pct": 63.2,
+    "unmerged_count": 552,
+    "unmerged_pct": 36.8,
+    "ai_reviewer_count": 459,
+    "ai_reviewer_pct": 30.6,
+    "ai_generated_code_count": 103,
+    "ai_generated_code_pct": 6.87
+  },
+  "feature_distributions": {
+    "pr_length": {
+      "mean": 1708.94,
+      "median": 735.5,
+      "std": 3684.77,
+      "min": 15,
+      "max": 66105,
+      "q25": 291.75,
+      "q75": 1811.25
+    },
+    "num_changed_files": {
+      "mean": 20.06,
+      "median": 2.0,
+      "std": 189.09,
+      "min": 0,
+      "max": 3000,
+      "q25": 1.0,
+      "q75": 5.0
+    },
+    "num_reviewers": {
+      "mean": 1.14,
+      "median": 1.0,
+      "std": 1.22,
+      "min": 0,
+      "max": 7,
+      "q25": 0.0,
+      "q75": 2.0
+    },
+    "num_review_comments": {
+      "mean": 1.68,
+      "median": 1.0,
+      "std": 2.82,
+      "min": 0,
+      "max": 35,
+      "q25": 0.0,
+      "q75": 2.0
+    },
+    "num_labels": {
+      "mean": 3.61,
+      "median": 1.0,
+      "std": 4.97,
+      "min": 0,
+      "max": 41,
+      "q25": 0.0,
+      "q75": 6.0
+    }
+  },
+  "per_repo": [
+    {
+      "repo": "facebook/react",
+      "prs": 300,
+      "merged": 146,
+      "merge_rate": 48.7,
+      "avg_comments": 1.04,
+      "avg_reviewers": 0.71,
+      "avg_length": 2586.5,
+      "avg_changed_files": 39.17,
+      "ai_reviewer_count": 33,
+      "ai_code_count": 2
+    },
+    {
+      "repo": "kubernetes/kubernetes",
+      "prs": 300,
+      "merged": 229,
+      "merge_rate": 76.3,
+      "avg_comments": 2.93,
+      "avg_reviewers": 1.24,
+      "avg_length": 2239.7,
+      "avg_changed_files": 24.66,
+      "ai_reviewer_count": 85,
+      "ai_code_count": 0
+    },
+    {
+      "repo": "microsoft/vscode",
+      "prs": 300,
+      "merged": 275,
+      "merge_rate": 91.7,
+      "avg_comments": 2.78,
+      "avg_reviewers": 2.48,
+      "avg_length": 1461.4,
+      "avg_changed_files": 15.37,
+      "ai_reviewer_count": 295,
+      "ai_code_count": 77
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "prs": 300,
+      "merged": 14,
+      "merge_rate": 4.7,
+      "avg_comments": 1.63,
+      "avg_reviewers": 1.25,
+      "avg_length": 1620.6,
+      "avg_changed_files": 16.52,
+      "ai_reviewer_count": 39,
+      "ai_code_count": 18
+    },
+    {
+      "repo": "tensorflow/tensorflow",
+      "prs": 300,
+      "merged": 284,
+      "merge_rate": 94.7,
+      "avg_comments": 0.04,
+      "avg_reviewers": 0.04,
+      "avg_length": 636.5,
+      "avg_changed_files": 4.57,
+      "ai_reviewer_count": 7,
+      "ai_code_count": 6
+    }
+  ],
+  "merge_comparison": {
+    "pr_length": {
+      "merged_mean": 1359.75,
+      "unmerged_mean": 2308.65
+    },
+    "num_changed_files": {
+      "merged_mean": 7.47,
+      "unmerged_mean": 41.67
+    },
+    "num_reviewers": {
+      "merged_mean": 1.34,
+      "unmerged_mean": 0.8
+    },
+    "num_review_comments": {
+      "merged_mean": 2.04,
+      "unmerged_mean": 1.08
+    },
+    "num_labels": {
+      "merged_mean": 3.15,
+      "unmerged_mean": 4.41
+    }
+  },
+  "top_labels": [
+    {
+      "label": "cncf-cla: yes",
+      "count": 283
+    },
+    {
+      "label": "CLA Signed",
+      "count": 264
+    },
+    {
+      "label": "needs-priority",
+      "count": 263
+    },
+    {
+      "label": "needs-triage",
+      "count": 244
+    },
+    {
+      "label": "approved",
+      "count": 237
+    },
+    {
+      "label": "lgtm",
+      "count": 234
+    },
+    {
+      "label": "Merged",
+      "count": 209
+    },
+    {
+      "label": "release-note-none",
+      "count": 207
+    },
+    {
+      "label": "ciflow/trunk",
+      "count": 182
+    },
+    {
+      "label": "topic: not user facing",
+      "count": 175
+    },
+    {
+      "label": "open source",
+      "count": 124
+    },
+    {
+      "label": "sig/api-machinery",
+      "count": 123
+    },
+    {
+      "label": "kind/cleanup",
+      "count": 113
+    },
+    {
+      "label": "ciflow/inductor",
+      "count": 100
+    },
+    {
+      "label": "sig/node",
+      "count": 91
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+2026-07-06 14:53:13 [INFO] experiment1: 开始采集 huggingface/transformers，目标 300 条 closed PR（3 线程并行）...
+2026-07-06 14:53:14 [INFO] experiment1: huggingface/transformers: 获取到 0 条 closed PR
+2026-07-06 14:53:14 [INFO] experiment1: huggingface/transformers: 0 条 PR，其中 merged≈0（0%）
+2026-07-06 14:53:14 [INFO] experiment1: huggingface/transformers: 完成，共采集 0 条 PR
+2026-07-06 14:58:04 [INFO] experiment1: 开始采集 huggingface/transformers，目标 300 条 closed PR（3 线程并行）...
+2026-07-06 14:58:14 [INFO] experiment1: huggingface/transformers: 获取到 300 条 closed PR
+2026-07-06 14:58:14 [INFO] experiment1: huggingface/transformers: 300 条 PR，其中 merged≈166（55%）
+2026-07-06 14:58:24 [INFO] experiment1: [huggingface/transformers] 20/300
+2026-07-06 14:58:33 [INFO] experiment1: [huggingface/transformers] 40/300
+2026-07-06 14:58:41 [INFO] experiment1: [huggingface/transformers] 60/300
+2026-07-06 14:58:50 [INFO] experiment1: [huggingface/transformers] 80/300
+2026-07-06 14:58:59 [INFO] experiment1: [huggingface/transformers] 100/300
+2026-07-06 14:59:08 [INFO] experiment1: [huggingface/transformers] 120/300
+2026-07-06 14:59:18 [INFO] experiment1: [huggingface/transformers] 140/300
+2026-07-06 14:59:27 [INFO] experiment1: [huggingface/transformers] 160/300
+2026-07-06 14:59:38 [INFO] experiment1: [huggingface/transformers] 180/300
+2026-07-06 14:59:46 [INFO] experiment1: [huggingface/transformers] 200/300
+2026-07-06 14:59:56 [INFO] experiment1: [huggingface/transformers] 220/300
+2026-07-06 15:00:05 [INFO] experiment1: [huggingface/transformers] 240/300
+2026-07-06 15:00:17 [INFO] experiment1: [huggingface/transformers] 260/300
+2026-07-06 15:00:29 [INFO] experiment1: [huggingface/transformers] 280/300
+2026-07-06 15:00:42 [INFO] experiment1: [huggingface/transformers] 300/300
+2026-07-06 15:00:42 [INFO] experiment1: huggingface/transformers: 完成，共采集 300 条 PR

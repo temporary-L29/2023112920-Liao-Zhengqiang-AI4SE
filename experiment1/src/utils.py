@@ -19,7 +19,7 @@ import config
 # ============================================================
 # 日志配置
 # ============================================================
-LOG_FILE = config.DATA_DIR / "pipeline.log"
+LOG_FILE = config.EXPERIMENT_DIR / "results" / "pipeline.log"
 
 
 def setup_logging(level=logging.INFO):

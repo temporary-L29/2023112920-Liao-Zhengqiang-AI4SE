@@ -6,6 +6,7 @@
 
 import json
 import time
+import random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from threading import Lock
@@ -172,42 +173,59 @@ class PRCollector:
     # 采集单个仓库
     # --------------------------------------------------------
     def collect_repo(self, owner, repo, target_count,
-                     skip_pr_numbers=None):
-        """采集单个仓库的 closed PR，按创建时间降序，不强制比例。
+                     skip_pr_numbers=None, random_sample=False):
+        """采集单个仓库的 closed PR。
 
-        策略：只拉 state=closed，按 created 降序取 target_count 条，
-        仓库自然 merged/unmerged 比例是多少就是多少。
+        Args:
+            random_sample: True=从大池中随机采样（避免时间集群效应），
+                           False=按创建时间降序取
         """
         skip_set = skip_pr_numbers or set()
         repo_name = f"{owner}/{repo}"
+        mode = "随机采样" if random_sample else "按创建时间降序"
         log.info(
-            f"开始采集 {repo_name}，目标 {target_count} 条 closed PR"
+            f"开始采集 {repo_name}，目标 {target_count} 条（{mode}）"
             f"（{self.workers} 线程并行）..."
         )
 
-        # 拉取 closed PR 列表，按创建时间降序
         list_url = (
             f"{config.API_BASE_URL}/repos/{owner}/{repo}/pulls"
             f"?state=closed&sort=created&direction=desc"
             f"&per_page={config.PER_PAGE}"
         )
 
-        pr_list = self._collect_all_pages(list_url, max_items=target_count)
-        log.info(f"{repo_name}: 获取到 {len(pr_list)} 条 closed PR")
+        if random_sample:
+            # 拉取大池（目标10倍），然后随机选
+            pool_size = target_count * 10
+            pr_list = self._collect_all_pages(list_url, max_items=pool_size)
+            log.info(f"{repo_name}: 大池获取到 {len(pr_list)} 条")
+            # 去重
+            seen = set(skip_set)
+            unique = []
+            for pr in pr_list:
+                pn = pr["number"]
+                if pn not in seen:
+                    seen.add(pn)
+                    unique.append(pr)
+            # 随机采样
+            sample = random.sample(unique, min(target_count, len(unique)))
+            to_fetch = [pr["number"] for pr in sample]
+            merged_in_list = sum(1 for pr in sample
+                                if pr.get("merged_at") is not None)
+        else:
+            pr_list = self._collect_all_pages(list_url, max_items=target_count)
+            log.info(f"{repo_name}: 获取到 {len(pr_list)} 条 closed PR")
+            to_fetch = []
+            for pr in pr_list:
+                pn = pr["number"]
+                if pn not in skip_set and pn not in to_fetch:
+                    to_fetch.append(pn)
+                if len(to_fetch) >= target_count:
+                    break
+            merged_in_list = sum(1 for pr in pr_list
+                                if pr.get("merged_at") is not None
+                                and pr["number"] in to_fetch)
 
-        # 去重、去跳过
-        to_fetch = []
-        for pr in pr_list:
-            pn = pr["number"]
-            if pn not in skip_set and pn not in to_fetch:
-                to_fetch.append(pn)
-            if len(to_fetch) >= target_count:
-                break
-
-        # 统计自然比例
-        merged_in_list = sum(1 for pr in pr_list
-                            if pr.get("merged_at") is not None
-                            and pr["number"] in to_fetch)
         log.info(
             f"{repo_name}: {len(to_fetch)} 条 PR，"
             f"其中 merged≈{merged_in_list}"

@@ -10,11 +10,10 @@ from pathlib import Path
 # ============================================================
 # 目录路径
 # ============================================================
-EXPERIMENT_DIR = Path(__file__).parent.resolve()
-DATA_DIR = EXPERIMENT_DIR / "data"
-RAW_DATA_DIR = DATA_DIR / "raw"
-PROCESSED_DATA_DIR = DATA_DIR / "processed"
-CHECKPOINT_DIR = DATA_DIR / "checkpoints"
+EXPERIMENT_DIR = Path(__file__).parent.parent.resolve()  # experiment1/
+RAW_DATA_DIR = EXPERIMENT_DIR.parent / "raw"              # experiments/raw/
+PROCESSED_DATA_DIR = EXPERIMENT_DIR / "results" / "processed"
+CHECKPOINT_DIR = EXPERIMENT_DIR / "results" / "checkpoints"
 FIGURES_DIR = EXPERIMENT_DIR / "figures"
 
 # ============================================================
@@ -32,9 +31,9 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or _TOKEN_FROM_FILE
 # 5 个目标仓库
 TARGET_REPOS = [
     ("kubernetes", "kubernetes"),
-    ("pytorch", "pytorch"),
+    ("huggingface", "transformers"),
     ("microsoft", "vscode"),
-    ("tensorflow", "tensorflow"),
+    ("pandas-dev", "pandas"),
     ("facebook", "react"),
 ]
 
@@ -89,7 +88,7 @@ def validate_token():
 
 def ensure_dirs():
     """创建所有需要的目录。"""
-    for d in [DATA_DIR, RAW_DATA_DIR, PROCESSED_DATA_DIR,
+    for d in [RAW_DATA_DIR, PROCESSED_DATA_DIR,
               CHECKPOINT_DIR, FIGURES_DIR]:
         d.mkdir(parents=True, exist_ok=True)
 

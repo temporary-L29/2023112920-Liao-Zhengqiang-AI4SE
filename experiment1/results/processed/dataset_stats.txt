@@ -1,61 +1,61 @@
 ============================================================
 数据集统计报告
 ============================================================
-生成时间: 2026-07-03T19:20:55.225450
+生成时间: 2026-07-06T16:04:09.435048
 
 --- 总体统计 ---
 总 PR 数:        1500
-已合并:          948 (63.2%)
-未合并:          552 (36.8%)
-含 AI Reviewer:  459 (30.6%)
-含 AI 生成代码:  103 (6.87%)
+已合并:          972 (64.8%)
+未合并:          528 (35.2%)
+含 AI Reviewer:  523 (34.87%)
+含 AI 生成代码:  97 (6.47%)
 
 --- 数值特征分布 ---
 pr_length:
-  mean=1708.94, median=735.5, std=3684.77, min=15, max=66105
-  Q25=291.75, Q75=1811.25
+  mean=1782.43, median=912.0, std=2890.66, min=9, max=44980
+  Q25=400.0, Q75=2053.75
 num_changed_files:
-  mean=20.06, median=2.0, std=189.09, min=0, max=3000
+  mean=21.65, median=2.0, std=207.85, min=0, max=3000
   Q25=1.0, Q75=5.0
 num_reviewers:
-  mean=1.14, median=1.0, std=1.22, min=0, max=7
+  mean=1.21, median=1.0, std=1.23, min=0, max=10
   Q25=0.0, Q75=2.0
 num_review_comments:
-  mean=1.68, median=1.0, std=2.82, min=0, max=35
+  mean=2.43, median=1.0, std=7.05, min=0, max=133
   Q25=0.0, Q75=2.0
 num_labels:
-  mean=3.61, median=1.0, std=4.97, min=0, max=41
-  Q25=0.0, Q75=6.0
+  mean=3.08, median=1.0, std=5.16, min=0, max=43
+  Q25=0.0, Q75=3.0
 
 --- 按仓库统计 ---
 Repo                        PRs      合并率      均评论     均审阅人      均长度
 -------------------------------------------------------------------
 facebook/react              300    48.7%     1.04     0.71   2586.5
-kubernetes/kubernetes       300    76.3%     2.93     1.24   2239.7
-microsoft/vscode            300    91.7%     2.78     2.48   1461.4
-pytorch/pytorch             300     4.7%     1.63     1.25   1620.6
-tensorflow/tensorflow       300    94.7%     0.04     0.04    636.5
+huggingface/transformers    300    55.3%     1.67     0.81   1806.8
+kubernetes/kubernetes       300    66.0%     5.11     1.41   2307.3
+microsoft/vscode            300    87.3%     2.79     2.29   1215.5
+pandas-dev/pandas           300    66.7%     1.53     0.85    996.0
 
 --- 合并 vs 未合并特征对比 ---
-pr_length: merged_mean=1359.75, unmerged_mean=2308.65
-num_changed_files: merged_mean=7.47, unmerged_mean=41.67
-num_reviewers: merged_mean=1.34, unmerged_mean=0.8
-num_review_comments: merged_mean=2.04, unmerged_mean=1.08
-num_labels: merged_mean=3.15, unmerged_mean=4.41
+pr_length: merged_mean=1389.73, unmerged_mean=2505.34
+num_changed_files: merged_mean=7.23, unmerged_mean=48.2
+num_reviewers: merged_mean=1.67, unmerged_mean=0.37
+num_review_comments: merged_mean=3.35, unmerged_mean=0.72
+num_labels: merged_mean=3.09, unmerged_mean=3.06
 
 --- Top 标签 ---
-  cncf-cla: yes: 283
+  cncf-cla: yes: 287
   CLA Signed: 264
-  needs-priority: 263
-  needs-triage: 244
-  approved: 237
-  lgtm: 234
-  Merged: 209
-  release-note-none: 207
-  ciflow/trunk: 182
-  topic: not user facing: 175
-  open source: 124
-  sig/api-machinery: 123
-  kind/cleanup: 113
-  ciflow/inductor: 100
-  sig/node: 91
+  needs-priority: 239
+  needs-triage: 211
+  approved: 209
+  lgtm: 202
+  release-note-none: 168
+  sig/testing: 114
+  area/test: 110
+  sig/node: 106
+  kind/cleanup: 106
+  release-note: 97
+  sig/api-machinery: 91
+  triage/accepted: 89
+  React Core Team: 84

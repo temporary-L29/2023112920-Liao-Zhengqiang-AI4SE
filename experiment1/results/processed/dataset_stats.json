@@ -1,62 +1,62 @@
 {
   "title": "实验一：数据集统计报告",
-  "generated_at": "2026-07-03T19:20:55.225450",
+  "generated_at": "2026-07-06T16:04:09.435048",
   "overall": {
     "total_prs": 1500,
-    "merged_count": 948,
-    "merged_pct": 63.2,
-    "unmerged_count": 552,
-    "unmerged_pct": 36.8,
-    "ai_reviewer_count": 459,
-    "ai_reviewer_pct": 30.6,
-    "ai_generated_code_count": 103,
-    "ai_generated_code_pct": 6.87
+    "merged_count": 972,
+    "merged_pct": 64.8,
+    "unmerged_count": 528,
+    "unmerged_pct": 35.2,
+    "ai_reviewer_count": 523,
+    "ai_reviewer_pct": 34.87,
+    "ai_generated_code_count": 97,
+    "ai_generated_code_pct": 6.47
   },
   "feature_distributions": {
     "pr_length": {
-      "mean": 1708.94,
-      "median": 735.5,
-      "std": 3684.77,
-      "min": 15,
-      "max": 66105,
-      "q25": 291.75,
-      "q75": 1811.25
+      "mean": 1782.43,
+      "median": 912.0,
+      "std": 2890.66,
+      "min": 9,
+      "max": 44980,
+      "q25": 400.0,
+      "q75": 2053.75
     },
     "num_changed_files": {
-      "mean": 20.06,
+      "mean": 21.65,
       "median": 2.0,
-      "std": 189.09,
+      "std": 207.85,
       "min": 0,
       "max": 3000,
       "q25": 1.0,
       "q75": 5.0
     },
     "num_reviewers": {
-      "mean": 1.14,
+      "mean": 1.21,
       "median": 1.0,
-      "std": 1.22,
+      "std": 1.23,
       "min": 0,
-      "max": 7,
+      "max": 10,
       "q25": 0.0,
       "q75": 2.0
     },
     "num_review_comments": {
-      "mean": 1.68,
+      "mean": 2.43,
       "median": 1.0,
-      "std": 2.82,
+      "std": 7.05,
       "min": 0,
-      "max": 35,
+      "max": 133,
       "q25": 0.0,
       "q75": 2.0
     },
     "num_labels": {
-      "mean": 3.61,
+      "mean": 3.08,
       "median": 1.0,
-      "std": 4.97,
+      "std": 5.16,
       "min": 0,
-      "max": 41,
+      "max": 43,
       "q25": 0.0,
-      "q75": 6.0
+      "q75": 3.0
     }
   },
   "per_repo": [
@@ -73,80 +73,80 @@
       "ai_code_count": 2
     },
     {
+      "repo": "huggingface/transformers",
+      "prs": 300,
+      "merged": 166,
+      "merge_rate": 55.3,
+      "avg_comments": 1.67,
+      "avg_reviewers": 0.81,
+      "avg_length": 1806.8,
+      "avg_changed_files": 4.48,
+      "ai_reviewer_count": 46,
+      "ai_code_count": 2
+    },
+    {
       "repo": "kubernetes/kubernetes",
       "prs": 300,
-      "merged": 229,
-      "merge_rate": 76.3,
-      "avg_comments": 2.93,
-      "avg_reviewers": 1.24,
-      "avg_length": 2239.7,
-      "avg_changed_files": 24.66,
-      "ai_reviewer_count": 85,
-      "ai_code_count": 0
+      "merged": 198,
+      "merge_rate": 66.0,
+      "avg_comments": 5.11,
+      "avg_reviewers": 1.41,
+      "avg_length": 2307.3,
+      "avg_changed_files": 44.54,
+      "ai_reviewer_count": 113,
+      "ai_code_count": 1
     },
     {
       "repo": "microsoft/vscode",
       "prs": 300,
-      "merged": 275,
-      "merge_rate": 91.7,
-      "avg_comments": 2.78,
-      "avg_reviewers": 2.48,
-      "avg_length": 1461.4,
-      "avg_changed_files": 15.37,
-      "ai_reviewer_count": 295,
-      "ai_code_count": 77
+      "merged": 262,
+      "merge_rate": 87.3,
+      "avg_comments": 2.79,
+      "avg_reviewers": 2.29,
+      "avg_length": 1215.5,
+      "avg_changed_files": 16.21,
+      "ai_reviewer_count": 291,
+      "ai_code_count": 88
     },
     {
-      "repo": "pytorch/pytorch",
+      "repo": "pandas-dev/pandas",
       "prs": 300,
-      "merged": 14,
-      "merge_rate": 4.7,
-      "avg_comments": 1.63,
-      "avg_reviewers": 1.25,
-      "avg_length": 1620.6,
-      "avg_changed_files": 16.52,
-      "ai_reviewer_count": 39,
-      "ai_code_count": 18
-    },
-    {
-      "repo": "tensorflow/tensorflow",
-      "prs": 300,
-      "merged": 284,
-      "merge_rate": 94.7,
-      "avg_comments": 0.04,
-      "avg_reviewers": 0.04,
-      "avg_length": 636.5,
-      "avg_changed_files": 4.57,
-      "ai_reviewer_count": 7,
-      "ai_code_count": 6
+      "merged": 200,
+      "merge_rate": 66.7,
+      "avg_comments": 1.53,
+      "avg_reviewers": 0.85,
+      "avg_length": 996.0,
+      "avg_changed_files": 3.86,
+      "ai_reviewer_count": 40,
+      "ai_code_count": 4
     }
   ],
   "merge_comparison": {
     "pr_length": {
-      "merged_mean": 1359.75,
-      "unmerged_mean": 2308.65
+      "merged_mean": 1389.73,
+      "unmerged_mean": 2505.34
     },
     "num_changed_files": {
-      "merged_mean": 7.47,
-      "unmerged_mean": 41.67
+      "merged_mean": 7.23,
+      "unmerged_mean": 48.2
     },
     "num_reviewers": {
-      "merged_mean": 1.34,
-      "unmerged_mean": 0.8
+      "merged_mean": 1.67,
+      "unmerged_mean": 0.37
     },
     "num_review_comments": {
-      "merged_mean": 2.04,
-      "unmerged_mean": 1.08
+      "merged_mean": 3.35,
+      "unmerged_mean": 0.72
     },
     "num_labels": {
-      "merged_mean": 3.15,
-      "unmerged_mean": 4.41
+      "merged_mean": 3.09,
+      "unmerged_mean": 3.06
     }
   },
   "top_labels": [
     {
       "label": "cncf-cla: yes",
-      "count": 283
+      "count": 287
     },
     {
       "label": "CLA Signed",
@@ -154,55 +154,55 @@
     },
     {
       "label": "needs-priority",
-      "count": 263
+      "count": 239
     },
     {
       "label": "needs-triage",
-      "count": 244
+      "count": 211
     },
     {
       "label": "approved",
-      "count": 237
-    },
-    {
-      "label": "lgtm",
-      "count": 234
-    },
-    {
-      "label": "Merged",
       "count": 209
     },
     {
+      "label": "lgtm",
+      "count": 202
+    },
+    {
       "label": "release-note-none",
-      "count": 207
+      "count": 168
     },
     {
-      "label": "ciflow/trunk",
-      "count": 182
+      "label": "sig/testing",
+      "count": 114
     },
     {
-      "label": "topic: not user facing",
-      "count": 175
-    },
-    {
-      "label": "open source",
-      "count": 124
-    },
-    {
-      "label": "sig/api-machinery",
-      "count": 123
-    },
-    {
-      "label": "kind/cleanup",
-      "count": 113
-    },
-    {
-      "label": "ciflow/inductor",
-      "count": 100
+      "label": "area/test",
+      "count": 110
     },
     {
       "label": "sig/node",
+      "count": 106
+    },
+    {
+      "label": "kind/cleanup",
+      "count": 106
+    },
+    {
+      "label": "release-note",
+      "count": 97
+    },
+    {
+      "label": "sig/api-machinery",
       "count": 91
+    },
+    {
+      "label": "triage/accepted",
+      "count": 89
+    },
+    {
+      "label": "React Core Team",
+      "count": 84
     }
   ]
 }

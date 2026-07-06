@@ -47,23 +47,6 @@
 - Python 3.10+
 - 依赖库：`requests`, `pandas`, `matplotlib`, `seaborn`, `numpy`
 
-### GitHub Token 配置
-
-GitHub API 匿名限制为 60 次/小时，本实验约需 7500 次 API 调用，需要 Personal Access Token。
-
-1. 访问 https://github.com/settings/tokens 生成 token（无需勾选任何权限）
-2. 配置方式（任选其一）：
-
-**方式 A — 环境变量：**
-```bash
-export GITHUB_TOKEN="ghp_xxxxxxxxxxxx"
-```
-
-**方式 B — Token 文件：**
-```bash
-echo -n "ghp_xxxxxxxxxxxx" > .token
-```
-
 ### 运行
 
 进入项目目录：

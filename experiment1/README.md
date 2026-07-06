@@ -95,9 +95,11 @@ experiments/
     ├── results/
     │   ├── processed/            # 数据集 + 统计报告
     │   └── checkpoints/          # 断点续传
+    ├── report/  
+    │   ├── main.pdf         # 实验报告
     ├── figures/                  # 图表输出（6 张 PNG）
     └── docs/                     # LaTeX 报告
         ├── experimentreport.cls
         ├── listing_style.tex
-        └── main.tex / main.pdf
+        └── main.tex
 ```

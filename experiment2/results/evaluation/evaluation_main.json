@@ -1,0 +1,224 @@
+{
+  "svm": {
+    "overall": {
+      "accuracy": 0.7238,
+      "precision": 0.8031,
+      "recall": 0.7556,
+      "f1_score": 0.7786,
+      "roc_auc": 0.7788,
+      "pr_auc": 0.8366,
+      "confusion_matrix": {
+        "tn": 50,
+        "fp": 25,
+        "fn": 33,
+        "tp": 102
+      },
+      "specificity": 0.6667,
+      "npv": 0.6024
+    },
+    "per_repo": [
+      {
+        "accuracy": 0.6889,
+        "precision": 0.7222,
+        "recall": 0.5909,
+        "f1_score": 0.65,
+        "roc_auc": 0.7945,
+        "pr_auc": 0.7646,
+        "confusion_matrix": {
+          "tn": 18,
+          "fp": 5,
+          "fn": 9,
+          "tp": 13
+        },
+        "specificity": 0.7826,
+        "npv": 0.6667,
+        "repo": "facebook/react",
+        "n_samples": 45
+      },
+      {
+        "accuracy": 0.7111,
+        "precision": 0.75,
+        "recall": 0.72,
+        "f1_score": 0.7347,
+        "roc_auc": 0.8,
+        "pr_auc": 0.8322,
+        "confusion_matrix": {
+          "tn": 14,
+          "fp": 6,
+          "fn": 7,
+          "tp": 18
+        },
+        "specificity": 0.7,
+        "npv": 0.6667,
+        "repo": "huggingface/transformers",
+        "n_samples": 45
+      },
+      {
+        "accuracy": 0.5778,
+        "precision": 0.7037,
+        "recall": 0.6333,
+        "f1_score": 0.6667,
+        "roc_auc": 0.5789,
+        "pr_auc": 0.7857,
+        "confusion_matrix": {
+          "tn": 7,
+          "fp": 8,
+          "fn": 11,
+          "tp": 19
+        },
+        "specificity": 0.4667,
+        "npv": 0.3889,
+        "repo": "kubernetes/kubernetes",
+        "n_samples": 45
+      },
+      {
+        "accuracy": 0.8387,
+        "precision": 0.8966,
+        "recall": 0.9286,
+        "f1_score": 0.9123,
+        "roc_auc": 0.4762,
+        "pr_auc": 0.8893,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 3,
+          "fn": 2,
+          "tp": 26
+        },
+        "specificity": 0.0,
+        "npv": 0.0,
+        "repo": "microsoft/vscode",
+        "n_samples": 31
+      },
+      {
+        "accuracy": 0.8409,
+        "precision": 0.8966,
+        "recall": 0.8667,
+        "f1_score": 0.8814,
+        "roc_auc": 0.8571,
+        "pr_auc": 0.9024,
+        "confusion_matrix": {
+          "tn": 11,
+          "fp": 3,
+          "fn": 4,
+          "tp": 26
+        },
+        "specificity": 0.7857,
+        "npv": 0.7333,
+        "repo": "pandas-dev/pandas",
+        "n_samples": 44
+      }
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n  not_merged       0.60      0.67      0.63        75\n      merged       0.80      0.76      0.78       135\n\n    accuracy                           0.72       210\n   macro avg       0.70      0.71      0.71       210\nweighted avg       0.73      0.72      0.73       210\n"
+  },
+  "randomforest": {
+    "overall": {
+      "accuracy": 0.7429,
+      "precision": 0.7455,
+      "recall": 0.9111,
+      "f1_score": 0.82,
+      "roc_auc": 0.8062,
+      "pr_auc": 0.8701,
+      "confusion_matrix": {
+        "tn": 33,
+        "fp": 42,
+        "fn": 12,
+        "tp": 123
+      },
+      "specificity": 0.44,
+      "npv": 0.7333
+    },
+    "per_repo": [
+      {
+        "accuracy": 0.7556,
+        "precision": 0.6897,
+        "recall": 0.9091,
+        "f1_score": 0.7843,
+        "roc_auc": 0.8953,
+        "pr_auc": 0.8881,
+        "confusion_matrix": {
+          "tn": 14,
+          "fp": 9,
+          "fn": 2,
+          "tp": 20
+        },
+        "specificity": 0.6087,
+        "npv": 0.875,
+        "repo": "facebook/react",
+        "n_samples": 45
+      },
+      {
+        "accuracy": 0.7556,
+        "precision": 0.7333,
+        "recall": 0.88,
+        "f1_score": 0.8,
+        "roc_auc": 0.817,
+        "pr_auc": 0.845,
+        "confusion_matrix": {
+          "tn": 12,
+          "fp": 8,
+          "fn": 3,
+          "tp": 22
+        },
+        "specificity": 0.6,
+        "npv": 0.8,
+        "repo": "huggingface/transformers",
+        "n_samples": 45
+      },
+      {
+        "accuracy": 0.5778,
+        "precision": 0.6486,
+        "recall": 0.8,
+        "f1_score": 0.7164,
+        "roc_auc": 0.5267,
+        "pr_auc": 0.717,
+        "confusion_matrix": {
+          "tn": 2,
+          "fp": 13,
+          "fn": 6,
+          "tp": 24
+        },
+        "specificity": 0.1333,
+        "npv": 0.25,
+        "repo": "kubernetes/kubernetes",
+        "n_samples": 45
+      },
+      {
+        "accuracy": 0.9032,
+        "precision": 0.9032,
+        "recall": 1.0,
+        "f1_score": 0.9492,
+        "roc_auc": 0.631,
+        "pr_auc": 0.9261,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 3,
+          "fn": 0,
+          "tp": 28
+        },
+        "specificity": 0.0,
+        "npv": 0.0,
+        "repo": "microsoft/vscode",
+        "n_samples": 31
+      },
+      {
+        "accuracy": 0.7727,
+        "precision": 0.7632,
+        "recall": 0.9667,
+        "f1_score": 0.8529,
+        "roc_auc": 0.8119,
+        "pr_auc": 0.8859,
+        "confusion_matrix": {
+          "tn": 5,
+          "fp": 9,
+          "fn": 1,
+          "tp": 29
+        },
+        "specificity": 0.3571,
+        "npv": 0.8333,
+        "repo": "pandas-dev/pandas",
+        "n_samples": 44
+      }
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n  not_merged       0.73      0.44      0.55        75\n      merged       0.75      0.91      0.82       135\n\n    accuracy                           0.74       210\n   macro avg       0.74      0.68      0.69       210\nweighted avg       0.74      0.74      0.72       210\n"
+  }
+}

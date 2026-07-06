@@ -1,0 +1,301 @@
+2026-07-06 16:44:48,022 [INFO] experiment2: 加载数据集: E:\latex\projects\experiments\experiment1\results\processed\dataset.csv
+2026-07-06 16:44:48,071 [INFO] experiment2: 数据集加载完成: 1500 条记录
+2026-07-06 16:44:48,072 [INFO] experiment2: 过滤 AI 生成代码: 97 → 移除, 剩余 1403 条
+2026-07-06 16:44:48,075 [WARNING] experiment2: 移除 6 条异常样本 (num_changed_files<=0 或负新增/删除)
+2026-07-06 16:44:48,075 [INFO] experiment2: 筛选完成: 1500 → 1397 条 (93.1%)
+2026-07-06 16:44:48,082 [INFO] experiment2: =======================================================
+2026-07-06 16:44:48,082 [INFO] experiment2: 人类代码数据集统计摘要
+2026-07-06 16:44:48,082 [INFO] experiment2: =======================================================
+2026-07-06 16:44:48,084 [INFO] experiment2: 总 PR 数:           1397
+2026-07-06 16:44:48,084 [INFO] experiment2: 已合并:             891 (63.78%)
+2026-07-06 16:44:48,084 [INFO] experiment2: 未合并:             506 (36.22%)
+2026-07-06 16:44:48,084 [INFO] experiment2: 含 AI Reviewer:     431 (30.85%)
+2026-07-06 16:44:48,084 [INFO] experiment2: -------------------------------------------------------
+2026-07-06 16:44:48,084 [INFO] experiment2: 仓库                               PR数      合并率
+2026-07-06 16:44:48,084 [INFO] experiment2: -------------------------------------------------------
+2026-07-06 16:44:48,084 [INFO] experiment2: facebook/react                   298    49.0%
+2026-07-06 16:44:48,085 [INFO] experiment2: huggingface/transformers         298    55.4%
+2026-07-06 16:44:48,085 [INFO] experiment2: kubernetes/kubernetes            298    66.4%
+2026-07-06 16:44:48,085 [INFO] experiment2: microsoft/vscode                 209    88.0%
+2026-07-06 16:44:48,085 [INFO] experiment2: pandas-dev/pandas                294    67.3%
+2026-07-06 16:44:48,085 [INFO] experiment2: =======================================================
+2026-07-06 16:44:48,125 [INFO] experiment2: 数据集已保存: E:\latex\projects\experiments\experiment2\results\processed\human_only_dataset.csv
+2026-07-06 16:44:48,127 [INFO] experiment2: 统计已保存: E:\latex\projects\experiments\experiment2\results\processed\human_dataset_stats.json
+2026-07-06 16:45:29,993 [INFO] experiment2: 加载人类代码数据集: E:\latex\projects\experiments\experiment2\results\processed\human_only_dataset.csv
+2026-07-06 16:45:30,037 [INFO] experiment2: 加载完成: 1397 条记录
+2026-07-06 16:45:30,039 [INFO] experiment2: 分层键类别数: 10
+2026-07-06 16:45:30,039 [INFO] experiment2: 划分比例: train=0.7, val=0.15, test=0.15
+2026-07-06 16:45:30,045 [INFO] experiment2: 划分完成: train=977 (69.9%), val=210 (15.0%), test=210 (15.0%)
+2026-07-06 16:45:30,046 [INFO] experiment2:   train: 977 条, 合并率=0.6377
+2026-07-06 16:45:30,046 [INFO] experiment2:   val: 210 条, 合并率=0.6333
+2026-07-06 16:45:30,046 [INFO] experiment2:   test: 210 条, 合并率=0.6429
+2026-07-06 16:45:30,085 [INFO] experiment2: 划分文件已保存: E:\latex\projects\experiments\experiment2\results\processed\splits.csv
+2026-07-06 16:45:30,094 [INFO] experiment2: 划分摘要已保存: E:\latex\projects\experiments\experiment2\results\processed\split_summary.json
+2026-07-06 16:46:28,226 [INFO] experiment2: 加载人类代码数据集: 1397 条
+2026-07-06 16:46:28,226 [INFO] experiment2: 加载原始数据: E:\latex\projects\experiments\raw\merged_raw.json
+2026-07-06 16:46:30,391 [INFO] experiment2: 原始数据 1500 条, 建立 pr_id 映射 1500 条
+2026-07-06 16:46:32,105 [INFO] experiment2: PR 级匹配: 1397/1397 (未匹配: 0)
+2026-07-06 16:46:32,105 [INFO] experiment2: PR 级 patch 覆盖: 1395/1397 (99.86%)
+2026-07-06 16:46:32,105 [INFO] experiment2: 文件级 patch 覆盖: 30778/31817 (96.73%)
+2026-07-06 16:46:32,105 [INFO] experiment2: 总计新增代码行: 2249967
+2026-07-06 16:46:32,105 [INFO] experiment2: Top 扩展名: {'.go': 8344, '.js': 4923, '.md': 4810, '.ts': 3049, '.json': 2229, '.py': 2035, '.yaml': 1412, '': 1108, '.sh': 504, '.rs': 443}
+2026-07-06 16:46:34,391 [INFO] experiment2: Patch 索引已保存: E:\latex\projects\experiments\experiment2\results\processed\patch_index.json (1397 条 PR)
+2026-07-06 16:46:34,399 [INFO] experiment2: 覆盖率统计已保存: E:\latex\projects\experiments\experiment2\results\processed\patch_coverage_stats.json
+2026-07-06 16:47:23,233 [INFO] experiment2: 加载人类代码数据集: 1397 条
+2026-07-06 16:47:23,233 [INFO] experiment2: 加载原始数据: E:\latex\projects\experiments\raw\merged_raw.json
+2026-07-06 16:47:25,193 [INFO] experiment2: 原始数据 1500 条, 建立 pr_id 映射 1500 条
+2026-07-06 16:47:27,286 [INFO] experiment2: PR 级匹配: 1397/1397 (未匹配: 0)
+2026-07-06 16:47:27,286 [INFO] experiment2: PR 级 patch 覆盖: 1395/1397 (99.86%)
+2026-07-06 16:47:27,286 [INFO] experiment2: 文件级 patch 覆盖: 30778/31817 (96.73%)
+2026-07-06 16:47:27,286 [INFO] experiment2: 总计新增代码行: 2249967
+2026-07-06 16:47:27,286 [INFO] experiment2: Top 扩展名: {'.go': 8344, '.js': 4923, '.md': 4810, '.ts': 3049, '.json': 2229, '.py': 2035, '.yaml': 1412, '': 1108, '.sh': 504, '.rs': 443}
+2026-07-06 16:47:28,126 [INFO] experiment2: Patch 索引已保存: E:\latex\projects\experiments\experiment2\results\processed\patch_index.json (1397 条 PR)
+2026-07-06 16:47:28,127 [INFO] experiment2: 覆盖率统计已保存: E:\latex\projects\experiments\experiment2\results\processed\patch_coverage_stats.json
+2026-07-06 16:54:37,189 [WARNING] experiment2: tree-sitter 初始化失败 (.ts): module 'tree_sitter_typescript' has no attribute 'language'
+2026-07-06 16:54:37,189 [WARNING] experiment2: tree-sitter 初始化失败 (.tsx): module 'tree_sitter_typescript' has no attribute 'language'
+2026-07-06 16:54:37,189 [INFO] experiment2: tree-sitter 初始化完成: 4 种语言可用 (['.go', '.js', '.jsx', '.py'])
+2026-07-06 16:54:37,802 [INFO] experiment2: PR 2982655795: parsed=1, total_nodes=38, func=0, fallback=0, assign=0
+2026-07-06 16:54:37,802 [INFO] experiment2: PR 2986965670: parsed=1, total_nodes=108, func=1, fallback=0, assign=3
+2026-07-06 16:54:37,802 [INFO] experiment2: PR 3053707565: parsed=0, total_nodes=0, func=0, fallback=0, assign=0
+2026-07-06 16:54:37,802 [INFO] experiment2: PR 3074670104: parsed=1, total_nodes=40, func=0, fallback=0, assign=1
+2026-07-06 16:54:37,834 [INFO] experiment2: PR 3487370131: parsed=54, total_nodes=28166, func=228, fallback=0, assign=265
+2026-07-06 16:55:10,810 [INFO] experiment2: tree-sitter 初始化完成: 6 种语言可用 (['.go', '.js', '.jsx', '.py', '.ts', '.tsx'])
+2026-07-06 16:55:10,811 [INFO] experiment2: 加载 patch 索引: E:\latex\projects\experiments\experiment2\results\processed\patch_index.json
+2026-07-06 16:55:11,408 [INFO] experiment2: 共 1397 条 PR，开始 AST 提取...
+2026-07-06 16:55:18,244 [INFO] experiment2: AST 进度: 200/1397 (tree-sitter: 176, fallback: 1)
+2026-07-06 16:55:22,966 [INFO] experiment2: AST 进度: 400/1397 (tree-sitter: 345, fallback: 2)
+2026-07-06 16:55:23,561 [INFO] experiment2: AST 进度: 600/1397 (tree-sitter: 498, fallback: 16)
+2026-07-06 16:55:26,186 [INFO] experiment2: AST 进度: 800/1397 (tree-sitter: 619, fallback: 38)
+2026-07-06 16:55:26,465 [INFO] experiment2: AST 进度: 1000/1397 (tree-sitter: 780, fallback: 38)
+2026-07-06 16:55:26,823 [INFO] experiment2: AST 进度: 1200/1397 (tree-sitter: 929, fallback: 40)
+2026-07-06 16:55:26,987 [INFO] experiment2: AST 提取完成: 1397 条 PR, 至少部分使用 tree-sitter: 1086, 含 fallback: 47
+2026-07-06 16:55:27,000 [INFO] experiment2: AST 解析成功率: avg=0.780
+2026-07-06 16:55:27,001 [INFO] experiment2: 含 fallback 文件 PR 数: 47
+2026-07-06 16:55:27,001 [INFO] experiment2: 完全未解析 PR 数: 286
+2026-07-06 16:55:27,009 [INFO] experiment2: AST 特征已保存: E:\latex\projects\experiments\experiment2\results\processed\ast_features.csv (1397 行 × 16 列)
+2026-07-06 16:55:27,025 [INFO] experiment2: Total time: 16.2s
+2026-07-06 16:57:11,566 [INFO] experiment2: PR 2982655795: cfg_avail=True, nodes=2, edges=1, branch=0, loop=0, exit=0, cyclo=1
+2026-07-06 16:57:11,566 [INFO] experiment2: PR 2986965670: cfg_avail=True, nodes=11, edges=11, branch=1, loop=0, exit=2, cyclo=2
+2026-07-06 16:57:11,566 [INFO] experiment2: PR 3053707565: cfg_avail=False, nodes=0, edges=0, branch=0, loop=0, exit=0, cyclo=0
+2026-07-06 16:57:11,566 [INFO] experiment2: PR 3074670104: cfg_avail=True, nodes=2, edges=1, branch=0, loop=0, exit=0, cyclo=1
+2026-07-06 16:57:11,571 [INFO] experiment2: PR 3487370131: cfg_avail=True, nodes=2018, edges=2088, branch=124, loop=15, exit=254, cyclo=178
+2026-07-06 16:57:11,571 [INFO] experiment2: 加载 patch 索引: E:\latex\projects\experiments\experiment2\results\processed\patch_index.json
+2026-07-06 16:57:12,167 [INFO] experiment2: 共 1397 条 PR，开始 CFG 构建...
+2026-07-06 16:57:13,733 [INFO] experiment2: CFG 进度: 200/1397 (有 CFG: 176)
+2026-07-06 16:57:14,879 [INFO] experiment2: CFG 进度: 400/1397 (有 CFG: 345)
+2026-07-06 16:57:14,973 [INFO] experiment2: CFG 进度: 600/1397 (有 CFG: 507)
+2026-07-06 16:57:15,669 [INFO] experiment2: CFG 进度: 800/1397 (有 CFG: 640)
+2026-07-06 16:57:15,724 [INFO] experiment2: CFG 进度: 1000/1397 (有 CFG: 801)
+2026-07-06 16:57:15,798 [INFO] experiment2: CFG 进度: 1200/1397 (有 CFG: 951)
+2026-07-06 16:57:15,821 [INFO] experiment2: CFG 构建完成: 1397 条 PR, 有 CFG: 1111 (79.5%)
+2026-07-06 16:57:15,825 [INFO] experiment2: CFG 可用率: 1111/1397
+2026-07-06 16:57:15,825 [INFO] experiment2: 平均 CFG 节点数: 887.7
+2026-07-06 16:57:15,825 [INFO] experiment2: 平均圈复杂度: 67.8
+2026-07-06 16:57:15,834 [INFO] experiment2: CFG 特征已保存: E:\latex\projects\experiments\experiment2\results\processed\cfg_features.csv (1397 行 × 14 列)
+2026-07-06 16:58:35,588 [INFO] experiment2: 加载数据源...
+2026-07-06 16:58:35,678 [INFO] experiment2: human=1397, splits=1397, ast=1397, cfg=1397
+2026-07-06 16:58:35,686 [INFO] experiment2: 合并后数据集: 1397 行
+2026-07-06 16:58:35,945 [INFO] experiment2: large_pr_flag 阈值 (code_churn Q75): 157.0
+2026-07-06 16:58:35,948 [INFO] experiment2: 主实验特征: 59 个
+2026-07-06 16:58:35,948 [INFO] experiment2: 上界实验特征: 69 个
+2026-07-06 16:58:36,097 [INFO] experiment2: 主实验特征已保存: E:\latex\projects\experiments\experiment2\results\processed\features_main.csv (1397 行 × 65 列)
+2026-07-06 16:58:36,155 [INFO] experiment2: 上界实验特征已保存: E:\latex\projects\experiments\experiment2\results\processed\features_upper_bound.csv (1397 行 × 75 列)
+2026-07-06 17:00:10,608 [INFO] experiment2: 
+=======================================================
+2026-07-06 17:00:10,608 [INFO] experiment2: 训练 main 实验模型
+2026-07-06 17:00:10,608 [INFO] experiment2: =======================================================
+2026-07-06 17:00:10,624 [INFO] experiment2: 加载特征: features_main.csv (1397 行 × 65 列)
+2026-07-06 17:00:10,628 [INFO] experiment2: Train: 977, Val: 210, Test: 210
+2026-07-06 17:00:10,628 [INFO] experiment2: 特征维度: 61
+2026-07-06 17:00:10,628 [INFO] experiment2: 训练 DummyClassifier (most_frequent)...
+2026-07-06 17:00:10,633 [INFO] experiment2: 训练 LogisticRegression (balanced)...
+2026-07-06 17:00:12,572 [INFO] experiment2: 训练 SVM (GridSearchCV)...
+2026-07-06 17:00:45,391 [INFO] experiment2: 
+=======================================================
+2026-07-06 17:00:45,391 [INFO] experiment2: 训练 main 实验模型
+2026-07-06 17:00:45,391 [INFO] experiment2: =======================================================
+2026-07-06 17:00:45,406 [INFO] experiment2: 加载特征: features_main.csv (1397 行 × 65 列)
+2026-07-06 17:00:45,410 [INFO] experiment2: Train: 977, Val: 210, Test: 210
+2026-07-06 17:00:45,410 [INFO] experiment2: 特征维度: 61
+2026-07-06 17:00:45,410 [INFO] experiment2: 训练 DummyClassifier (most_frequent)...
+2026-07-06 17:00:45,413 [INFO] experiment2: 训练 LogisticRegression (balanced)...
+2026-07-06 17:00:47,338 [INFO] experiment2: 训练 SVM (GridSearchCV)...
+2026-07-06 17:00:52,953 [INFO] experiment2: SVM 最佳参数: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+2026-07-06 17:00:52,954 [INFO] experiment2: SVM 最佳 CV ROC-AUC: 0.7302
+2026-07-06 17:00:52,954 [INFO] experiment2: 训练时间: 5.6s
+2026-07-06 17:00:52,976 [INFO] experiment2: 训练 Random Forest (GridSearchCV)...
+2026-07-06 17:01:14,601 [INFO] experiment2: RF 最佳参数: {'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 500}
+2026-07-06 17:01:14,601 [INFO] experiment2: RF 最佳 CV ROC-AUC: 0.7239
+2026-07-06 17:01:14,601 [INFO] experiment2: 训练时间: 21.6s
+2026-07-06 17:01:14,729 [INFO] experiment2: 模型已保存: E:\latex\projects\experiments\experiment2\results\models\svm_main.joblib
+2026-07-06 17:01:14,828 [INFO] experiment2: 模型已保存: E:\latex\projects\experiments\experiment2\results\models\randomforest_main.joblib
+2026-07-06 17:01:14,828 [INFO] experiment2: 
+========================================
+2026-07-06 17:01:14,828 [INFO] experiment2: main 实验测试集结果汇总:
+2026-07-06 17:01:14,828 [INFO] experiment2: ========================================
+2026-07-06 17:01:14,828 [INFO] experiment2:   dummy: Acc=0.6429, F1=0.7826, AUC=0.5000
+2026-07-06 17:01:14,828 [INFO] experiment2:   logistic_regression: Acc=0.7000, F1=0.7605, AUC=0.7457
+2026-07-06 17:01:14,828 [INFO] experiment2:   svm: Acc=0.7238, F1=0.7786, AUC=0.7788
+2026-07-06 17:01:14,828 [INFO] experiment2:   random_forest: Acc=0.7429, F1=0.8200, AUC=0.8062
+2026-07-06 17:01:14,864 [INFO] experiment2: 开始消融实验...
+2026-07-06 17:01:15,103 [INFO] experiment2:   消融 stats_text (36 特征): Acc=0.7286, F1=0.8094, AUC=0.8033
+2026-07-06 17:01:15,350 [INFO] experiment2:   消融 stats_text_ast (50 特征): Acc=0.7476, F1=0.8227, AUC=0.8057
+2026-07-06 17:01:15,583 [INFO] experiment2:   消融 stats_text_cfg (47 特征): Acc=0.7190, F1=0.8040, AUC=0.8051
+2026-07-06 17:01:15,818 [INFO] experiment2:   消融 main_all (61 特征): Acc=0.7429, F1=0.8200, AUC=0.8013
+2026-07-06 17:01:15,821 [INFO] experiment2: 特征重要性已保存: E:\latex\projects\experiments\experiment2\results\evaluation\feature_importance.csv
+2026-07-06 17:01:15,821 [INFO] experiment2: 
+Top-20 特征重要性:
+2026-07-06 17:01:15,821 [INFO] experiment2:    1. body_word_count: 0.0534
+2026-07-06 17:01:15,821 [INFO] experiment2:    2. body_len: 0.0506
+2026-07-06 17:01:15,821 [INFO] experiment2:    3. commit_msg_len: 0.0418
+2026-07-06 17:01:15,821 [INFO] experiment2:    4. deletions_per_file: 0.0400
+2026-07-06 17:01:15,822 [INFO] experiment2:    5. total_deletions: 0.0387
+2026-07-06 17:01:15,822 [INFO] experiment2:    6. title_len: 0.0357
+2026-07-06 17:01:15,822 [INFO] experiment2:    7. commit_msg_word_count: 0.0340
+2026-07-06 17:01:15,822 [INFO] experiment2:    8. additions_per_file: 0.0335
+2026-07-06 17:01:15,822 [INFO] experiment2:    9. net_lines: 0.0325
+2026-07-06 17:01:15,822 [INFO] experiment2:   10. code_churn: 0.0316
+2026-07-06 17:01:15,822 [INFO] experiment2:   11. total_additions: 0.0295
+2026-07-06 17:01:15,822 [INFO] experiment2:   12. title_word_count: 0.0293
+2026-07-06 17:01:15,822 [INFO] experiment2:   13. cfg_avg_out_degree: 0.0291
+2026-07-06 17:01:15,822 [INFO] experiment2:   14. ast_total_nodes: 0.0283
+2026-07-06 17:01:15,822 [INFO] experiment2:   15. ast_max_depth: 0.0229
+2026-07-06 17:01:15,822 [INFO] experiment2:   16. ast_error_node_count: 0.0225
+2026-07-06 17:01:15,822 [INFO] experiment2:   17. commits_per_file: 0.0222
+2026-07-06 17:01:15,822 [INFO] experiment2:   18. cfg_total_nodes: 0.0216
+2026-07-06 17:01:15,822 [INFO] experiment2:   19. cfg_total_edges: 0.0215
+2026-07-06 17:01:15,822 [INFO] experiment2:   20. repo_microsoft/vscode: 0.0205
+2026-07-06 17:01:15,822 [INFO] experiment2: 
+=======================================================
+2026-07-06 17:01:15,822 [INFO] experiment2: 训练 upper_bound 实验模型
+2026-07-06 17:01:15,822 [INFO] experiment2: =======================================================
+2026-07-06 17:01:15,836 [INFO] experiment2: 加载特征: features_upper_bound.csv (1397 行 × 75 列)
+2026-07-06 17:01:15,839 [INFO] experiment2: Train: 977, Val: 210, Test: 210
+2026-07-06 17:01:15,839 [INFO] experiment2: 特征维度: 71
+2026-07-06 17:01:15,840 [INFO] experiment2: 训练 DummyClassifier (most_frequent)...
+2026-07-06 17:01:15,843 [INFO] experiment2: 训练 LogisticRegression (balanced)...
+2026-07-06 17:01:15,870 [INFO] experiment2: 训练 SVM (GridSearchCV)...
+2026-07-06 17:01:20,602 [INFO] experiment2: SVM 最佳参数: {'C': 10, 'gamma': 0.01, 'kernel': 'rbf'}
+2026-07-06 17:01:20,603 [INFO] experiment2: SVM 最佳 CV ROC-AUC: 0.9253
+2026-07-06 17:01:20,603 [INFO] experiment2: 训练时间: 4.7s
+2026-07-06 17:01:20,624 [INFO] experiment2: 训练 Random Forest (GridSearchCV)...
+2026-07-06 17:01:44,041 [INFO] experiment2: RF 最佳参数: {'max_depth': 16, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+2026-07-06 17:01:44,041 [INFO] experiment2: RF 最佳 CV ROC-AUC: 0.9413
+2026-07-06 17:01:44,042 [INFO] experiment2: 训练时间: 23.4s
+2026-07-06 17:01:44,104 [INFO] experiment2: 模型已保存: E:\latex\projects\experiments\experiment2\results\models\svm_upper_bound.joblib
+2026-07-06 17:01:44,146 [INFO] experiment2: 模型已保存: E:\latex\projects\experiments\experiment2\results\models\randomforest_upper_bound.joblib
+2026-07-06 17:01:44,146 [INFO] experiment2: 
+========================================
+2026-07-06 17:01:44,146 [INFO] experiment2: upper_bound 实验测试集结果汇总:
+2026-07-06 17:01:44,146 [INFO] experiment2: ========================================
+2026-07-06 17:01:44,146 [INFO] experiment2:   dummy: Acc=0.6429, F1=0.7826, AUC=0.5000
+2026-07-06 17:01:44,146 [INFO] experiment2:   logistic_regression: Acc=0.8524, F1=0.8794, AUC=0.9340
+2026-07-06 17:01:44,146 [INFO] experiment2:   svm: Acc=0.8619, F1=0.8945, AUC=0.9111
+2026-07-06 17:01:44,146 [INFO] experiment2:   random_forest: Acc=0.9000, F1=0.9213, AUC=0.9546
+2026-07-06 17:01:44,153 [INFO] experiment2: 
+训练日志已保存: E:\latex\projects\experiments\experiment2\results\evaluation\training_log.json
+2026-07-06 17:03:45,468 [INFO] experiment2: 
+=======================================================
+2026-07-06 17:03:45,468 [INFO] experiment2: 评估 main 实验
+2026-07-06 17:03:45,468 [INFO] experiment2: =======================================================
+2026-07-06 17:03:45,484 [INFO] experiment2: 测试集: 210 样本, 正类率=0.6429
+2026-07-06 17:03:45,535 [INFO] experiment2: 加载模型: E:\latex\projects\experiments\experiment2\results\models\svm_main.joblib
+2026-07-06 17:03:45,574 [INFO] experiment2: 
+svm 测试集结果:
+2026-07-06 17:03:45,574 [INFO] experiment2:   Accuracy:     0.7238
+2026-07-06 17:03:45,574 [INFO] experiment2:   Precision:    0.8031
+2026-07-06 17:03:45,574 [INFO] experiment2:   Recall:       0.7556
+2026-07-06 17:03:45,575 [INFO] experiment2:   F1-score:     0.7786
+2026-07-06 17:03:45,575 [INFO] experiment2:   ROC-AUC:      0.7788
+2026-07-06 17:03:45,575 [INFO] experiment2:   PR-AUC:       0.8366
+2026-07-06 17:03:45,575 [INFO] experiment2:   Confusion:    TN=50, FP=25, FN=33, TP=102
+2026-07-06 17:03:45,575 [INFO] experiment2: 
+  分仓库性能:
+2026-07-06 17:03:45,575 [INFO] experiment2:     facebook/react: n=45, Acc=0.6889, F1=0.6500, AUC=0.7945
+2026-07-06 17:03:45,575 [INFO] experiment2:     huggingface/transformers: n=45, Acc=0.7111, F1=0.7347, AUC=0.8000
+2026-07-06 17:03:45,575 [INFO] experiment2:     kubernetes/kubernetes: n=45, Acc=0.5778, F1=0.6667, AUC=0.5789
+2026-07-06 17:03:45,575 [INFO] experiment2:     microsoft/vscode: n=31, Acc=0.8387, F1=0.9123, AUC=0.4762
+2026-07-06 17:03:45,576 [INFO] experiment2:     pandas-dev/pandas: n=44, Acc=0.8409, F1=0.8814, AUC=0.8571
+2026-07-06 17:03:45,772 [INFO] experiment2: 加载模型: E:\latex\projects\experiments\experiment2\results\models\randomforest_main.joblib
+2026-07-06 17:03:45,884 [INFO] experiment2: 
+randomforest 测试集结果:
+2026-07-06 17:03:45,885 [INFO] experiment2:   Accuracy:     0.7429
+2026-07-06 17:03:45,885 [INFO] experiment2:   Precision:    0.7455
+2026-07-06 17:03:45,885 [INFO] experiment2:   Recall:       0.9111
+2026-07-06 17:03:45,885 [INFO] experiment2:   F1-score:     0.8200
+2026-07-06 17:03:45,885 [INFO] experiment2:   ROC-AUC:      0.8062
+2026-07-06 17:03:45,885 [INFO] experiment2:   PR-AUC:       0.8701
+2026-07-06 17:03:45,885 [INFO] experiment2:   Confusion:    TN=33, FP=42, FN=12, TP=123
+2026-07-06 17:03:45,885 [INFO] experiment2: 
+  分仓库性能:
+2026-07-06 17:03:45,885 [INFO] experiment2:     facebook/react: n=45, Acc=0.7556, F1=0.7843, AUC=0.8953
+2026-07-06 17:03:45,885 [INFO] experiment2:     huggingface/transformers: n=45, Acc=0.7556, F1=0.8000, AUC=0.8170
+2026-07-06 17:03:45,885 [INFO] experiment2:     kubernetes/kubernetes: n=45, Acc=0.5778, F1=0.7164, AUC=0.5267
+2026-07-06 17:03:45,885 [INFO] experiment2:     microsoft/vscode: n=31, Acc=0.9032, F1=0.9492, AUC=0.6310
+2026-07-06 17:03:45,885 [INFO] experiment2:     pandas-dev/pandas: n=44, Acc=0.7727, F1=0.8529, AUC=0.8119
+2026-07-06 17:03:45,888 [INFO] experiment2: 评估结果已保存: E:\latex\projects\experiments\experiment2\results\evaluation\evaluation_main.json
+2026-07-06 17:03:45,888 [INFO] experiment2: 
+=======================================================
+2026-07-06 17:03:45,888 [INFO] experiment2: 评估 upper_bound 实验
+2026-07-06 17:03:45,888 [INFO] experiment2: =======================================================
+2026-07-06 17:03:45,904 [INFO] experiment2: 测试集: 210 样本, 正类率=0.6429
+2026-07-06 17:03:45,908 [INFO] experiment2: 加载模型: E:\latex\projects\experiments\experiment2\results\models\svm_upper_bound.joblib
+2026-07-06 17:03:45,939 [INFO] experiment2: 
+svm 测试集结果:
+2026-07-06 17:03:45,939 [INFO] experiment2:   Accuracy:     0.8619
+2026-07-06 17:03:45,939 [INFO] experiment2:   Precision:    0.8786
+2026-07-06 17:03:45,939 [INFO] experiment2:   Recall:       0.9111
+2026-07-06 17:03:45,939 [INFO] experiment2:   F1-score:     0.8945
+2026-07-06 17:03:45,939 [INFO] experiment2:   ROC-AUC:      0.9111
+2026-07-06 17:03:45,939 [INFO] experiment2:   PR-AUC:       0.9402
+2026-07-06 17:03:45,939 [INFO] experiment2:   Confusion:    TN=58, FP=17, FN=12, TP=123
+2026-07-06 17:03:45,940 [INFO] experiment2: 
+  分仓库性能:
+2026-07-06 17:03:45,940 [INFO] experiment2:     facebook/react: n=45, Acc=0.9556, F1=0.9545, AUC=0.9486
+2026-07-06 17:03:45,940 [INFO] experiment2:     huggingface/transformers: n=45, Acc=0.8444, F1=0.8627, AUC=0.9100
+2026-07-06 17:03:45,940 [INFO] experiment2:     kubernetes/kubernetes: n=45, Acc=0.7333, F1=0.8125, AUC=0.7511
+2026-07-06 17:03:45,940 [INFO] experiment2:     microsoft/vscode: n=31, Acc=0.9355, F1=0.9655, AUC=1.0000
+2026-07-06 17:03:45,940 [INFO] experiment2:     pandas-dev/pandas: n=44, Acc=0.8636, F1=0.8966, AUC=0.9452
+2026-07-06 17:03:45,971 [INFO] experiment2: 加载模型: E:\latex\projects\experiments\experiment2\results\models\randomforest_upper_bound.joblib
+2026-07-06 17:03:46,058 [INFO] experiment2: 
+randomforest 测试集结果:
+2026-07-06 17:03:46,058 [INFO] experiment2:   Accuracy:     0.9000
+2026-07-06 17:03:46,058 [INFO] experiment2:   Precision:    0.9318
+2026-07-06 17:03:46,058 [INFO] experiment2:   Recall:       0.9111
+2026-07-06 17:03:46,058 [INFO] experiment2:   F1-score:     0.9213
+2026-07-06 17:03:46,058 [INFO] experiment2:   ROC-AUC:      0.9546
+2026-07-06 17:03:46,058 [INFO] experiment2:   PR-AUC:       0.9753
+2026-07-06 17:03:46,058 [INFO] experiment2:   Confusion:    TN=66, FP=9, FN=12, TP=123
+2026-07-06 17:03:46,058 [INFO] experiment2: 
+  分仓库性能:
+2026-07-06 17:03:46,058 [INFO] experiment2:     facebook/react: n=45, Acc=0.9556, F1=0.9524, AUC=0.9664
+2026-07-06 17:03:46,058 [INFO] experiment2:     huggingface/transformers: n=45, Acc=0.8889, F1=0.8936, AUC=0.9360
+2026-07-06 17:03:46,058 [INFO] experiment2:     kubernetes/kubernetes: n=45, Acc=0.7778, F1=0.8387, AUC=0.8689
+2026-07-06 17:03:46,058 [INFO] experiment2:     microsoft/vscode: n=31, Acc=1.0000, F1=1.0000, AUC=1.0000
+2026-07-06 17:03:46,058 [INFO] experiment2:     pandas-dev/pandas: n=44, Acc=0.9091, F1=0.9333, AUC=0.9595
+2026-07-06 17:03:46,061 [INFO] experiment2: 评估结果已保存: E:\latex\projects\experiments\experiment2\results\evaluation\evaluation_upper_bound.json
+2026-07-06 17:03:46,062 [INFO] experiment2: 评估报告已保存: E:\latex\projects\experiments\experiment2\results\evaluation\evaluation_report.md
+2026-07-06 17:04:09,645 [INFO] experiment2: 开始生成可视化图表...
+2026-07-06 17:04:09,645 [INFO] experiment2: 生成图表 01: 人类代码数据集分布...
+2026-07-06 17:04:10,038 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\01_human_dataset_distribution.png
+2026-07-06 17:04:10,039 [INFO] experiment2: 生成图表 02: 语言与 patch 覆盖率...
+2026-07-06 17:04:10,287 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\02_language_patch_coverage.png
+2026-07-06 17:04:10,287 [INFO] experiment2: 生成图表 03: AST/CFG 覆盖率...
+2026-07-06 17:04:10,616 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\03_ast_cfg_coverage.png
+2026-07-06 17:04:10,626 [INFO] experiment2: 生成图表 04: 特征相关性热力图...
+2026-07-06 17:04:11,464 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\04_feature_correlation_heatmap.png
+2026-07-06 17:04:11,464 [INFO] experiment2: 生成图表 05: ROC 曲线对比...
+2026-07-06 17:04:11,821 [ERROR] experiment2: 图表 05: ROC 曲线对比 生成失败: X has 61 features, but SVC is expecting 71 features as input.
+2026-07-06 17:04:11,835 [INFO] experiment2: 生成图表 06: SVM 混淆矩阵...
+2026-07-06 17:04:11,862 [ERROR] experiment2: 图表 06: SVM 混淆矩阵 生成失败: ConfusionMatrixDisplay.from_predictions() got an unexpected keyword argument 'display_names'
+2026-07-06 17:04:11,863 [INFO] experiment2: 生成图表 07: RF 混淆矩阵...
+2026-07-06 17:04:11,863 [INFO] experiment2: 生成图表 08: 特征重要性...
+2026-07-06 17:04:12,158 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\08_feature_importance.png
+2026-07-06 17:04:12,158 [INFO] experiment2: 生成图表 09: 消融实验对比...
+2026-07-06 17:04:12,394 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\09_ablation_comparison.png
+2026-07-06 17:04:12,395 [INFO] experiment2: 生成图表 10: 分仓库性能...
+2026-07-06 17:04:12,688 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\10_per_repo_performance.png
+2026-07-06 17:04:12,688 [INFO] experiment2: 图表生成完成，输出目录: E:\latex\projects\experiments\experiment2\figures
+2026-07-06 17:04:47,117 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\05_roc_curve_main.png
+2026-07-06 17:04:47,287 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\06_confusion_matrix_svm.png
+2026-07-06 17:04:47,551 [INFO] experiment2: 图表已保存: E:\latex\projects\experiments\experiment2\figures\07_confusion_matrix_rf.png

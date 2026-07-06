@@ -1,0 +1,90 @@
+{
+  "total": 1397,
+  "random_seed": 42,
+  "splits": {
+    "train": {
+      "count": 977,
+      "merged": 623,
+      "unmerged": 354,
+      "merge_rate": 0.6377,
+      "per_repo": {
+        "facebook/react": {
+          "count": 208,
+          "merged": 102
+        },
+        "huggingface/transformers": {
+          "count": 208,
+          "merged": 115
+        },
+        "kubernetes/kubernetes": {
+          "count": 208,
+          "merged": 138
+        },
+        "microsoft/vscode": {
+          "count": 147,
+          "merged": 129
+        },
+        "pandas-dev/pandas": {
+          "count": 206,
+          "merged": 139
+        }
+      }
+    },
+    "val": {
+      "count": 210,
+      "merged": 133,
+      "unmerged": 77,
+      "merge_rate": 0.6333,
+      "per_repo": {
+        "facebook/react": {
+          "count": 45,
+          "merged": 22
+        },
+        "huggingface/transformers": {
+          "count": 45,
+          "merged": 25
+        },
+        "kubernetes/kubernetes": {
+          "count": 45,
+          "merged": 30
+        },
+        "microsoft/vscode": {
+          "count": 31,
+          "merged": 27
+        },
+        "pandas-dev/pandas": {
+          "count": 44,
+          "merged": 29
+        }
+      }
+    },
+    "test": {
+      "count": 210,
+      "merged": 135,
+      "unmerged": 75,
+      "merge_rate": 0.6429,
+      "per_repo": {
+        "facebook/react": {
+          "count": 45,
+          "merged": 22
+        },
+        "huggingface/transformers": {
+          "count": 45,
+          "merged": 25
+        },
+        "kubernetes/kubernetes": {
+          "count": 45,
+          "merged": 30
+        },
+        "microsoft/vscode": {
+          "count": 31,
+          "merged": 28
+        },
+        "pandas-dev/pandas": {
+          "count": 44,
+          "merged": 30
+        }
+      }
+    }
+  }
+}

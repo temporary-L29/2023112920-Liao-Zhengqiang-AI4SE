@@ -1,0 +1,49 @@
+{
+  "title": "实验二：人类代码数据集统计",
+  "overall": {
+    "total_prs": 1397,
+    "merged_count": 891,
+    "merged_pct": 63.78,
+    "unmerged_count": 506,
+    "unmerged_pct": 36.22,
+    "ai_reviewer_count": 431,
+    "ai_reviewer_pct": 30.85
+  },
+  "per_repo": [
+    {
+      "repo": "facebook/react",
+      "prs": 298,
+      "merged": 146,
+      "merge_rate": 48.99,
+      "ai_reviewer_count": 33
+    },
+    {
+      "repo": "huggingface/transformers",
+      "prs": 298,
+      "merged": 165,
+      "merge_rate": 55.37,
+      "ai_reviewer_count": 46
+    },
+    {
+      "repo": "kubernetes/kubernetes",
+      "prs": 298,
+      "merged": 198,
+      "merge_rate": 66.44,
+      "ai_reviewer_count": 113
+    },
+    {
+      "repo": "microsoft/vscode",
+      "prs": 209,
+      "merged": 184,
+      "merge_rate": 88.04,
+      "ai_reviewer_count": 201
+    },
+    {
+      "repo": "pandas-dev/pandas",
+      "prs": 294,
+      "merged": 198,
+      "merge_rate": 67.35,
+      "ai_reviewer_count": 38
+    }
+  ]
+}

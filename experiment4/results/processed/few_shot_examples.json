@@ -1,0 +1,34 @@
+[
+  {
+    "id": "fewshot_merged_1",
+    "type": "merged",
+    "pr_id": 3679389382,
+    "repo": "microsoft/vscode",
+    "title": "Let markdown preview scripts mark themselves as modules",
+    "body": "Fixes #316328\\n\\n<!-- Thank you for submitting a Pull Request. Please:\\n* Read our Pull Request guidelines:\\n  https://github.com/microsoft/vscode/wiki/How-to-Contribute#pull-requests\\n* Associate an issue with the Pull Request.\\n* Ensure that the code is up-to-date with the `main` branch.\\n* Include a description of the proposed changes and how to test them.\\n-->\\n"
+  },
+  {
+    "id": "fewshot_merged_2",
+    "type": "merged",
+    "pr_id": 3546386373,
+    "repo": "facebook/react",
+    "title": "[eprh] Add back a no-op for removed component-hook-factories rule",
+    "body": "The `component-hook-factories` rule was removed in #35825 as part of a feature flag cleanup, but was listed in the README as part of the manual config example. This broke users who used a manual config (copied from the old README) in eslint-plugin-react-hooks 7.1.0. This adds back a deprecated no-op rule as a fix.\\n\\n\\n#35825 removed other rules (`automatic-effect-dependencies` and `fire`), but these were for experimental features that did not ship. These were also not referenced in the README.\\"
+  },
+  {
+    "id": "fewshot_unmerged_1",
+    "type": "not_merged",
+    "pr_id": 3432160310,
+    "repo": "kubernetes/kubernetes",
+    "title": "Fix goroutine leaks in ephemeral volume controller test",
+    "body": "## Summary\\n\\nFixes #134565\\n\\nAs discussed in the issue, the `TestSyncHandler` test in `pkg/controller/volume/ephemeral/controller_test.go` leaks goroutines because it uses `context.Background()` which never cancels, leaving informer and workqueue goroutines running after test completion.\\n\\nNow that context support has been added to `tools/cache` (#126387), the informers can be cleanly shut down via context cancellation. This PR:\\n\\n- Replaces `context.Background()` with `context.WithCancel()`"
+  },
+  {
+    "id": "fewshot_unmerged_2",
+    "type": "not_merged",
+    "pr_id": 3480984974,
+    "repo": "facebook/react",
+    "title": "Bump lodash from 4.17.21 to 4.18.1 in /scripts/devtools",
+    "body": "Bumps [lodash](https://github.com/lodash/lodash) from 4.17.21 to 4.18.1.\\n<details>\\n<summary>Release notes</summary>\\n<p><em>Sourced from <a href=\"https://github.com/lodash/lodash/releases\">lodash's releases</a>.</em></p>\\n<blockquote>\\n<h2>4.18.1</h2>\\n<h2>Bugs</h2>\\n<p>Fixes a <code>ReferenceError</code> issue in <code>lodash</code> <code>lodash-es</code> <code>lodash-amd</code> and <code>lodash.template</code> when using the <code>template</code> and <code>fromPairs</code> functions from the"
+  }
+]

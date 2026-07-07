@@ -1,0 +1,277 @@
+{
+  "per_combination": {
+    "P1_C1": {
+      "prompt_type": "P1",
+      "context_type": "C1",
+      "n_samples": 44,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1163,
+      "avg_rouge2": 0.0081,
+      "avg_rougeL": 0.0744,
+      "avg_generated_comments": 2.61,
+      "severity_distribution": {
+        "minor": 56,
+        "nit": 47,
+        "major": 9,
+        "blocker": 3
+      }
+    },
+    "P1_C2": {
+      "prompt_type": "P1",
+      "context_type": "C2",
+      "n_samples": 44,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1127,
+      "avg_rouge2": 0.0094,
+      "avg_rougeL": 0.0736,
+      "avg_generated_comments": 2.93,
+      "severity_distribution": {
+        "minor": 54,
+        "nit": 67,
+        "major": 6,
+        "blocker": 2
+      }
+    },
+    "P1_C3": {
+      "prompt_type": "P1",
+      "context_type": "C3",
+      "n_samples": 45,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1212,
+      "avg_rouge2": 0.0112,
+      "avg_rougeL": 0.076,
+      "avg_generated_comments": 2.82,
+      "severity_distribution": {
+        "minor": 59,
+        "nit": 63,
+        "major": 4,
+        "info": 1
+      }
+    },
+    "P1_C4": {
+      "prompt_type": "P1",
+      "context_type": "C4",
+      "n_samples": 42,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1172,
+      "avg_rouge2": 0.01,
+      "avg_rougeL": 0.0712,
+      "avg_generated_comments": 2.74,
+      "severity_distribution": {
+        "minor": 48,
+        "nit": 57,
+        "major": 6,
+        "blocker": 3,
+        "comment": 1
+      }
+    },
+    "P2_C1": {
+      "prompt_type": "P2",
+      "context_type": "C1",
+      "n_samples": 45,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1057,
+      "avg_rouge2": 0.007,
+      "avg_rougeL": 0.0674,
+      "avg_generated_comments": 2.2,
+      "severity_distribution": {
+        "minor": 47,
+        "major": 7,
+        "nit": 43,
+        "blocker": 2
+      }
+    },
+    "P2_C2": {
+      "prompt_type": "P2",
+      "context_type": "C2",
+      "n_samples": 44,
+      "avg_bleu": 0.0006,
+      "avg_rouge1": 0.1086,
+      "avg_rouge2": 0.0104,
+      "avg_rougeL": 0.0703,
+      "avg_generated_comments": 2.27,
+      "severity_distribution": {
+        "minor": 42,
+        "nit": 51,
+        "blocker": 2,
+        "major": 4,
+        "info": 1
+      }
+    },
+    "P2_C3": {
+      "prompt_type": "P2",
+      "context_type": "C3",
+      "n_samples": 45,
+      "avg_bleu": 0.0006,
+      "avg_rouge1": 0.1133,
+      "avg_rouge2": 0.0093,
+      "avg_rougeL": 0.0725,
+      "avg_generated_comments": 2.62,
+      "severity_distribution": {
+        "minor": 49,
+        "nit": 62,
+        "major": 5,
+        "info": 1,
+        "blocker": 1
+      }
+    },
+    "P2_C4": {
+      "prompt_type": "P2",
+      "context_type": "C4",
+      "n_samples": 44,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1056,
+      "avg_rouge2": 0.011,
+      "avg_rougeL": 0.0707,
+      "avg_generated_comments": 2.41,
+      "severity_distribution": {
+        "minor": 41,
+        "nit": 61,
+        "major": 4
+      }
+    },
+    "P3_C1": {
+      "prompt_type": "P3",
+      "context_type": "C1",
+      "n_samples": 45,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.0897,
+      "avg_rouge2": 0.0064,
+      "avg_rougeL": 0.0552,
+      "avg_generated_comments": 1.64,
+      "severity_distribution": {
+        "major": 7,
+        "minor": 34,
+        "nit": 26,
+        "blocker": 7
+      }
+    },
+    "P3_C2": {
+      "prompt_type": "P3",
+      "context_type": "C2",
+      "n_samples": 45,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.107,
+      "avg_rouge2": 0.0091,
+      "avg_rougeL": 0.0653,
+      "avg_generated_comments": 1.67,
+      "severity_distribution": {
+        "minor": 36,
+        "nit": 28,
+        "major": 9,
+        "blocker": 2
+      }
+    },
+    "P3_C3": {
+      "prompt_type": "P3",
+      "context_type": "C3",
+      "n_samples": 44,
+      "avg_bleu": 0.0006,
+      "avg_rouge1": 0.1137,
+      "avg_rouge2": 0.0096,
+      "avg_rougeL": 0.072,
+      "avg_generated_comments": 1.73,
+      "severity_distribution": {
+        "minor": 26,
+        "nit": 39,
+        "blocker": 4,
+        "major": 7
+      }
+    },
+    "P3_C4": {
+      "prompt_type": "P3",
+      "context_type": "C4",
+      "n_samples": 44,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1168,
+      "avg_rouge2": 0.0109,
+      "avg_rougeL": 0.0694,
+      "avg_generated_comments": 1.45,
+      "severity_distribution": {
+        "minor": 28,
+        "nit": 27,
+        "blocker": 4,
+        "major": 5
+      }
+    },
+    "P4_C1": {
+      "prompt_type": "P4",
+      "context_type": "C1",
+      "n_samples": 45,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.096,
+      "avg_rouge2": 0.0047,
+      "avg_rougeL": 0.0595,
+      "avg_generated_comments": 2.02,
+      "severity_distribution": {
+        "nit": 39,
+        "minor": 44,
+        "major": 7,
+        "other": 1
+      }
+    },
+    "P4_C2": {
+      "prompt_type": "P4",
+      "context_type": "C2",
+      "n_samples": 43,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.0927,
+      "avg_rouge2": 0.0054,
+      "avg_rougeL": 0.0588,
+      "avg_generated_comments": 1.77,
+      "severity_distribution": {
+        "minor": 36,
+        "nit": 38,
+        "blocker": 1,
+        "major": 1
+      }
+    },
+    "P4_C3": {
+      "prompt_type": "P4",
+      "context_type": "C3",
+      "n_samples": 45,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1093,
+      "avg_rouge2": 0.0085,
+      "avg_rougeL": 0.0695,
+      "avg_generated_comments": 1.87,
+      "severity_distribution": {
+        "minor": 33,
+        "nit": 45,
+        "major": 5,
+        "blocker": 1
+      }
+    },
+    "P4_C4": {
+      "prompt_type": "P4",
+      "context_type": "C4",
+      "n_samples": 44,
+      "avg_bleu": 0.0,
+      "avg_rouge1": 0.1061,
+      "avg_rouge2": 0.0082,
+      "avg_rougeL": 0.0702,
+      "avg_generated_comments": 1.93,
+      "severity_distribution": {
+        "major": 4,
+        "minor": 37,
+        "nit": 44
+      }
+    }
+  },
+  "extra_statistics": {
+    "total_pr_with_real_review": 45,
+    "empty_ref_prs_generated_comments": 68,
+    "empty_ref_prs_total": 80,
+    "overall_severity_distribution": {
+      "minor": 734,
+      "nit": 789,
+      "major": 114,
+      "blocker": 45,
+      "info": 3,
+      "other": 1,
+      "comment": 1
+    },
+    "overall_total_comments": 1687,
+    "avg_comments_per_response": 2.14
+  }
+}

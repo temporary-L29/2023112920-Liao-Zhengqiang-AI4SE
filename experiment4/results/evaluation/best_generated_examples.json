@@ -1,0 +1,26 @@
+[
+  {
+    "pr_id": 3826336938,
+    "prompt_type": "P2",
+    "context_type": "C3",
+    "bleu": 0.0271,
+    "real_review": "[Review by copilot-pull-request-reviewer[bot]]: ## Pull request overview\\n\\nRemoves the primary/secondary sidebar visibility toggle actions from the **Agents window title bar context menu** while keeping the commands themselves available via other entry points (e.g. command palette, and existing title bar layout placements where applicable).\\n\\n**Changes:**\\n- Remove `Toggle Primary Side Bar Visibility` from `Menus.TitleBarContext` contribution.\\n- Remove `Toggle Secondary Side Bar Visibility` f",
+    "generated_review": "Ensure that the removed sidebar toggle commands are still accessible via the intended alternate paths (e.g., existing title bar layout placements) and that no functional gaps are introduced. The added line 'f1: true' appears to set a property; verify that this change is intentional and consistent with the surrounding code (e.g., object structure, context of 'f1')."
+  },
+  {
+    "pr_id": 3065696649,
+    "prompt_type": "P2",
+    "context_type": "C2",
+    "bleu": 0.0243,
+    "real_review": "[Review by BenTheElder]: I think we're going to have to sort out building and uploading this tool for CI to pick it up, I don't think it has been updated in ages ... | [Inline on cluster/gce/gci/mounter/mounter.go L86]: As a quick fix this seems to address the problem. I'm just wondering about the retry logic: it retries once. Wouldn't it be better to retry in a loop? | [Inline on cluster/gce/gci/mounter/mounter.go L86]: kubelet will retry the mount operation if the operation is failed. However,",
+    "generated_review": "The comment says 'ignore this error and try to mount again' but the code does not show an explicit retry mechanism. It might be relying on an external retry loop (e.g., kubelet's mount retry). If the function returns successfully after ignoring this error, ensure that the caller will retry the mount operation. The logic should be clear to avoid confusion. The constant `nfsRPCBindAlreadyRunningErrMsg` includes a trailing newline. Ensure that the actual output from `rpcbind` matches this exactly ("
+  },
+  {
+    "pr_id": 3070792182,
+    "prompt_type": "P3",
+    "context_type": "C3",
+    "bleu": 0.0175,
+    "real_review": "[Review by PiotrProkop]: Please split the change into 2 commits, one for memorymanager and second for devicemanager. | [Review by klueska]: @fanzhangio, thanks for being patient while I took the time to look through this PR in detail.\\n\\nUnfortunately, I don't think we can make this change without a KEP. When first discussing this PR on slack, I thought this problem could be cast as a bug fix for systems that online a bunch of \"unusable\" NUMA nodes from the perspective of the `TopologyManager`, ",
+    "generated_review": "The new `candidateNUMANodes` function is not fully visible in the diff; please ensure it correctly filters to only NUMA nodes that have available or reusable devices for the resource, and that the fallback 'any-NUMA' hint is inserted only when candidate nodes are a proper subset of all NUMA nodes. Consider adding a unit test for the edge case where no devices are available on any NUMA node. Skipping NUMA nodes without CPUs in `selectableNUMANodes` is a behavioral change. Confirm that on systems "
+  }
+]

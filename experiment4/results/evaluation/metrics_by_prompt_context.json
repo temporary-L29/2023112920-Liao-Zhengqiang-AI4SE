@@ -1,0 +1,450 @@
+{
+  "P1_C1": {
+    "prompt_type": "P1",
+    "context_type": "C1",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.8547,
+    "avg_duration_ms": 8664.0,
+    "accuracy": 0.6530612244897959,
+    "precision": 0.6521739130434783,
+    "recall": 0.967741935483871,
+    "f1": 0.7792207792207793,
+    "roc_auc": 0.492831541218638,
+    "confusion_matrix": [
+      [
+        2,
+        16
+      ],
+      [
+        1,
+        30
+      ]
+    ],
+    "tn": 2,
+    "fp": 16,
+    "fn": 1,
+    "tp": 30
+  },
+  "P1_C2": {
+    "prompt_type": "P1",
+    "context_type": "C2",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.9014,
+    "avg_duration_ms": 9523.0,
+    "accuracy": 0.6530612244897959,
+    "precision": 0.6382978723404256,
+    "recall": 1.0,
+    "f1": 0.7792207792207793,
+    "roc_auc": 0.5754385964912281,
+    "confusion_matrix": [
+      [
+        2,
+        17
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "tn": 2,
+    "fp": 17,
+    "fn": 0,
+    "tp": 30
+  },
+  "P1_C3": {
+    "prompt_type": "P1",
+    "context_type": "C3",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.8992,
+    "avg_duration_ms": 9860.0,
+    "accuracy": 0.66,
+    "precision": 0.6458333333333334,
+    "recall": 1.0,
+    "f1": 0.7848101265822784,
+    "roc_auc": 0.5449915110356536,
+    "confusion_matrix": [
+      [
+        2,
+        17
+      ],
+      [
+        0,
+        31
+      ]
+    ],
+    "tn": 2,
+    "fp": 17,
+    "fn": 0,
+    "tp": 31
+  },
+  "P1_C4": {
+    "prompt_type": "P1",
+    "context_type": "C4",
+    "n_valid": 47,
+    "n_total": 50,
+    "parse_fail_rate": 0.06,
+    "avg_probability": 0.8923,
+    "avg_duration_ms": 8985.0,
+    "accuracy": 0.6382978723404256,
+    "precision": 0.6222222222222222,
+    "recall": 1.0,
+    "f1": 0.7671232876712328,
+    "roc_auc": 0.5159774436090225,
+    "confusion_matrix": [
+      [
+        2,
+        17
+      ],
+      [
+        0,
+        28
+      ]
+    ],
+    "tn": 2,
+    "fp": 17,
+    "fn": 0,
+    "tp": 28
+  },
+  "P2_C1": {
+    "prompt_type": "P2",
+    "context_type": "C1",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.7978,
+    "avg_duration_ms": 9483.0,
+    "accuracy": 0.62,
+    "precision": 0.6363636363636364,
+    "recall": 0.9032258064516129,
+    "f1": 0.7466666666666667,
+    "roc_auc": 0.5594227504244482,
+    "confusion_matrix": [
+      [
+        3,
+        16
+      ],
+      [
+        3,
+        28
+      ]
+    ],
+    "tn": 3,
+    "fp": 16,
+    "fn": 3,
+    "tp": 28
+  },
+  "P2_C2": {
+    "prompt_type": "P2",
+    "context_type": "C2",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.8953,
+    "avg_duration_ms": 8779.0,
+    "accuracy": 0.6938775510204082,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "roc_auc": 0.5824561403508772,
+    "confusion_matrix": [
+      [
+        4,
+        15
+      ],
+      [
+        0,
+        30
+      ]
+    ],
+    "tn": 4,
+    "fp": 15,
+    "fn": 0,
+    "tp": 30
+  },
+  "P2_C3": {
+    "prompt_type": "P2",
+    "context_type": "C3",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.875,
+    "avg_duration_ms": 9577.0,
+    "accuracy": 0.7,
+    "precision": 0.6739130434782609,
+    "recall": 1.0,
+    "f1": 0.8051948051948052,
+    "roc_auc": 0.5424448217317488,
+    "confusion_matrix": [
+      [
+        4,
+        15
+      ],
+      [
+        0,
+        31
+      ]
+    ],
+    "tn": 4,
+    "fp": 15,
+    "fn": 0,
+    "tp": 31
+  },
+  "P2_C4": {
+    "prompt_type": "P2",
+    "context_type": "C4",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.8667,
+    "avg_duration_ms": 9404.0,
+    "accuracy": 0.673469387755102,
+    "precision": 0.6666666666666666,
+    "recall": 0.967741935483871,
+    "f1": 0.7894736842105263,
+    "roc_auc": 0.6433691756272402,
+    "confusion_matrix": [
+      [
+        3,
+        15
+      ],
+      [
+        1,
+        30
+      ]
+    ],
+    "tn": 3,
+    "fp": 15,
+    "fn": 1,
+    "tp": 30
+  },
+  "P3_C1": {
+    "prompt_type": "P3",
+    "context_type": "C1",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.709,
+    "avg_duration_ms": 9496.0,
+    "accuracy": 0.6,
+    "precision": 0.6486486486486487,
+    "recall": 0.7741935483870968,
+    "f1": 0.7058823529411765,
+    "roc_auc": 0.5203735144312394,
+    "confusion_matrix": [
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        24
+      ]
+    ],
+    "tn": 6,
+    "fp": 13,
+    "fn": 7,
+    "tp": 24
+  },
+  "P3_C2": {
+    "prompt_type": "P3",
+    "context_type": "C2",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.827,
+    "avg_duration_ms": 9915.0,
+    "accuracy": 0.62,
+    "precision": 0.6363636363636364,
+    "recall": 0.9032258064516129,
+    "f1": 0.7466666666666667,
+    "roc_auc": 0.5814940577249577,
+    "confusion_matrix": [
+      [
+        3,
+        16
+      ],
+      [
+        3,
+        28
+      ]
+    ],
+    "tn": 3,
+    "fp": 16,
+    "fn": 3,
+    "tp": 28
+  },
+  "P3_C3": {
+    "prompt_type": "P3",
+    "context_type": "C3",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.8678,
+    "avg_duration_ms": 8601.0,
+    "accuracy": 0.5918367346938775,
+    "precision": 0.6136363636363636,
+    "recall": 0.9,
+    "f1": 0.7297297297297297,
+    "roc_auc": 0.5078947368421053,
+    "confusion_matrix": [
+      [
+        2,
+        17
+      ],
+      [
+        3,
+        27
+      ]
+    ],
+    "tn": 2,
+    "fp": 17,
+    "fn": 3,
+    "tp": 27
+  },
+  "P3_C4": {
+    "prompt_type": "P3",
+    "context_type": "C4",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.8502,
+    "avg_duration_ms": 8606.0,
+    "accuracy": 0.6122448979591837,
+    "precision": 0.6363636363636364,
+    "recall": 0.9032258064516129,
+    "f1": 0.7466666666666667,
+    "roc_auc": 0.5618279569892473,
+    "confusion_matrix": [
+      [
+        2,
+        16
+      ],
+      [
+        3,
+        28
+      ]
+    ],
+    "tn": 2,
+    "fp": 16,
+    "fn": 3,
+    "tp": 28
+  },
+  "P4_C1": {
+    "prompt_type": "P4",
+    "context_type": "C1",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.8728,
+    "avg_duration_ms": 9130.0,
+    "accuracy": 0.66,
+    "precision": 0.6458333333333334,
+    "recall": 1.0,
+    "f1": 0.7848101265822784,
+    "roc_auc": 0.5441426146010186,
+    "confusion_matrix": [
+      [
+        2,
+        17
+      ],
+      [
+        0,
+        31
+      ]
+    ],
+    "tn": 2,
+    "fp": 17,
+    "fn": 0,
+    "tp": 31
+  },
+  "P4_C2": {
+    "prompt_type": "P4",
+    "context_type": "C2",
+    "n_valid": 48,
+    "n_total": 50,
+    "parse_fail_rate": 0.04,
+    "avg_probability": 0.8783,
+    "avg_duration_ms": 9466.0,
+    "accuracy": 0.6458333333333334,
+    "precision": 0.6444444444444445,
+    "recall": 0.9666666666666667,
+    "f1": 0.7733333333333333,
+    "roc_auc": 0.5509259259259258,
+    "confusion_matrix": [
+      [
+        2,
+        16
+      ],
+      [
+        1,
+        29
+      ]
+    ],
+    "tn": 2,
+    "fp": 16,
+    "fn": 1,
+    "tp": 29
+  },
+  "P4_C3": {
+    "prompt_type": "P4",
+    "context_type": "C3",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_fail_rate": 0.0,
+    "avg_probability": 0.8982,
+    "avg_duration_ms": 10025.0,
+    "accuracy": 0.66,
+    "precision": 0.6458333333333334,
+    "recall": 1.0,
+    "f1": 0.7848101265822784,
+    "roc_auc": 0.5314091680814941,
+    "confusion_matrix": [
+      [
+        2,
+        17
+      ],
+      [
+        0,
+        31
+      ]
+    ],
+    "tn": 2,
+    "fp": 17,
+    "fn": 0,
+    "tp": 31
+  },
+  "P4_C4": {
+    "prompt_type": "P4",
+    "context_type": "C4",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_fail_rate": 0.02,
+    "avg_probability": 0.9037,
+    "avg_duration_ms": 9182.0,
+    "accuracy": 0.673469387755102,
+    "precision": 0.6595744680851063,
+    "recall": 1.0,
+    "f1": 0.7948717948717948,
+    "roc_auc": 0.4740143369175627,
+    "confusion_matrix": [
+      [
+        2,
+        16
+      ],
+      [
+        0,
+        31
+      ]
+    ],
+    "tn": 2,
+    "fp": 16,
+    "fn": 0,
+    "tp": 31
+  }
+}

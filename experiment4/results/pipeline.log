@@ -1,0 +1,1319 @@
+2026-07-07 13:55:12,468 [INFO] experiment3: ============================================================
+2026-07-07 13:55:12,468 [INFO] experiment3: PREPARE: 数据准备
+2026-07-07 13:55:12,469 [INFO] experiment3: ============================================================
+2026-07-07 13:55:12,469 [INFO] experiment3: ============================================================
+2026-07-07 13:55:12,469 [INFO] experiment3: 步骤一：数据抽样
+2026-07-07 13:55:12,470 [INFO] experiment3: ============================================================
+2026-07-07 13:55:12,470 [INFO] experiment3: 加载数据集...
+2026-07-07 13:55:12,536 [INFO] experiment3:   人类代码数据集: 1397 条
+2026-07-07 13:55:12,588 [INFO] experiment3:   Splits: 1397 条
+2026-07-07 13:55:12,600 [INFO] experiment3:   合并后: 1397 条
+2026-07-07 13:55:13,444 [INFO] experiment3:   Patch 索引: 1397 条
+2026-07-07 13:55:13,447 [INFO] experiment3: 测试集总数: 210
+2026-07-07 13:55:13,447 [INFO] experiment3: 测试集 merge rate: 0.6429
+2026-07-07 13:55:13,448 [INFO] experiment3: 测试集中有 review_comments_text 的: 96/210
+2026-07-07 13:55:13,448 [INFO] experiment3: 
+facebook/react: test 集 45 条
+2026-07-07 13:55:13,460 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:13,460 [INFO] experiment3: 
+huggingface/transformers: test 集 45 条
+2026-07-07 13:55:13,467 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:13,468 [INFO] experiment3: 
+kubernetes/kubernetes: test 集 45 条
+2026-07-07 13:55:13,474 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:13,474 [INFO] experiment3: 
+microsoft/vscode: test 集 31 条
+2026-07-07 13:55:13,477 [INFO] experiment3:   选中: merged=6, unmerged=3
+2026-07-07 13:55:13,477 [INFO] experiment3: 
+pandas-dev/pandas: test 集 44 条
+2026-07-07 13:55:13,482 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:13,484 [INFO] experiment3: 
+抽样结果: 49 条, merged=30, 有 review text: 44
+2026-07-07 13:55:13,485 [INFO] experiment3: 最终抽样: 49 条, merged=30, merge_rate=0.6122, 有 review text: 44
+2026-07-07 13:55:13,496 [INFO] experiment3: 抽样结果已保存: E:\latex\projects\experiments\experiment3\results\processed\llm_sample_50.csv
+2026-07-07 13:55:13,496 [INFO] experiment3: 从 validation 集 (210 条) 选择 few-shot 示例
+2026-07-07 13:55:13,499 [INFO] experiment3: 生成 4 个 few-shot 示例
+2026-07-07 13:55:13,500 [INFO] experiment3: Few-shot 示例已保存: E:\latex\projects\experiments\experiment3\results\processed\few_shot_examples.json
+2026-07-07 13:55:13,500 [INFO] experiment3: 
+抽样统计:
+2026-07-07 13:55:13,500 [INFO] experiment3:   总样本数: 49
+2026-07-07 13:55:13,501 [INFO] experiment3:   Merged: 30
+2026-07-07 13:55:13,501 [INFO] experiment3:   Merge rate: 0.6122
+2026-07-07 13:55:13,501 [INFO] experiment3:   facebook/react: 10 条, merged=6
+2026-07-07 13:55:13,501 [INFO] experiment3:   huggingface/transformers: 10 条, merged=6
+2026-07-07 13:55:13,501 [INFO] experiment3:   kubernetes/kubernetes: 10 条, merged=6
+2026-07-07 13:55:13,502 [INFO] experiment3:   microsoft/vscode: 9 条, merged=6
+2026-07-07 13:55:13,502 [INFO] experiment3:   pandas-dev/pandas: 10 条, merged=6
+2026-07-07 13:55:13,525 [INFO] experiment3: 
+构建上下文...
+2026-07-07 13:55:13,525 [INFO] experiment3: 加载 patch 索引...
+2026-07-07 13:55:14,231 [INFO] experiment3: C1: 平均长度=2725 chars, 最大=14849, 超长=1/49
+2026-07-07 13:55:14,231 [INFO] experiment3: C2: 平均长度=4106 chars, 最大=16596, 超长=1/49
+2026-07-07 13:55:14,231 [INFO] experiment3: C3: 平均长度=4338 chars, 最大=17548, 超长=1/49
+2026-07-07 13:55:14,231 [INFO] experiment3: C4: 平均长度=4840 chars, 最大=18144, 超长=3/49
+2026-07-07 13:55:14,256 [INFO] experiment3: 上下文已保存: E:\latex\projects\experiments\experiment3\results\processed\all_contexts.json
+2026-07-07 13:55:14,256 [INFO] experiment3: 
+PREPARE 完成！
+2026-07-07 13:55:14,256 [INFO] experiment3:   样本: E:\latex\projects\experiments\experiment3\results\processed\llm_sample_50.csv
+2026-07-07 13:55:14,256 [INFO] experiment3:   Few-shot 示例: E:\latex\projects\experiments\experiment3\results\processed\few_shot_examples.json
+2026-07-07 13:55:14,256 [INFO] experiment3:   上下文: E:\latex\projects\experiments\experiment3\results\processed\all_contexts.json
+2026-07-07 13:55:54,959 [INFO] experiment3: ============================================================
+2026-07-07 13:55:54,960 [INFO] experiment3: PREPARE: 数据准备
+2026-07-07 13:55:54,960 [INFO] experiment3: ============================================================
+2026-07-07 13:55:54,960 [INFO] experiment3: ============================================================
+2026-07-07 13:55:54,960 [INFO] experiment3: 步骤一：数据抽样
+2026-07-07 13:55:54,960 [INFO] experiment3: ============================================================
+2026-07-07 13:55:54,960 [INFO] experiment3: 加载数据集...
+2026-07-07 13:55:55,002 [INFO] experiment3:   人类代码数据集: 1397 条
+2026-07-07 13:55:55,040 [INFO] experiment3:   Splits: 1397 条
+2026-07-07 13:55:55,043 [INFO] experiment3:   合并后: 1397 条
+2026-07-07 13:55:55,780 [INFO] experiment3:   Patch 索引: 1397 条
+2026-07-07 13:55:55,782 [INFO] experiment3: 测试集总数: 210
+2026-07-07 13:55:55,782 [INFO] experiment3: 测试集 merge rate: 0.6429
+2026-07-07 13:55:55,783 [INFO] experiment3: 测试集中有 review_comments_text 的: 96/210
+2026-07-07 13:55:55,783 [INFO] experiment3: 
+facebook/react: test 集 45 条
+2026-07-07 13:55:55,794 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:55,794 [INFO] experiment3: 
+huggingface/transformers: test 集 45 条
+2026-07-07 13:55:55,800 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:55,800 [INFO] experiment3: 
+kubernetes/kubernetes: test 集 45 条
+2026-07-07 13:55:55,805 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:55,805 [INFO] experiment3: 
+microsoft/vscode: test 集 31 条
+2026-07-07 13:55:55,810 [INFO] experiment3:   选中: merged=7, unmerged=3
+2026-07-07 13:55:55,810 [INFO] experiment3: 
+pandas-dev/pandas: test 集 44 条
+2026-07-07 13:55:55,815 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:55:55,816 [INFO] experiment3: 
+抽样结果: 50 条, merged=31, 有 review text: 45
+2026-07-07 13:55:55,816 [INFO] experiment3: 最终抽样: 50 条, merged=31, merge_rate=0.6200, 有 review text: 45
+2026-07-07 13:55:55,822 [INFO] experiment3: 抽样结果已保存: E:\latex\projects\experiments\experiment3\results\processed\llm_sample_50.csv
+2026-07-07 13:55:55,822 [INFO] experiment3: 从 validation 集 (210 条) 选择 few-shot 示例
+2026-07-07 13:55:55,825 [INFO] experiment3: 生成 4 个 few-shot 示例
+2026-07-07 13:55:55,826 [INFO] experiment3: Few-shot 示例已保存: E:\latex\projects\experiments\experiment3\results\processed\few_shot_examples.json
+2026-07-07 13:55:55,826 [INFO] experiment3: 
+抽样统计:
+2026-07-07 13:55:55,826 [INFO] experiment3:   总样本数: 50
+2026-07-07 13:55:55,826 [INFO] experiment3:   Merged: 31
+2026-07-07 13:55:55,826 [INFO] experiment3:   Merge rate: 0.6200
+2026-07-07 13:55:55,826 [INFO] experiment3:   facebook/react: 10 条, merged=6
+2026-07-07 13:55:55,827 [INFO] experiment3:   huggingface/transformers: 10 条, merged=6
+2026-07-07 13:55:55,827 [INFO] experiment3:   kubernetes/kubernetes: 10 条, merged=6
+2026-07-07 13:55:55,827 [INFO] experiment3:   microsoft/vscode: 10 条, merged=7
+2026-07-07 13:55:55,827 [INFO] experiment3:   pandas-dev/pandas: 10 条, merged=6
+2026-07-07 13:55:55,852 [INFO] experiment3: 
+构建上下文...
+2026-07-07 13:55:55,852 [INFO] experiment3: 加载 patch 索引...
+2026-07-07 13:55:56,542 [INFO] experiment3: C1: 平均长度=2750 chars, 最大=14849, 超长=1/50
+2026-07-07 13:55:56,542 [INFO] experiment3: C2: 平均长度=4112 chars, 最大=16596, 超长=1/50
+2026-07-07 13:55:56,542 [INFO] experiment3: C3: 平均长度=4342 chars, 最大=17548, 超长=1/50
+2026-07-07 13:55:56,542 [INFO] experiment3: C4: 平均长度=4846 chars, 最大=18144, 超长=3/50
+2026-07-07 13:55:56,569 [INFO] experiment3: 上下文已保存: E:\latex\projects\experiments\experiment3\results\processed\all_contexts.json
+2026-07-07 13:55:56,569 [INFO] experiment3: 
+PREPARE 完成！
+2026-07-07 13:55:56,569 [INFO] experiment3:   样本: E:\latex\projects\experiments\experiment3\results\processed\llm_sample_50.csv
+2026-07-07 13:55:56,569 [INFO] experiment3:   Few-shot 示例: E:\latex\projects\experiments\experiment3\results\processed\few_shot_examples.json
+2026-07-07 13:55:56,569 [INFO] experiment3:   上下文: E:\latex\projects\experiments\experiment3\results\processed\all_contexts.json
+2026-07-07 13:56:17,643 [INFO] experiment3: ============================================================
+2026-07-07 13:56:17,644 [INFO] experiment3: DRY RUN: 数据质量检查
+2026-07-07 13:56:17,644 [INFO] experiment3: ============================================================
+2026-07-07 13:56:17,644 [INFO] experiment3: ============================================================
+2026-07-07 13:56:17,644 [INFO] experiment3: 步骤一：数据抽样
+2026-07-07 13:56:17,644 [INFO] experiment3: ============================================================
+2026-07-07 13:56:17,644 [INFO] experiment3: 加载数据集...
+2026-07-07 13:56:17,685 [INFO] experiment3:   人类代码数据集: 1397 条
+2026-07-07 13:56:17,724 [INFO] experiment3:   Splits: 1397 条
+2026-07-07 13:56:17,727 [INFO] experiment3:   合并后: 1397 条
+2026-07-07 13:56:18,342 [INFO] experiment3:   Patch 索引: 1397 条
+2026-07-07 13:56:18,343 [INFO] experiment3: 测试集总数: 210
+2026-07-07 13:56:18,344 [INFO] experiment3: 测试集 merge rate: 0.6429
+2026-07-07 13:56:18,345 [INFO] experiment3: 测试集中有 review_comments_text 的: 96/210
+2026-07-07 13:56:18,345 [INFO] experiment3: 
+facebook/react: test 集 45 条
+2026-07-07 13:56:18,354 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:56:18,354 [INFO] experiment3: 
+huggingface/transformers: test 集 45 条
+2026-07-07 13:56:18,360 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:56:18,361 [INFO] experiment3: 
+kubernetes/kubernetes: test 集 45 条
+2026-07-07 13:56:18,366 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:56:18,366 [INFO] experiment3: 
+microsoft/vscode: test 集 31 条
+2026-07-07 13:56:18,369 [INFO] experiment3:   选中: merged=7, unmerged=3
+2026-07-07 13:56:18,369 [INFO] experiment3: 
+pandas-dev/pandas: test 集 44 条
+2026-07-07 13:56:18,374 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:56:18,375 [INFO] experiment3: 
+抽样结果: 50 条, merged=31, 有 review text: 45
+2026-07-07 13:56:18,376 [INFO] experiment3: 最终抽样: 50 条, merged=31, merge_rate=0.6200, 有 review text: 45
+2026-07-07 13:56:18,380 [INFO] experiment3: 抽样结果已保存: E:\latex\projects\experiments\experiment3\results\processed\llm_sample_50.csv
+2026-07-07 13:56:18,381 [INFO] experiment3: 从 validation 集 (210 条) 选择 few-shot 示例
+2026-07-07 13:56:18,384 [INFO] experiment3: 生成 4 个 few-shot 示例
+2026-07-07 13:56:18,385 [INFO] experiment3: Few-shot 示例已保存: E:\latex\projects\experiments\experiment3\results\processed\few_shot_examples.json
+2026-07-07 13:56:18,385 [INFO] experiment3: 
+抽样统计:
+2026-07-07 13:56:18,385 [INFO] experiment3:   总样本数: 50
+2026-07-07 13:56:18,386 [INFO] experiment3:   Merged: 31
+2026-07-07 13:56:18,386 [INFO] experiment3:   Merge rate: 0.6200
+2026-07-07 13:56:18,386 [INFO] experiment3:   facebook/react: 10 条, merged=6
+2026-07-07 13:56:18,386 [INFO] experiment3:   huggingface/transformers: 10 条, merged=6
+2026-07-07 13:56:18,386 [INFO] experiment3:   kubernetes/kubernetes: 10 条, merged=6
+2026-07-07 13:56:18,387 [INFO] experiment3:   microsoft/vscode: 10 条, merged=7
+2026-07-07 13:56:18,388 [INFO] experiment3:   pandas-dev/pandas: 10 条, merged=6
+2026-07-07 13:56:18,419 [INFO] experiment3: 有 review text 的样本: 45/50 (需要 ≥ 25)
+2026-07-07 13:56:18,420 [INFO] experiment3: 加载 patch 索引...
+2026-07-07 13:56:19,032 [INFO] experiment3: C1: 平均长度=2750 chars, 最大=14849, 超长=1/50
+2026-07-07 13:56:19,032 [INFO] experiment3: C2: 平均长度=4112 chars, 最大=16596, 超长=1/50
+2026-07-07 13:56:19,032 [INFO] experiment3: C3: 平均长度=4342 chars, 最大=17548, 超长=1/50
+2026-07-07 13:56:19,032 [INFO] experiment3: C4: 平均长度=4846 chars, 最大=18144, 超长=3/50
+2026-07-07 13:56:19,052 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 13:56:19,053 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 13:56:19,053 [INFO] experiment3: 任务数: 800 (期望 800)
+2026-07-07 13:56:19,060 [INFO] experiment3: 
+检查结果: 24 个错误
+2026-07-07 13:56:19,060 [ERROR] experiment3:   ❌ pr_id=3204855521, P1/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,074 [ERROR] experiment3:   ❌ pr_id=3204855521, P1/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,075 [ERROR] experiment3:   ❌ pr_id=3204855521, P1/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,075 [ERROR] experiment3:   ❌ pr_id=3204855521, P2/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,076 [ERROR] experiment3:   ❌ pr_id=3204855521, P2/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,076 [ERROR] experiment3:   ❌ pr_id=3204855521, P2/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,076 [ERROR] experiment3:   ❌ pr_id=3204855521, P3/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,077 [ERROR] experiment3:   ❌ pr_id=3204855521, P3/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,077 [ERROR] experiment3:   ❌ pr_id=3204855521, P3/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,078 [ERROR] experiment3:   ❌ pr_id=3204855521, P4/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,078 [ERROR] experiment3:   ❌ pr_id=3204855521, P4/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,079 [ERROR] experiment3:   ❌ pr_id=3204855521, P4/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,079 [ERROR] experiment3:   ❌ pr_id=3899385359, P1/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,079 [ERROR] experiment3:   ❌ pr_id=3899385359, P1/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,080 [ERROR] experiment3:   ❌ pr_id=3899385359, P1/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,080 [ERROR] experiment3:   ❌ pr_id=3899385359, P2/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,081 [ERROR] experiment3:   ❌ pr_id=3899385359, P2/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,081 [ERROR] experiment3:   ❌ pr_id=3899385359, P2/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,081 [ERROR] experiment3:   ❌ pr_id=3899385359, P3/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,082 [ERROR] experiment3:   ❌ pr_id=3899385359, P3/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,082 [ERROR] experiment3:   ❌ pr_id=3899385359, P3/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,083 [ERROR] experiment3:   ❌ pr_id=3899385359, P4/C2: 上下文中发现 'approved'
+2026-07-07 13:56:19,083 [ERROR] experiment3:   ❌ pr_id=3899385359, P4/C3: 上下文中发现 'approved'
+2026-07-07 13:56:19,083 [ERROR] experiment3:   ❌ pr_id=3899385359, P4/C4: 上下文中发现 'approved'
+2026-07-07 13:56:19,084 [INFO] experiment3: 
+DRY RUN 完成！
+2026-07-07 13:57:26,075 [INFO] experiment3: ============================================================
+2026-07-07 13:57:26,075 [INFO] experiment3: DRY RUN: 数据质量检查
+2026-07-07 13:57:26,075 [INFO] experiment3: ============================================================
+2026-07-07 13:57:26,075 [INFO] experiment3: ============================================================
+2026-07-07 13:57:26,075 [INFO] experiment3: 步骤一：数据抽样
+2026-07-07 13:57:26,075 [INFO] experiment3: ============================================================
+2026-07-07 13:57:26,075 [INFO] experiment3: 加载数据集...
+2026-07-07 13:57:26,118 [INFO] experiment3:   人类代码数据集: 1397 条
+2026-07-07 13:57:26,157 [INFO] experiment3:   Splits: 1397 条
+2026-07-07 13:57:26,158 [INFO] experiment3:   合并后: 1397 条
+2026-07-07 13:57:26,782 [INFO] experiment3:   Patch 索引: 1397 条
+2026-07-07 13:57:26,783 [INFO] experiment3: 测试集总数: 210
+2026-07-07 13:57:26,784 [INFO] experiment3: 测试集 merge rate: 0.6429
+2026-07-07 13:57:26,784 [INFO] experiment3: 测试集中有 review_comments_text 的: 96/210
+2026-07-07 13:57:26,785 [INFO] experiment3: 
+facebook/react: test 集 45 条
+2026-07-07 13:57:26,794 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:57:26,794 [INFO] experiment3: 
+huggingface/transformers: test 集 45 条
+2026-07-07 13:57:26,800 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:57:26,800 [INFO] experiment3: 
+kubernetes/kubernetes: test 集 45 条
+2026-07-07 13:57:26,805 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:57:26,805 [INFO] experiment3: 
+microsoft/vscode: test 集 31 条
+2026-07-07 13:57:26,808 [INFO] experiment3:   选中: merged=7, unmerged=3
+2026-07-07 13:57:26,808 [INFO] experiment3: 
+pandas-dev/pandas: test 集 44 条
+2026-07-07 13:57:26,813 [INFO] experiment3:   选中: merged=6, unmerged=4
+2026-07-07 13:57:26,814 [INFO] experiment3: 
+抽样结果: 50 条, merged=31, 有 review text: 45
+2026-07-07 13:57:26,814 [INFO] experiment3: 最终抽样: 50 条, merged=31, merge_rate=0.6200, 有 review text: 45
+2026-07-07 13:57:26,819 [INFO] experiment3: 抽样结果已保存: E:\latex\projects\experiments\experiment3\results\processed\llm_sample_50.csv
+2026-07-07 13:57:26,819 [INFO] experiment3: 从 validation 集 (210 条) 选择 few-shot 示例
+2026-07-07 13:57:26,822 [INFO] experiment3: 生成 4 个 few-shot 示例
+2026-07-07 13:57:26,823 [INFO] experiment3: Few-shot 示例已保存: E:\latex\projects\experiments\experiment3\results\processed\few_shot_examples.json
+2026-07-07 13:57:26,823 [INFO] experiment3: 
+抽样统计:
+2026-07-07 13:57:26,823 [INFO] experiment3:   总样本数: 50
+2026-07-07 13:57:26,823 [INFO] experiment3:   Merged: 31
+2026-07-07 13:57:26,823 [INFO] experiment3:   Merge rate: 0.6200
+2026-07-07 13:57:26,824 [INFO] experiment3:   facebook/react: 10 条, merged=6
+2026-07-07 13:57:26,824 [INFO] experiment3:   huggingface/transformers: 10 条, merged=6
+2026-07-07 13:57:26,824 [INFO] experiment3:   kubernetes/kubernetes: 10 条, merged=6
+2026-07-07 13:57:26,824 [INFO] experiment3:   microsoft/vscode: 10 条, merged=7
+2026-07-07 13:57:26,825 [INFO] experiment3:   pandas-dev/pandas: 10 条, merged=6
+2026-07-07 13:57:26,844 [INFO] experiment3: 有 review text 的样本: 45/50 (需要 ≥ 25)
+2026-07-07 13:57:26,844 [INFO] experiment3: 加载 patch 索引...
+2026-07-07 13:57:27,485 [INFO] experiment3: C1: 平均长度=2750 chars, 最大=14849, 超长=1/50
+2026-07-07 13:57:27,485 [INFO] experiment3: C2: 平均长度=4112 chars, 最大=16596, 超长=1/50
+2026-07-07 13:57:27,485 [INFO] experiment3: C3: 平均长度=4342 chars, 最大=17548, 超长=1/50
+2026-07-07 13:57:27,486 [INFO] experiment3: C4: 平均长度=4846 chars, 最大=18144, 超长=3/50
+2026-07-07 13:57:27,510 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 13:57:27,510 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 13:57:27,510 [INFO] experiment3: 任务数: 800 (期望 800)
+2026-07-07 13:57:27,519 [INFO] experiment3: 
+检查结果: 0 个错误
+2026-07-07 13:57:27,519 [INFO] experiment3:   [OK] 所有检查通过！未发现数据泄露。
+2026-07-07 13:57:27,519 [INFO] experiment3: 
+DRY RUN 完成！
+2026-07-07 14:03:27,700 [INFO] experiment3: ============================================================
+2026-07-07 14:03:27,700 [INFO] experiment3: 步骤四：API 调用
+2026-07-07 14:03:27,701 [INFO] experiment3: ============================================================
+2026-07-07 14:03:27,705 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 14:03:27,705 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 14:03:27,719 [INFO] experiment3: 任务列表已保存: E:\latex\projects\experiments\experiment3\results\processed\task_list.json
+2026-07-07 14:03:27,723 [INFO] experiment3: 总任务: 800, 已完成: 0, 待执行: 800
+2026-07-07 14:03:27,723 [INFO] experiment3: 限制执行: 3 个任务
+2026-07-07 14:03:27,723 [ERROR] experiment3: 未设置 LLM_API_KEY，无法调用 API！
+2026-07-07 14:03:27,724 [ERROR] experiment3: 设置方式: export LLM_API_KEY=<your-key>
+2026-07-07 14:03:27,726 [INFO] experiment3: 解析后的预测结果已保存: E:\latex\projects\experiments\experiment3\results\responses\parsed_predictions.csv (0 条)
+2026-07-07 14:10:11,554 [INFO] experiment3: ============================================================
+2026-07-07 14:10:11,554 [INFO] experiment3: 步骤四：API 调用
+2026-07-07 14:10:11,554 [INFO] experiment3: ============================================================
+2026-07-07 14:10:11,559 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 14:10:11,559 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 14:10:11,573 [INFO] experiment3: 任务列表已保存: E:\latex\projects\experiments\experiment3\results\processed\task_list.json
+2026-07-07 14:10:11,574 [ERROR] experiment3: 请安装 openai 包: pip install openai
+2026-07-07 14:11:09,396 [INFO] experiment3: ============================================================
+2026-07-07 14:11:09,397 [INFO] experiment3: 步骤四：API 调用
+2026-07-07 14:11:09,397 [INFO] experiment3: ============================================================
+2026-07-07 14:11:09,401 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 14:11:09,401 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 14:11:09,416 [INFO] experiment3: 任务列表已保存: E:\latex\projects\experiments\experiment3\results\processed\task_list.json
+2026-07-07 14:11:12,147 [INFO] experiment3: API 客户端已创建: provider=deepseek, base_url=https://api.deepseek.com, model=deepseek-v4-flash
+2026-07-07 14:11:12,149 [INFO] experiment3: 总任务: 800, 已完成: 0, 待执行: 800
+2026-07-07 14:11:12,149 [INFO] experiment3: 限制执行: 3 个任务
+2026-07-07 14:11:12,149 [INFO] experiment3: 开始执行 3 个任务...
+2026-07-07 14:11:12,149 [INFO] experiment3: 调用 [1/3] P1/C1/pr=2787555329
+2026-07-07 14:11:21,372 [WARNING] experiment3:   JSON 解析失败: Failed to parse JSON from: {
+  "merge_prediction": "merged",
+  "merge_probability": 0.7,
+  "confiden
+2026-07-07 14:11:21,372 [INFO] experiment3: 调用 [2/3] P1/C2/pr=2787555329
+2026-07-07 14:11:30,675 [WARNING] experiment3:   JSON 解析失败: Empty response
+2026-07-07 14:11:30,675 [INFO] experiment3: 调用 [3/3] P1/C3/pr=2787555329
+2026-07-07 14:11:40,088 [WARNING] experiment3:   JSON 解析失败: Empty response
+2026-07-07 14:11:40,088 [INFO] experiment3: 执行完成: 成功=0, 失败=3
+2026-07-07 14:11:40,091 [INFO] experiment3: 解析后的预测结果已保存: E:\latex\projects\experiments\experiment3\results\responses\parsed_predictions.csv (3 条)
+2026-07-07 14:12:45,257 [INFO] experiment3: ============================================================
+2026-07-07 14:12:45,258 [INFO] experiment3: 步骤四：API 调用
+2026-07-07 14:12:45,258 [INFO] experiment3: ============================================================
+2026-07-07 14:12:45,262 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 14:12:45,262 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 14:12:45,278 [INFO] experiment3: 任务列表已保存: E:\latex\projects\experiments\experiment3\results\processed\task_list.json
+2026-07-07 14:12:47,114 [INFO] experiment3: API 客户端已创建: provider=deepseek, base_url=https://api.deepseek.com, model=deepseek-v4-flash
+2026-07-07 14:12:47,116 [INFO] experiment3: 总任务: 800, 已完成: 0, 待执行: 800
+2026-07-07 14:12:47,116 [INFO] experiment3: 限制执行: 3 个任务
+2026-07-07 14:12:47,116 [INFO] experiment3: 开始执行 3 个任务...
+2026-07-07 14:12:47,116 [INFO] experiment3: 调用 [1/3] P1/C1/pr=2787555329
+2026-07-07 14:12:56,162 [INFO] experiment3:   OK: duration=9044ms
+2026-07-07 14:12:56,163 [INFO] experiment3: 调用 [2/3] P1/C2/pr=2787555329
+2026-07-07 14:13:05,740 [INFO] experiment3:   OK: duration=9575ms
+2026-07-07 14:13:05,740 [INFO] experiment3: 调用 [3/3] P1/C3/pr=2787555329
+2026-07-07 14:13:10,496 [INFO] experiment3:   OK: duration=4754ms
+2026-07-07 14:13:10,496 [INFO] experiment3: 执行完成: 成功=3, 失败=0
+2026-07-07 14:13:10,499 [INFO] experiment3: 解析后的预测结果已保存: E:\latex\projects\experiments\experiment3\results\responses\parsed_predictions.csv (3 条)
+2026-07-07 14:13:32,312 [INFO] experiment3: ============================================================
+2026-07-07 14:13:32,312 [INFO] experiment3: 步骤四：API 调用
+2026-07-07 14:13:32,312 [INFO] experiment3: ============================================================
+2026-07-07 14:13:32,316 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 14:13:32,316 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 14:13:32,331 [INFO] experiment3: 任务列表已保存: E:\latex\projects\experiments\experiment3\results\processed\task_list.json
+2026-07-07 14:13:34,035 [INFO] experiment3: API 客户端已创建: provider=deepseek, base_url=https://api.deepseek.com, model=deepseek-v4-flash
+2026-07-07 14:13:34,037 [INFO] experiment3: 总任务: 800, 已完成: 0, 待执行: 800
+2026-07-07 14:13:34,037 [INFO] experiment3: 开始执行 800 个任务...
+2026-07-07 14:13:34,037 [INFO] experiment3: 调用 [1/800] P1/C1/pr=2787555329
+2026-07-07 14:13:44,308 [INFO] experiment3:   OK: duration=10237ms
+2026-07-07 14:13:44,308 [INFO] experiment3: 调用 [2/800] P1/C2/pr=2787555329
+2026-07-07 14:13:55,519 [INFO] experiment3:   OK: duration=11209ms
+2026-07-07 14:13:55,519 [INFO] experiment3: 调用 [3/800] P1/C3/pr=2787555329
+2026-07-07 14:14:05,077 [INFO] experiment3:   OK: duration=9557ms
+2026-07-07 14:14:05,077 [INFO] experiment3: 调用 [4/800] P1/C4/pr=2787555329
+2026-07-07 14:14:12,589 [INFO] experiment3:   OK: duration=7511ms
+2026-07-07 14:14:12,589 [INFO] experiment3: 调用 [5/800] P2/C1/pr=2787555329
+2026-07-07 14:14:22,342 [INFO] experiment3:   OK: duration=9751ms
+2026-07-07 14:14:22,342 [INFO] experiment3: 调用 [6/800] P2/C2/pr=2787555329
+2026-07-07 14:14:36,833 [INFO] experiment3:   OK: duration=14490ms
+2026-07-07 14:14:36,834 [INFO] experiment3: 调用 [7/800] P2/C3/pr=2787555329
+2026-07-07 14:15:53,127 [INFO] experiment3: ============================================================
+2026-07-07 14:15:53,127 [INFO] experiment3: 步骤四：API 调用
+2026-07-07 14:15:53,127 [INFO] experiment3: ============================================================
+2026-07-07 14:15:53,131 [INFO] experiment3: 构建任务列表: 800 个任务
+2026-07-07 14:15:53,131 [INFO] experiment3:   = 4 prompts × 4 contexts × 50 PRs
+2026-07-07 14:15:53,148 [INFO] experiment3: 任务列表已保存: E:\latex\projects\experiments\experiment3\results\processed\task_list.json
+2026-07-07 14:15:54,908 [INFO] experiment3: API 客户端已创建: provider=deepseek, base_url=https://api.deepseek.com, model=deepseek-v4-flash
+2026-07-07 14:15:54,919 [INFO] experiment3: 总任务: 800, 已完成: 0, 待执行: 800
+2026-07-07 14:15:54,919 [INFO] experiment3: 开始并发执行 800 个任务 (workers=8)...
+2026-07-07 14:16:04,512 [INFO] experiment3:   [6/800] OK P2/C2/pr=2787555329 (9583ms)
+2026-07-07 14:16:04,761 [INFO] experiment3:   [1/800] OK P1/C1/pr=2787555329 (9839ms)
+2026-07-07 14:16:04,861 [INFO] experiment3:   [2/800] OK P1/C2/pr=2787555329 (9933ms)
+2026-07-07 14:16:05,144 [INFO] experiment3:   [3/800] OK P1/C3/pr=2787555329 (10222ms)
+2026-07-07 14:16:05,828 [INFO] experiment3:   [4/800] OK P1/C4/pr=2787555329 (10906ms)
+2026-07-07 14:16:07,336 [INFO] experiment3:   [5/800] OK P2/C1/pr=2787555329 (12414ms)
+2026-07-07 14:16:07,830 [INFO] experiment3:   [7/800] OK P2/C3/pr=2787555329 (12907ms)
+2026-07-07 14:16:10,789 [INFO] experiment3:   [12/800] OK P3/C4/pr=2787555329 (5643ms)
+2026-07-07 14:16:13,268 [INFO] experiment3:   [10/800] OK P3/C2/pr=2787555329 (8505ms)
+2026-07-07 14:16:14,376 [INFO] experiment3:   [8/800] OK P2/C4/pr=2787555329 (19454ms)
+2026-07-07 14:16:15,503 [INFO] experiment3:   [11/800] OK P3/C3/pr=2787555329 (10641ms)
+2026-07-07 14:16:15,583 [INFO] experiment3:   [9/800] OK P3/C1/pr=2787555329 (11068ms)
+2026-07-07 14:16:15,925 [INFO] experiment3:   [14/800] OK P4/C2/pr=2787555329 (8587ms)
+2026-07-07 14:16:16,377 [INFO] experiment3:   [15/800] OK P4/C3/pr=2787555329 (8546ms)
+2026-07-07 14:16:20,926 [INFO] experiment3:   [17/800] OK P1/C1/pr=2846405707 (7657ms)
+2026-07-07 14:16:21,356 [INFO] experiment3:   [13/800] OK P4/C1/pr=2787555329 (15527ms)
+2026-07-07 14:16:21,746 [INFO] experiment3:   [21/800] OK P2/C1/pr=2846405707 (5820ms)
+2026-07-07 14:16:21,821 [INFO] experiment3:   [22/800] OK P2/C2/pr=2846405707 (5442ms)
+2026-07-07 14:16:21,909 [INFO] experiment3:   [18/800] OK P1/C2/pr=2846405707 (7532ms)
+2026-07-07 14:16:24,023 [INFO] experiment3:   [16/800] OK P4/C4/pr=2787555329 (13233ms)
+2026-07-07 14:16:24,107 [INFO] experiment3:   [20/800] OK P1/C4/pr=2846405707 (8522ms)
+2026-07-07 14:16:25,109 [INFO] experiment3:   [19/800] OK P1/C3/pr=2846405707 (9605ms)
+2026-07-07 14:16:28,770 [INFO] experiment3:   [23/800] OK P2/C3/pr=2846405707 (7842ms)
+2026-07-07 14:16:30,016 [INFO] experiment3:   [29/800] OK P4/C1/pr=2846405707 (5907ms)
+2026-07-07 14:16:30,427 [INFO] experiment3:   [24/800] OK P2/C4/pr=2846405707 (9069ms)
+2026-07-07 14:16:32,119 [INFO] experiment3:   [26/800] OK P3/C2/pr=2846405707 (10296ms)
+2026-07-07 14:16:32,121 [INFO] experiment3:   [25/800] OK P3/C1/pr=2846405707 (10374ms)
+2026-07-07 14:16:32,830 [INFO] experiment3:   [30/800] OK P4/C2/pr=2846405707 (7719ms)
+2026-07-07 14:16:34,864 [INFO] experiment3:   [28/800] OK P3/C4/pr=2846405707 (10839ms)
+2026-07-07 14:16:35,992 [INFO] experiment3:   [33/800] OK P1/C1/pr=2948801074 (5563ms)
+2026-07-07 14:16:36,001 [INFO] experiment3:   [27/800] OK P3/C3/pr=2846405707 (14091ms)
+2026-07-07 14:16:38,988 [INFO] experiment3:   [31/800] OK P4/C3/pr=2846405707 (10216ms)
+2026-07-07 14:16:39,148 [INFO] experiment3:   [34/800] OK P1/C2/pr=2948801074 (7029ms)
+2026-07-07 14:16:39,865 [INFO] experiment3:   [32/800] OK P4/C4/pr=2846405707 (9847ms)
+2026-07-07 14:16:42,399 [INFO] experiment3:   [36/800] OK P1/C4/pr=2948801074 (9566ms)
+2026-07-07 14:16:42,430 [INFO] experiment3:   [35/800] OK P1/C3/pr=2948801074 (10307ms)
+2026-07-07 14:16:44,084 [INFO] experiment3:   [37/800] OK P2/C1/pr=2948801074 (9218ms)
+2026-07-07 14:16:45,417 [INFO] experiment3:   [39/800] OK P2/C3/pr=2948801074 (9414ms)
+2026-07-07 14:16:46,391 [INFO] experiment3:   [38/800] OK P2/C2/pr=2948801074 (10398ms)
+2026-07-07 14:16:46,981 [INFO] experiment3:   [40/800] OK P2/C4/pr=2948801074 (7991ms)
+2026-07-07 14:16:47,197 [INFO] experiment3:   [44/800] OK P3/C4/pr=2948801074 (4765ms)
+2026-07-07 14:16:48,322 [INFO] experiment3:   [43/800] OK P3/C3/pr=2948801074 (5922ms)
+2026-07-07 14:16:50,388 [INFO] experiment3:   [45/800] OK P4/C1/pr=2948801074 (6302ms)
+2026-07-07 14:16:52,199 [INFO] experiment3:   [46/800] OK P4/C2/pr=2948801074 (6780ms)
+2026-07-07 14:16:52,865 [INFO] experiment3:   [48/800] OK P4/C4/pr=2948801074 (5882ms)
+2026-07-07 14:16:52,983 [INFO] experiment3:   [47/800] OK P4/C3/pr=2948801074 (6590ms)
+2026-07-07 14:16:54,620 [INFO] experiment3:   [49/800] OK P1/C1/pr=3065696649 (7422ms)
+2026-07-07 14:16:55,396 [INFO] experiment3:   [41/800] OK P3/C1/pr=2948801074 (16247ms)
+2026-07-07 14:16:56,420 [INFO] experiment3:   [50/800] OK P1/C2/pr=3065696649 (8096ms)
+2026-07-07 14:16:58,276 [INFO] experiment3:   [42/800] OK P3/C2/pr=2948801074 (18408ms)
+2026-07-07 14:17:01,546 [INFO] experiment3:   [53/800] OK P2/C1/pr=3065696649 (8675ms)
+2026-07-07 14:17:07,285 [INFO] experiment3:   [54/800] OK P2/C2/pr=3065696649 (14301ms)
+2026-07-07 14:17:07,837 [INFO] experiment3:   [57/800] OK P3/C1/pr=3065696649 (11415ms)
+2026-07-07 14:17:08,321 [INFO] experiment3:   [52/800] OK P1/C4/pr=3065696649 (16120ms)
+2026-07-07 14:17:08,577 [INFO] experiment3:   [55/800] OK P2/C3/pr=3065696649 (13954ms)
+2026-07-07 14:17:08,850 [INFO] experiment3:   [51/800] OK P1/C3/pr=3065696649 (18461ms)
+2026-07-07 14:17:08,958 [INFO] experiment3:   [58/800] OK P3/C2/pr=3065696649 (10682ms)
+2026-07-07 14:17:15,220 [INFO] experiment3:   [56/800] FAIL P2/C4/pr=3065696649 (19821ms)
+2026-07-07 14:17:16,387 [INFO] experiment3:   [64/800] OK P4/C4/pr=3065696649 (7536ms)
+2026-07-07 14:17:17,309 [INFO] experiment3:   [59/800] OK P3/C3/pr=3065696649 (15762ms)
+2026-07-07 14:17:19,636 [INFO] experiment3:   [65/800] OK P1/C1/pr=3070792182 (10677ms)
+2026-07-07 14:17:19,638 [INFO] experiment3:   [61/800] OK P4/C1/pr=3065696649 (11797ms)
+2026-07-07 14:17:21,061 [INFO] experiment3:   [62/800] OK P4/C2/pr=3065696649 (12739ms)
+2026-07-07 14:17:21,383 [INFO] experiment3:   [63/800] OK P4/C3/pr=3065696649 (12804ms)
+2026-07-07 14:17:23,678 [INFO] experiment3:   [66/800] OK P1/C2/pr=3070792182 (8457ms)
+2026-07-07 14:17:24,863 [INFO] experiment3:   [60/800] OK P3/C4/pr=3065696649 (17577ms)
+2026-07-07 14:17:26,240 [INFO] experiment3:   [67/800] OK P1/C3/pr=3070792182 (9850ms)
+2026-07-07 14:17:27,595 [INFO] experiment3:   [68/800] OK P1/C4/pr=3070792182 (10284ms)
+2026-07-07 14:17:29,770 [INFO] experiment3:   [69/800] OK P2/C1/pr=3070792182 (10133ms)
+2026-07-07 14:17:29,874 [INFO] experiment3:   [72/800] OK P2/C4/pr=3070792182 (8490ms)
+2026-07-07 14:17:30,728 [INFO] experiment3:   [71/800] OK P2/C3/pr=3070792182 (9665ms)
+2026-07-07 14:17:33,605 [INFO] experiment3:   [70/800] OK P2/C2/pr=3070792182 (13965ms)
+2026-07-07 14:17:34,510 [INFO] experiment3:   [73/800] OK P3/C1/pr=3070792182 (10831ms)
+2026-07-07 14:17:36,846 [INFO] experiment3:   [77/800] OK P4/C1/pr=3070792182 (7074ms)
+2026-07-07 14:17:37,592 [INFO] experiment3:   [76/800] OK P3/C4/pr=3070792182 (9994ms)
+2026-07-07 14:17:39,916 [INFO] experiment3:   [75/800] OK P3/C3/pr=3070792182 (13675ms)
+2026-07-07 14:17:40,493 [INFO] experiment3:   [79/800] OK P4/C3/pr=3070792182 (9762ms)
+2026-07-07 14:17:44,570 [INFO] experiment3:   [74/800] OK P3/C2/pr=3070792182 (19705ms)
+2026-07-07 14:17:46,195 [INFO] experiment3:   [81/800] OK P1/C1/pr=3109901488 (11683ms)
+2026-07-07 14:17:46,418 [INFO] experiment3:   [84/800] OK P1/C4/pr=3109901488 (6500ms)
+2026-07-07 14:17:46,484 [INFO] experiment3:   [78/800] OK P4/C2/pr=3070792182 (16608ms)
+2026-07-07 14:17:46,993 [INFO] experiment3:   [83/800] OK P1/C3/pr=3109901488 (9400ms)
+2026-07-07 14:17:50,939 [INFO] experiment3:   [82/800] OK P1/C2/pr=3109901488 (14091ms)
+2026-07-07 14:17:53,004 [INFO] experiment3:   [88/800] OK P2/C4/pr=3109901488 (6583ms)
+2026-07-07 14:17:53,323 [INFO] experiment3:   [85/800] OK P2/C1/pr=3109901488 (12828ms)
+2026-07-07 14:17:54,713 [INFO] experiment3:   [87/800] OK P2/C3/pr=3109901488 (8516ms)
+2026-07-07 14:17:55,195 [INFO] experiment3:   [86/800] OK P2/C2/pr=3109901488 (10624ms)
+2026-07-07 14:17:56,379 [INFO] experiment3:   [80/800] FAIL P4/C4/pr=3070792182 (22772ms)
+2026-07-07 14:17:57,412 [INFO] experiment3:   [89/800] OK P3/C1/pr=3109901488 (10926ms)
+2026-07-07 14:17:58,274 [INFO] experiment3:   [91/800] OK P3/C3/pr=3109901488 (7333ms)
+2026-07-07 14:17:59,508 [INFO] experiment3:   [90/800] OK P3/C2/pr=3109901488 (12512ms)
+2026-07-07 14:18:01,915 [INFO] experiment3:   [92/800] OK P3/C4/pr=3109901488 (8909ms)
+2026-07-07 14:18:02,291 [INFO] experiment3:   [94/800] OK P4/C2/pr=3109901488 (7575ms)
+2026-07-07 14:18:03,905 [INFO] experiment3:   [93/800] OK P4/C1/pr=3109901488 (10581ms)
+2026-07-07 14:18:04,183 [INFO] experiment3:   [95/800] OK P4/C3/pr=3109901488 (8985ms)
+2026-07-07 14:18:05,493 [INFO] experiment3:   [99/800] OK P1/C3/pr=3153160437 (5984ms)
+2026-07-07 14:18:06,717 [INFO] experiment3:   [98/800] OK P1/C2/pr=3153160437 (8440ms)
+2026-07-07 14:18:06,728 [INFO] experiment3:   [96/800] OK P4/C4/pr=3109901488 (10349ms)
+2026-07-07 14:18:08,334 [INFO] experiment3:   [100/800] OK P1/C4/pr=3153160437 (6417ms)
+2026-07-07 14:18:08,863 [INFO] experiment3:   [103/800] OK P2/C3/pr=3153160437 (4678ms)
+2026-07-07 14:18:10,032 [INFO] experiment3:   [101/800] OK P2/C1/pr=3153160437 (7740ms)
+2026-07-07 14:18:11,293 [INFO] experiment3:   [97/800] FAIL P1/C1/pr=3153160437 (13880ms)
+2026-07-07 14:18:11,525 [INFO] experiment3:   [102/800] OK P2/C2/pr=3153160437 (7618ms)
+2026-07-07 14:18:11,937 [INFO] experiment3:   [104/800] OK P2/C4/pr=3153160437 (6442ms)
+2026-07-07 14:18:13,458 [INFO] experiment3:   [107/800] OK P3/C3/pr=3153160437 (5123ms)
+2026-07-07 14:18:13,936 [INFO] experiment3:   [108/800] OK P3/C4/pr=3153160437 (5071ms)
+2026-07-07 14:18:13,999 [INFO] experiment3:   [105/800] OK P3/C1/pr=3153160437 (7280ms)
+2026-07-07 14:18:14,604 [INFO] experiment3:   [106/800] OK P3/C2/pr=3153160437 (7873ms)
+2026-07-07 14:18:17,921 [INFO] experiment3:   [110/800] OK P4/C2/pr=3153160437 (6626ms)
+2026-07-07 14:18:19,891 [INFO] experiment3:   [109/800] OK P4/C1/pr=3153160437 (9857ms)
+2026-07-07 14:18:19,998 [INFO] experiment3:   [112/800] OK P4/C4/pr=3153160437 (8054ms)
+2026-07-07 14:18:20,677 [INFO] experiment3:   [111/800] OK P4/C3/pr=3153160437 (9150ms)
+2026-07-07 14:18:23,172 [INFO] experiment3:   [115/800] OK P1/C3/pr=3193862952 (9171ms)
+2026-07-07 14:18:25,310 [INFO] experiment3:   [114/800] OK P1/C2/pr=3193862952 (11373ms)
+2026-07-07 14:18:28,024 [INFO] experiment3:   [121/800] OK P3/C1/pr=3193862952 (4849ms)
+2026-07-07 14:18:28,444 [INFO] experiment3:   [118/800] OK P2/C2/pr=3193862952 (8551ms)
+2026-07-07 14:18:28,517 [INFO] experiment3:   [116/800] OK P1/C4/pr=3193862952 (13912ms)
+2026-07-07 14:18:28,520 [INFO] experiment3:   [113/800] OK P1/C1/pr=3193862952 (15058ms)
+2026-07-07 14:18:33,448 [INFO] experiment3:   [117/800] OK P2/C1/pr=3193862952 (15524ms)
+2026-07-07 14:18:35,106 [INFO] experiment3:   [122/800] OK P3/C2/pr=3193862952 (9793ms)
+2026-07-07 14:18:35,353 [INFO] experiment3:   [120/800] OK P2/C4/pr=3193862952 (14674ms)
+2026-07-07 14:18:35,393 [INFO] experiment3:   [124/800] OK P3/C4/pr=3193862952 (6948ms)
+2026-07-07 14:18:35,501 [INFO] experiment3:   [119/800] OK P2/C3/pr=3193862952 (15502ms)
+2026-07-07 14:18:38,299 [INFO] experiment3:   [126/800] OK P4/C2/pr=3193862952 (9778ms)
+2026-07-07 14:18:38,835 [INFO] experiment3:   [125/800] OK P4/C1/pr=3193862952 (10316ms)
+2026-07-07 14:18:39,204 [INFO] experiment3:   [123/800] OK P3/C3/pr=3193862952 (11179ms)
+2026-07-07 14:18:41,047 [INFO] experiment3:   [127/800] OK P4/C3/pr=3193862952 (7597ms)
+2026-07-07 14:18:43,309 [INFO] experiment3:   [131/800] OK P1/C3/pr=3204855521 (7807ms)
+2026-07-07 14:18:43,630 [INFO] experiment3:   [130/800] OK P1/C2/pr=3204855521 (8233ms)
+2026-07-07 14:18:44,290 [INFO] experiment3:   [128/800] OK P4/C4/pr=3193862952 (9182ms)
+2026-07-07 14:18:44,716 [INFO] experiment3:   [133/800] OK P2/C1/pr=3204855521 (5878ms)
+2026-07-07 14:18:44,997 [INFO] experiment3:   [129/800] OK P1/C1/pr=3204855521 (9643ms)
+2026-07-07 14:18:48,941 [INFO] experiment3:   [132/800] OK P1/C4/pr=3204855521 (10641ms)
+2026-07-07 14:18:49,483 [INFO] experiment3:   [134/800] OK P2/C2/pr=3204855521 (10273ms)
+2026-07-07 14:18:50,262 [INFO] experiment3:   [139/800] OK P3/C3/pr=3204855521 (5544ms)
+2026-07-07 14:18:50,277 [INFO] experiment3:   [136/800] OK P2/C4/pr=3204855521 (6967ms)
+2026-07-07 14:18:51,454 [INFO] experiment3:   [137/800] OK P3/C1/pr=3204855521 (7823ms)
+2026-07-07 14:18:52,158 [INFO] experiment3:   [135/800] OK P2/C3/pr=3204855521 (11110ms)
+2026-07-07 14:18:54,255 [INFO] experiment3:   [140/800] OK P3/C4/pr=3204855521 (9257ms)
+2026-07-07 14:18:54,787 [INFO] experiment3:   [143/800] OK P4/C3/pr=3204855521 (4523ms)
+2026-07-07 14:18:56,438 [INFO] experiment3:   [141/800] OK P4/C1/pr=3204855521 (7493ms)
+2026-07-07 14:18:57,314 [INFO] experiment3:   [144/800] OK P4/C4/pr=3204855521 (7035ms)
+2026-07-07 14:18:59,231 [INFO] experiment3:   [145/800] OK P1/C1/pr=3249584903 (7776ms)
+2026-07-07 14:18:59,462 [INFO] experiment3:   [138/800] OK P3/C2/pr=3204855521 (15170ms)
+2026-07-07 14:18:59,980 [INFO] experiment3:   [146/800] OK P1/C2/pr=3249584903 (7818ms)
+2026-07-07 14:18:59,987 [INFO] experiment3:   [148/800] OK P1/C4/pr=3249584903 (5199ms)
+2026-07-07 14:19:00,316 [INFO] experiment3:   [147/800] OK P1/C3/pr=3249584903 (6060ms)
+2026-07-07 14:19:03,171 [INFO] experiment3:   [142/800] OK P4/C2/pr=3204855521 (13686ms)
+2026-07-07 14:19:03,696 [INFO] experiment3:   [150/800] OK P2/C2/pr=3249584903 (6380ms)
+2026-07-07 14:19:06,246 [INFO] experiment3:   [152/800] OK P2/C4/pr=3249584903 (6783ms)
+2026-07-07 14:19:06,307 [INFO] experiment3:   [154/800] OK P3/C2/pr=3249584903 (6318ms)
+2026-07-07 14:19:08,014 [INFO] experiment3:   [151/800] OK P2/C3/pr=3249584903 (8781ms)
+2026-07-07 14:19:08,277 [INFO] experiment3:   [149/800] OK P2/C1/pr=3249584903 (11838ms)
+2026-07-07 14:19:08,647 [INFO] experiment3:   [153/800] OK P3/C1/pr=3249584903 (8665ms)
+2026-07-07 14:19:12,825 [INFO] experiment3:   [155/800] OK P3/C3/pr=3249584903 (12506ms)
+2026-07-07 14:19:13,571 [INFO] experiment3:   [156/800] OK P3/C4/pr=3249584903 (10398ms)
+2026-07-07 14:19:14,708 [INFO] experiment3:   [157/800] OK P4/C1/pr=3249584903 (11010ms)
+2026-07-07 14:19:15,459 [INFO] experiment3:   [158/800] OK P4/C2/pr=3249584903 (9212ms)
+2026-07-07 14:19:15,603 [INFO] experiment3:   [159/800] OK P4/C3/pr=3249584903 (9294ms)
+2026-07-07 14:19:17,476 [INFO] experiment3:   [161/800] OK P1/C1/pr=3254629315 (9197ms)
+2026-07-07 14:19:17,703 [INFO] experiment3:   [162/800] OK P1/C2/pr=3254629315 (9054ms)
+2026-07-07 14:19:18,349 [INFO] experiment3:   [160/800] OK P4/C4/pr=3249584903 (10334ms)
+2026-07-07 14:19:20,833 [INFO] experiment3:   [164/800] OK P1/C4/pr=3254629315 (7260ms)
+2026-07-07 14:19:22,672 [INFO] experiment3:   [163/800] OK P1/C3/pr=3254629315 (9845ms)
+2026-07-07 14:19:24,215 [INFO] experiment3:   [166/800] OK P2/C2/pr=3254629315 (8754ms)
+2026-07-07 14:19:24,453 [INFO] experiment3:   [167/800] OK P2/C3/pr=3254629315 (8847ms)
+2026-07-07 14:19:24,626 [INFO] experiment3:   [165/800] OK P2/C1/pr=3254629315 (9915ms)
+2026-07-07 14:19:26,389 [INFO] experiment3:   [168/800] OK P2/C4/pr=3254629315 (8912ms)
+2026-07-07 14:19:27,413 [INFO] experiment3:   [169/800] OK P3/C1/pr=3254629315 (9708ms)
+2026-07-07 14:19:29,217 [INFO] experiment3:   [170/800] OK P3/C2/pr=3254629315 (10866ms)
+2026-07-07 14:19:29,265 [INFO] experiment3:   [171/800] OK P3/C3/pr=3254629315 (8431ms)
+2026-07-07 14:19:31,204 [INFO] experiment3:   [172/800] OK P3/C4/pr=3254629315 (8529ms)
+2026-07-07 14:19:31,920 [INFO] experiment3:   [173/800] OK P4/C1/pr=3254629315 (7703ms)
+2026-07-07 14:19:32,803 [INFO] experiment3:   [174/800] OK P4/C2/pr=3254629315 (8349ms)
+2026-07-07 14:19:33,451 [INFO] experiment3:   [178/800] OK P1/C2/pr=3358822026 (4232ms)
+2026-07-07 14:19:35,012 [INFO] experiment3:   [177/800] OK P1/C1/pr=3358822026 (7597ms)
+2026-07-07 14:19:35,382 [INFO] experiment3:   [176/800] OK P4/C4/pr=3254629315 (8991ms)
+2026-07-07 14:19:38,238 [INFO] experiment3:   [175/800] OK P4/C3/pr=3254629315 (13610ms)
+2026-07-07 14:19:38,333 [INFO] experiment3:   [179/800] OK P1/C3/pr=3358822026 (9065ms)
+2026-07-07 14:19:38,448 [INFO] experiment3:   [182/800] OK P2/C2/pr=3358822026 (5643ms)
+2026-07-07 14:19:38,509 [INFO] experiment3:   [180/800] OK P1/C4/pr=3358822026 (7302ms)
+2026-07-07 14:19:38,712 [INFO] experiment3:   [181/800] OK P2/C1/pr=3358822026 (6790ms)
+2026-07-07 14:19:40,553 [INFO] experiment3:   [184/800] OK P2/C4/pr=3358822026 (5539ms)
+2026-07-07 14:19:43,138 [INFO] experiment3:   [190/800] OK P4/C2/pr=3358822026 (4424ms)
+2026-07-07 14:19:43,172 [INFO] experiment3:   [186/800] OK P3/C2/pr=3358822026 (4932ms)
+2026-07-07 14:19:43,355 [INFO] experiment3:   [183/800] OK P2/C3/pr=3358822026 (9901ms)
+2026-07-07 14:19:46,228 [INFO] experiment3:   [191/800] OK P4/C3/pr=3358822026 (5673ms)
+2026-07-07 14:19:46,231 [INFO] experiment3:   [185/800] OK P3/C1/pr=3358822026 (10847ms)
+2026-07-07 14:19:46,323 [INFO] experiment3:   [189/800] OK P4/C1/pr=3358822026 (7812ms)
+2026-07-07 14:19:47,237 [INFO] experiment3:   [188/800] OK P3/C4/pr=3358822026 (8786ms)
+2026-07-07 14:19:48,209 [INFO] experiment3:   [187/800] OK P3/C3/pr=3358822026 (9875ms)
+2026-07-07 14:19:50,084 [INFO] experiment3:   [194/800] OK P1/C2/pr=3391981820 (6728ms)
+2026-07-07 14:19:50,218 [INFO] experiment3:   [193/800] OK P1/C1/pr=3391981820 (7044ms)
+2026-07-07 14:19:51,970 [INFO] experiment3:   [197/800] OK P2/C1/pr=3391981820 (5644ms)
+2026-07-07 14:19:52,347 [INFO] experiment3:   [195/800] OK P1/C3/pr=3391981820 (6118ms)
+2026-07-07 14:19:53,336 [INFO] experiment3:   [196/800] OK P1/C4/pr=3391981820 (7104ms)
+2026-07-07 14:19:53,416 [INFO] experiment3:   [198/800] OK P2/C2/pr=3391981820 (6178ms)
+2026-07-07 14:19:56,136 [INFO] experiment3:   [202/800] OK P3/C2/pr=3391981820 (4165ms)
+2026-07-07 14:19:58,241 [INFO] experiment3:   [192/800] OK P4/C4/pr=3358822026 (15101ms)
+2026-07-07 14:19:58,289 [INFO] experiment3:   [204/800] OK P3/C4/pr=3391981820 (4946ms)
+2026-07-07 14:19:58,771 [INFO] experiment3:   [200/800] OK P2/C4/pr=3391981820 (8686ms)
+2026-07-07 14:19:58,886 [INFO] experiment3:   [203/800] OK P3/C3/pr=3391981820 (6537ms)
+2026-07-07 14:19:59,023 [INFO] experiment3:   [199/800] OK P2/C3/pr=3391981820 (10812ms)
+2026-07-07 14:20:00,350 [INFO] experiment3:   [205/800] OK P4/C1/pr=3391981820 (6932ms)
+2026-07-07 14:20:01,943 [INFO] experiment3:   [208/800] OK P4/C4/pr=3391981820 (3653ms)
+2026-07-07 14:20:03,987 [INFO] experiment3:   [207/800] OK P4/C3/pr=3391981820 (5745ms)
+2026-07-07 14:20:04,970 [INFO] experiment3:   [201/800] OK P3/C1/pr=3391981820 (14751ms)
+2026-07-07 14:20:08,317 [INFO] experiment3:   [209/800] OK P1/C1/pr=3436318179 (9544ms)
+2026-07-07 14:20:09,465 [INFO] experiment3:   [206/800] OK P4/C2/pr=3391981820 (13328ms)
+2026-07-07 14:20:11,167 [INFO] experiment3:   [213/800] OK P2/C1/pr=3436318179 (9222ms)
+2026-07-07 14:20:13,862 [INFO] experiment3:   [210/800] OK P1/C2/pr=3436318179 (14974ms)
+2026-07-07 14:20:15,895 [INFO] experiment3:   [215/800] OK P2/C3/pr=3436318179 (10924ms)
+2026-07-07 14:20:16,386 [INFO] experiment3:   [211/800] OK P1/C3/pr=3436318179 (17362ms)
+2026-07-07 14:20:17,119 [INFO] experiment3:   [214/800] OK P2/C2/pr=3436318179 (13131ms)
+2026-07-07 14:20:17,163 [INFO] experiment3:   [218/800] OK P3/C2/pr=3436318179 (5994ms)
+2026-07-07 14:20:20,239 [INFO] experiment3:   [216/800] OK P2/C4/pr=3436318179 (11920ms)
+2026-07-07 14:20:22,833 [INFO] experiment3:   [212/800] FAIL P1/C4/pr=3436318179 (22481ms)
+2026-07-07 14:20:23,860 [INFO] experiment3:   [219/800] OK P3/C3/pr=3436318179 (9996ms)
+2026-07-07 14:20:26,120 [INFO] experiment3:   [225/800] OK P1/C1/pr=3448276744 (3286ms)
+2026-07-07 14:20:29,259 [INFO] experiment3:   [226/800] OK P1/C2/pr=3448276744 (5396ms)
+2026-07-07 14:20:29,532 [INFO] experiment3:   [217/800] OK P3/C1/pr=3436318179 (20067ms)
+2026-07-07 14:20:31,402 [INFO] experiment3:   [227/800] OK P1/C3/pr=3448276744 (5280ms)
+2026-07-07 14:20:31,447 [INFO] experiment3:   [224/800] OK P4/C4/pr=3436318179 (11206ms)
+2026-07-07 14:20:32,311 [INFO] experiment3:   [220/800] OK P3/C4/pr=3436318179 (16414ms)
+2026-07-07 14:20:32,749 [INFO] experiment3:   [223/800] OK P4/C3/pr=3436318179 (15584ms)
+2026-07-07 14:20:32,830 [INFO] experiment3:   [228/800] OK P1/C4/pr=3448276744 (3568ms)
+2026-07-07 14:20:34,338 [INFO] experiment3:   [221/800] OK P4/C1/pr=3436318179 (17951ms)
+2026-07-07 14:20:36,110 [INFO] experiment3:   [229/800] OK P2/C1/pr=3448276744 (6575ms)
+2026-07-07 14:20:37,322 [INFO] experiment3:   [230/800] OK P2/C2/pr=3448276744 (5918ms)
+2026-07-07 14:20:37,595 [INFO] experiment3:   [232/800] OK P2/C4/pr=3448276744 (5283ms)
+2026-07-07 14:20:38,155 [INFO] experiment3:   [231/800] OK P2/C3/pr=3448276744 (6706ms)
+2026-07-07 14:20:38,598 [INFO] experiment3:   [222/800] FAIL P4/C2/pr=3436318179 (21477ms)
+2026-07-07 14:20:38,745 [INFO] experiment3:   [233/800] OK P3/C1/pr=3448276744 (5995ms)
+2026-07-07 14:20:39,828 [INFO] experiment3:   [236/800] OK P3/C4/pr=3448276744 (3715ms)
+2026-07-07 14:20:40,076 [INFO] experiment3:   [234/800] OK P3/C2/pr=3448276744 (7244ms)
+2026-07-07 14:20:40,658 [INFO] experiment3:   [235/800] OK P3/C3/pr=3448276744 (6317ms)
+2026-07-07 14:20:42,513 [INFO] experiment3:   [237/800] OK P4/C1/pr=3448276744 (5190ms)
+2026-07-07 14:20:44,981 [INFO] experiment3:   [241/800] OK P1/C1/pr=3457204783 (6235ms)
+2026-07-07 14:20:45,208 [INFO] experiment3:   [244/800] OK P1/C4/pr=3457204783 (4549ms)
+2026-07-07 14:20:45,423 [INFO] experiment3:   [238/800] OK P4/C2/pr=3448276744 (7824ms)
+2026-07-07 14:20:45,473 [INFO] experiment3:   [242/800] OK P1/C2/pr=3457204783 (5644ms)
+2026-07-07 14:20:46,105 [INFO] experiment3:   [240/800] OK P4/C4/pr=3448276744 (7506ms)
+2026-07-07 14:20:46,919 [INFO] experiment3:   [239/800] OK P4/C3/pr=3448276744 (8760ms)
+2026-07-07 14:20:47,259 [INFO] experiment3:   [243/800] OK P1/C3/pr=3457204783 (7182ms)
+2026-07-07 14:20:50,649 [INFO] experiment3:   [250/800] OK P3/C2/pr=3457204783 (4542ms)
+2026-07-07 14:20:50,821 [INFO] experiment3:   [252/800] OK P3/C4/pr=3457204783 (3561ms)
+2026-07-07 14:20:51,339 [INFO] experiment3:   [245/800] OK P2/C1/pr=3457204783 (8824ms)
+2026-07-07 14:20:51,684 [INFO] experiment3:   [249/800] OK P3/C1/pr=3457204783 (6208ms)
+2026-07-07 14:20:53,192 [INFO] experiment3:   [251/800] OK P3/C3/pr=3457204783 (6269ms)
+2026-07-07 14:20:53,688 [INFO] experiment3:   [246/800] OK P2/C2/pr=3457204783 (8705ms)
+2026-07-07 14:20:53,894 [INFO] experiment3:   [247/800] OK P2/C3/pr=3457204783 (8684ms)
+2026-07-07 14:20:54,619 [INFO] experiment3:   [248/800] OK P2/C4/pr=3457204783 (9194ms)
+2026-07-07 14:20:56,391 [INFO] experiment3:   [255/800] OK P4/C3/pr=3457204783 (5051ms)
+2026-07-07 14:20:57,052 [INFO] experiment3:   [253/800] OK P4/C1/pr=3457204783 (6401ms)
+2026-07-07 14:20:57,595 [INFO] experiment3:   [256/800] OK P4/C4/pr=3457204783 (5909ms)
+2026-07-07 14:20:58,496 [INFO] experiment3:   [254/800] OK P4/C2/pr=3457204783 (7673ms)
+2026-07-07 14:20:59,865 [INFO] experiment3:   [257/800] OK P1/C1/pr=3460878843 (6671ms)
+2026-07-07 14:21:00,997 [INFO] experiment3:   [261/800] OK P2/C1/pr=3460878843 (4604ms)
+2026-07-07 14:21:01,772 [INFO] experiment3:   [260/800] OK P1/C4/pr=3460878843 (7151ms)
+2026-07-07 14:21:02,917 [INFO] experiment3:   [258/800] OK P1/C2/pr=3460878843 (9228ms)
+2026-07-07 14:21:03,089 [INFO] experiment3:   [259/800] OK P1/C3/pr=3460878843 (9193ms)
+2026-07-07 14:21:03,228 [INFO] experiment3:   [262/800] OK P2/C2/pr=3460878843 (6174ms)
+2026-07-07 14:21:04,932 [INFO] experiment3:   [265/800] OK P3/C1/pr=3460878843 (5064ms)
+2026-07-07 14:21:04,970 [INFO] experiment3:   [264/800] OK P2/C4/pr=3460878843 (6472ms)
+2026-07-07 14:21:06,310 [INFO] experiment3:   [263/800] OK P2/C3/pr=3460878843 (8714ms)
+2026-07-07 14:21:07,521 [INFO] experiment3:   [266/800] OK P3/C2/pr=3460878843 (6523ms)
+2026-07-07 14:21:08,195 [INFO] experiment3:   [267/800] OK P3/C3/pr=3460878843 (6422ms)
+2026-07-07 14:21:09,192 [INFO] experiment3:   [268/800] OK P3/C4/pr=3460878843 (6274ms)
+2026-07-07 14:21:09,697 [INFO] experiment3:   [270/800] OK P4/C2/pr=3460878843 (6467ms)
+2026-07-07 14:21:09,883 [INFO] experiment3:   [269/800] OK P4/C1/pr=3460878843 (6793ms)
+2026-07-07 14:21:10,540 [INFO] experiment3:   [271/800] OK P4/C3/pr=3460878843 (5607ms)
+2026-07-07 14:21:11,809 [INFO] experiment3:   [272/800] OK P4/C4/pr=3460878843 (6838ms)
+2026-07-07 14:21:17,202 [INFO] experiment3:   [274/800] OK P1/C2/pr=3487370131 (9679ms)
+2026-07-07 14:21:19,187 [INFO] experiment3:   [273/800] OK P1/C1/pr=3487370131 (12875ms)
+2026-07-07 14:21:19,382 [INFO] experiment3:   [278/800] OK P2/C2/pr=3487370131 (9496ms)
+2026-07-07 14:21:19,783 [INFO] experiment3:   [275/800] OK P1/C3/pr=3487370131 (11586ms)
+2026-07-07 14:21:19,812 [INFO] experiment3:   [280/800] OK P2/C4/pr=3487370131 (8003ms)
+2026-07-07 14:21:20,262 [INFO] experiment3:   [277/800] OK P2/C1/pr=3487370131 (10564ms)
+2026-07-07 14:21:20,742 [INFO] experiment3:   [276/800] OK P1/C4/pr=3487370131 (11548ms)
+2026-07-07 14:21:23,526 [INFO] experiment3:   [279/800] OK P2/C3/pr=3487370131 (12984ms)
+2026-07-07 14:21:26,631 [INFO] experiment3:   [283/800] OK P3/C3/pr=3487370131 (7247ms)
+2026-07-07 14:21:30,342 [INFO] experiment3:   [286/800] OK P4/C2/pr=3487370131 (10077ms)
+2026-07-07 14:21:33,484 [INFO] experiment3:   [282/800] OK P3/C2/pr=3487370131 (14295ms)
+2026-07-07 14:21:34,226 [INFO] experiment3:   [285/800] OK P4/C1/pr=3487370131 (14412ms)
+2026-07-07 14:21:34,589 [INFO] experiment3:   [289/800] OK P1/C1/pr=3487930429 (7957ms)
+2026-07-07 14:21:36,738 [INFO] experiment3:   [281/800] OK P3/C1/pr=3487370131 (19535ms)
+2026-07-07 14:21:37,661 [INFO] experiment3:   [284/800] OK P3/C4/pr=3487370131 (17876ms)
+2026-07-07 14:21:37,694 [INFO] experiment3:   [287/800] OK P4/C3/pr=3487370131 (16951ms)
+2026-07-07 14:21:39,562 [INFO] experiment3:   [288/800] OK P4/C4/pr=3487370131 (16033ms)
+2026-07-07 14:21:44,116 [INFO] experiment3:   [293/800] OK P2/C1/pr=3487930429 (9525ms)
+2026-07-07 14:21:46,270 [INFO] experiment3:   [292/800] OK P1/C4/pr=3487930429 (12042ms)
+2026-07-07 14:21:48,485 [INFO] experiment3:   [297/800] OK P3/C1/pr=3487930429 (8921ms)
+2026-07-07 14:21:49,060 [INFO] experiment3:   [291/800] OK P1/C3/pr=3487930429 (15574ms)
+2026-07-07 14:21:49,951 [INFO] experiment3:   [290/800] OK P1/C2/pr=3487930429 (19607ms)
+2026-07-07 14:21:50,538 [INFO] experiment3:   [295/800] OK P2/C3/pr=3487930429 (12876ms)
+2026-07-07 14:21:50,802 [INFO] experiment3:   [294/800] OK P2/C2/pr=3487930429 (14061ms)
+2026-07-07 14:21:53,911 [INFO] experiment3:   [296/800] OK P2/C4/pr=3487930429 (16215ms)
+2026-07-07 14:21:57,350 [INFO] experiment3:   [298/800] OK P3/C2/pr=3487930429 (13233ms)
+2026-07-07 14:21:58,514 [INFO] experiment3:   [300/800] OK P3/C4/pr=3487930429 (10028ms)
+2026-07-07 14:21:59,168 [INFO] experiment3:   [305/800] OK P1/C1/pr=3541929460 (5255ms)
+2026-07-07 14:21:59,452 [INFO] experiment3:   [301/800] OK P4/C1/pr=3487930429 (10389ms)
+2026-07-07 14:21:59,840 [INFO] experiment3:   [302/800] OK P4/C2/pr=3487930429 (9885ms)
+2026-07-07 14:22:00,087 [INFO] experiment3:   [299/800] OK P3/C3/pr=3487930429 (13816ms)
+2026-07-07 14:22:03,123 [INFO] experiment3:   [303/800] OK P4/C3/pr=3487930429 (12582ms)
+2026-07-07 14:22:05,870 [INFO] experiment3:   [309/800] OK P2/C1/pr=3541929460 (6415ms)
+2026-07-07 14:22:05,965 [INFO] experiment3:   [308/800] OK P1/C4/pr=3541929460 (6796ms)
+2026-07-07 14:22:06,837 [INFO] experiment3:   [307/800] OK P1/C3/pr=3541929460 (8320ms)
+2026-07-07 14:22:06,873 [INFO] experiment3:   [306/800] OK P1/C2/pr=3541929460 (9522ms)
+2026-07-07 14:22:09,887 [INFO] experiment3:   [310/800] OK P2/C2/pr=3541929460 (10046ms)
+2026-07-07 14:22:11,858 [INFO] experiment3:   [304/800] OK P4/C4/pr=3487930429 (21053ms)
+2026-07-07 14:22:12,121 [INFO] experiment3:   [311/800] OK P2/C3/pr=3541929460 (12032ms)
+2026-07-07 14:22:12,388 [INFO] experiment3:   [313/800] OK P3/C1/pr=3541929460 (6517ms)
+2026-07-07 14:22:13,218 [INFO] experiment3:   [316/800] OK P3/C4/pr=3541929460 (6342ms)
+2026-07-07 14:22:13,321 [INFO] experiment3:   [314/800] OK P3/C2/pr=3541929460 (7354ms)
+2026-07-07 14:22:13,353 [INFO] experiment3:   [312/800] OK P2/C4/pr=3541929460 (10228ms)
+2026-07-07 14:22:14,884 [INFO] experiment3:   [315/800] OK P3/C3/pr=3541929460 (8046ms)
+2026-07-07 14:22:17,527 [INFO] experiment3:   [317/800] OK P4/C1/pr=3541929460 (7639ms)
+2026-07-07 14:22:19,879 [INFO] experiment3:   [318/800] OK P4/C2/pr=3541929460 (8019ms)
+2026-07-07 14:22:20,127 [INFO] experiment3:   [319/800] OK P4/C3/pr=3541929460 (8003ms)
+2026-07-07 14:22:23,374 [INFO] experiment3:   [321/800] OK P1/C1/pr=3656644773 (10155ms)
+2026-07-07 14:22:25,651 [INFO] experiment3:   [322/800] OK P1/C2/pr=3656644773 (12328ms)
+2026-07-07 14:22:25,817 [INFO] experiment3:   [324/800] OK P1/C4/pr=3656644773 (10931ms)
+2026-07-07 14:22:26,428 [INFO] experiment3:   [320/800] OK P4/C4/pr=3541929460 (14037ms)
+2026-07-07 14:22:27,456 [INFO] experiment3:   [326/800] OK P2/C2/pr=3656644773 (7573ms)
+2026-07-07 14:22:27,617 [INFO] experiment3:   [325/800] OK P2/C1/pr=3656644773 (10088ms)
+2026-07-07 14:22:33,965 [INFO] experiment3:   [333/800] OK P4/C1/pr=3656644773 (6346ms)
+2026-07-07 14:22:34,643 [INFO] experiment3:   [323/800] OK P1/C3/pr=3656644773 (21289ms)
+2026-07-07 14:22:35,238 [INFO] experiment3:   [327/800] OK P2/C3/pr=3656644773 (15109ms)
+2026-07-07 14:22:35,709 [INFO] experiment3:   [328/800] OK P2/C4/pr=3656644773 (12332ms)
+2026-07-07 14:22:36,750 [INFO] experiment3:   [331/800] OK P3/C3/pr=3656644773 (10321ms)
+2026-07-07 14:22:37,689 [INFO] experiment3:   [332/800] OK P3/C4/pr=3656644773 (10232ms)
+2026-07-07 14:22:38,295 [INFO] experiment3:   [330/800] OK P3/C2/pr=3656644773 (12477ms)
+2026-07-07 14:22:39,711 [INFO] experiment3:   [329/800] OK P3/C1/pr=3656644773 (14059ms)
+2026-07-07 14:22:44,012 [INFO] experiment3:   [334/800] OK P4/C2/pr=3656644773 (10044ms)
+2026-07-07 14:22:44,980 [INFO] experiment3:   [336/800] OK P4/C4/pr=3656644773 (9740ms)
+2026-07-07 14:22:46,479 [INFO] experiment3:   [337/800] OK P1/C1/pr=3678395982 (10769ms)
+2026-07-07 14:22:46,972 [INFO] experiment3:   [340/800] OK P1/C4/pr=3678395982 (8675ms)
+2026-07-07 14:22:47,882 [INFO] experiment3:   [335/800] OK P4/C3/pr=3656644773 (13237ms)
+2026-07-07 14:22:47,939 [INFO] experiment3:   [339/800] OK P1/C3/pr=3678395982 (10248ms)
+2026-07-07 14:22:48,913 [INFO] experiment3:   [338/800] OK P1/C2/pr=3678395982 (12161ms)
+2026-07-07 14:22:52,317 [INFO] experiment3:   [341/800] OK P2/C1/pr=3678395982 (12603ms)
+2026-07-07 14:22:54,608 [INFO] experiment3:   [345/800] OK P3/C1/pr=3678395982 (7635ms)
+2026-07-07 14:22:54,755 [INFO] experiment3:   [347/800] OK P3/C3/pr=3678395982 (6815ms)
+2026-07-07 14:22:55,135 [INFO] experiment3:   [348/800] OK P3/C4/pr=3678395982 (6221ms)
+2026-07-07 14:22:56,169 [INFO] experiment3:   [344/800] OK P2/C4/pr=3678395982 (9689ms)
+2026-07-07 14:22:57,580 [INFO] experiment3:   [342/800] OK P2/C2/pr=3678395982 (13566ms)
+2026-07-07 14:22:57,648 [INFO] experiment3:   [343/800] OK P2/C3/pr=3678395982 (12666ms)
+2026-07-07 14:22:57,764 [INFO] experiment3:   [346/800] OK P3/C2/pr=3678395982 (9881ms)
+2026-07-07 14:23:02,779 [INFO] experiment3:   [350/800] OK P4/C2/pr=3678395982 (8168ms)
+2026-07-07 14:23:03,172 [INFO] experiment3:   [349/800] OK P4/C1/pr=3678395982 (10854ms)
+2026-07-07 14:23:04,221 [INFO] experiment3:   [355/800] OK P1/C3/pr=3705587596 (6572ms)
+2026-07-07 14:23:04,825 [INFO] experiment3:   [351/800] OK P4/C3/pr=3678395982 (10068ms)
+2026-07-07 14:23:05,315 [INFO] experiment3:   [353/800] OK P1/C1/pr=3705587596 (9144ms)
+2026-07-07 14:23:05,473 [INFO] experiment3:   [354/800] OK P1/C2/pr=3705587596 (7891ms)
+2026-07-07 14:23:05,676 [INFO] experiment3:   [352/800] OK P4/C4/pr=3678395982 (10539ms)
+2026-07-07 14:23:06,132 [INFO] experiment3:   [356/800] OK P1/C4/pr=3705587596 (8366ms)
+2026-07-07 14:23:09,676 [INFO] experiment3:   [357/800] OK P2/C1/pr=3705587596 (6895ms)
+2026-07-07 14:23:10,480 [INFO] experiment3:   [360/800] OK P2/C4/pr=3705587596 (5653ms)
+2026-07-07 14:23:11,222 [INFO] experiment3:   [358/800] OK P2/C2/pr=3705587596 (8048ms)
+2026-07-07 14:23:11,412 [INFO] experiment3:   [363/800] OK P3/C3/pr=3705587596 (5734ms)
+2026-07-07 14:23:12,135 [INFO] experiment3:   [362/800] OK P3/C2/pr=3705587596 (6659ms)
+2026-07-07 14:23:13,189 [INFO] experiment3:   [361/800] OK P3/C1/pr=3705587596 (7873ms)
+2026-07-07 14:23:13,531 [INFO] experiment3:   [364/800] OK P3/C4/pr=3705587596 (7397ms)
+2026-07-07 14:23:13,940 [INFO] experiment3:   [359/800] OK P2/C3/pr=3705587596 (9718ms)
+2026-07-07 14:23:15,965 [INFO] experiment3:   [365/800] OK P4/C1/pr=3705587596 (6286ms)
+2026-07-07 14:23:18,625 [INFO] experiment3:   [367/800] OK P4/C3/pr=3705587596 (7401ms)
+2026-07-07 14:23:18,854 [INFO] experiment3:   [366/800] OK P4/C2/pr=3705587596 (8369ms)
+2026-07-07 14:23:19,482 [INFO] experiment3:   [370/800] OK P1/C2/pr=3751934078 (6292ms)
+2026-07-07 14:23:19,781 [INFO] experiment3:   [369/800] OK P1/C1/pr=3751934078 (7645ms)
+2026-07-07 14:23:20,574 [INFO] experiment3:   [368/800] OK P4/C4/pr=3705587596 (9160ms)
+2026-07-07 14:23:20,602 [INFO] experiment3:   [371/800] OK P1/C3/pr=3751934078 (7068ms)
+2026-07-07 14:23:21,988 [INFO] experiment3:   [372/800] OK P1/C4/pr=3751934078 (8046ms)
+2026-07-07 14:23:25,814 [INFO] experiment3:   [374/800] OK P2/C2/pr=3751934078 (7187ms)
+2026-07-07 14:23:26,800 [INFO] experiment3:   [377/800] OK P3/C1/pr=3751934078 (7017ms)
+2026-07-07 14:23:27,265 [INFO] experiment3:   [375/800] OK P2/C3/pr=3751934078 (8409ms)
+2026-07-07 14:23:27,425 [INFO] experiment3:   [376/800] OK P2/C4/pr=3751934078 (7941ms)
+2026-07-07 14:23:27,462 [INFO] experiment3:   [379/800] OK P3/C3/pr=3751934078 (6859ms)
+2026-07-07 14:23:27,652 [INFO] experiment3:   [373/800] OK P2/C1/pr=3751934078 (11685ms)
+2026-07-07 14:23:29,021 [INFO] experiment3:   [378/800] OK P3/C2/pr=3751934078 (8444ms)
+2026-07-07 14:23:30,765 [INFO] experiment3:   [381/800] OK P4/C1/pr=3751934078 (4950ms)
+2026-07-07 14:23:31,731 [INFO] experiment3:   [380/800] OK P3/C4/pr=3751934078 (9741ms)
+2026-07-07 14:23:32,721 [INFO] experiment3:   [382/800] OK P4/C2/pr=3751934078 (5919ms)
+2026-07-07 14:23:33,314 [INFO] experiment3:   [384/800] OK P4/C4/pr=3751934078 (5888ms)
+2026-07-07 14:23:35,653 [INFO] experiment3:   [383/800] OK P4/C3/pr=3751934078 (8387ms)
+2026-07-07 14:23:36,401 [INFO] experiment3:   [386/800] OK P1/C2/pr=3760806588 (8748ms)
+2026-07-07 14:23:38,617 [INFO] experiment3:   [385/800] OK P1/C1/pr=3760806588 (11152ms)
+2026-07-07 14:23:40,255 [INFO] experiment3:   [389/800] OK P2/C1/pr=3760806588 (8522ms)
+2026-07-07 14:23:40,464 [INFO] experiment3:   [387/800] OK P1/C3/pr=3760806588 (11442ms)
+2026-07-07 14:23:40,532 [INFO] experiment3:   [391/800] OK P2/C3/pr=3760806588 (7216ms)
+2026-07-07 14:23:41,163 [INFO] experiment3:   [388/800] OK P1/C4/pr=3760806588 (10395ms)
+2026-07-07 14:23:44,940 [INFO] experiment3:   [392/800] OK P2/C4/pr=3760806588 (9285ms)
+2026-07-07 14:23:46,373 [INFO] experiment3:   [394/800] OK P3/C2/pr=3760806588 (7754ms)
+2026-07-07 14:23:46,425 [INFO] experiment3:   [390/800] OK P2/C2/pr=3760806588 (13701ms)
+2026-07-07 14:23:47,367 [INFO] experiment3:   [393/800] OK P3/C1/pr=3760806588 (10964ms)
+2026-07-07 14:23:47,544 [INFO] experiment3:   [396/800] OK P3/C4/pr=3760806588 (7078ms)
+2026-07-07 14:23:47,948 [INFO] experiment3:   [398/800] OK P4/C2/pr=3760806588 (6784ms)
+2026-07-07 14:23:48,683 [INFO] experiment3:   [397/800] OK P4/C1/pr=3760806588 (8149ms)
+2026-07-07 14:23:49,896 [INFO] experiment3:   [395/800] OK P3/C3/pr=3760806588 (9639ms)
+2026-07-07 14:23:54,511 [INFO] experiment3:   [400/800] OK P4/C4/pr=3760806588 (8137ms)
+2026-07-07 14:23:55,482 [INFO] experiment3:   [405/800] OK P2/C1/pr=3762732875 (6797ms)
+2026-07-07 14:23:55,827 [INFO] experiment3:   [402/800] OK P1/C2/pr=3762732875 (8459ms)
+2026-07-07 14:23:56,236 [INFO] experiment3:   [406/800] OK P2/C2/pr=3762732875 (6338ms)
+2026-07-07 14:23:58,290 [INFO] experiment3:   [401/800] OK P1/C1/pr=3762732875 (11864ms)
+2026-07-07 14:23:58,641 [INFO] experiment3:   [403/800] OK P1/C3/pr=3762732875 (11095ms)
+2026-07-07 14:24:00,900 [INFO] experiment3:   [399/800] OK P4/C3/pr=3760806588 (15957ms)
+2026-07-07 14:24:01,857 [INFO] experiment3:   [404/800] OK P1/C4/pr=3762732875 (13908ms)
+2026-07-07 14:24:03,633 [INFO] experiment3:   [407/800] OK P2/C3/pr=3762732875 (9120ms)
+2026-07-07 14:24:04,835 [INFO] experiment3:   [412/800] OK P3/C4/pr=3762732875 (6193ms)
+2026-07-07 14:24:04,914 [INFO] experiment3:   [411/800] OK P3/C3/pr=3762732875 (6620ms)
+2026-07-07 14:24:05,834 [INFO] experiment3:   [409/800] OK P3/C1/pr=3762732875 (10006ms)
+2026-07-07 14:24:05,952 [INFO] experiment3:   [410/800] OK P3/C2/pr=3762732875 (9714ms)
+2026-07-07 14:24:06,186 [INFO] experiment3:   [408/800] OK P2/C4/pr=3762732875 (10703ms)
+2026-07-07 14:24:08,815 [INFO] experiment3:   [416/800] OK P4/C4/pr=3762732875 (3979ms)
+2026-07-07 14:24:12,554 [INFO] experiment3:   [413/800] OK P4/C1/pr=3762732875 (11653ms)
+2026-07-07 14:24:12,617 [INFO] experiment3:   [414/800] OK P4/C2/pr=3762732875 (10757ms)
+2026-07-07 14:24:12,704 [INFO] experiment3:   [415/800] OK P4/C3/pr=3762732875 (9070ms)
+2026-07-07 14:24:15,460 [INFO] experiment3:   [419/800] OK P1/C3/pr=3772925495 (9507ms)
+2026-07-07 14:24:15,847 [INFO] experiment3:   [421/800] OK P2/C1/pr=3772925495 (7031ms)
+2026-07-07 14:24:20,490 [INFO] experiment3:   [418/800] OK P1/C2/pr=3772925495 (14654ms)
+2026-07-07 14:24:20,750 [INFO] experiment3:   [417/800] OK P1/C1/pr=3772925495 (15835ms)
+2026-07-07 14:24:21,812 [INFO] experiment3:   [422/800] OK P2/C2/pr=3772925495 (9256ms)
+2026-07-07 14:24:22,791 [INFO] experiment3:   [420/800] OK P1/C4/pr=3772925495 (16603ms)
+2026-07-07 14:24:22,951 [INFO] experiment3:   [423/800] OK P2/C3/pr=3772925495 (10333ms)
+2026-07-07 14:24:23,192 [INFO] experiment3:   [425/800] OK P3/C1/pr=3772925495 (7730ms)
+2026-07-07 14:24:25,861 [INFO] experiment3:   [424/800] OK P2/C4/pr=3772925495 (13155ms)
+2026-07-07 14:24:27,208 [INFO] experiment3:   [426/800] OK P3/C2/pr=3772925495 (11358ms)
+2026-07-07 14:24:30,721 [INFO] experiment3:   [431/800] OK P4/C3/pr=3772925495 (7768ms)
+2026-07-07 14:24:31,604 [INFO] experiment3:   [433/800] OK P1/C1/pr=3781232230 (5742ms)
+2026-07-07 14:24:33,272 [INFO] experiment3:   [429/800] OK P4/C1/pr=3772925495 (11458ms)
+2026-07-07 14:24:33,719 [INFO] experiment3:   [427/800] OK P3/C3/pr=3772925495 (13227ms)
+2026-07-07 14:24:34,113 [INFO] experiment3:   [428/800] OK P3/C4/pr=3772925495 (13362ms)
+2026-07-07 14:24:36,248 [INFO] experiment3:   [430/800] OK P4/C2/pr=3772925495 (13456ms)
+2026-07-07 14:24:36,547 [INFO] experiment3:   [434/800] OK P1/C2/pr=3781232230 (9338ms)
+2026-07-07 14:24:36,730 [INFO] experiment3:   [435/800] OK P1/C3/pr=3781232230 (6007ms)
+2026-07-07 14:24:37,122 [INFO] experiment3:   [432/800] OK P4/C4/pr=3772925495 (13928ms)
+2026-07-07 14:24:40,202 [INFO] experiment3:   [436/800] OK P1/C4/pr=3781232230 (8596ms)
+2026-07-07 14:24:40,220 [INFO] experiment3:   [439/800] OK P2/C3/pr=3781232230 (6105ms)
+2026-07-07 14:24:40,666 [INFO] experiment3:   [438/800] OK P2/C2/pr=3781232230 (6945ms)
+2026-07-07 14:24:40,779 [INFO] experiment3:   [443/800] OK P3/C3/pr=3781232230 (3655ms)
+2026-07-07 14:24:42,894 [INFO] experiment3:   [440/800] OK P2/C4/pr=3781232230 (6645ms)
+2026-07-07 14:24:44,693 [INFO] experiment3:   [441/800] OK P3/C1/pr=3781232230 (8144ms)
+2026-07-07 14:24:44,713 [INFO] experiment3:   [442/800] OK P3/C2/pr=3781232230 (7982ms)
+2026-07-07 14:24:46,453 [INFO] experiment3:   [445/800] OK P4/C1/pr=3781232230 (6232ms)
+2026-07-07 14:24:46,824 [INFO] experiment3:   [444/800] OK P3/C4/pr=3781232230 (6620ms)
+2026-07-07 14:24:50,516 [INFO] experiment3:   [450/800] OK P1/C2/pr=3793408709 (5802ms)
+2026-07-07 14:24:50,614 [INFO] experiment3:   [447/800] OK P4/C3/pr=3781232230 (9834ms)
+2026-07-07 14:24:51,018 [INFO] experiment3:   [448/800] OK P4/C4/pr=3781232230 (8122ms)
+2026-07-07 14:24:51,156 [INFO] experiment3:   [446/800] OK P4/C2/pr=3781232230 (10487ms)
+2026-07-07 14:24:51,545 [INFO] experiment3:   [451/800] OK P1/C3/pr=3793408709 (5088ms)
+2026-07-07 14:24:51,979 [INFO] experiment3:   [449/800] OK P1/C1/pr=3793408709 (7285ms)
+2026-07-07 14:24:54,365 [INFO] experiment3:   [452/800] OK P1/C4/pr=3793408709 (7539ms)
+2026-07-07 14:24:54,734 [INFO] experiment3:   [437/800] OK P2/C1/pr=3781232230 (21461ms)
+2026-07-07 14:24:56,438 [INFO] experiment3:   [454/800] OK P2/C2/pr=3793408709 (5822ms)
+2026-07-07 14:24:56,440 [INFO] experiment3:   [456/800] OK P2/C4/pr=3793408709 (5281ms)
+2026-07-07 14:24:57,027 [INFO] experiment3:   [455/800] OK P2/C3/pr=3793408709 (6007ms)
+2026-07-07 14:24:57,694 [INFO] experiment3:   [458/800] OK P3/C2/pr=3793408709 (5713ms)
+2026-07-07 14:24:57,926 [INFO] experiment3:   [460/800] OK P3/C4/pr=3793408709 (3189ms)
+2026-07-07 14:24:58,013 [INFO] experiment3:   [453/800] OK P2/C1/pr=3793408709 (7495ms)
+2026-07-07 14:24:58,831 [INFO] experiment3:   [459/800] OK P3/C3/pr=3793408709 (4465ms)
+2026-07-07 14:24:59,031 [INFO] experiment3:   [457/800] OK P3/C1/pr=3793408709 (7485ms)
+2026-07-07 14:24:59,857 [INFO] experiment3:   [462/800] OK P4/C2/pr=3793408709 (3414ms)
+2026-07-07 14:25:03,009 [INFO] experiment3:   [461/800] OK P4/C1/pr=3793408709 (6570ms)
+2026-07-07 14:25:03,318 [INFO] experiment3:   [463/800] OK P4/C3/pr=3793408709 (6288ms)
+2026-07-07 14:25:05,030 [INFO] experiment3:   [464/800] OK P4/C4/pr=3793408709 (7335ms)
+2026-07-07 14:25:07,879 [INFO] experiment3:   [467/800] OK P1/C3/pr=3815737372 (9046ms)
+2026-07-07 14:25:08,679 [INFO] experiment3:   [465/800] OK P1/C1/pr=3815737372 (10750ms)
+2026-07-07 14:25:08,772 [INFO] experiment3:   [468/800] OK P1/C4/pr=3815737372 (9738ms)
+2026-07-07 14:25:09,234 [INFO] experiment3:   [470/800] OK P2/C2/pr=3815737372 (6222ms)
+2026-07-07 14:25:10,891 [INFO] experiment3:   [466/800] OK P1/C2/pr=3815737372 (12875ms)
+2026-07-07 14:25:11,864 [INFO] experiment3:   [469/800] OK P2/C1/pr=3815737372 (12006ms)
+2026-07-07 14:25:12,257 [INFO] experiment3:   [471/800] OK P2/C3/pr=3815737372 (8937ms)
+2026-07-07 14:25:14,955 [INFO] experiment3:   [472/800] OK P2/C4/pr=3815737372 (9923ms)
+2026-07-07 14:25:17,603 [INFO] experiment3:   [474/800] OK P3/C2/pr=3815737372 (8922ms)
+2026-07-07 14:25:18,656 [INFO] experiment3:   [476/800] OK P3/C4/pr=3815737372 (9421ms)
+2026-07-07 14:25:19,625 [INFO] experiment3:   [475/800] OK P3/C3/pr=3815737372 (10851ms)
+2026-07-07 14:25:20,259 [INFO] experiment3:   [477/800] OK P4/C1/pr=3815737372 (9367ms)
+2026-07-07 14:25:21,464 [INFO] experiment3:   [478/800] OK P4/C2/pr=3815737372 (9598ms)
+2026-07-07 14:25:21,598 [INFO] experiment3:   [473/800] OK P3/C1/pr=3815737372 (13716ms)
+2026-07-07 14:25:23,575 [INFO] experiment3:   [480/800] OK P4/C4/pr=3815737372 (8618ms)
+2026-07-07 14:25:23,929 [INFO] experiment3:   [481/800] OK P1/C1/pr=3826336938 (6324ms)
+2026-07-07 14:25:24,363 [INFO] experiment3:   [479/800] OK P4/C3/pr=3815737372 (12104ms)
+2026-07-07 14:25:26,362 [INFO] experiment3:   [483/800] OK P1/C3/pr=3826336938 (6735ms)
+2026-07-07 14:25:27,870 [INFO] experiment3:   [486/800] OK P2/C2/pr=3826336938 (6271ms)
+2026-07-07 14:25:28,780 [INFO] experiment3:   [484/800] OK P1/C4/pr=3826336938 (8519ms)
+2026-07-07 14:25:28,849 [INFO] experiment3:   [489/800] OK P3/C1/pr=3826336938 (4485ms)
+2026-07-07 14:25:30,049 [INFO] experiment3:   [488/800] OK P2/C4/pr=3826336938 (6118ms)
+2026-07-07 14:25:30,526 [INFO] experiment3:   [482/800] OK P1/C2/pr=3826336938 (11868ms)
+2026-07-07 14:25:32,128 [INFO] experiment3:   [485/800] OK P2/C1/pr=3826336938 (10664ms)
+2026-07-07 14:25:32,346 [INFO] experiment3:   [487/800] OK P2/C3/pr=3826336938 (8769ms)
+2026-07-07 14:25:34,611 [INFO] experiment3:   [491/800] OK P3/C3/pr=3826336938 (6738ms)
+2026-07-07 14:25:36,156 [INFO] experiment3:   [490/800] OK P3/C2/pr=3826336938 (9792ms)
+2026-07-07 14:25:37,795 [INFO] experiment3:   [497/800] OK P1/C1/pr=3827484450 (5448ms)
+2026-07-07 14:25:38,134 [INFO] experiment3:   [492/800] OK P3/C4/pr=3826336938 (9352ms)
+2026-07-07 14:25:39,115 [INFO] experiment3:   [496/800] OK P4/C4/pr=3826336938 (6984ms)
+2026-07-07 14:25:39,161 [INFO] experiment3:   [495/800] OK P4/C3/pr=3826336938 (8633ms)
+2026-07-07 14:25:40,790 [INFO] experiment3:   [493/800] OK P4/C1/pr=3826336938 (11938ms)
+2026-07-07 14:25:42,572 [INFO] experiment3:   [498/800] OK P1/C2/pr=3827484450 (7960ms)
+2026-07-07 14:25:43,852 [INFO] experiment3:   [501/800] OK P2/C1/pr=3827484450 (5716ms)
+2026-07-07 14:25:44,593 [INFO] experiment3:   [494/800] OK P4/C2/pr=3826336938 (14542ms)
+2026-07-07 14:25:48,749 [INFO] experiment3:   [502/800] OK P2/C2/pr=3827484450 (9633ms)
+2026-07-07 14:25:48,845 [INFO] experiment3:   [499/800] OK P1/C3/pr=3827484450 (12688ms)
+2026-07-07 14:25:49,591 [INFO] experiment3:   [505/800] OK P3/C1/pr=3827484450 (7017ms)
+2026-07-07 14:25:49,692 [INFO] experiment3:   [503/800] OK P2/C3/pr=3827484450 (10530ms)
+2026-07-07 14:25:51,725 [INFO] experiment3:   [504/800] OK P2/C4/pr=3827484450 (10934ms)
+2026-07-07 14:25:51,744 [INFO] experiment3:   [500/800] OK P1/C4/pr=3827484450 (13948ms)
+2026-07-07 14:25:53,940 [INFO] experiment3:   [507/800] OK P3/C3/pr=3827484450 (9345ms)
+2026-07-07 14:25:57,179 [INFO] experiment3:   [506/800] OK P3/C2/pr=3827484450 (13325ms)
+2026-07-07 14:25:58,518 [INFO] experiment3:   [509/800] OK P4/C1/pr=3827484450 (9671ms)
+2026-07-07 14:25:59,082 [INFO] experiment3:   [508/800] OK P3/C4/pr=3827484450 (10330ms)
+2026-07-07 14:26:00,698 [INFO] experiment3:   [510/800] OK P4/C2/pr=3827484450 (11106ms)
+2026-07-07 14:26:01,997 [INFO] experiment3:   [512/800] OK P4/C4/pr=3827484450 (10270ms)
+2026-07-07 14:26:04,048 [INFO] experiment3:   [511/800] OK P4/C3/pr=3827484450 (14355ms)
+2026-07-07 14:26:08,058 [INFO] experiment3:   [514/800] OK P1/C2/pr=3830943148 (14117ms)
+2026-07-07 14:26:09,014 [INFO] experiment3:   [518/800] OK P2/C2/pr=3830943148 (8314ms)
+2026-07-07 14:26:11,396 [INFO] experiment3:   [513/800] OK P1/C1/pr=3830943148 (19651ms)
+2026-07-07 14:26:12,528 [INFO] experiment3:   [519/800] OK P2/C3/pr=3830943148 (10528ms)
+2026-07-07 14:26:12,531 [INFO] experiment3:   [515/800] OK P1/C3/pr=3830943148 (15346ms)
+2026-07-07 14:26:13,394 [INFO] experiment3:   [517/800] OK P2/C1/pr=3830943148 (14310ms)
+2026-07-07 14:26:18,003 [INFO] experiment3:   [520/800] OK P2/C4/pr=3830943148 (13954ms)
+2026-07-07 14:26:18,381 [INFO] experiment3:   [516/800] OK P1/C4/pr=3830943148 (19861ms)
+2026-07-07 14:26:19,585 [INFO] experiment3:   [522/800] OK P3/C2/pr=3830943148 (10569ms)
+2026-07-07 14:26:23,049 [INFO] experiment3:   [521/800] OK P3/C1/pr=3830943148 (14989ms)
+2026-07-07 14:26:24,538 [INFO] experiment3:   [525/800] OK P4/C1/pr=3830943148 (12006ms)
+2026-07-07 14:26:24,753 [INFO] experiment3:   [529/800] OK P1/C1/pr=3832256283 (5167ms)
+2026-07-07 14:26:25,131 [INFO] experiment3:   [524/800] OK P3/C4/pr=3830943148 (12600ms)
+2026-07-07 14:26:25,839 [INFO] experiment3:   [526/800] OK P4/C2/pr=3830943148 (12442ms)
+2026-07-07 14:26:26,313 [INFO] experiment3:   [523/800] OK P3/C3/pr=3830943148 (14915ms)
+2026-07-07 14:26:30,163 [INFO] experiment3:   [530/800] OK P1/C2/pr=3832256283 (7113ms)
+2026-07-07 14:26:31,509 [INFO] experiment3:   [531/800] OK P1/C3/pr=3832256283 (6969ms)
+2026-07-07 14:26:32,970 [INFO] experiment3:   [528/800] OK P4/C4/pr=3830943148 (14587ms)
+2026-07-07 14:26:33,320 [INFO] experiment3:   [532/800] OK P1/C4/pr=3832256283 (8564ms)
+2026-07-07 14:26:34,630 [INFO] experiment3:   [535/800] OK P2/C3/pr=3832256283 (8315ms)
+2026-07-07 14:26:35,260 [INFO] experiment3:   [534/800] OK P2/C2/pr=3832256283 (9420ms)
+2026-07-07 14:26:36,299 [INFO] experiment3:   [527/800] OK P4/C3/pr=3830943148 (18294ms)
+2026-07-07 14:26:38,674 [INFO] experiment3:   [539/800] OK P3/C3/pr=3832256283 (5353ms)
+2026-07-07 14:26:43,416 [INFO] experiment3:   [540/800] OK P3/C4/pr=3832256283 (8784ms)
+2026-07-07 14:26:43,795 [INFO] experiment3:   [533/800] OK P2/C1/pr=3832256283 (18662ms)
+2026-07-07 14:26:44,835 [INFO] experiment3:   [537/800] OK P3/C1/pr=3832256283 (13324ms)
+2026-07-07 14:26:45,025 [INFO] experiment3:   [536/800] OK P2/C4/pr=3832256283 (14860ms)
+2026-07-07 14:26:45,722 [INFO] experiment3:   [543/800] OK P4/C3/pr=3832256283 (7045ms)
+2026-07-07 14:26:45,799 [INFO] experiment3:   [541/800] OK P4/C1/pr=3832256283 (10537ms)
+2026-07-07 14:26:47,526 [INFO] experiment3:   [542/800] OK P4/C2/pr=3832256283 (11226ms)
+2026-07-07 14:26:51,244 [INFO] experiment3:   [544/800] OK P4/C4/pr=3832256283 (7825ms)
+2026-07-07 14:26:52,131 [INFO] experiment3:   [538/800] OK P3/C2/pr=3832256283 (19160ms)
+2026-07-07 14:26:52,593 [INFO] experiment3:   [547/800] OK P1/C3/pr=3849035410 (7566ms)
+2026-07-07 14:26:52,992 [INFO] experiment3:   [545/800] OK P1/C1/pr=3849035410 (9194ms)
+2026-07-07 14:26:53,907 [INFO] experiment3:   [549/800] OK P2/C1/pr=3849035410 (8107ms)
+2026-07-07 14:26:54,663 [INFO] experiment3:   [548/800] OK P1/C4/pr=3849035410 (8941ms)
+2026-07-07 14:26:55,132 [INFO] experiment3:   [546/800] OK P1/C2/pr=3849035410 (10295ms)
+2026-07-07 14:26:58,956 [INFO] experiment3:   [551/800] OK P2/C3/pr=3849035410 (7710ms)
+2026-07-07 14:26:59,273 [INFO] experiment3:   [552/800] OK P2/C4/pr=3849035410 (7141ms)
+2026-07-07 14:26:59,772 [INFO] experiment3:   [550/800] OK P2/C2/pr=3849035410 (12243ms)
+2026-07-07 14:26:59,857 [INFO] experiment3:   [555/800] OK P3/C3/pr=3849035410 (5948ms)
+2026-07-07 14:27:00,755 [INFO] experiment3:   [553/800] OK P3/C1/pr=3849035410 (8161ms)
+2026-07-07 14:27:00,938 [INFO] experiment3:   [557/800] OK P4/C1/pr=3849035410 (5805ms)
+2026-07-07 14:27:04,404 [INFO] experiment3:   [556/800] OK P3/C4/pr=3849035410 (9737ms)
+2026-07-07 14:27:06,378 [INFO] experiment3:   [560/800] OK P4/C4/pr=3849035410 (6605ms)
+2026-07-07 14:27:07,060 [INFO] experiment3:   [561/800] OK P1/C1/pr=3852851173 (7202ms)
+2026-07-07 14:27:08,268 [INFO] experiment3:   [554/800] OK P3/C2/pr=3849035410 (15274ms)
+2026-07-07 14:27:08,927 [INFO] experiment3:   [559/800] OK P4/C3/pr=3849035410 (9652ms)
+2026-07-07 14:27:09,406 [INFO] experiment3:   [558/800] OK P4/C2/pr=3849035410 (10448ms)
+2026-07-07 14:27:09,987 [INFO] experiment3:   [563/800] OK P1/C3/pr=3852851173 (9047ms)
+2026-07-07 14:27:11,855 [INFO] experiment3:   [564/800] OK P1/C4/pr=3852851173 (7450ms)
+2026-07-07 14:27:12,623 [INFO] experiment3:   [562/800] OK P1/C2/pr=3852851173 (11865ms)
+2026-07-07 14:27:14,925 [INFO] experiment3:   [568/800] OK P2/C4/pr=3852851173 (5996ms)
+2026-07-07 14:27:14,932 [INFO] experiment3:   [565/800] OK P2/C1/pr=3852851173 (8552ms)
+2026-07-07 14:27:17,394 [INFO] experiment3:   [571/800] OK P3/C3/pr=3852851173 (5537ms)
+2026-07-07 14:27:17,573 [INFO] experiment3:   [567/800] OK P2/C3/pr=3852851173 (9302ms)
+2026-07-07 14:27:17,951 [INFO] experiment3:   [566/800] OK P2/C2/pr=3852851173 (10888ms)
+2026-07-07 14:27:18,175 [INFO] experiment3:   [572/800] OK P3/C4/pr=3852851173 (5550ms)
+2026-07-07 14:27:18,519 [INFO] experiment3:   [570/800] OK P3/C2/pr=3852851173 (8530ms)
+2026-07-07 14:27:18,831 [INFO] experiment3:   [569/800] OK P3/C1/pr=3852851173 (9395ms)
+2026-07-07 14:27:23,284 [INFO] experiment3:   [573/800] OK P4/C1/pr=3852851173 (8357ms)
+2026-07-07 14:27:23,730 [INFO] experiment3:   [574/800] OK P4/C2/pr=3852851173 (8797ms)
+2026-07-07 14:27:25,048 [INFO] experiment3:   [576/800] OK P4/C4/pr=3852851173 (7474ms)
+2026-07-07 14:27:30,387 [INFO] experiment3:   [575/800] OK P4/C3/pr=3852851173 (12991ms)
+2026-07-07 14:27:33,255 [INFO] experiment3:   [577/800] OK P1/C1/pr=3854498102 (15303ms)
+2026-07-07 14:27:35,071 [INFO] experiment3:   [579/800] OK P1/C3/pr=3854498102 (16549ms)
+2026-07-07 14:27:38,657 [INFO] experiment3:   [583/800] OK P2/C3/pr=3854498102 (13607ms)
+2026-07-07 14:27:40,112 [INFO] experiment3:   [578/800] FAIL P1/C2/pr=3854498102 (21935ms)
+2026-07-07 14:27:40,897 [INFO] experiment3:   [580/800] FAIL P1/C4/pr=3854498102 (22063ms)
+2026-07-07 14:27:41,423 [INFO] experiment3:   [581/800] OK P2/C1/pr=3854498102 (18138ms)
+2026-07-07 14:27:41,749 [INFO] experiment3:   [585/800] OK P3/C1/pr=3854498102 (8494ms)
+2026-07-07 14:27:44,724 [INFO] experiment3:   [582/800] FAIL P2/C2/pr=3854498102 (20992ms)
+2026-07-07 14:27:49,428 [INFO] experiment3:   [584/800] OK P2/C4/pr=3854498102 (19039ms)
+2026-07-07 14:27:50,110 [INFO] experiment3:   [586/800] OK P3/C2/pr=3854498102 (15039ms)
+2026-07-07 14:27:50,546 [INFO] experiment3:   [589/800] OK P4/C1/pr=3854498102 (9647ms)
+2026-07-07 14:27:52,583 [INFO] experiment3:   [587/800] OK P3/C3/pr=3854498102 (13924ms)
+2026-07-07 14:27:52,708 [INFO] experiment3:   [588/800] OK P3/C4/pr=3854498102 (12594ms)
+2026-07-07 14:27:57,465 [INFO] experiment3:   [595/800] OK P1/C3/pr=3859840128 (6918ms)
+2026-07-07 14:27:58,691 [INFO] experiment3:   [593/800] OK P1/C1/pr=3859840128 (9261ms)
+2026-07-07 14:28:00,705 [INFO] experiment3:   [594/800] OK P1/C2/pr=3859840128 (10592ms)
+2026-07-07 14:28:00,820 [INFO] experiment3:   [592/800] OK P4/C4/pr=3854498102 (16095ms)
+2026-07-07 14:28:01,313 [INFO] experiment3:   [596/800] OK P1/C4/pr=3859840128 (8728ms)
+2026-07-07 14:28:01,936 [INFO] experiment3:   [591/800] OK P4/C3/pr=3854498102 (20184ms)
+2026-07-07 14:28:02,755 [INFO] experiment3:   [590/800] OK P4/C2/pr=3854498102 (21330ms)
+2026-07-07 14:28:04,505 [INFO] experiment3:   [597/800] OK P2/C1/pr=3859840128 (11796ms)
+2026-07-07 14:28:04,555 [INFO] experiment3:   [598/800] OK P2/C2/pr=3859840128 (7088ms)
+2026-07-07 14:28:09,736 [INFO] experiment3:   [600/800] OK P2/C4/pr=3859840128 (9029ms)
+2026-07-07 14:28:09,879 [INFO] experiment3:   [602/800] OK P3/C2/pr=3859840128 (8564ms)
+2026-07-07 14:28:10,443 [INFO] experiment3:   [605/800] OK P4/C1/pr=3859840128 (5937ms)
+2026-07-07 14:28:10,699 [INFO] experiment3:   [603/800] OK P3/C3/pr=3859840128 (8762ms)
+2026-07-07 14:28:10,778 [INFO] experiment3:   [601/800] OK P3/C1/pr=3859840128 (9956ms)
+2026-07-07 14:28:11,092 [INFO] experiment3:   [599/800] OK P2/C3/pr=3859840128 (12399ms)
+2026-07-07 14:28:16,407 [INFO] experiment3:   [609/800] OK P1/C1/pr=3861654603 (5962ms)
+2026-07-07 14:28:16,957 [INFO] experiment3:   [612/800] OK P1/C4/pr=3861654603 (5864ms)
+2026-07-07 14:28:17,105 [INFO] experiment3:   [610/800] OK P1/C2/pr=3861654603 (6405ms)
+2026-07-07 14:28:19,843 [INFO] experiment3:   [608/800] OK P4/C4/pr=3859840128 (9961ms)
+2026-07-07 14:28:21,291 [INFO] experiment3:   [607/800] OK P4/C3/pr=3859840128 (11553ms)
+2026-07-07 14:28:23,310 [INFO] experiment3:   [611/800] OK P1/C3/pr=3861654603 (12530ms)
+2026-07-07 14:28:23,786 [INFO] experiment3:   [606/800] FAIL P4/C2/pr=3859840128 (19230ms)
+2026-07-07 14:28:26,167 [INFO] experiment3:   [604/800] FAIL P3/C4/pr=3859840128 (23410ms)
+2026-07-07 14:28:26,928 [INFO] experiment3:   [615/800] OK P2/C3/pr=3861654603 (9822ms)
+2026-07-07 14:28:29,096 [INFO] experiment3:   [617/800] OK P3/C1/pr=3861654603 (7803ms)
+2026-07-07 14:28:29,558 [INFO] experiment3:   [613/800] OK P2/C1/pr=3861654603 (13149ms)
+2026-07-07 14:28:29,823 [INFO] experiment3:   [619/800] OK P3/C3/pr=3861654603 (6034ms)
+2026-07-07 14:28:30,905 [INFO] experiment3:   [616/800] OK P2/C4/pr=3861654603 (11060ms)
+2026-07-07 14:28:31,260 [INFO] experiment3:   [614/800] OK P2/C2/pr=3861654603 (14300ms)
+2026-07-07 14:28:32,976 [INFO] experiment3:   [620/800] OK P3/C4/pr=3861654603 (6806ms)
+2026-07-07 14:28:36,877 [INFO] experiment3:   [623/800] OK P4/C3/pr=3861654603 (7318ms)
+2026-07-07 14:28:37,008 [INFO] experiment3:   [618/800] OK P3/C2/pr=3861654603 (13696ms)
+2026-07-07 14:28:37,660 [INFO] experiment3:   [621/800] OK P4/C1/pr=3861654603 (10729ms)
+2026-07-07 14:28:37,689 [INFO] experiment3:   [622/800] OK P4/C2/pr=3861654603 (8591ms)
+2026-07-07 14:28:38,904 [INFO] experiment3:   [625/800] OK P1/C1/pr=3876907704 (7998ms)
+2026-07-07 14:28:38,967 [INFO] experiment3:   [624/800] OK P4/C4/pr=3861654603 (9142ms)
+2026-07-07 14:28:38,997 [INFO] experiment3:   [627/800] OK P1/C3/pr=3876907704 (6020ms)
+2026-07-07 14:28:41,663 [INFO] experiment3:   [626/800] OK P1/C2/pr=3876907704 (10402ms)
+2026-07-07 14:28:42,568 [INFO] experiment3:   [628/800] OK P1/C4/pr=3876907704 (5689ms)
+2026-07-07 14:28:42,679 [INFO] experiment3:   [630/800] OK P2/C2/pr=3876907704 (5018ms)
+2026-07-07 14:28:43,905 [INFO] experiment3:   [633/800] OK P3/C1/pr=3876907704 (4935ms)
+2026-07-07 14:28:44,782 [INFO] experiment3:   [629/800] OK P2/C1/pr=3876907704 (7773ms)
+2026-07-07 14:28:45,263 [INFO] experiment3:   [632/800] OK P2/C4/pr=3876907704 (6357ms)
+2026-07-07 14:28:45,712 [INFO] experiment3:   [635/800] OK P3/C3/pr=3876907704 (4047ms)
+2026-07-07 14:28:46,136 [INFO] experiment3:   [631/800] OK P2/C3/pr=3876907704 (8446ms)
+2026-07-07 14:28:49,373 [INFO] experiment3:   [638/800] OK P4/C2/pr=3876907704 (5467ms)
+2026-07-07 14:28:49,487 [INFO] experiment3:   [640/800] OK P4/C4/pr=3876907704 (4222ms)
+2026-07-07 14:28:50,038 [INFO] experiment3:   [636/800] OK P3/C4/pr=3876907704 (7467ms)
+2026-07-07 14:28:50,141 [INFO] experiment3:   [634/800] OK P3/C2/pr=3876907704 (11141ms)
+2026-07-07 14:28:52,667 [INFO] experiment3:   [642/800] OK P1/C2/pr=3878931556 (6529ms)
+2026-07-07 14:28:52,957 [INFO] experiment3:   [637/800] OK P4/C1/pr=3876907704 (10277ms)
+2026-07-07 14:28:53,446 [INFO] experiment3:   [639/800] OK P4/C3/pr=3876907704 (8662ms)
+2026-07-07 14:28:55,552 [INFO] experiment3:   [644/800] OK P1/C4/pr=3878931556 (6064ms)
+2026-07-07 14:28:57,244 [INFO] experiment3:   [646/800] OK P2/C2/pr=3878931556 (7101ms)
+2026-07-07 14:29:00,027 [INFO] experiment3:   [645/800] OK P2/C1/pr=3878931556 (9987ms)
+2026-07-07 14:29:01,156 [INFO] experiment3:   [647/800] OK P2/C3/pr=3878931556 (8487ms)
+2026-07-07 14:29:01,250 [INFO] experiment3:   [649/800] OK P3/C1/pr=3878931556 (7800ms)
+2026-07-07 14:29:01,748 [INFO] experiment3:   [650/800] OK P3/C2/pr=3878931556 (6193ms)
+2026-07-07 14:29:01,929 [INFO] experiment3:   [648/800] OK P2/C4/pr=3878931556 (8970ms)
+2026-07-07 14:29:02,634 [INFO] experiment3:   [641/800] OK P1/C1/pr=3878931556 (16919ms)
+2026-07-07 14:29:06,470 [INFO] experiment3:   [643/800] OK P1/C3/pr=3878931556 (17095ms)
+2026-07-07 14:29:08,626 [INFO] experiment3:   [652/800] OK P3/C4/pr=3878931556 (8597ms)
+2026-07-07 14:29:09,853 [INFO] experiment3:   [654/800] OK P4/C2/pr=3878931556 (8601ms)
+2026-07-07 14:29:13,684 [INFO] experiment3:   [655/800] OK P4/C3/pr=3878931556 (11935ms)
+2026-07-07 14:29:14,048 [INFO] experiment3:   [657/800] OK P1/C1/pr=3899017294 (11412ms)
+2026-07-07 14:29:14,853 [INFO] experiment3:   [653/800] OK P4/C1/pr=3878931556 (13694ms)
+2026-07-07 14:29:17,906 [INFO] experiment3:   [656/800] OK P4/C4/pr=3878931556 (15975ms)
+2026-07-07 14:29:18,073 [INFO] experiment3:   [658/800] OK P1/C2/pr=3899017294 (11601ms)
+2026-07-07 14:29:20,727 [INFO] experiment3:   [651/800] FAIL P3/C3/pr=3878931556 (23481ms)
+2026-07-07 14:29:21,757 [INFO] experiment3:   [659/800] OK P1/C3/pr=3899017294 (13130ms)
+2026-07-07 14:29:23,704 [INFO] experiment3:   [661/800] OK P2/C1/pr=3899017294 (10018ms)
+2026-07-07 14:29:23,917 [INFO] experiment3:   [662/800] OK P2/C2/pr=3899017294 (9867ms)
+2026-07-07 14:29:25,568 [INFO] experiment3:   [663/800] OK P2/C3/pr=3899017294 (10713ms)
+2026-07-07 14:29:28,175 [INFO] experiment3:   [660/800] FAIL P1/C4/pr=3899017294 (18320ms)
+2026-07-07 14:29:28,990 [INFO] experiment3:   [665/800] OK P3/C1/pr=3899017294 (10915ms)
+2026-07-07 14:29:30,851 [INFO] experiment3:   [664/800] OK P2/C4/pr=3899017294 (12943ms)
+2026-07-07 14:29:34,011 [INFO] experiment3:   [667/800] OK P3/C3/pr=3899017294 (12252ms)
+2026-07-07 14:29:36,023 [INFO] experiment3:   [666/800] OK P3/C2/pr=3899017294 (15294ms)
+2026-07-07 14:29:37,569 [INFO] experiment3:   [673/800] OK P1/C1/pr=3899385359 (6716ms)
+2026-07-07 14:29:37,973 [INFO] experiment3:   [672/800] OK P4/C4/pr=3899017294 (8981ms)
+2026-07-07 14:29:38,562 [INFO] experiment3:   [671/800] OK P4/C3/pr=3899017294 (10385ms)
+2026-07-07 14:29:38,789 [INFO] experiment3:   [669/800] OK P4/C1/pr=3899017294 (14871ms)
+2026-07-07 14:29:39,062 [INFO] experiment3:   [674/800] OK P1/C2/pr=3899385359 (5050ms)
+2026-07-07 14:29:40,535 [INFO] experiment3:   [675/800] OK P1/C3/pr=3899385359 (4510ms)
+2026-07-07 14:29:40,734 [INFO] experiment3:   [676/800] OK P1/C4/pr=3899385359 (3163ms)
+2026-07-07 14:29:40,937 [INFO] experiment3:   [677/800] OK P2/C1/pr=3899385359 (2962ms)
+2026-07-07 14:29:40,940 [INFO] experiment3:   [668/800] OK P3/C4/pr=3899017294 (17233ms)
+2026-07-07 14:29:41,072 [INFO] experiment3:   [670/800] OK P4/C2/pr=3899017294 (15501ms)
+2026-07-07 14:29:41,655 [INFO] experiment3:   [678/800] OK P2/C2/pr=3899385359 (3092ms)
+2026-07-07 14:29:43,625 [INFO] experiment3:   [680/800] OK P2/C4/pr=3899385359 (4560ms)
+2026-07-07 14:29:44,380 [INFO] experiment3:   [683/800] OK P3/C3/pr=3899385359 (3441ms)
+2026-07-07 14:29:44,848 [INFO] experiment3:   [684/800] OK P3/C4/pr=3899385359 (3906ms)
+2026-07-07 14:29:45,346 [INFO] experiment3:   [685/800] OK P4/C1/pr=3899385359 (4273ms)
+2026-07-07 14:29:45,436 [INFO] experiment3:   [679/800] OK P2/C3/pr=3899385359 (6645ms)
+2026-07-07 14:29:47,209 [INFO] experiment3:   [686/800] OK P4/C2/pr=3899385359 (5551ms)
+2026-07-07 14:29:47,218 [INFO] experiment3:   [688/800] OK P4/C4/pr=3899385359 (2836ms)
+2026-07-07 14:29:47,840 [INFO] experiment3:   [689/800] OK P1/C1/pr=3940311668 (2991ms)
+2026-07-07 14:29:49,476 [INFO] experiment3:   [690/800] OK P1/C2/pr=3940311668 (4128ms)
+2026-07-07 14:29:49,544 [INFO] experiment3:   [681/800] OK P3/C1/pr=3899385359 (9008ms)
+2026-07-07 14:29:49,572 [INFO] experiment3:   [682/800] OK P3/C2/pr=3899385359 (8837ms)
+2026-07-07 14:29:49,934 [INFO] experiment3:   [687/800] OK P4/C3/pr=3899385359 (6307ms)
+2026-07-07 14:29:51,280 [INFO] experiment3:   [694/800] OK P2/C2/pr=3940311668 (3438ms)
+2026-07-07 14:29:51,545 [INFO] experiment3:   [692/800] OK P1/C4/pr=3940311668 (4332ms)
+2026-07-07 14:29:52,748 [INFO] experiment3:   [693/800] OK P2/C1/pr=3940311668 (5527ms)
+2026-07-07 14:29:55,555 [INFO] experiment3:   [696/800] OK P2/C4/pr=3940311668 (6009ms)
+2026-07-07 14:29:55,692 [INFO] experiment3:   [699/800] OK P3/C3/pr=3940311668 (4409ms)
+2026-07-07 14:29:56,183 [INFO] experiment3:   [691/800] OK P1/C3/pr=3940311668 (10745ms)
+2026-07-07 14:29:56,185 [INFO] experiment3:   [697/800] OK P3/C1/pr=3940311668 (6610ms)
+2026-07-07 14:29:56,273 [INFO] experiment3:   [695/800] OK P2/C3/pr=3940311668 (6794ms)
+2026-07-07 14:29:56,701 [INFO] experiment3:   [701/800] OK P4/C1/pr=3940311668 (3951ms)
+2026-07-07 14:29:57,848 [INFO] experiment3:   [700/800] OK P3/C4/pr=3940311668 (6302ms)
+2026-07-07 14:29:59,172 [INFO] experiment3:   [698/800] OK P3/C2/pr=3940311668 (9235ms)
+2026-07-07 14:30:01,087 [INFO] experiment3:   [704/800] OK P4/C4/pr=3940311668 (4902ms)
+2026-07-07 14:30:02,150 [INFO] experiment3:   [703/800] OK P4/C3/pr=3940311668 (6455ms)
+2026-07-07 14:30:02,606 [INFO] experiment3:   [702/800] OK P4/C2/pr=3940311668 (7049ms)
+2026-07-07 14:30:03,083 [INFO] experiment3:   [705/800] OK P1/C1/pr=3940691919 (6897ms)
+2026-07-07 14:30:07,573 [INFO] experiment3:   [709/800] OK P2/C1/pr=3940691919 (8398ms)
+2026-07-07 14:30:08,568 [INFO] experiment3:   [708/800] OK P1/C4/pr=3940691919 (10718ms)
+2026-07-07 14:30:08,625 [INFO] experiment3:   [707/800] OK P1/C3/pr=3940691919 (11922ms)
+2026-07-07 14:30:08,956 [INFO] experiment3:   [710/800] OK P2/C2/pr=3940691919 (7867ms)
+2026-07-07 14:30:10,970 [INFO] experiment3:   [711/800] OK P2/C3/pr=3940691919 (8819ms)
+2026-07-07 14:30:11,818 [INFO] experiment3:   [706/800] OK P1/C2/pr=3940691919 (15544ms)
+2026-07-07 14:30:12,903 [INFO] experiment3:   [712/800] OK P2/C4/pr=3940691919 (10296ms)
+2026-07-07 14:30:13,414 [INFO] experiment3:   [713/800] OK P3/C1/pr=3940691919 (10329ms)
+2026-07-07 14:30:17,897 [INFO] experiment3:   [721/800] OK P1/C1/pr=3951775893 (4480ms)
+2026-07-07 14:30:18,941 [INFO] experiment3:   [714/800] OK P3/C2/pr=3940691919 (11366ms)
+2026-07-07 14:30:19,790 [INFO] experiment3:   [716/800] OK P3/C4/pr=3940691919 (11164ms)
+2026-07-07 14:30:20,042 [INFO] experiment3:   [717/800] OK P4/C1/pr=3940691919 (11085ms)
+2026-07-07 14:30:22,474 [INFO] experiment3:   [718/800] OK P4/C2/pr=3940691919 (11503ms)
+2026-07-07 14:30:24,725 [INFO] experiment3:   [722/800] OK P1/C2/pr=3951775893 (6826ms)
+2026-07-07 14:30:24,925 [INFO] experiment3:   [723/800] OK P1/C3/pr=3951775893 (5983ms)
+2026-07-07 14:30:24,957 [INFO] experiment3:   [719/800] OK P4/C3/pr=3940691919 (13136ms)
+2026-07-07 14:30:25,642 [INFO] experiment3:   [720/800] OK P4/C4/pr=3940691919 (12737ms)
+2026-07-07 14:30:25,998 [INFO] experiment3:   [715/800] OK P3/C3/pr=3940691919 (17429ms)
+2026-07-07 14:30:26,172 [INFO] experiment3:   [724/800] OK P1/C4/pr=3951775893 (6379ms)
+2026-07-07 14:30:26,967 [INFO] experiment3:   [725/800] OK P2/C1/pr=3951775893 (6923ms)
+2026-07-07 14:30:28,403 [INFO] experiment3:   [726/800] OK P2/C2/pr=3951775893 (5926ms)
+2026-07-07 14:30:29,903 [INFO] experiment3:   [730/800] OK P3/C2/pr=3951775893 (4260ms)
+2026-07-07 14:30:30,426 [INFO] experiment3:   [728/800] OK P2/C4/pr=3951775893 (5499ms)
+2026-07-07 14:30:31,576 [INFO] experiment3:   [731/800] OK P3/C3/pr=3951775893 (5575ms)
+2026-07-07 14:30:31,690 [INFO] experiment3:   [727/800] OK P2/C3/pr=3951775893 (6963ms)
+2026-07-07 14:30:32,614 [INFO] experiment3:   [732/800] OK P3/C4/pr=3951775893 (6441ms)
+2026-07-07 14:30:32,684 [INFO] experiment3:   [729/800] OK P3/C1/pr=3951775893 (7726ms)
+2026-07-07 14:30:34,112 [INFO] experiment3:   [736/800] OK P4/C4/pr=3951775893 (3684ms)
+2026-07-07 14:30:34,646 [INFO] experiment3:   [733/800] OK P4/C1/pr=3951775893 (7677ms)
+2026-07-07 14:30:35,175 [INFO] experiment3:   [734/800] OK P4/C2/pr=3951775893 (6771ms)
+2026-07-07 14:30:35,270 [INFO] experiment3:   [737/800] OK P1/C1/pr=3953200020 (3693ms)
+2026-07-07 14:30:37,973 [INFO] experiment3:   [735/800] OK P4/C3/pr=3951775893 (8067ms)
+2026-07-07 14:30:38,967 [INFO] experiment3:   [739/800] OK P1/C3/pr=3953200020 (6351ms)
+2026-07-07 14:30:40,495 [INFO] experiment3:   [741/800] OK P2/C1/pr=3953200020 (6382ms)
+2026-07-07 14:30:41,336 [INFO] experiment3:   [738/800] OK P1/C2/pr=3953200020 (9643ms)
+2026-07-07 14:30:41,358 [INFO] experiment3:   [744/800] OK P2/C4/pr=3953200020 (6086ms)
+2026-07-07 14:30:42,856 [INFO] experiment3:   [742/800] OK P2/C2/pr=3953200020 (8209ms)
+2026-07-07 14:30:43,184 [INFO] experiment3:   [743/800] OK P2/C3/pr=3953200020 (8008ms)
+2026-07-07 14:30:43,489 [INFO] experiment3:   [740/800] OK P1/C4/pr=3953200020 (10803ms)
+2026-07-07 14:30:44,070 [INFO] experiment3:   [746/800] OK P3/C2/pr=3953200020 (5100ms)
+2026-07-07 14:30:44,754 [INFO] experiment3:   [748/800] OK P3/C4/pr=3953200020 (3416ms)
+2026-07-07 14:30:47,173 [INFO] experiment3:   [745/800] OK P3/C1/pr=3953200020 (9198ms)
+2026-07-07 14:30:49,603 [INFO] experiment3:   [752/800] OK P4/C4/pr=3953200020 (6112ms)
+2026-07-07 14:30:50,420 [INFO] experiment3:   [747/800] OK P3/C3/pr=3953200020 (9924ms)
+2026-07-07 14:30:51,316 [INFO] experiment3:   [749/800] OK P4/C1/pr=3953200020 (9955ms)
+2026-07-07 14:30:51,598 [INFO] experiment3:   [751/800] OK P4/C3/pr=3953200020 (8411ms)
+2026-07-07 14:30:52,320 [INFO] experiment3:   [753/800] OK P1/C1/pr=3968182808 (8248ms)
+2026-07-07 14:30:54,218 [INFO] experiment3:   [750/800] OK P4/C2/pr=3953200020 (11360ms)
+2026-07-07 14:30:56,017 [INFO] experiment3:   [757/800] OK P2/C1/pr=3968182808 (5595ms)
+2026-07-07 14:30:58,142 [INFO] experiment3:   [759/800] OK P2/C3/pr=3968182808 (6542ms)
+2026-07-07 14:30:59,999 [INFO] experiment3:   [755/800] OK P1/C3/pr=3968182808 (12824ms)
+2026-07-07 14:31:00,653 [INFO] experiment3:   [756/800] OK P1/C4/pr=3968182808 (11049ms)
+2026-07-07 14:31:01,631 [INFO] experiment3:   [761/800] OK P3/C1/pr=3968182808 (7410ms)
+2026-07-07 14:31:03,309 [INFO] experiment3:   [754/800] OK P1/C2/pr=3968182808 (18553ms)
+2026-07-07 14:31:04,412 [INFO] experiment3:   [762/800] OK P3/C2/pr=3968182808 (8393ms)
+2026-07-07 14:31:05,124 [INFO] experiment3:   [758/800] OK P2/C2/pr=3968182808 (13806ms)
+2026-07-07 14:31:05,726 [INFO] experiment3:   [763/800] OK P3/C3/pr=3968182808 (7583ms)
+2026-07-07 14:31:06,802 [INFO] experiment3:   [766/800] OK P4/C2/pr=3968182808 (5171ms)
+2026-07-07 14:31:07,179 [INFO] experiment3:   [760/800] OK P2/C4/pr=3968182808 (14857ms)
+2026-07-07 14:31:08,464 [INFO] experiment3:   [765/800] OK P4/C1/pr=3968182808 (7809ms)
+2026-07-07 14:31:10,297 [INFO] experiment3:   [764/800] OK P3/C4/pr=3968182808 (10296ms)
+2026-07-07 14:31:10,741 [INFO] experiment3:   [769/800] OK P1/C1/pr=3973017639 (5617ms)
+2026-07-07 14:31:13,448 [INFO] experiment3:   [770/800] OK P1/C2/pr=3973017639 (7720ms)
+2026-07-07 14:31:13,994 [INFO] experiment3:   [772/800] OK P1/C4/pr=3973017639 (6812ms)
+2026-07-07 14:31:14,063 [INFO] experiment3:   [768/800] OK P4/C4/pr=3968182808 (9650ms)
+2026-07-07 14:31:14,796 [INFO] experiment3:   [767/800] OK P4/C3/pr=3968182808 (11486ms)
+2026-07-07 14:31:15,122 [INFO] experiment3:   [771/800] OK P1/C3/pr=3973017639 (8318ms)
+2026-07-07 14:31:16,670 [INFO] experiment3:   [774/800] OK P2/C2/pr=3973017639 (6372ms)
+2026-07-07 14:31:17,888 [INFO] experiment3:   [773/800] OK P2/C1/pr=3973017639 (9422ms)
+2026-07-07 14:31:20,703 [INFO] experiment3:   [776/800] OK P2/C4/pr=3973017639 (7253ms)
+2026-07-07 14:31:20,891 [INFO] experiment3:   [778/800] OK P3/C2/pr=3973017639 (6826ms)
+2026-07-07 14:31:21,231 [INFO] experiment3:   [775/800] OK P2/C3/pr=3973017639 (10488ms)
+2026-07-07 14:31:24,819 [INFO] experiment3:   [780/800] OK P3/C4/pr=3973017639 (9696ms)
+2026-07-07 14:31:24,887 [INFO] experiment3:   [777/800] OK P3/C1/pr=3973017639 (10892ms)
+2026-07-07 14:31:25,155 [INFO] experiment3:   [781/800] OK P4/C1/pr=3973017639 (8483ms)
+2026-07-07 14:31:25,902 [INFO] experiment3:   [779/800] OK P3/C3/pr=3973017639 (11103ms)
+2026-07-07 14:31:25,966 [INFO] experiment3:   [785/800] OK P1/C1/pr=3980212702 (4732ms)
+2026-07-07 14:31:26,245 [INFO] experiment3:   [782/800] OK P4/C2/pr=3973017639 (8355ms)
+2026-07-07 14:31:28,368 [INFO] experiment3:   [783/800] OK P4/C3/pr=3973017639 (7664ms)
+2026-07-07 14:31:28,758 [INFO] experiment3:   [784/800] OK P4/C4/pr=3973017639 (7863ms)
+2026-07-07 14:31:31,637 [INFO] experiment3:   [786/800] OK P1/C2/pr=3980212702 (6816ms)
+2026-07-07 14:31:32,378 [INFO] experiment3:   [788/800] OK P1/C4/pr=3980212702 (7220ms)
+2026-07-07 14:31:32,902 [INFO] experiment3:   [787/800] OK P1/C3/pr=3980212702 (8013ms)
+2026-07-07 14:31:33,376 [INFO] experiment3:   [793/800] OK P3/C1/pr=3980212702 (4617ms)
+2026-07-07 14:31:33,722 [INFO] experiment3:   [791/800] OK P2/C3/pr=3980212702 (7476ms)
+2026-07-07 14:31:35,245 [INFO] experiment3:   [789/800] OK P2/C1/pr=3980212702 (9341ms)
+2026-07-07 14:31:37,396 [INFO] experiment3:   [790/800] OK P2/C2/pr=3980212702 (11429ms)
+2026-07-07 14:31:38,612 [INFO] experiment3:   [795/800] OK P3/C3/pr=3980212702 (6232ms)
+2026-07-07 14:31:38,997 [INFO] experiment3:   [796/800] OK P3/C4/pr=3980212702 (6094ms)
+2026-07-07 14:31:39,488 [INFO] experiment3:   [794/800] OK P3/C2/pr=3980212702 (7850ms)
+2026-07-07 14:31:40,701 [INFO] experiment3:   [792/800] OK P2/C4/pr=3980212702 (12330ms)
+2026-07-07 14:31:41,911 [INFO] experiment3:   [798/800] OK P4/C2/pr=3980212702 (8187ms)
+2026-07-07 14:31:44,207 [INFO] experiment3:   [800/800] OK P4/C4/pr=3980212702 (6810ms)
+2026-07-07 14:31:44,236 [INFO] experiment3:   [797/800] OK P4/C1/pr=3980212702 (10858ms)
+2026-07-07 14:31:48,820 [INFO] experiment3:   [799/800] OK P4/C3/pr=3980212702 (13573ms)
+2026-07-07 14:31:48,821 [INFO] experiment3: 执行完成: 成功=788, 失败=12, 总耗时=954s, 平均=1.2s/条
+2026-07-07 14:31:48,858 [INFO] experiment3: 解析后的预测结果已保存: E:\latex\projects\experiments\experiment3\results\responses\parsed_predictions.csv (800 条)
+2026-07-07 14:37:48,412 [INFO] experiment3: ============================================================
+2026-07-07 14:37:48,412 [INFO] experiment3: 步骤五：评估
+2026-07-07 14:37:48,412 [INFO] experiment3: ============================================================
+2026-07-07 14:37:48,412 [INFO] experiment3: ========================================
+2026-07-07 14:37:48,412 [INFO] experiment3: Merge Prediction 评估
+2026-07-07 14:37:48,412 [INFO] experiment3: ========================================
+2026-07-07 14:37:51,330 [INFO] experiment3:   P1/C1: acc=0.6531, f1=0.7792, auc=0.492831541218638, n=49
+2026-07-07 14:37:51,333 [INFO] experiment3:   P1/C2: acc=0.6531, f1=0.7792, auc=0.5754385964912281, n=49
+2026-07-07 14:37:51,337 [INFO] experiment3:   P1/C3: acc=0.6600, f1=0.7848, auc=0.5449915110356536, n=50
+2026-07-07 14:37:51,340 [INFO] experiment3:   P1/C4: acc=0.6383, f1=0.7671, auc=0.5159774436090225, n=47
+2026-07-07 14:37:51,344 [INFO] experiment3:   P2/C1: acc=0.6200, f1=0.7467, auc=0.5594227504244482, n=50
+2026-07-07 14:37:51,347 [INFO] experiment3:   P2/C2: acc=0.6939, f1=0.8000, auc=0.5824561403508772, n=49
+2026-07-07 14:37:51,350 [INFO] experiment3:   P2/C3: acc=0.7000, f1=0.8052, auc=0.5424448217317488, n=50
+2026-07-07 14:37:51,353 [INFO] experiment3:   P2/C4: acc=0.6735, f1=0.7895, auc=0.6433691756272402, n=49
+2026-07-07 14:37:51,357 [INFO] experiment3:   P3/C1: acc=0.6000, f1=0.7059, auc=0.5203735144312394, n=50
+2026-07-07 14:37:51,360 [INFO] experiment3:   P3/C2: acc=0.6200, f1=0.7467, auc=0.5814940577249577, n=50
+2026-07-07 14:37:51,363 [INFO] experiment3:   P3/C3: acc=0.5918, f1=0.7297, auc=0.5078947368421053, n=49
+2026-07-07 14:37:51,366 [INFO] experiment3:   P3/C4: acc=0.6122, f1=0.7467, auc=0.5618279569892473, n=49
+2026-07-07 14:37:51,370 [INFO] experiment3:   P4/C1: acc=0.6600, f1=0.7848, auc=0.5441426146010186, n=50
+2026-07-07 14:37:51,374 [INFO] experiment3:   P4/C2: acc=0.6458, f1=0.7733, auc=0.5509259259259258, n=48
+2026-07-07 14:37:51,377 [INFO] experiment3:   P4/C3: acc=0.6600, f1=0.7848, auc=0.5314091680814941, n=50
+2026-07-07 14:37:51,380 [INFO] experiment3:   P4/C4: acc=0.6735, f1=0.7949, auc=0.4740143369175627, n=49
+2026-07-07 14:37:51,380 [INFO] experiment3: 
+最佳 F1: P2/C3 (F1=0.8052)
+2026-07-07 14:37:51,380 [INFO] experiment3: 最佳 ROC-AUC: P2/C4 (AUC=0.6434)
+2026-07-07 14:37:51,382 [INFO] experiment3: Merge 指标已保存: E:\latex\projects\experiments\experiment3\results\evaluation\metrics_by_prompt_context.json
+2026-07-07 14:37:51,382 [INFO] experiment3: ========================================
+2026-07-07 14:37:51,382 [INFO] experiment3: Review Comment Generation 评估
+2026-07-07 14:37:51,382 [INFO] experiment3: ========================================
+2026-07-07 14:37:51,387 [INFO] experiment3: 有真实 review text 的 PR: 45
+2026-07-07 14:38:15,285 [INFO] experiment3: ============================================================
+2026-07-07 14:38:15,285 [INFO] experiment3: 步骤五：评估
+2026-07-07 14:38:15,285 [INFO] experiment3: ============================================================
+2026-07-07 14:38:15,289 [INFO] experiment3: 加载预测数据: 800 条
+2026-07-07 14:38:15,302 [INFO] experiment3: 加载原始响应: 800 条
+2026-07-07 14:38:15,302 [INFO] experiment3: ========================================
+2026-07-07 14:38:15,302 [INFO] experiment3: Merge Prediction 评估
+2026-07-07 14:38:15,302 [INFO] experiment3: ========================================
+2026-07-07 14:38:16,060 [INFO] experiment3:   P1/C1: acc=0.6531, f1=0.7792, auc=0.492831541218638, n=49
+2026-07-07 14:38:16,065 [INFO] experiment3:   P1/C2: acc=0.6531, f1=0.7792, auc=0.5754385964912281, n=49
+2026-07-07 14:38:16,068 [INFO] experiment3:   P1/C3: acc=0.6600, f1=0.7848, auc=0.5449915110356536, n=50
+2026-07-07 14:38:16,072 [INFO] experiment3:   P1/C4: acc=0.6383, f1=0.7671, auc=0.5159774436090225, n=47
+2026-07-07 14:38:16,075 [INFO] experiment3:   P2/C1: acc=0.6200, f1=0.7467, auc=0.5594227504244482, n=50
+2026-07-07 14:38:16,079 [INFO] experiment3:   P2/C2: acc=0.6939, f1=0.8000, auc=0.5824561403508772, n=49
+2026-07-07 14:38:16,082 [INFO] experiment3:   P2/C3: acc=0.7000, f1=0.8052, auc=0.5424448217317488, n=50
+2026-07-07 14:38:16,085 [INFO] experiment3:   P2/C4: acc=0.6735, f1=0.7895, auc=0.6433691756272402, n=49
+2026-07-07 14:38:16,088 [INFO] experiment3:   P3/C1: acc=0.6000, f1=0.7059, auc=0.5203735144312394, n=50
+2026-07-07 14:38:16,091 [INFO] experiment3:   P3/C2: acc=0.6200, f1=0.7467, auc=0.5814940577249577, n=50
+2026-07-07 14:38:16,095 [INFO] experiment3:   P3/C3: acc=0.5918, f1=0.7297, auc=0.5078947368421053, n=49
+2026-07-07 14:38:16,098 [INFO] experiment3:   P3/C4: acc=0.6122, f1=0.7467, auc=0.5618279569892473, n=49
+2026-07-07 14:38:16,101 [INFO] experiment3:   P4/C1: acc=0.6600, f1=0.7848, auc=0.5441426146010186, n=50
+2026-07-07 14:38:16,105 [INFO] experiment3:   P4/C2: acc=0.6458, f1=0.7733, auc=0.5509259259259258, n=48
+2026-07-07 14:38:16,108 [INFO] experiment3:   P4/C3: acc=0.6600, f1=0.7848, auc=0.5314091680814941, n=50
+2026-07-07 14:38:16,111 [INFO] experiment3:   P4/C4: acc=0.6735, f1=0.7949, auc=0.4740143369175627, n=49
+2026-07-07 14:38:16,112 [INFO] experiment3: 
+最佳 F1: P2/C3 (F1=0.8052)
+2026-07-07 14:38:16,112 [INFO] experiment3: 最佳 ROC-AUC: P2/C4 (AUC=0.6434)
+2026-07-07 14:38:16,113 [INFO] experiment3: Merge 指标已保存: E:\latex\projects\experiments\experiment3\results\evaluation\metrics_by_prompt_context.json
+2026-07-07 14:38:16,113 [INFO] experiment3: ========================================
+2026-07-07 14:38:16,113 [INFO] experiment3: Review Comment Generation 评估
+2026-07-07 14:38:16,113 [INFO] experiment3: ========================================
+2026-07-07 14:38:16,118 [INFO] experiment3: 有真实 review text 的 PR: 45
+2026-07-07 14:39:11,753 [INFO] experiment3: ============================================================
+2026-07-07 14:39:11,753 [INFO] experiment3: 步骤五：评估
+2026-07-07 14:39:11,754 [INFO] experiment3: ============================================================
+2026-07-07 14:39:11,758 [INFO] experiment3: 加载预测数据: 800 条
+2026-07-07 14:39:11,771 [INFO] experiment3: 加载原始响应: 800 条
+2026-07-07 14:39:11,771 [INFO] experiment3: ========================================
+2026-07-07 14:39:11,771 [INFO] experiment3: Merge Prediction 评估
+2026-07-07 14:39:11,771 [INFO] experiment3: ========================================
+2026-07-07 14:39:12,519 [INFO] experiment3:   P1/C1: acc=0.6531, f1=0.7792, auc=0.492831541218638, n=49
+2026-07-07 14:39:12,523 [INFO] experiment3:   P1/C2: acc=0.6531, f1=0.7792, auc=0.5754385964912281, n=49
+2026-07-07 14:39:12,526 [INFO] experiment3:   P1/C3: acc=0.6600, f1=0.7848, auc=0.5449915110356536, n=50
+2026-07-07 14:39:12,530 [INFO] experiment3:   P1/C4: acc=0.6383, f1=0.7671, auc=0.5159774436090225, n=47
+2026-07-07 14:39:12,533 [INFO] experiment3:   P2/C1: acc=0.6200, f1=0.7467, auc=0.5594227504244482, n=50
+2026-07-07 14:39:12,536 [INFO] experiment3:   P2/C2: acc=0.6939, f1=0.8000, auc=0.5824561403508772, n=49
+2026-07-07 14:39:12,540 [INFO] experiment3:   P2/C3: acc=0.7000, f1=0.8052, auc=0.5424448217317488, n=50
+2026-07-07 14:39:12,543 [INFO] experiment3:   P2/C4: acc=0.6735, f1=0.7895, auc=0.6433691756272402, n=49
+2026-07-07 14:39:12,546 [INFO] experiment3:   P3/C1: acc=0.6000, f1=0.7059, auc=0.5203735144312394, n=50
+2026-07-07 14:39:12,550 [INFO] experiment3:   P3/C2: acc=0.6200, f1=0.7467, auc=0.5814940577249577, n=50
+2026-07-07 14:39:12,553 [INFO] experiment3:   P3/C3: acc=0.5918, f1=0.7297, auc=0.5078947368421053, n=49
+2026-07-07 14:39:12,556 [INFO] experiment3:   P3/C4: acc=0.6122, f1=0.7467, auc=0.5618279569892473, n=49
+2026-07-07 14:39:12,560 [INFO] experiment3:   P4/C1: acc=0.6600, f1=0.7848, auc=0.5441426146010186, n=50
+2026-07-07 14:39:12,563 [INFO] experiment3:   P4/C2: acc=0.6458, f1=0.7733, auc=0.5509259259259258, n=48
+2026-07-07 14:39:12,567 [INFO] experiment3:   P4/C3: acc=0.6600, f1=0.7848, auc=0.5314091680814941, n=50
+2026-07-07 14:39:12,570 [INFO] experiment3:   P4/C4: acc=0.6735, f1=0.7949, auc=0.4740143369175627, n=49
+2026-07-07 14:39:12,570 [INFO] experiment3: 
+最佳 F1: P2/C3 (F1=0.8052)
+2026-07-07 14:39:12,570 [INFO] experiment3: 最佳 ROC-AUC: P2/C4 (AUC=0.6434)
+2026-07-07 14:39:12,572 [INFO] experiment3: Merge 指标已保存: E:\latex\projects\experiments\experiment3\results\evaluation\metrics_by_prompt_context.json
+2026-07-07 14:39:12,572 [INFO] experiment3: ========================================
+2026-07-07 14:39:12,572 [INFO] experiment3: Review Comment Generation 评估
+2026-07-07 14:39:12,572 [INFO] experiment3: ========================================
+2026-07-07 14:39:12,577 [INFO] experiment3: 有真实 review text 的 PR: 45
+2026-07-07 14:39:12,678 [INFO] experiment3:   P1/C1: BLEU=0.0000, ROUGE-L=0.0744, avg_comments=2.61
+2026-07-07 14:39:12,790 [INFO] experiment3:   P1/C2: BLEU=0.0000, ROUGE-L=0.0736, avg_comments=2.93
+2026-07-07 14:39:12,907 [INFO] experiment3:   P1/C3: BLEU=0.0000, ROUGE-L=0.0760, avg_comments=2.82
+2026-07-07 14:39:13,022 [INFO] experiment3:   P1/C4: BLEU=0.0000, ROUGE-L=0.0712, avg_comments=2.74
+2026-07-07 14:39:13,101 [INFO] experiment3:   P2/C1: BLEU=0.0000, ROUGE-L=0.0674, avg_comments=2.2
+2026-07-07 14:39:13,194 [INFO] experiment3:   P2/C2: BLEU=0.0006, ROUGE-L=0.0703, avg_comments=2.27
+2026-07-07 14:39:13,297 [INFO] experiment3:   P2/C3: BLEU=0.0006, ROUGE-L=0.0725, avg_comments=2.62
+2026-07-07 14:39:13,380 [INFO] experiment3:   P2/C4: BLEU=0.0000, ROUGE-L=0.0707, avg_comments=2.41
+2026-07-07 14:39:13,428 [INFO] experiment3:   P3/C1: BLEU=0.0000, ROUGE-L=0.0552, avg_comments=1.64
+2026-07-07 14:39:13,498 [INFO] experiment3:   P3/C2: BLEU=0.0000, ROUGE-L=0.0653, avg_comments=1.67
+2026-07-07 14:39:13,571 [INFO] experiment3:   P3/C3: BLEU=0.0006, ROUGE-L=0.0720, avg_comments=1.73
+2026-07-07 14:39:13,621 [INFO] experiment3:   P3/C4: BLEU=0.0000, ROUGE-L=0.0694, avg_comments=1.45
+2026-07-07 14:39:13,685 [INFO] experiment3:   P4/C1: BLEU=0.0000, ROUGE-L=0.0595, avg_comments=2.02
+2026-07-07 14:39:13,740 [INFO] experiment3:   P4/C2: BLEU=0.0000, ROUGE-L=0.0588, avg_comments=1.77
+2026-07-07 14:39:13,822 [INFO] experiment3:   P4/C3: BLEU=0.0000, ROUGE-L=0.0695, avg_comments=1.87
+2026-07-07 14:39:13,875 [INFO] experiment3:   P4/C4: BLEU=0.0000, ROUGE-L=0.0702, avg_comments=1.93
+2026-07-07 14:39:13,877 [INFO] experiment3: 评论生成指标已保存: E:\latex\projects\experiments\experiment3\results\evaluation\comment_generation_metrics.json
+2026-07-07 14:39:14,236 [INFO] experiment3: 最佳生成样例已保存: E:\latex\projects\experiments\experiment3\results\evaluation\best_generated_examples.json
+2026-07-07 14:39:41,484 [INFO] experiment3: ============================================================
+2026-07-07 14:39:41,484 [INFO] experiment3: 步骤六：可视化
+2026-07-07 14:39:41,484 [INFO] experiment3: ============================================================
+2026-07-07 14:39:41,485 [INFO] experiment3: 图 1: 样本分布
+2026-07-07 14:39:41,845 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\01_sample_distribution.png
+2026-07-07 14:39:41,845 [INFO] experiment3: 图 2: 上下文长度与截断率
+2026-07-07 14:39:42,123 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\02_context_lengths.png
+2026-07-07 14:39:42,123 [INFO] experiment3: 图 7: 推理时间对比图
+2026-07-07 14:39:42,378 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\07_inference_time.png
+2026-07-07 14:39:42,378 [INFO] experiment3: 图 3: Accuracy 热力图
+2026-07-07 14:40:42,834 [INFO] experiment3: ============================================================
+2026-07-07 14:40:42,834 [INFO] experiment3: 步骤六：可视化
+2026-07-07 14:40:42,834 [INFO] experiment3: ============================================================
+2026-07-07 14:40:42,835 [INFO] experiment3: 图 1: 样本分布
+2026-07-07 14:40:43,124 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\01_sample_distribution.png
+2026-07-07 14:40:43,125 [INFO] experiment3: 图 2: 上下文长度与截断率
+2026-07-07 14:40:43,394 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\02_context_lengths.png
+2026-07-07 14:40:43,394 [INFO] experiment3: 图 7: 推理时间对比图
+2026-07-07 14:40:43,637 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\07_inference_time.png
+2026-07-07 14:40:43,638 [INFO] experiment3: 图 3: Accuracy 热力图
+2026-07-07 14:40:43,959 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\03_accuracy_heatmap.png
+2026-07-07 14:40:43,959 [INFO] experiment3: 图 4: F1 热力图
+2026-07-07 14:40:44,245 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\04_f1_heatmap.png
+2026-07-07 14:40:44,246 [INFO] experiment3: 图 5: ROC-AUC 热力图
+2026-07-07 14:40:44,540 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\05_roc_auc_heatmap.png
+2026-07-07 14:40:44,540 [INFO] experiment3: 额外图: JSON 解析失败率
+2026-07-07 14:40:44,834 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\09_parse_fail_rate.png
+2026-07-07 14:40:44,834 [INFO] experiment3: 图 8: 模型对比
+2026-07-07 14:40:44,835 [INFO] experiment3:   加载实验二指标: E:\latex\projects\experiments\experiment2\results\evaluation\metrics_main.json
+2026-07-07 14:40:45,060 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\08_model_comparison.png
+2026-07-07 14:40:45,060 [INFO] experiment3: 图 6: BLEU/ROUGE 对比图
+2026-07-07 14:40:45,348 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\06_bleu_rouge_comparison.png
+2026-07-07 14:40:45,348 [INFO] experiment3: 所有图表生成完毕
+2026-07-07 14:58:10,658 [INFO] experiment3: ============================================================
+2026-07-07 14:58:10,658 [INFO] experiment3: 步骤六：可视化
+2026-07-07 14:58:10,659 [INFO] experiment3: ============================================================
+2026-07-07 14:58:10,660 [INFO] experiment3: 图 1: 样本分布
+2026-07-07 14:58:11,059 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\01_sample_distribution.png
+2026-07-07 14:58:11,059 [INFO] experiment3: 图 2: 上下文长度与截断率
+2026-07-07 14:58:11,382 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\02_context_lengths.png
+2026-07-07 14:58:11,383 [INFO] experiment3: 图 7: 推理时间对比图
+2026-07-07 14:58:11,667 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\07_inference_time.png
+2026-07-07 14:58:11,667 [INFO] experiment3: 图 3: Accuracy 热力图
+2026-07-07 14:58:12,051 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\03_accuracy_heatmap.png
+2026-07-07 14:58:12,051 [INFO] experiment3: 图 4: F1 热力图
+2026-07-07 14:58:12,451 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\04_f1_heatmap.png
+2026-07-07 14:58:12,452 [INFO] experiment3: 图 5: ROC-AUC 热力图
+2026-07-07 14:58:12,805 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\05_roc_auc_heatmap.png
+2026-07-07 14:58:12,805 [INFO] experiment3: 额外图: JSON 解析失败率
+2026-07-07 14:58:13,135 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\09_parse_fail_rate.png
+2026-07-07 14:58:13,135 [INFO] experiment3: 图 8: 模型对比
+2026-07-07 14:58:13,137 [INFO] experiment3:   加载实验二指标: E:\latex\projects\experiments\experiment2\results\evaluation\metrics_main.json
+2026-07-07 14:58:13,337 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\08_model_comparison.png
+2026-07-07 14:58:13,337 [INFO] experiment3: 图 6: BLEU/ROUGE 对比图
+2026-07-07 14:58:13,665 [INFO] experiment3:   保存: E:\latex\projects\experiments\experiment3\figures\06_bleu_rouge_comparison.png
+2026-07-07 14:58:13,665 [INFO] experiment3: 所有图表生成完毕

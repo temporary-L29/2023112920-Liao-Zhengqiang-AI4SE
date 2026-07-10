@@ -1,0 +1,46 @@
+{
+  "svm": {
+    "false_positives": 89,
+    "false_negatives": 19,
+    "fp_avg_changed_files": 17.5,
+    "fn_avg_changed_files": 4.7,
+    "fp_avg_additions": 675.1,
+    "fn_avg_additions": 193.6,
+    "fp_repos": {
+      "huggingface/transformers": 31,
+      "kubernetes/kubernetes": 20,
+      "pandas-dev/pandas": 17,
+      "facebook/react": 14,
+      "microsoft/vscode": 5,
+      "langchain-ai/langchain": 2
+    },
+    "fn_repos": {
+      "pandas-dev/pandas": 6,
+      "facebook/react": 6,
+      "huggingface/transformers": 4,
+      "kubernetes/kubernetes": 2,
+      "langchain-ai/langchain": 1
+    },
+    "overall_avg_files": 92.7,
+    "overall_avg_additions": 19633.3
+  },
+  "randomforest": {
+    "false_positives": 118,
+    "false_negatives": 0,
+    "fp_avg_changed_files": 258.1,
+    "fn_avg_changed_files": 0,
+    "fp_avg_additions": 56604.1,
+    "fn_avg_additions": 0,
+    "fp_repos": {
+      "facebook/react": 34,
+      "huggingface/transformers": 34,
+      "kubernetes/kubernetes": 25,
+      "pandas-dev/pandas": 17,
+      "microsoft/vscode": 6,
+      "langchain-ai/langchain": 2
+    },
+    "fn_repos": {},
+    "overall_avg_files": 92.7,
+    "overall_avg_additions": 19633.3
+  }
+}

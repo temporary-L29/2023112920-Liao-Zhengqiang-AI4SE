@@ -1,0 +1,86 @@
+{
+  "M1": {
+    "method_id": "M1",
+    "avg_bleu": 0.2239,
+    "avg_rouge1": 0.1173,
+    "avg_rouge2": 0.011,
+    "avg_rougeL": 0.1054,
+    "avg_risk_coverage": 0.9491,
+    "avg_actionability": 0.8905,
+    "avg_specificity": 0.5385,
+    "n_generated": 63,
+    "n_with_real": 67,
+    "total_comments": 400,
+    "avg_comments_per_pr": 6.3,
+    "severity_distribution": {
+      "blocker": 33,
+      "major": 106,
+      "minor": 148,
+      "nit": 113
+    },
+    "blocker_major_ratio": 0.3475
+  },
+  "M2": {
+    "method_id": "M2",
+    "avg_bleu": 0.2189,
+    "avg_rouge1": 0.1241,
+    "avg_rouge2": 0.0121,
+    "avg_rougeL": 0.1119,
+    "avg_risk_coverage": 0.8934,
+    "avg_actionability": 0.8508,
+    "avg_specificity": 0.4741,
+    "n_generated": 62,
+    "n_with_real": 67,
+    "total_comments": 331,
+    "avg_comments_per_pr": 5.3,
+    "severity_distribution": {
+      "blocker": 17,
+      "major": 52,
+      "minor": 137,
+      "nit": 125
+    },
+    "blocker_major_ratio": 0.2085
+  },
+  "M3": {
+    "method_id": "M3",
+    "avg_bleu": 0.2344,
+    "avg_rouge1": 0.1228,
+    "avg_rouge2": 0.0144,
+    "avg_rougeL": 0.1089,
+    "avg_risk_coverage": 0.9065,
+    "avg_actionability": 0.8942,
+    "avg_specificity": 0.4485,
+    "n_generated": 60,
+    "n_with_real": 67,
+    "total_comments": 369,
+    "avg_comments_per_pr": 6.2,
+    "severity_distribution": {
+      "blocker": 25,
+      "major": 87,
+      "minor": 160,
+      "nit": 97
+    },
+    "blocker_major_ratio": 0.3035
+  },
+  "M4": {
+    "method_id": "M4",
+    "avg_bleu": 0.2286,
+    "avg_rouge1": 0.1087,
+    "avg_rouge2": 0.011,
+    "avg_rougeL": 0.0954,
+    "avg_risk_coverage": 0.9467,
+    "avg_actionability": 0.9036,
+    "avg_specificity": 0.5723,
+    "n_generated": 63,
+    "n_with_real": 67,
+    "total_comments": 409,
+    "avg_comments_per_pr": 6.5,
+    "severity_distribution": {
+      "blocker": 69,
+      "major": 150,
+      "minor": 155,
+      "nit": 35
+    },
+    "blocker_major_ratio": 0.5355
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "full_dataset": {
+    "total": 343,
+    "merged": 225,
+    "unmerged": 118,
+    "merge_rate": 0.656,
+    "with_review": 193,
+    "repos": {
+      "pandas-dev/pandas": 84,
+      "huggingface/transformers": 82,
+      "microsoft/vscode": 60,
+      "kubernetes/kubernetes": 54,
+      "facebook/react": 52,
+      "langchain-ai/langchain": 11
+    }
+  },
+  "balanced_120": {
+    "total": 120,
+    "merged": 60,
+    "unmerged": 60,
+    "with_review": 65,
+    "repos": {
+      "huggingface/transformers": 28,
+      "facebook/react": 24,
+      "pandas-dev/pandas": 24,
+      "kubernetes/kubernetes": 23,
+      "microsoft/vscode": 11,
+      "langchain-ai/langchain": 10
+    }
+  },
+  "hard_fp_40": {
+    "total": 40,
+    "merged": 0,
+    "unmerged": 40,
+    "repos": {
+      "huggingface/transformers": 11,
+      "facebook/react": 10,
+      "kubernetes/kubernetes": 8,
+      "pandas-dev/pandas": 7,
+      "microsoft/vscode": 3,
+      "langchain-ai/langchain": 1
+    }
+  },
+  "balanced_50": {
+    "total": 50,
+    "merged": 25,
+    "unmerged": 25,
+    "repos": {
+      "facebook/react": 11,
+      "pandas-dev/pandas": 9,
+      "kubernetes/kubernetes": 8,
+      "microsoft/vscode": 8,
+      "huggingface/transformers": 8,
+      "langchain-ai/langchain": 6
+    },
+    "source": "experiment5/ai_llm_sample_50.csv"
+  },
+  "baseline_balanced_120": {
+    "P2_C3": {
+      "prompt_type": "P2",
+      "context_type": "C3",
+      "n_valid": 119,
+      "accuracy": 0.5714,
+      "precision": 0.5413,
+      "recall": 0.9833,
+      "f1": 0.6982,
+      "roc_auc": 0.4768,
+      "specificity": 0.1525,
+      "balanced_accuracy": 0.5679,
+      "fpr": 0.8475,
+      "confusion_matrix": [
+        [
+          9,
+          50
+        ],
+        [
+          1,
+          59
+        ]
+      ]
+    },
+    "P2_C4": {
+      "prompt_type": "P2",
+      "context_type": "C4",
+      "n_valid": 119,
+      "accuracy": 0.5546,
+      "precision": 0.5321,
+      "recall": 0.9667,
+      "f1": 0.6864,
+      "roc_auc": 0.5945,
+      "specificity": 0.1356,
+      "balanced_accuracy": 0.5511,
+      "fpr": 0.8644,
+      "confusion_matrix": [
+        [
+          8,
+          51
+        ],
+        [
+          2,
+          58
+        ]
+      ]
+    }
+  },
+  "baseline_hard_fp": {
+    "P2_C3": {
+      "prompt_type": "P2",
+      "context_type": "C3",
+      "n_valid": 40,
+      "accuracy": 0.05,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": null,
+      "specificity": 0.05,
+      "balanced_accuracy": 0.025,
+      "fpr": 0.95,
+      "confusion_matrix": [
+        [
+          2,
+          38
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "P2_C4": {
+      "prompt_type": "P2",
+      "context_type": "C4",
+      "n_valid": 40,
+      "accuracy": 0.05,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": null,
+      "specificity": 0.05,
+      "balanced_accuracy": 0.025,
+      "fpr": 0.95,
+      "confusion_matrix": [
+        [
+          2,
+          38
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  }
+}

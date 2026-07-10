@@ -1,0 +1,423 @@
+{
+  "overall": "M4",
+  "by_auc": "M3",
+  "by_specificity": "M4",
+  "by_balanced_acc": "M4",
+  "scores": {
+    "M1": 0.5279,
+    "M2": 0.5009,
+    "M3": 0.5341,
+    "M4": 0.6193
+  },
+  "all_metrics": {
+    "balanced_120": {
+      "M1": {
+        "method_id": "M1",
+        "prompt_type": "P5",
+        "context_type": "C5",
+        "n_valid": 116,
+        "n_total": 120,
+        "parse_rate": 0.9667,
+        "accuracy": 0.569,
+        "precision": 0.5556,
+        "recall": 0.7627,
+        "f1": 0.6429,
+        "roc_auc": 0.5938,
+        "pr_auc": 0.5747,
+        "specificity": 0.3684,
+        "balanced_accuracy": 0.5656,
+        "fpr": 0.6316,
+        "confusion_matrix": [
+          [
+            21,
+            36
+          ],
+          [
+            14,
+            45
+          ]
+        ],
+        "tn": 21,
+        "fp": 36,
+        "fn": 14,
+        "tp": 45,
+        "unmerged_identified": 21,
+        "unmerged_total": 57,
+        "avg_merge_probability": 0.6725,
+        "avg_unmerged_risk_score": 0.3284
+      },
+      "M2": {
+        "method_id": "M2",
+        "prompt_type": "P6",
+        "context_type": "C5",
+        "n_valid": 118,
+        "n_total": 120,
+        "parse_rate": 0.9833,
+        "accuracy": 0.5508,
+        "precision": 0.5306,
+        "recall": 0.8814,
+        "f1": 0.6624,
+        "roc_auc": 0.6438,
+        "pr_auc": 0.6118,
+        "specificity": 0.2203,
+        "balanced_accuracy": 0.5508,
+        "fpr": 0.7797,
+        "confusion_matrix": [
+          [
+            13,
+            46
+          ],
+          [
+            7,
+            52
+          ]
+        ],
+        "tn": 13,
+        "fp": 46,
+        "fn": 7,
+        "tp": 52,
+        "unmerged_identified": 13,
+        "unmerged_total": 59,
+        "avg_merge_probability": 0.7468,
+        "avg_unmerged_risk_score": 0.2532
+      },
+      "M3": {
+        "method_id": "M3",
+        "prompt_type": "P7",
+        "context_type": "C6",
+        "n_valid": 113,
+        "n_total": 120,
+        "parse_rate": 0.9417,
+        "accuracy": 0.5487,
+        "precision": 0.525,
+        "recall": 0.7636,
+        "f1": 0.6222,
+        "roc_auc": 0.6472,
+        "pr_auc": 0.6129,
+        "specificity": 0.3448,
+        "balanced_accuracy": 0.5542,
+        "fpr": 0.6552,
+        "confusion_matrix": [
+          [
+            20,
+            38
+          ],
+          [
+            13,
+            42
+          ]
+        ],
+        "tn": 20,
+        "fp": 38,
+        "fn": 13,
+        "tp": 42,
+        "unmerged_identified": 20,
+        "unmerged_total": 58,
+        "avg_merge_probability": 0.6396,
+        "avg_unmerged_risk_score": 0.3604
+      },
+      "M4": {
+        "method_id": "M4",
+        "prompt_type": "P8",
+        "context_type": "C8",
+        "n_valid": 117,
+        "n_total": 120,
+        "parse_rate": 0.975,
+        "accuracy": 0.6239,
+        "precision": 0.619,
+        "recall": 0.661,
+        "f1": 0.6393,
+        "roc_auc": 0.6366,
+        "pr_auc": 0.6229,
+        "specificity": 0.5862,
+        "balanced_accuracy": 0.6236,
+        "fpr": 0.4138,
+        "confusion_matrix": [
+          [
+            34,
+            24
+          ],
+          [
+            20,
+            39
+          ]
+        ],
+        "tn": 34,
+        "fp": 24,
+        "fn": 20,
+        "tp": 39,
+        "unmerged_identified": 34,
+        "unmerged_total": 58,
+        "avg_merge_probability": 0.5472,
+        "avg_unmerged_risk_score": 0.4539
+      }
+    },
+    "hard_fp_40": {
+      "M1": {
+        "method_id": "M1",
+        "prompt_type": "P5",
+        "context_type": "C5",
+        "n_valid": 40,
+        "n_total": 40,
+        "parse_rate": 1.0,
+        "accuracy": 0.4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": null,
+        "pr_auc": null,
+        "specificity": 0.4,
+        "balanced_accuracy": 0.2,
+        "fpr": 0.6,
+        "confusion_matrix": [
+          [
+            16,
+            24
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "tn": 16,
+        "fp": 24,
+        "fn": 0,
+        "tp": 0,
+        "unmerged_identified": 16,
+        "unmerged_total": 40,
+        "avg_merge_probability": 0.6322,
+        "avg_unmerged_risk_score": 0.3765
+      },
+      "M2": {
+        "method_id": "M2",
+        "prompt_type": "P6",
+        "context_type": "C5",
+        "n_valid": 40,
+        "n_total": 40,
+        "parse_rate": 1.0,
+        "accuracy": 0.1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": null,
+        "pr_auc": null,
+        "specificity": 0.1,
+        "balanced_accuracy": 0.05,
+        "fpr": 0.9,
+        "confusion_matrix": [
+          [
+            4,
+            36
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "tn": 4,
+        "fp": 36,
+        "fn": 0,
+        "tp": 0,
+        "unmerged_identified": 4,
+        "unmerged_total": 40,
+        "avg_merge_probability": 0.7537,
+        "avg_unmerged_risk_score": 0.2475
+      },
+      "M3": {
+        "method_id": "M3",
+        "prompt_type": "P7",
+        "context_type": "C6",
+        "n_valid": 40,
+        "n_total": 40,
+        "parse_rate": 1.0,
+        "accuracy": 0.275,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": null,
+        "pr_auc": null,
+        "specificity": 0.275,
+        "balanced_accuracy": 0.1375,
+        "fpr": 0.725,
+        "confusion_matrix": [
+          [
+            11,
+            29
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "tn": 11,
+        "fp": 29,
+        "fn": 0,
+        "tp": 0,
+        "unmerged_identified": 11,
+        "unmerged_total": 40,
+        "avg_merge_probability": 0.6137,
+        "avg_unmerged_risk_score": 0.3862
+      },
+      "M4": {
+        "method_id": "M4",
+        "prompt_type": "P8",
+        "context_type": "C8",
+        "n_valid": 39,
+        "n_total": 40,
+        "parse_rate": 0.975,
+        "accuracy": 0.6154,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": null,
+        "pr_auc": null,
+        "specificity": 0.6154,
+        "balanced_accuracy": 0.3077,
+        "fpr": 0.3846,
+        "confusion_matrix": [
+          [
+            24,
+            15
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "tn": 24,
+        "fp": 15,
+        "fn": 0,
+        "tp": 0,
+        "unmerged_identified": 24,
+        "unmerged_total": 39,
+        "avg_merge_probability": 0.4856,
+        "avg_unmerged_risk_score": 0.5177
+      }
+    },
+    "hard_fp_corrections": {
+      "M1": {
+        "method_id": "M1",
+        "total_fp_samples": 40,
+        "unmerged_in_sample": 40,
+        "correctly_rejected": 16,
+        "correction_rate": 0.4,
+        "still_false_positive": 24
+      },
+      "M2": {
+        "method_id": "M2",
+        "total_fp_samples": 40,
+        "unmerged_in_sample": 40,
+        "correctly_rejected": 4,
+        "correction_rate": 0.1,
+        "still_false_positive": 36
+      },
+      "M3": {
+        "method_id": "M3",
+        "total_fp_samples": 40,
+        "unmerged_in_sample": 40,
+        "correctly_rejected": 11,
+        "correction_rate": 0.275,
+        "still_false_positive": 29
+      },
+      "M4": {
+        "method_id": "M4",
+        "total_fp_samples": 39,
+        "unmerged_in_sample": 39,
+        "correctly_rejected": 24,
+        "correction_rate": 0.6154,
+        "still_false_positive": 15
+      }
+    },
+    "comment_quality": {
+      "M1": {
+        "method_id": "M1",
+        "avg_bleu": 0.2239,
+        "avg_rouge1": 0.1173,
+        "avg_rouge2": 0.011,
+        "avg_rougeL": 0.1054,
+        "avg_risk_coverage": 0.9491,
+        "avg_actionability": 0.8905,
+        "avg_specificity": 0.5385,
+        "n_generated": 63,
+        "n_with_real": 67,
+        "total_comments": 400,
+        "avg_comments_per_pr": 6.3,
+        "severity_distribution": {
+          "blocker": 33,
+          "major": 106,
+          "minor": 148,
+          "nit": 113
+        },
+        "blocker_major_ratio": 0.3475
+      },
+      "M2": {
+        "method_id": "M2",
+        "avg_bleu": 0.2189,
+        "avg_rouge1": 0.1241,
+        "avg_rouge2": 0.0121,
+        "avg_rougeL": 0.1119,
+        "avg_risk_coverage": 0.8934,
+        "avg_actionability": 0.8508,
+        "avg_specificity": 0.4741,
+        "n_generated": 62,
+        "n_with_real": 67,
+        "total_comments": 331,
+        "avg_comments_per_pr": 5.3,
+        "severity_distribution": {
+          "blocker": 17,
+          "major": 52,
+          "minor": 137,
+          "nit": 125
+        },
+        "blocker_major_ratio": 0.2085
+      },
+      "M3": {
+        "method_id": "M3",
+        "avg_bleu": 0.2344,
+        "avg_rouge1": 0.1228,
+        "avg_rouge2": 0.0144,
+        "avg_rougeL": 0.1089,
+        "avg_risk_coverage": 0.9065,
+        "avg_actionability": 0.8942,
+        "avg_specificity": 0.4485,
+        "n_generated": 60,
+        "n_with_real": 67,
+        "total_comments": 369,
+        "avg_comments_per_pr": 6.2,
+        "severity_distribution": {
+          "blocker": 25,
+          "major": 87,
+          "minor": 160,
+          "nit": 97
+        },
+        "blocker_major_ratio": 0.3035
+      },
+      "M4": {
+        "method_id": "M4",
+        "avg_bleu": 0.2286,
+        "avg_rouge1": 0.1087,
+        "avg_rouge2": 0.011,
+        "avg_rougeL": 0.0954,
+        "avg_risk_coverage": 0.9467,
+        "avg_actionability": 0.9036,
+        "avg_specificity": 0.5723,
+        "n_generated": 63,
+        "n_with_real": 67,
+        "total_comments": 409,
+        "avg_comments_per_pr": 6.5,
+        "severity_distribution": {
+          "blocker": 69,
+          "major": 150,
+          "minor": 155,
+          "nit": 35
+        },
+        "blocker_major_ratio": 0.5355
+      }
+    },
+    "comparison": {
+      "experiment5_baselines_on_subset": {},
+      "experiment6_methods": {},
+      "improvements": {}
+    }
+  }
+}

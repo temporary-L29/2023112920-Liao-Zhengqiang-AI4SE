@@ -1,0 +1,1855 @@
+2026-07-09 14:53:36,940 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 14:53:36,940 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 14:53:37,257 [INFO] ============================================================
+2026-07-09 14:53:37,257 [INFO] 阶段: 构建评估子集
+2026-07-09 14:53:37,257 [INFO] ============================================================
+2026-07-09 14:53:37,283 [INFO] 加载实验五数据集: 343 条 PR, merged=225, unmerged=118
+2026-07-09 14:53:37,287 [INFO] 加载实验五预测: 686 条
+2026-07-09 14:53:37,287 [INFO] ========================================
+2026-07-09 14:53:37,289 [INFO] 构建 Balanced-120 评估子集
+2026-07-09 14:53:37,292 [INFO]   可用: merged=225, unmerged=118
+2026-07-09 14:53:37,304 [INFO]   merged: 目标60, 实际60, 含review=41
+2026-07-09 14:53:37,312 [INFO]   unmerged: 目标60, 实际60, 含review=24
+2026-07-09 14:53:37,313 [INFO] Balanced-120 构建完成: 120 条, merged=60, unmerged=60, 含review=65
+2026-07-09 14:53:37,315 [INFO] ========================================
+2026-07-09 14:53:37,315 [INFO] 构建 Hard-FP-40 子集
+2026-07-09 14:53:37,326 [INFO]   实验五 FP 候选: 103 个
+2026-07-09 14:53:37,329 [INFO] Hard-FP-40 构建完成: 40 条
+2026-07-09 14:53:37,338 [INFO] Balanced-120 已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_balanced_120.csv
+2026-07-09 14:53:37,343 [INFO] Hard-FP-40 已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_hard_fp_40.csv
+2026-07-09 14:53:40,747 [INFO]   Balanced-120 基线 P2_C3: Acc=0.5714, F1=0.6982, AUC=0.4768, Specificity=0.1525
+2026-07-09 14:53:40,751 [INFO]   Balanced-120 基线 P2_C4: Acc=0.5546, F1=0.6864, AUC=0.5945, Specificity=0.1356
+2026-07-09 14:53:40,755 [INFO]   Hard-FP-40 基线 P2_C3: Acc=0.0500, F1=0.0000, AUC=None, Specificity=0.0500
+2026-07-09 14:53:40,758 [INFO]   Hard-FP-40 基线 P2_C4: Acc=0.0500, F1=0.0000, AUC=None, Specificity=0.0500
+2026-07-09 14:53:40,761 [INFO] 样本统计已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_sample_stats.json
+2026-07-09 14:53:40,761 [INFO] ============================================================
+2026-07-09 14:54:01,994 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 14:54:01,995 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 14:54:02,306 [INFO] ============================================================
+2026-07-09 14:54:02,306 [INFO] 阶段: 构建增强上下文
+2026-07-09 14:54:02,306 [INFO] ============================================================
+2026-07-09 14:54:02,460 [INFO] 完整数据集: 343 条, Patch index: 398 条目
+2026-07-09 14:54:02,494 [INFO]   构建 balanced 上下文: 50 条目...
+2026-07-09 14:54:02,515 [INFO]   构建 balanced 上下文: 100 条目...
+2026-07-09 14:54:02,582 [INFO]   构建 balanced 上下文: 150 条目...
+2026-07-09 14:54:02,705 [INFO]   构建 balanced 上下文: 200 条目...
+2026-07-09 14:54:48,125 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 14:54:48,125 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 14:54:48,434 [INFO] ============================================================
+2026-07-09 14:54:48,434 [INFO] 阶段: 构建增强上下文
+2026-07-09 14:54:48,434 [INFO] ============================================================
+2026-07-09 14:54:48,580 [INFO] 完整数据集: 343 条, Patch index: 398 条目
+2026-07-09 14:54:48,616 [INFO]   构建 balanced 上下文: 50 条目...
+2026-07-09 14:54:48,637 [INFO]   构建 balanced 上下文: 100 条目...
+2026-07-09 14:54:48,713 [INFO]   构建 balanced 上下文: 150 条目...
+2026-07-09 14:54:48,845 [INFO]   构建 balanced 上下文: 200 条目...
+2026-07-09 14:54:49,014 [INFO]   构建 balanced 上下文: 250 条目...
+2026-07-09 14:54:49,374 [INFO]   构建 balanced 上下文: 300 条目...
+2026-07-09 14:54:49,723 [INFO]   构建 balanced 上下文: 350 条目...
+2026-07-09 14:54:50,159 [INFO]   构建 balanced 上下文: 400 条目...
+2026-07-09 14:54:50,647 [INFO]   构建 balanced 上下文: 450 条目...
+2026-07-09 14:54:50,938 [INFO]   balanced 上下文构建完成: 480 条目 (4 types × 120 samples)
+2026-07-09 14:54:50,988 [INFO]   构建 hardfp 上下文: 50 条目...
+2026-07-09 14:54:51,214 [INFO]   构建 hardfp 上下文: 100 条目...
+2026-07-09 14:54:51,654 [INFO]   构建 hardfp 上下文: 150 条目...
+2026-07-09 14:54:51,764 [INFO]   hardfp 上下文构建完成: 160 条目 (4 types × 40 samples)
+2026-07-09 14:54:51,803 [INFO] 增强上下文已保存: E:\latex\projects\experiments\experiment6\results\processed\improved_contexts.json (640 条目)
+2026-07-09 14:54:51,821 [INFO]   任务列表: 480 任务 (4 方法 × 120 样本)
+2026-07-09 14:54:51,826 [INFO]   任务列表: 160 任务 (4 方法 × 40 样本)
+2026-07-09 14:54:51,832 [INFO] 任务列表已保存: E:\latex\projects\experiments\experiment6\results\processed\task_list.json
+2026-07-09 14:54:51,832 [INFO] 总任务数: 640 (Balanced: 480, Hard-FP: 160)
+2026-07-09 14:54:51,832 [INFO] ============================================================
+2026-07-09 14:57:12,894 [WARNING] ============================================================
+2026-07-09 14:57:12,894 [WARNING] 未设置 DEEPSEEK_API_KEY 环境变量!
+2026-07-09 14:57:12,894 [WARNING] 请先设置: set DEEPSEEK_API_KEY=your-key
+2026-07-09 14:57:12,894 [WARNING] 或在运行前: $env:DEEPSEEK_API_KEY='your-key'
+2026-07-09 14:57:12,894 [WARNING] ============================================================
+2026-07-09 14:57:13,343 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 14:57:13,343 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 14:57:13,671 [INFO] ============================================================
+2026-07-09 14:57:13,672 [INFO] 阶段: LLM API 调用
+2026-07-09 14:57:13,672 [INFO] Suite: balanced, Methods: ['M1', 'M2', 'M3', 'M4']
+2026-07-09 14:57:13,672 [INFO] Model: deepseek-v4-flash, Dry run: False, Limit: 4
+2026-07-09 14:57:13,672 [INFO] ============================================================
+2026-07-09 14:57:13,685 [INFO] 加载评估集: 120 条
+2026-07-09 14:57:15,321 [INFO] 总任务数: 480 (4 方法 × 120 样本)
+2026-07-09 14:57:15,321 [WARNING] 未设置 DEEPSEEK_API_KEY/LLM_API_KEY 环境变量！
+2026-07-09 14:57:15,321 [WARNING] 请设置后运行: set DEEPSEEK_API_KEY=your-key
+2026-07-09 14:57:23,343 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 14:57:23,343 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 14:57:23,648 [INFO] ============================================================
+2026-07-09 14:57:23,648 [INFO] 阶段: LLM API 调用
+2026-07-09 14:57:23,648 [INFO] Suite: balanced, Methods: ['M1', 'M2', 'M3', 'M4']
+2026-07-09 14:57:23,648 [INFO] Model: deepseek-v4-flash, Dry run: False, Limit: 4
+2026-07-09 14:57:23,648 [INFO] ============================================================
+2026-07-09 14:57:23,671 [INFO] 加载评估集: 120 条
+2026-07-09 14:57:25,273 [INFO] 总任务数: 480 (4 方法 × 120 样本)
+2026-07-09 14:57:25,274 [INFO]   已完成: 0
+2026-07-09 14:57:25,274 [INFO]   待处理: 4
+2026-07-09 14:57:29,751 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:57:29,759 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:57:29,792 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:57:29,877 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:57:47,152 [INFO] API 调用完成: 4/4, 总耗时 22s
+2026-07-09 14:57:47,153 [INFO] 导出解析预测...
+2026-07-09 14:57:47,165 [INFO] 解析预测已保存: E:\latex\projects\experiments\experiment6\results\responses\parsed_predictions.csv (4 行)
+2026-07-09 14:57:47,165 [INFO] ============================================================
+2026-07-09 14:58:07,465 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 14:58:07,467 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 14:58:07,781 [INFO] ============================================================
+2026-07-09 14:58:07,781 [INFO] 阶段: LLM API 调用
+2026-07-09 14:58:07,782 [INFO] Suite: balanced, Methods: ['M1', 'M2', 'M3', 'M4']
+2026-07-09 14:58:07,782 [INFO] Model: deepseek-v4-flash, Dry run: False, Limit: unlimited
+2026-07-09 14:58:07,782 [INFO] ============================================================
+2026-07-09 14:58:07,795 [INFO] 加载评估集: 120 条
+2026-07-09 14:58:09,509 [INFO] 总任务数: 480 (4 方法 × 120 样本)
+2026-07-09 14:58:09,509 [INFO]   已完成: 0
+2026-07-09 14:58:09,509 [INFO]   待处理: 480
+2026-07-09 14:58:12,562 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,576 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,577 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,595 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,598 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,616 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,624 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:12,630 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:20,469 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:21,744 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:25,379 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:26,366 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:26,451 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:27,505 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:28,291 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:28,616 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:29,211 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:31,885 [INFO]   进度: 10/480 (0.4/s, ETA 1052s)
+2026-07-09 14:58:33,255 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:33,808 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:36,785 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:39,219 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:41,584 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:42,591 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:43,604 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:45,013 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:46,696 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:46,827 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:47,147 [INFO]   进度: 20/480 (0.5/s, ETA 866s)
+2026-07-09 14:58:48,316 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:51,048 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:54,068 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:54,663 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:56,926 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:58,088 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:58:59,627 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:00,049 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:00,401 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:02,241 [INFO]   进度: 30/480 (0.6/s, ETA 791s)
+2026-07-09 14:59:03,540 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:03,684 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:04,592 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:05,046 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:06,726 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:09,437 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:12,228 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:14,664 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:15,239 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:17,558 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:21,095 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:23,661 [INFO]   进度: 40/480 (0.5/s, ETA 816s)
+2026-07-09 14:59:24,974 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:25,384 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:26,648 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:26,974 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:27,616 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:30,618 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:34,791 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:35,503 [INFO]   进度: 50/480 (0.6/s, ETA 740s)
+2026-07-09 14:59:35,528 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:35,601 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:36,605 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:36,785 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:38,079 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:41,219 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:42,276 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:44,312 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:44,656 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:48,205 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:50,240 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:54,154 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:55,337 [INFO]   进度: 60/480 (0.6/s, ETA 741s)
+2026-07-09 14:59:56,521 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:56,607 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:57,664 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:57,696 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 14:59:57,862 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:00,741 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:03,012 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:03,324 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:04,437 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:06,076 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:06,633 [INFO]   进度: 70/480 (0.6/s, ETA 686s)
+2026-07-09 15:00:06,784 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:07,783 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:10,020 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:10,089 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:17,836 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:19,520 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:20,659 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:22,253 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:24,549 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:26,365 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:26,647 [INFO]   进度: 80/480 (0.6/s, ETA 686s)
+2026-07-09 15:00:27,044 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:28,384 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:31,041 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:33,151 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:33,936 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:35,876 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:40,603 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:41,571 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:42,042 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:42,676 [INFO]   进度: 90/480 (0.6/s, ETA 664s)
+2026-07-09 15:00:42,885 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:44,168 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:44,257 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:46,718 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:48,696 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:50,051 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:54,920 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:54,965 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:56,576 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:57,318 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:58,105 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:58,828 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:00:59,444 [INFO]   进度: 100/480 (0.6/s, ETA 646s)
+2026-07-09 15:01:01,176 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:05,704 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:05,798 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:06,464 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:07,254 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:07,637 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:09,661 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:12,121 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:15,796 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:15,931 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:17,289 [INFO]   进度: 110/480 (0.6/s, ETA 632s)
+2026-07-09 15:01:19,004 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:19,427 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:21,206 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:24,450 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:25,201 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:25,793 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:27,243 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:30,356 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:32,039 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:34,464 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:34,647 [INFO]   进度: 120/480 (0.6/s, ETA 615s)
+2026-07-09 15:01:35,881 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:36,285 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:39,174 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:39,376 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:40,171 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:41,533 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:42,102 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:43,067 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:44,963 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:47,247 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:49,514 [INFO]   进度: 130/480 (0.6/s, ETA 592s)
+2026-07-09 15:01:50,763 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:53,358 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:53,741 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:54,311 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:55,296 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:57,602 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:01:59,202 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:00,554 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:04,416 [INFO]   进度: 140/480 (0.6/s, ETA 570s)
+2026-07-09 15:02:05,244 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:05,747 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:05,750 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:06,009 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:07,957 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:11,464 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:12,949 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:13,931 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:15,023 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:15,944 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:20,252 [INFO]   进度: 150/480 (0.6/s, ETA 552s)
+2026-07-09 15:02:20,751 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:20,934 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:21,691 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:21,776 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:22,366 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:24,291 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:27,946 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:28,535 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:28,854 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:32,165 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:34,763 [INFO]   进度: 160/480 (0.6/s, ETA 531s)
+2026-07-09 15:02:35,355 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:36,024 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:36,102 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:38,112 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:41,048 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:42,664 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:43,127 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:45,157 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:47,691 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:47,808 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:49,901 [INFO]   进度: 170/480 (0.6/s, ETA 511s)
+2026-07-09 15:02:51,152 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:51,310 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:51,357 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:51,556 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:55,461 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:02:55,616 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:00,279 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:01,655 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:03,468 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:08,191 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:09,278 [INFO]   进度: 180/480 (0.6/s, ETA 500s)
+2026-07-09 15:03:09,459 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:10,253 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:10,550 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:11,286 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:11,451 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:11,738 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:12,585 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:16,647 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:19,441 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:19,807 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:20,245 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:22,521 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:22,669 [INFO]   进度: 190/480 (0.6/s, ETA 478s)
+2026-07-09 15:03:23,841 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:25,865 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:26,804 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:27,583 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:33,134 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:33,981 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:34,420 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:34,510 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:35,240 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:36,001 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:40,068 [INFO]   进度: 200/480 (0.6/s, ETA 463s)
+2026-07-09 15:03:41,266 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:41,384 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:42,101 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:42,874 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:42,940 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:44,761 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:46,208 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:46,581 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:51,095 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:53,527 [INFO]   进度: 210/480 (0.6/s, ETA 442s)
+2026-07-09 15:03:53,531 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:54,754 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:55,785 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:56,619 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:56,764 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:03:58,392 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:00,577 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:03,265 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:04,861 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:07,099 [INFO]   进度: 220/480 (0.6/s, ETA 423s)
+2026-07-09 15:04:07,782 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:08,497 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:08,523 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:10,037 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:10,700 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:10,862 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:14,351 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:14,723 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:19,034 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:19,983 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:20,291 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:22,562 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:23,495 [INFO]   进度: 230/480 (0.6/s, ETA 407s)
+2026-07-09 15:04:24,658 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:25,960 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:26,709 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:29,395 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:32,487 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:32,558 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:33,924 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:35,691 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:36,057 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:41,730 [INFO]   进度: 240/480 (0.6/s, ETA 392s)
+2026-07-09 15:04:42,705 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:42,924 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:43,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:44,755 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:48,031 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:48,388 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:52,138 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:53,507 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:53,519 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:53,981 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:54,892 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:56,127 [INFO]   进度: 250/480 (0.6/s, ETA 374s)
+2026-07-09 15:04:57,337 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:04:58,891 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:03,775 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:06,417 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:12,963 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:13,033 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:13,213 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:13,334 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:13,462 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:14,962 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:20,529 [INFO]   进度: 260/480 (0.6/s, ETA 365s)
+2026-07-09 15:05:21,617 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:26,186 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:28,061 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:28,123 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:29,909 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:30,878 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:32,692 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:33,811 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:41,786 [INFO]   进度: 270/480 (0.6/s, ETA 352s)
+2026-07-09 15:05:41,838 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:43,005 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:43,178 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:44,653 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:45,360 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:46,674 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:51,437 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:53,065 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:54,559 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:54,819 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:58,311 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:58,314 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:05:59,599 [INFO]   进度: 280/480 (0.6/s, ETA 336s)
+2026-07-09 15:06:00,827 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:06,117 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:07,649 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:08,158 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:08,647 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:09,195 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:10,726 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:13,073 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:15,397 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:17,189 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:19,002 [INFO]   进度: 290/480 (0.6/s, ETA 321s)
+2026-07-09 15:06:20,233 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:20,566 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:20,931 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:22,961 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:24,528 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:26,882 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:27,738 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:34,618 [INFO]   进度: 300/480 (0.6/s, ETA 303s)
+2026-07-09 15:06:35,195 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:35,196 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:35,268 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:35,873 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:40,863 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:41,245 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:45,067 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:47,335 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:48,401 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:49,860 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:52,828 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:52,919 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:54,388 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:55,638 [INFO]   进度: 310/480 (0.6/s, ETA 289s)
+2026-07-09 15:06:56,922 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:57,570 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:06:59,623 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:03,343 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:07,798 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:07,893 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:10,114 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:10,331 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:11,669 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:14,277 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:20,541 [INFO]   进度: 320/480 (0.6/s, ETA 276s)
+2026-07-09 15:07:21,899 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:22,277 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:23,266 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:23,312 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:23,422 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:27,549 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:30,101 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:32,443 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:32,684 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:34,450 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:35,885 [INFO]   进度: 330/480 (0.6/s, ETA 257s)
+2026-07-09 15:07:37,343 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:37,481 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:37,878 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:38,250 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:46,509 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:49,368 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:49,587 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:49,655 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:53,422 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:54,254 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:54,264 [INFO]   进度: 340/480 (0.6/s, ETA 241s)
+2026-07-09 15:07:55,494 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:07:58,911 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:00,233 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:00,848 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:02,531 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:02,599 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:04,981 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:05,494 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:13,674 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:13,928 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:18,033 [INFO]   进度: 350/480 (0.6/s, ETA 226s)
+2026-07-09 15:08:19,274 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:20,105 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:21,837 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:21,845 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:22,591 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:24,886 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:28,923 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:28,949 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:34,687 [INFO]   进度: 360/480 (0.6/s, ETA 208s)
+2026-07-09 15:08:35,524 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:35,735 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:36,027 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:37,425 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:37,793 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:39,297 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:43,528 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:44,821 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:46,999 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:48,677 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:48,780 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:49,350 [INFO]   进度: 370/480 (0.6/s, ETA 190s)
+2026-07-09 15:08:49,622 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:50,408 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:54,690 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:59,885 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:08:59,981 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:01,065 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:01,651 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:06,124 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:06,148 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:12,059 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:12,639 [INFO]   进度: 380/480 (0.6/s, ETA 175s)
+2026-07-09 15:09:13,564 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:14,017 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:14,485 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:15,468 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:21,617 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:21,757 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:23,086 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:24,604 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:24,764 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:28,927 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:28,933 [INFO]   进度: 390/480 (0.6/s, ETA 157s)
+2026-07-09 15:09:28,984 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:30,666 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:30,686 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:30,947 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:36,082 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:39,357 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:39,998 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:40,747 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:43,296 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:45,846 [INFO]   进度: 400/480 (0.6/s, ETA 139s)
+2026-07-09 15:09:46,166 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:46,866 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:47,970 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:51,665 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:53,936 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:59,609 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:09:59,773 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:00,841 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:03,231 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:03,628 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:04,892 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:08,827 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:10,553 [INFO]   进度: 410/480 (0.6/s, ETA 123s)
+2026-07-09 15:10:12,004 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:12,119 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:15,475 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:17,281 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:18,107 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:21,373 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:22,582 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:26,084 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:28,946 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:29,629 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:30,729 [INFO]   进度: 420/480 (0.6/s, ETA 106s)
+2026-07-09 15:10:31,973 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:32,636 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:33,037 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:33,448 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:35,546 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:41,228 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:42,487 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:43,291 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:44,344 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:45,072 [INFO]   进度: 430/480 (0.6/s, ETA 88s)
+2026-07-09 15:10:45,974 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:46,331 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:50,668 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:53,437 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:10:56,402 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:00,249 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:01,763 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:04,532 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:07,477 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:09,186 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:09,882 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:12,549 [INFO]   进度: 440/480 (0.6/s, ETA 71s)
+2026-07-09 15:11:13,738 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:16,735 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:16,795 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:17,154 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:21,261 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:24,626 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:26,234 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:27,915 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:31,399 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:32,966 [INFO]   进度: 450/480 (0.6/s, ETA 54s)
+2026-07-09 15:11:33,872 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:34,328 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:34,466 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:36,063 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:39,782 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:39,917 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:47,056 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:47,793 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:51,127 [INFO]   进度: 460/480 (0.6/s, ETA 36s)
+2026-07-09 15:11:51,158 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:51,730 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:52,109 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:52,425 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:53,456 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:11:54,481 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:00,370 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:03,354 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:05,388 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:05,422 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:07,088 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:09,791 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:10,030 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:12,816 [INFO]   进度: 470/480 (0.6/s, ETA 18s)
+2026-07-09 15:12:14,144 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:14,251 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:19,207 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:12:36,710 [INFO]   进度: 480/480 (0.6/s, ETA 0s)
+2026-07-09 15:12:36,711 [INFO] API 调用完成: 480/480, 总耗时 867s
+2026-07-09 15:12:36,711 [INFO] 导出解析预测...
+2026-07-09 15:12:36,751 [INFO] 解析预测已保存: E:\latex\projects\experiments\experiment6\results\responses\parsed_predictions.csv (480 行)
+2026-07-09 15:12:36,751 [INFO] ============================================================
+2026-07-09 15:17:22,496 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 15:17:22,497 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 15:17:22,824 [INFO] ============================================================
+2026-07-09 15:17:22,824 [INFO] 阶段: LLM API 调用
+2026-07-09 15:17:22,824 [INFO] Suite: hard-fp, Methods: ['M1', 'M2', 'M3', 'M4']
+2026-07-09 15:17:22,824 [INFO] Model: deepseek-v4-flash, Dry run: False, Limit: unlimited
+2026-07-09 15:17:22,824 [INFO] ============================================================
+2026-07-09 15:17:22,832 [INFO] 加载评估集: 40 条
+2026-07-09 15:17:23,529 [INFO] 总任务数: 160 (4 方法 × 40 样本)
+2026-07-09 15:17:23,541 [INFO]   已完成: 480
+2026-07-09 15:17:23,542 [INFO]   待处理: 68
+2026-07-09 15:17:26,853 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,863 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,867 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,899 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,900 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,900 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,923 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:26,936 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:38,221 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:38,638 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:39,143 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:41,191 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:41,712 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:41,736 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:43,554 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:44,021 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:45,901 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:51,263 [INFO]   进度: 10/68 (0.4/s, ETA 161s)
+2026-07-09 15:17:52,601 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:53,139 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:53,597 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:54,994 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:55,527 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:58,134 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:17:59,830 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:03,424 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:03,929 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:05,515 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:05,655 [INFO]   进度: 20/68 (0.5/s, ETA 101s)
+2026-07-09 15:18:06,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:09,091 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:10,402 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:10,586 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:11,220 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:15,228 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:16,375 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:19,885 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:19,957 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:21,963 [INFO]   进度: 30/68 (0.5/s, ETA 74s)
+2026-07-09 15:18:22,079 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:23,293 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:24,180 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:26,163 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:28,697 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:31,359 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:31,423 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:38,284 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:38,568 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:38,664 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:40,024 [INFO]   进度: 40/68 (0.5/s, ETA 54s)
+2026-07-09 15:18:41,480 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:42,082 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:42,802 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:50,054 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:50,254 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:51,232 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:51,446 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:51,932 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:18:57,234 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:01,661 [INFO]   进度: 50/68 (0.5/s, ETA 35s)
+2026-07-09 15:19:02,513 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:03,071 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:03,171 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:04,539 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:06,613 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:08,812 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:11,589 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:11,851 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:14,605 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:17,267 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:17,945 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:17,972 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:19,872 [INFO]   进度: 60/68 (0.5/s, ETA 16s)
+2026-07-09 15:19:21,077 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 15:19:32,313 [INFO] API 调用完成: 68/68, 总耗时 129s
+2026-07-09 15:19:32,313 [INFO] 导出解析预测...
+2026-07-09 15:19:32,355 [INFO] 解析预测已保存: E:\latex\projects\experiments\experiment6\results\responses\parsed_predictions.csv (548 行)
+2026-07-09 15:19:32,355 [INFO] ============================================================
+2026-07-09 15:20:35,061 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 15:20:35,061 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 15:20:35,398 [INFO] ============================================================
+2026-07-09 15:20:35,398 [INFO] 阶段: 评估
+2026-07-09 15:20:35,398 [INFO] ============================================================
+2026-07-09 15:20:35,409 [INFO] 加载预测: 548 行, 方法: ['M1', 'M2', 'M3', 'M4']
+2026-07-09 15:20:35,418 [INFO] Balanced-120 预测: 480 行
+2026-07-09 15:20:36,731 [INFO]   [Balanced-120] M1: Acc=0.5690, F1=0.6429, AUC=0.5938, Specificity=0.3684, BalAcc=0.5656, FPR=0.6316
+2026-07-09 15:20:36,737 [INFO]   [Balanced-120] M2: Acc=0.5508, F1=0.6624, AUC=0.6438, Specificity=0.2203, BalAcc=0.5508, FPR=0.7797
+2026-07-09 15:20:36,743 [INFO]   [Balanced-120] M3: Acc=0.5487, F1=0.6222, AUC=0.6472, Specificity=0.3448, BalAcc=0.5542, FPR=0.6552
+2026-07-09 15:20:36,748 [INFO]   [Balanced-120] M4: Acc=0.6239, F1=0.6393, AUC=0.6366, Specificity=0.5862, BalAcc=0.6236, FPR=0.4138
+2026-07-09 15:20:36,749 [INFO] Balanced-120 指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\metrics_balanced_120.json
+2026-07-09 15:20:36,757 [INFO]   [Hard-FP-40] M1: Acc=0.4000, F1=0.0000, AUC=None, Specificity=0.4000, BalAcc=0.2000, FPR=0.6000
+2026-07-09 15:20:36,762 [INFO]   [Hard-FP-40] M2: Acc=0.1000, F1=0.0000, AUC=None, Specificity=0.1000, BalAcc=0.0500, FPR=0.9000
+2026-07-09 15:20:36,765 [INFO]   [Hard-FP-40] M3: Acc=0.2750, F1=0.0000, AUC=None, Specificity=0.2750, BalAcc=0.1375, FPR=0.7250
+2026-07-09 15:20:36,769 [INFO]   [Hard-FP-40] M4: Acc=0.6154, F1=0.0000, AUC=None, Specificity=0.6154, BalAcc=0.3077, FPR=0.3846
+2026-07-09 15:20:36,770 [INFO]   [Hard-FP] M1: 改判率=0.4000 (16/40)
+2026-07-09 15:20:36,770 [INFO]   [Hard-FP] M2: 改判率=0.1000 (4/40)
+2026-07-09 15:20:36,771 [INFO]   [Hard-FP] M3: 改判率=0.2750 (11/40)
+2026-07-09 15:20:36,771 [INFO]   [Hard-FP] M4: 改判率=0.6154 (24/39)
+2026-07-09 15:20:36,772 [INFO] Hard-FP 指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\metrics_hard_fp_40.json
+2026-07-09 15:20:37,583 [INFO] 评论质量指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\comment_quality_metrics.json
+2026-07-09 15:20:37,583 [INFO]   对比 M1 vs P2_C4: ΔAcc=0.0144, ΔAUC=-0.0007, ΔSpec=0.2328
+2026-07-09 15:20:37,583 [INFO]   对比 M2 vs P2_C4: ΔAcc=-0.0038, ΔAUC=0.0493, ΔSpec=0.0847
+2026-07-09 15:20:37,583 [INFO]   对比 M3 vs P2_C4: ΔAcc=-0.0059, ΔAUC=0.0527, ΔSpec=0.2092
+2026-07-09 15:20:37,583 [INFO]   对比 M4 vs P2_C4: ΔAcc=0.0693, ΔAUC=0.0421, ΔSpec=0.4506
+2026-07-09 15:20:37,584 [INFO] 基线对比已保存: E:\latex\projects\experiments\experiment6\results\evaluation\baseline_comparison.json
+2026-07-09 15:20:37,584 [INFO] 最佳方法: overall=M4, AUC=M3, Specificity=M4
+2026-07-09 15:20:37,586 [INFO] 最佳方法总结已保存: E:\latex\projects\experiments\experiment6\results\evaluation\best_method_summary.json
+2026-07-09 15:20:37,586 [INFO] 综合最佳: M4 (scores: {'M1': 0.5279, 'M2': 0.5009, 'M3': 0.5341, 'M4': 0.6193})
+2026-07-09 15:20:37,586 [INFO] ============================================================
+2026-07-09 15:20:38,457 [INFO] 开始生成图表...
+2026-07-09 15:20:38,457 [INFO] 图1: 方法指标对比
+2026-07-09 15:20:38,891 [INFO] 图2: Specificity & FPR
+2026-07-09 15:20:38,902 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:38,902 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:38,907 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:38,908 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,218 [INFO] 图3: AUC & Balanced Accuracy
+2026-07-09 15:20:39,233 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,234 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,517 [INFO] 图4: Hard-FP 改判率
+2026-07-09 15:20:39,526 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,526 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,845 [INFO] 图5: 评论质量
+2026-07-09 15:20:39,871 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,872 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,874 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:39,874 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,439 [INFO] 图6: 混淆矩阵
+2026-07-09 15:20:40,900 [INFO] 图7: 实验五 vs 实验六总结
+2026-07-09 15:20:40,921 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,922 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,925 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,925 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,927 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,928 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,930 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,930 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,932 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:40,932 [INFO] Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-07-09 15:20:41,571 [INFO] 图表已保存至: E:\latex\projects\experiments\experiment6\figures
+2026-07-09 15:20:41,571 [INFO] 可视化完成
+2026-07-09 15:20:41,574 [INFO] 实验报告已保存: E:\latex\projects\experiments\experiment6\results\experiment_report.txt
+2026-07-09 20:30:26,463 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 20:30:26,464 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 20:30:26,751 [INFO] ============================================================
+2026-07-09 20:30:26,751 [INFO] 阶段: 构建评估子集
+2026-07-09 20:30:26,751 [INFO] ============================================================
+2026-07-09 20:30:26,751 [INFO] ========================================
+2026-07-09 20:30:26,751 [INFO] 构建 Balanced-50 主实验样本 (复用实验五 ai_llm_sample_50.csv)
+2026-07-09 20:30:26,758 [INFO] 加载实验五 50 样本: 50 条
+2026-07-09 20:30:26,758 [INFO]   总数: 50, merged=25, unmerged=25
+2026-07-09 20:30:26,758 [INFO]   必需字段完整: ['pr_id', 'repo', 'title', 'body']
+2026-07-09 20:30:26,763 [INFO]   与实验五 4×4 predictions 重叠 PR: 50/50
+2026-07-09 20:30:26,771 [INFO] Balanced-50 已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_balanced_50.csv
+2026-07-09 20:30:26,788 [INFO] 加载实验五数据集: 343 条 PR, merged=225, unmerged=118
+2026-07-09 20:30:26,790 [INFO] 加载实验五预测: 686 条
+2026-07-09 20:30:26,791 [INFO] ========================================
+2026-07-09 20:30:26,791 [INFO] 构建 Balanced-120 评估子集
+2026-07-09 20:30:26,791 [INFO]   可用: merged=225, unmerged=118
+2026-07-09 20:30:26,800 [INFO]   merged: 目标60, 实际60, 含review=41
+2026-07-09 20:30:26,807 [INFO]   unmerged: 目标60, 实际60, 含review=24
+2026-07-09 20:30:26,808 [INFO] Balanced-120 构建完成: 120 条, merged=60, unmerged=60, 含review=65
+2026-07-09 20:30:26,808 [INFO] ========================================
+2026-07-09 20:30:26,808 [INFO] 构建 Hard-FP-40 子集
+2026-07-09 20:30:26,819 [INFO]   实验五 FP 候选: 103 个
+2026-07-09 20:30:26,821 [INFO] Hard-FP-40 构建完成: 40 条
+2026-07-09 20:30:26,826 [INFO] Balanced-120 已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_balanced_120.csv
+2026-07-09 20:30:26,829 [INFO] Hard-FP-40 已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_hard_fp_40.csv
+2026-07-09 20:30:27,775 [INFO]   Balanced-120 基线 P2_C3: Acc=0.5714, F1=0.6982, AUC=0.4768, Specificity=0.1525
+2026-07-09 20:30:27,779 [INFO]   Balanced-120 基线 P2_C4: Acc=0.5546, F1=0.6864, AUC=0.5945, Specificity=0.1356
+2026-07-09 20:30:27,783 [INFO]   Hard-FP-40 基线 P2_C3: Acc=0.0500, F1=0.0000, AUC=None, Specificity=0.0500
+2026-07-09 20:30:27,786 [INFO]   Hard-FP-40 基线 P2_C4: Acc=0.0500, F1=0.0000, AUC=None, Specificity=0.0500
+2026-07-09 20:30:27,788 [INFO] 样本统计已保存: E:\latex\projects\experiments\experiment6\results\processed\eval_sample_stats.json
+2026-07-09 20:30:27,788 [INFO] ============================================================
+2026-07-09 20:30:36,721 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 20:30:36,721 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 20:30:37,015 [INFO] ============================================================
+2026-07-09 20:30:37,015 [INFO] 阶段: 构建增强上下文
+2026-07-09 20:30:37,015 [INFO] ============================================================
+2026-07-09 20:30:37,156 [INFO] 完整数据集: 343 条, Patch index: 398 条目
+2026-07-09 20:30:37,157 [INFO] --- 构建 Balanced-50 增强上下文 (主实验 I01-I16) ---
+2026-07-09 20:30:37,172 [INFO]   构建 balanced50 上下文: 50 条目...
+2026-07-09 20:30:37,278 [INFO]   构建 balanced50 上下文: 100 条目...
+2026-07-09 20:30:37,610 [INFO]   构建 balanced50 上下文: 150 条目...
+2026-07-09 20:30:38,049 [INFO]   构建 balanced50 上下文: 200 条目...
+2026-07-09 20:30:38,049 [INFO]   balanced50 上下文构建完成: 200 条目 (4 types × 50 samples)
+2026-07-09 20:30:38,065 [INFO] Balanced-50 上下文已保存: E:\latex\projects\experiments\experiment6\results\processed\improved_contexts_balanced_50.json (200 条目)
+2026-07-09 20:30:38,084 [INFO]   任务列表: 800 任务 (16 方法 × 50 样本)
+2026-07-09 20:30:38,090 [INFO] I01-I16 任务列表已保存: E:\latex\projects\experiments\experiment6\results\processed\task_list_improved_4x4_balanced_50.json (800 任务)
+2026-07-09 20:30:38,122 [INFO]   构建 balanced 上下文: 50 条目...
+2026-07-09 20:30:38,144 [INFO]   构建 balanced 上下文: 100 条目...
+2026-07-09 20:30:38,205 [INFO]   构建 balanced 上下文: 150 条目...
+2026-07-09 20:30:38,325 [INFO]   构建 balanced 上下文: 200 条目...
+2026-07-09 20:30:38,480 [INFO]   构建 balanced 上下文: 250 条目...
+2026-07-09 20:30:38,820 [INFO]   构建 balanced 上下文: 300 条目...
+2026-07-09 20:30:39,149 [INFO]   构建 balanced 上下文: 350 条目...
+2026-07-09 20:30:39,564 [INFO]   构建 balanced 上下文: 400 条目...
+2026-07-09 20:30:40,023 [INFO]   构建 balanced 上下文: 450 条目...
+2026-07-09 20:30:40,293 [INFO]   balanced 上下文构建完成: 480 条目 (4 types × 120 samples)
+2026-07-09 20:30:40,340 [INFO]   构建 hardfp 上下文: 50 条目...
+2026-07-09 20:30:40,548 [INFO]   构建 hardfp 上下文: 100 条目...
+2026-07-09 20:30:40,960 [INFO]   构建 hardfp 上下文: 150 条目...
+2026-07-09 20:30:41,065 [INFO]   hardfp 上下文构建完成: 160 条目 (4 types × 40 samples)
+2026-07-09 20:30:41,106 [INFO] 增强上下文已保存: E:\latex\projects\experiments\experiment6\results\processed\improved_contexts.json (640 条目)
+2026-07-09 20:30:41,122 [INFO]   任务列表: 480 任务 (4 方法 × 120 样本)
+2026-07-09 20:30:41,129 [INFO]   任务列表: 160 任务 (4 方法 × 40 样本)
+2026-07-09 20:30:41,135 [INFO] 任务列表已保存: E:\latex\projects\experiments\experiment6\results\processed\task_list.json
+2026-07-09 20:30:41,135 [INFO] M1-M4 任务数: 640 (Balanced: 480, Hard-FP: 160)
+2026-07-09 20:30:41,135 [INFO] ============================================================
+2026-07-09 20:30:50,168 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 20:30:50,168 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 20:30:50,462 [INFO] ============================================================
+2026-07-09 20:30:50,462 [INFO] 阶段: LLM API 调用
+2026-07-09 20:30:50,462 [INFO] Suite: improved-4x4, Methods: ['I01', 'I02', 'I03', 'I04', 'I05', 'I06', 'I07', 'I08', 'I09', 'I10', 'I11', 'I12', 'I13', 'I14', 'I15', 'I16']
+2026-07-09 20:30:50,462 [INFO] Model: deepseek-v4-flash, Dry run: False, Limit: 4
+2026-07-09 20:30:50,462 [INFO] ============================================================
+2026-07-09 20:30:50,470 [INFO] 加载评估集: 50 条
+2026-07-09 20:30:54,058 [INFO] 总任务数: 800 (16 方法 × 50 样本)
+2026-07-09 20:30:54,058 [INFO]   已完成: 0
+2026-07-09 20:30:54,058 [INFO]   待处理: 4
+2026-07-09 20:30:56,687 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:30:56,724 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:30:56,746 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:30:56,807 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:20,762 [INFO] API 调用完成: 4/4, 总耗时 27s
+2026-07-09 20:31:20,762 [INFO] 导出解析预测...
+2026-07-09 20:31:20,775 [INFO] 解析预测已保存: E:\latex\projects\experiments\experiment6\results\responses\improved_4x4_parsed_predictions.csv (4 行)
+2026-07-09 20:31:20,775 [INFO] ============================================================
+2026-07-09 20:31:43,748 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 20:31:43,748 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 20:31:44,036 [INFO] ============================================================
+2026-07-09 20:31:44,036 [INFO] 阶段: LLM API 调用
+2026-07-09 20:31:44,036 [INFO] Suite: improved-4x4, Methods: ['I01', 'I02', 'I03', 'I04', 'I05', 'I06', 'I07', 'I08', 'I09', 'I10', 'I11', 'I12', 'I13', 'I14', 'I15', 'I16']
+2026-07-09 20:31:44,036 [INFO] Model: deepseek-v4-flash, Dry run: False, Limit: unlimited
+2026-07-09 20:31:44,037 [INFO] ============================================================
+2026-07-09 20:31:44,044 [INFO] 加载评估集: 50 条
+2026-07-09 20:31:47,704 [INFO] 总任务数: 800 (16 方法 × 50 样本)
+2026-07-09 20:31:47,704 [INFO]   已完成: 0
+2026-07-09 20:31:47,705 [INFO]   待处理: 800
+2026-07-09 20:31:50,834 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,847 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,902 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,911 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,917 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,921 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,922 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:31:50,931 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:01,148 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:02,234 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:03,272 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:04,863 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:06,282 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:09,451 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:09,491 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:10,116 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:13,329 [INFO]   进度: 10/800 (0.4/s, ETA 2024s)
+2026-07-09 20:32:14,152 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:14,657 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:16,946 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:17,713 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:19,840 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:20,321 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:22,428 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:22,680 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:26,480 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:28,673 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:29,886 [INFO]   进度: 20/800 (0.5/s, ETA 1645s)
+2026-07-09 20:32:30,691 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:31,229 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:33,627 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:37,387 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:38,424 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:38,593 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:40,031 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:40,462 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:40,558 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:44,158 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:45,038 [INFO]   进度: 30/800 (0.5/s, ETA 1472s)
+2026-07-09 20:32:45,506 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:46,211 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:50,991 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:52,807 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:53,179 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:54,124 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:56,187 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:58,057 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:32:59,542 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:04,635 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:06,327 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:07,802 [INFO]   进度: 40/800 (0.5/s, ETA 1522s)
+2026-07-09 20:33:09,115 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:09,519 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:11,266 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:15,540 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:17,094 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:19,253 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:19,713 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:20,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:21,798 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:26,100 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:26,624 [INFO]   进度: 50/800 (0.5/s, ETA 1484s)
+2026-07-09 20:33:27,712 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:31,078 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:33,133 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:35,327 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:39,043 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:40,950 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:41,814 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:43,045 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:43,070 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:47,818 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:49,140 [INFO]   进度: 60/800 (0.5/s, ETA 1498s)
+2026-07-09 20:33:50,295 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:52,626 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:56,327 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:58,662 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:58,673 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:33:59,716 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:01,271 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:01,530 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:03,685 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:10,820 [INFO]   进度: 70/800 (0.5/s, ETA 1492s)
+2026-07-09 20:34:11,048 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:11,885 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:12,130 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:13,068 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:13,112 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:13,549 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:14,684 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:18,371 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:22,635 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:23,909 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:24,983 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:25,375 [INFO]   进度: 80/800 (0.5/s, ETA 1419s)
+2026-07-09 20:34:26,416 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:29,029 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:29,098 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:33,332 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:37,859 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:38,286 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:38,940 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:39,482 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:40,033 [INFO]   进度: 90/800 (0.5/s, ETA 1359s)
+2026-07-09 20:34:40,888 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:41,156 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:41,358 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:47,639 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:48,911 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:51,308 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:55,063 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:57,346 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:57,429 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:34:59,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:00,136 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:00,608 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:05,165 [INFO]   进度: 100/800 (0.5/s, ETA 1382s)
+2026-07-09 20:35:06,509 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:06,796 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:08,964 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:10,415 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:11,158 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:17,437 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:17,970 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:22,244 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:22,546 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:23,344 [INFO]   进度: 110/800 (0.5/s, ETA 1353s)
+2026-07-09 20:35:23,941 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:24,384 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:25,842 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:29,560 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:31,383 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:32,509 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:32,728 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:37,905 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:39,029 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:42,141 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:42,273 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:42,537 [INFO]   进度: 120/800 (0.5/s, ETA 1331s)
+2026-07-09 20:35:43,490 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:46,423 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:47,466 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:48,882 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:49,173 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:54,991 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:55,671 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:58,441 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:58,482 [INFO]   进度: 130/800 (0.5/s, ETA 1292s)
+2026-07-09 20:35:58,904 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:59,337 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:35:59,492 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:00,752 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:03,517 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:07,539 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:09,245 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:10,706 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:11,030 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:11,200 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:13,137 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:15,448 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:16,084 [INFO]   进度: 140/800 (0.5/s, ETA 1265s)
+2026-07-09 20:36:17,012 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:19,092 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:19,963 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:23,068 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:23,676 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:25,537 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:26,581 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:29,661 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:31,822 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:35,448 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:37,718 [INFO]   进度: 150/800 (0.5/s, ETA 1257s)
+2026-07-09 20:36:38,668 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:38,945 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:39,512 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:39,634 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:40,095 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:43,001 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:52,631 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:52,745 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:54,132 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:54,738 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:36:57,001 [INFO]   进度: 160/800 (0.5/s, ETA 1237s)
+2026-07-09 20:36:57,871 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:00,126 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:01,200 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:04,277 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:05,060 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:05,975 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:06,477 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:08,327 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:09,500 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:11,836 [INFO]   进度: 170/800 (0.5/s, ETA 1201s)
+2026-07-09 20:37:12,811 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:12,839 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:16,187 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:16,602 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:17,186 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:22,132 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:23,526 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:25,446 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:27,963 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:29,891 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:32,686 [INFO]   进度: 180/800 (0.5/s, ETA 1188s)
+2026-07-09 20:37:32,723 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:33,667 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:34,054 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:34,069 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:35,013 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:35,731 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:37,312 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:39,264 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:41,824 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:42,374 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:45,345 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:46,311 [INFO]   进度: 190/800 (0.5/s, ETA 1151s)
+2026-07-09 20:37:47,321 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:47,644 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:52,871 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:53,342 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:53,588 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:37:58,840 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:03,667 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:04,528 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:06,398 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:07,353 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:07,498 [INFO]   进度: 200/800 (0.5/s, ETA 1139s)
+2026-07-09 20:38:08,527 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:09,112 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:13,457 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:13,609 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:15,217 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:16,737 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:20,054 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:21,112 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:26,403 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:26,537 [INFO]   进度: 210/800 (0.5/s, ETA 1121s)
+2026-07-09 20:38:26,739 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:27,657 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:27,670 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:29,610 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:29,898 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:31,422 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:36,833 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:37,153 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:37,702 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:38,333 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:39,629 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:42,404 [INFO]   进度: 220/800 (0.5/s, ETA 1093s)
+2026-07-09 20:38:43,212 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:44,775 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:46,001 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:47,320 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:51,497 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:51,846 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:52,182 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:53,260 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:55,349 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:56,955 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:38:58,204 [INFO]   进度: 230/800 (0.5/s, ETA 1067s)
+2026-07-09 20:38:59,043 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:00,287 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:00,914 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:01,519 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:02,264 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:05,368 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:07,195 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:07,588 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:09,634 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:10,135 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:12,690 [INFO]   进度: 240/800 (0.5/s, ETA 1038s)
+2026-07-09 20:39:13,650 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:14,247 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:15,375 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:16,958 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:17,824 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:25,709 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:25,755 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:27,279 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:29,048 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:29,079 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:30,930 [INFO]   进度: 250/800 (0.5/s, ETA 1019s)
+2026-07-09 20:39:31,791 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:35,228 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:36,048 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:36,553 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:41,800 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:44,705 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:45,586 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:47,688 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:49,031 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:49,863 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:50,111 [INFO]   进度: 260/800 (0.5/s, ETA 1002s)
+2026-07-09 20:39:50,995 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:51,664 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:55,708 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:39:58,400 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:00,587 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:02,510 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:02,722 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:05,909 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:06,495 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:07,037 [INFO]   进度: 270/800 (0.5/s, ETA 980s)
+2026-07-09 20:40:07,625 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:07,929 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:14,434 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:18,211 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:18,222 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:19,211 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:19,610 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:19,689 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:21,224 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:23,494 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:28,334 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:29,036 [INFO]   进度: 280/800 (0.5/s, ETA 968s)
+2026-07-09 20:40:29,917 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:30,130 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:30,363 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:35,291 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:35,787 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:36,206 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:36,552 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:36,975 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:39,641 [INFO]   进度: 290/800 (0.5/s, ETA 935s)
+2026-07-09 20:40:40,329 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:40,536 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:40,557 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:47,045 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:47,812 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:49,246 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:52,006 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:52,468 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:52,501 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:53,800 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:40:57,655 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:02,311 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:04,361 [INFO]   进度: 300/800 (0.5/s, ETA 928s)
+2026-07-09 20:41:05,320 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:05,885 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:06,434 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:07,111 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:08,326 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:08,452 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:13,185 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:17,353 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:19,495 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:20,285 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:20,959 [INFO]   进度: 310/800 (0.5/s, ETA 906s)
+2026-07-09 20:41:22,116 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:22,777 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:23,203 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:23,209 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:28,152 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:29,872 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:31,521 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:31,952 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:34,986 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:35,197 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:36,524 [INFO]   进度: 320/800 (0.5/s, ETA 883s)
+2026-07-09 20:41:37,489 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:38,736 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:41,644 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:44,240 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:44,597 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:45,697 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:47,603 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:47,947 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:49,280 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:51,793 [INFO]   进度: 330/800 (0.5/s, ETA 860s)
+2026-07-09 20:41:52,389 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:52,766 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:53,508 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:56,216 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:56,223 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:41:58,976 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:00,632 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:01,409 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:04,986 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:06,768 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:06,790 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:08,512 [INFO]   进度: 340/800 (0.5/s, ETA 840s)
+2026-07-09 20:42:09,466 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:09,567 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:12,429 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:12,715 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:13,175 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:17,293 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:18,093 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:22,281 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:23,281 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:23,709 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:26,442 [INFO]   进度: 350/800 (0.5/s, ETA 821s)
+2026-07-09 20:42:27,342 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:27,974 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:28,440 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:30,694 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:31,692 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:35,702 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:36,024 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:38,465 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:39,214 [INFO]   进度: 360/800 (0.6/s, ETA 796s)
+2026-07-09 20:42:39,873 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:40,156 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:40,249 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:46,187 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:46,779 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:47,169 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:47,500 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:49,017 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:50,011 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:53,797 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:55,049 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:57,050 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:42:57,803 [INFO]   进度: 370/800 (0.6/s, ETA 779s)
+2026-07-09 20:42:58,633 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:00,864 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:01,078 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:03,108 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:04,093 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:05,725 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:06,998 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:08,734 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:11,658 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:11,660 [INFO]   进度: 380/800 (0.6/s, ETA 756s)
+2026-07-09 20:43:12,471 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:12,631 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:14,478 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:16,244 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:19,271 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:21,546 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:21,745 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:22,807 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:23,552 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:23,595 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:25,700 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:26,125 [INFO]   进度: 390/800 (0.6/s, ETA 734s)
+2026-07-09 20:43:27,095 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:30,092 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:31,587 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:33,680 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:35,579 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:38,412 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:38,734 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:39,568 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:40,339 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:42,474 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:45,908 [INFO]   进度: 400/800 (0.6/s, ETA 718s)
+2026-07-09 20:43:46,817 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:48,517 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:49,839 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:50,492 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:53,490 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:43:54,378 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:00,124 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:01,755 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:03,919 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:04,197 [INFO]   进度: 410/800 (0.6/s, ETA 701s)
+2026-07-09 20:44:04,296 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:05,246 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:05,494 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:08,385 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:08,853 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:12,443 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:12,639 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:15,740 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:17,040 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:19,085 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:19,216 [INFO]   进度: 420/800 (0.6/s, ETA 680s)
+2026-07-09 20:44:19,305 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:20,239 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:21,498 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:29,636 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:29,660 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:29,694 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:29,704 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:30,636 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:33,294 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:36,634 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:39,909 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:39,988 [INFO]   进度: 430/800 (0.6/s, ETA 665s)
+2026-07-09 20:44:40,870 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:41,156 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:43,570 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:43,905 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:44,215 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:47,657 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:50,848 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:52,536 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:53,229 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:54,896 [INFO]   进度: 440/800 (0.6/s, ETA 644s)
+2026-07-09 20:44:55,757 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:55,869 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:44:57,723 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:00,421 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:01,385 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:05,085 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:07,031 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:07,342 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:11,817 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:12,131 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:17,782 [INFO]   进度: 450/800 (0.6/s, ETA 630s)
+2026-07-09 20:45:17,916 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:18,764 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:19,033 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:19,510 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:19,568 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:20,531 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:31,718 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:33,236 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:33,900 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:34,356 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:39,081 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:39,175 [INFO]   进度: 460/800 (0.6/s, ETA 615s)
+2026-07-09 20:45:40,152 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:41,115 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:42,963 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:43,017 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:46,238 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:49,715 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:52,314 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:53,880 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:55,413 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:56,442 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:56,474 [INFO]   进度: 470/800 (0.6/s, ETA 596s)
+2026-07-09 20:45:57,385 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:45:58,450 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:01,421 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:04,368 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:06,011 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:08,389 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:11,728 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:16,072 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:16,379 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:17,731 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:18,152 [INFO]   进度: 480/800 (0.6/s, ETA 580s)
+2026-07-09 20:46:18,983 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:20,140 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:20,557 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:26,241 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:28,947 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:29,237 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:31,146 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:31,987 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:32,747 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:35,917 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:37,496 [INFO]   进度: 490/800 (0.6/s, ETA 563s)
+2026-07-09 20:46:38,333 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:40,483 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:40,578 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:42,581 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:44,788 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:46,787 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:47,443 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:48,321 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:50,910 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:55,686 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:46:56,517 [INFO]   进度: 500/800 (0.6/s, ETA 545s)
+2026-07-09 20:46:57,399 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:00,670 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:02,766 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:02,952 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:03,199 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:05,786 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:09,514 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:10,413 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:10,553 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:17,176 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:18,652 [INFO]   进度: 510/800 (0.5/s, ETA 529s)
+2026-07-09 20:47:19,531 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:20,134 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:20,686 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:22,852 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:23,315 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:27,541 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:29,315 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:30,344 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:30,494 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:31,025 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:36,611 [INFO]   进度: 520/800 (0.5/s, ETA 511s)
+2026-07-09 20:47:37,437 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:39,940 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:40,938 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:41,693 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:43,061 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:44,035 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:44,928 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:48,013 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:51,198 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:52,419 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:53,841 [INFO]   进度: 530/800 (0.5/s, ETA 492s)
+2026-07-09 20:47:54,807 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:55,483 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:56,960 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:47:59,416 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:03,373 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:03,606 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:03,748 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:03,965 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:07,379 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:10,303 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:12,536 [INFO]   进度: 540/800 (0.5/s, ETA 474s)
+2026-07-09 20:48:13,647 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:14,061 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:14,795 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:16,523 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:22,586 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:22,725 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:23,140 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:23,940 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:25,941 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:32,600 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:32,692 [INFO]   进度: 550/800 (0.5/s, ETA 457s)
+2026-07-09 20:48:33,771 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:33,840 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:34,438 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:36,567 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:37,253 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:37,815 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:47,046 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:49,237 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:49,359 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:51,566 [INFO]   进度: 560/800 (0.5/s, ETA 439s)
+2026-07-09 20:48:52,606 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:52,803 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:54,359 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:56,112 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:48:58,700 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:00,059 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:03,724 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:03,941 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:04,381 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:09,541 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:10,764 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:11,632 [INFO]   进度: 570/800 (0.5/s, ETA 421s)
+2026-07-09 20:49:12,610 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:16,467 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:17,036 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:17,391 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:18,881 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:19,068 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:22,748 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:26,172 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:27,114 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:28,181 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:30,901 [INFO]   进度: 580/800 (0.5/s, ETA 403s)
+2026-07-09 20:49:31,831 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:32,532 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:33,234 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:33,283 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:34,456 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:37,240 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:39,168 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:39,625 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:44,160 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:44,719 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:44,802 [INFO]   进度: 590/800 (0.5/s, ETA 383s)
+2026-07-09 20:49:45,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:47,137 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:49,734 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:50,579 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:50,733 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:55,898 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:49:56,361 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:02,901 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:03,442 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:03,938 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:04,020 [INFO]   进度: 600/800 (0.5/s, ETA 365s)
+2026-07-09 20:50:05,016 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:05,165 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:10,286 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:10,314 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:16,567 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:22,425 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:22,722 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:24,940 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:27,340 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:27,345 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:27,916 [INFO]   进度: 610/800 (0.5/s, ETA 349s)
+2026-07-09 20:50:28,981 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:29,321 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:36,619 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:38,546 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:40,483 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:41,908 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:42,783 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:43,072 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:45,652 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:46,811 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:49,466 [INFO]   进度: 620/800 (0.5/s, ETA 331s)
+2026-07-09 20:50:50,286 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:51,765 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:52,775 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:55,924 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:57,344 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:57,421 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:50:58,888 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:02,699 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:02,704 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:03,633 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:03,731 [INFO]   进度: 630/800 (0.5/s, ETA 312s)
+2026-07-09 20:51:04,531 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:11,745 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:13,287 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:14,798 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:15,625 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:16,582 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:16,809 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:21,495 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:22,042 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:23,456 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:24,159 [INFO]   进度: 640/800 (0.5/s, ETA 294s)
+2026-07-09 20:51:24,975 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:26,232 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:29,555 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:30,486 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:33,490 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:35,053 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:41,483 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:42,301 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:43,017 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:43,413 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:43,918 [INFO]   进度: 650/800 (0.5/s, ETA 276s)
+2026-07-09 20:51:44,836 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:47,419 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:52,139 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:55,698 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:56,270 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:51:57,958 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:00,395 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:01,631 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:01,958 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:06,069 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:08,394 [INFO]   进度: 660/800 (0.5/s, ETA 259s)
+2026-07-09 20:52:09,397 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:10,047 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:12,079 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:14,234 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:14,396 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:14,550 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:17,268 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:22,686 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:23,692 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:25,177 [INFO]   进度: 670/800 (0.5/s, ETA 240s)
+2026-07-09 20:52:26,092 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:26,170 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:26,932 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:26,975 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:27,656 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:29,389 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:30,414 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:34,697 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:35,797 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:36,732 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:37,859 [INFO]   进度: 680/800 (0.5/s, ETA 221s)
+2026-07-09 20:52:37,999 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:38,672 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:39,323 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:43,204 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:44,934 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:47,450 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:48,544 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:49,808 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:53,312 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:54,012 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:54,873 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:52:58,877 [INFO]   进度: 690/800 (0.5/s, ETA 203s)
+2026-07-09 20:52:59,730 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:01,349 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:01,371 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:01,405 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:01,957 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:05,865 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:10,155 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:10,919 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:12,558 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:12,988 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:19,272 [INFO]   进度: 700/800 (0.5/s, ETA 185s)
+2026-07-09 20:53:20,208 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:20,361 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:21,323 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:25,094 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:25,619 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:25,766 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:27,110 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:30,115 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:32,860 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:33,368 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:34,177 [INFO]   进度: 710/800 (0.5/s, ETA 166s)
+2026-07-09 20:53:35,045 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:37,111 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:37,298 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:39,916 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:42,608 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:43,111 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:45,251 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:47,810 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:48,191 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:49,402 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:51,404 [INFO]   进度: 720/800 (0.5/s, ETA 147s)
+2026-07-09 20:53:52,219 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:54,754 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:55,068 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:58,236 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:58,344 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:58,831 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:53:59,562 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:02,933 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:05,727 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:05,735 [INFO]   进度: 730/800 (0.5/s, ETA 128s)
+2026-07-09 20:54:06,841 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:06,851 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:08,123 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:08,757 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:11,965 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:14,414 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:14,463 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:16,085 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:16,484 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:19,619 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:21,849 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:22,752 [INFO]   进度: 740/800 (0.5/s, ETA 110s)
+2026-07-09 20:54:23,591 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:24,277 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:27,959 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:28,273 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:29,368 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:29,562 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:30,913 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:36,823 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:36,862 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:39,629 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:40,475 [INFO]   进度: 750/800 (0.5/s, ETA 92s)
+2026-07-09 20:54:41,360 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:42,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:42,864 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:45,358 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:47,232 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:50,630 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:51,269 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:51,561 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:52,991 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:53,977 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:57,403 [INFO]   进度: 760/800 (0.5/s, ETA 73s)
+2026-07-09 20:54:58,280 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:54:58,717 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:01,872 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:02,617 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:03,962 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:04,275 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:08,315 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:08,925 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:10,185 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:10,864 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:12,134 [INFO]   进度: 770/800 (0.5/s, ETA 55s)
+2026-07-09 20:55:12,939 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:14,463 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:15,112 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:16,590 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:22,275 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:23,095 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:25,758 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:28,526 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:28,665 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:29,674 [INFO]   进度: 780/800 (0.5/s, ETA 36s)
+2026-07-09 20:55:30,360 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:30,597 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:33,433 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:34,094 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:35,643 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:39,676 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:39,723 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:40,266 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:44,271 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:45,826 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:46,710 [INFO]   进度: 790/800 (0.5/s, ETA 18s)
+2026-07-09 20:55:47,165 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:47,728 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:48,874 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:55:50,432 [INFO] HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 20:56:07,748 [INFO]   进度: 800/800 (0.5/s, ETA 0s)
+2026-07-09 20:56:07,749 [INFO] API 调用完成: 800/800, 总耗时 1460s
+2026-07-09 20:56:07,749 [INFO] 导出解析预测...
+2026-07-09 20:56:07,965 [INFO] 解析预测已保存: E:\latex\projects\experiments\experiment6\results\responses\improved_4x4_parsed_predictions.csv (800 行)
+2026-07-09 20:56:07,965 [INFO] ============================================================
+2026-07-09 20:58:46,088 [INFO] 解析预测已保存: E:\latex\projects\experiments\experiment6\results\responses\improved_4x4_parsed_predictions.csv (800 行)
+2026-07-09 20:59:38,343 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 20:59:38,343 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 20:59:38,629 [INFO] ============================================================
+2026-07-09 20:59:38,630 [INFO] 阶段: 评估
+2026-07-09 20:59:38,630 [INFO] ============================================================
+2026-07-09 20:59:38,630 [INFO] --- 主实验: 32 组合对比 (B01-B16 vs I01-I16) ---
+2026-07-09 20:59:38,641 [INFO] 加载实验六 I01-I16 预测: 800 行, 方法: ['I01', 'I02', 'I03', 'I04', 'I05', 'I06', 'I07', 'I08', 'I09', 'I10', 'I11', 'I12', 'I13', 'I14', 'I15', 'I16']
+2026-07-09 20:59:38,642 [INFO] 加载实验五 B01-B16 基线: 16 组合
+2026-07-09 20:59:41,463 [INFO]   [Balanced-50] I01: Acc=0.6250, F1=0.6897, AUC=0.6643, Specificity=0.4000, BalAcc=0.6348, FPR=0.6000
+2026-07-09 20:59:41,468 [INFO]   [Balanced-50] I02: Acc=0.6600, F1=0.7018, AUC=0.6864, Specificity=0.5200, BalAcc=0.6600, FPR=0.4800
+2026-07-09 20:59:41,472 [INFO]   [Balanced-50] I03: Acc=0.6809, F1=0.7273, AUC=0.7264, Specificity=0.5000, BalAcc=0.6848, FPR=0.5000
+2026-07-09 20:59:41,477 [INFO]   [Balanced-50] I04: Acc=0.6809, F1=0.7368, AUC=0.6893, Specificity=0.4783, BalAcc=0.6766, FPR=0.5217
+2026-07-09 20:59:41,481 [INFO]   [Balanced-50] I05: Acc=0.6000, F1=0.6875, AUC=0.5376, Specificity=0.3200, BalAcc=0.6000, FPR=0.6800
+2026-07-09 20:59:41,486 [INFO]   [Balanced-50] I06: Acc=0.6667, F1=0.7333, AUC=0.5998, Specificity=0.4167, BalAcc=0.6667, FPR=0.5833
+2026-07-09 20:59:41,490 [INFO]   [Balanced-50] I07: Acc=0.6327, F1=0.7097, AUC=0.7358, Specificity=0.3600, BalAcc=0.6383, FPR=0.6400
+2026-07-09 20:59:41,495 [INFO]   [Balanced-50] I08: Acc=0.6400, F1=0.6897, AUC=0.7144, Specificity=0.4800, BalAcc=0.6400, FPR=0.5200
+2026-07-09 20:59:41,500 [INFO]   [Balanced-50] I09: Acc=0.5833, F1=0.6774, AUC=0.6078, Specificity=0.3043, BalAcc=0.5722, FPR=0.6957
+2026-07-09 20:59:41,504 [INFO]   [Balanced-50] I10: Acc=0.6000, F1=0.6667, AUC=0.652, Specificity=0.4000, BalAcc=0.6000, FPR=0.6000
+2026-07-09 20:59:41,509 [INFO]   [Balanced-50] I11: Acc=0.6250, F1=0.7000, AUC=0.7087, Specificity=0.3913, BalAcc=0.6157, FPR=0.6087
+2026-07-09 20:59:41,513 [INFO]   [Balanced-50] I12: Acc=0.6600, F1=0.7213, AUC=0.6632, Specificity=0.4400, BalAcc=0.6600, FPR=0.5600
+2026-07-09 20:59:41,518 [INFO]   [Balanced-50] I13: Acc=0.6250, F1=0.6667, AUC=0.6007, Specificity=0.5000, BalAcc=0.6250, FPR=0.5000
+2026-07-09 20:59:41,523 [INFO]   [Balanced-50] I14: Acc=0.7234, F1=0.7547, AUC=0.6927, Specificity=0.6364, BalAcc=0.7182, FPR=0.3636
+2026-07-09 20:59:41,528 [INFO]   [Balanced-50] I15: Acc=0.5957, F1=0.6275, AUC=0.6649, Specificity=0.5217, BalAcc=0.5942, FPR=0.4783
+2026-07-09 20:59:41,532 [INFO]   [Balanced-50] I16: Acc=0.6735, F1=0.6800, AUC=0.7075, Specificity=0.6667, BalAcc=0.6733, FPR=0.3333
+2026-07-09 20:59:41,532 [INFO] 32 组合指标合并完成: 32 组 (baseline=16, improved=16)
+2026-07-09 20:59:41,535 [INFO] 32 组合指标 CSV 已保存: E:\latex\projects\experiments\experiment6\results\evaluation\all_32_combo_metrics.csv
+2026-07-09 20:59:41,536 [INFO] 基线 vs 改进对比摘要已保存: E:\latex\projects\experiments\experiment6\results\evaluation\baseline_vs_improved_summary.json
+2026-07-09 20:59:41,540 [INFO] 改进 4×4 指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\improved_4x4_metrics.json
+2026-07-09 20:59:41,540 [INFO] --- 基线最佳 ---
+2026-07-09 20:59:41,541 [INFO]   baseline_best_f1: {'combo_id': 'B14', 'f1': 0.7059}
+2026-07-09 20:59:41,541 [INFO]   baseline_best_auc: {'combo_id': 'B04', 'roc_auc': 0.6352}
+2026-07-09 20:59:41,541 [INFO]   baseline_best_specificity: {'combo_id': 'N/A', 'specificity': None}
+2026-07-09 20:59:41,541 [INFO] --- 改进最佳 ---
+2026-07-09 20:59:41,541 [INFO]   improved_best_f1: {'combo_id': 'I14', 'f1': 0.7547}
+2026-07-09 20:59:41,541 [INFO]   improved_best_auc: {'combo_id': 'I07', 'roc_auc': 0.7358}
+2026-07-09 20:59:41,541 [INFO]   improved_best_specificity: {'combo_id': 'I16', 'specificity': 0.6667}
+2026-07-09 20:59:41,541 [INFO] --- 成功标准 ---
+2026-07-09 20:59:41,541 [INFO]   specificity_vs_B14: PASS (target=0.2, achieved=0.6667)
+2026-07-09 20:59:41,541 [INFO]   fpr_vs_B14: FAIL (target=decrease by 0.20, achieved=None)
+2026-07-09 20:59:41,541 [INFO]   balanced_accuracy_vs_B14: FAIL (target=None, achieved=None)
+2026-07-09 20:59:41,541 [INFO]   roc_auc_vs_B14: PASS (target=not below 0.5880, achieved=None)
+2026-07-09 20:59:41,541 [INFO]   f1_vs_B14_85pct: PASS (target=0.6, achieved=0.7547)
+2026-07-09 20:59:41,547 [INFO] 加载 M1-M4 预测: 548 行, 方法: ['M1', 'M2', 'M3', 'M4']
+2026-07-09 20:59:41,555 [INFO] Balanced-120 预测: 480 行
+2026-07-09 20:59:41,560 [INFO]   [Balanced-120] M1: Acc=0.5690, F1=0.6429, AUC=0.5938, Specificity=0.3684, BalAcc=0.5656, FPR=0.6316
+2026-07-09 20:59:41,565 [INFO]   [Balanced-120] M2: Acc=0.5508, F1=0.6624, AUC=0.6438, Specificity=0.2203, BalAcc=0.5508, FPR=0.7797
+2026-07-09 20:59:41,570 [INFO]   [Balanced-120] M3: Acc=0.5487, F1=0.6222, AUC=0.6472, Specificity=0.3448, BalAcc=0.5542, FPR=0.6552
+2026-07-09 20:59:41,575 [INFO]   [Balanced-120] M4: Acc=0.6239, F1=0.6393, AUC=0.6366, Specificity=0.5862, BalAcc=0.6236, FPR=0.4138
+2026-07-09 20:59:41,576 [INFO] Balanced-120 指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\metrics_balanced_120.json
+2026-07-09 20:59:41,582 [INFO]   [Hard-FP-40] M1: Acc=0.4000, F1=0.0000, AUC=None, Specificity=0.4000, BalAcc=0.2000, FPR=0.6000
+2026-07-09 20:59:41,585 [INFO]   [Hard-FP-40] M2: Acc=0.1000, F1=0.0000, AUC=None, Specificity=0.1000, BalAcc=0.0500, FPR=0.9000
+2026-07-09 20:59:41,588 [INFO]   [Hard-FP-40] M3: Acc=0.2750, F1=0.0000, AUC=None, Specificity=0.2750, BalAcc=0.1375, FPR=0.7250
+2026-07-09 20:59:41,592 [INFO]   [Hard-FP-40] M4: Acc=0.6154, F1=0.0000, AUC=None, Specificity=0.6154, BalAcc=0.3077, FPR=0.3846
+2026-07-09 20:59:41,592 [INFO]   [Hard-FP] M1: 改判率=0.4000 (16/40)
+2026-07-09 20:59:41,593 [INFO]   [Hard-FP] M2: 改判率=0.1000 (4/40)
+2026-07-09 20:59:41,593 [INFO]   [Hard-FP] M3: 改判率=0.2750 (11/40)
+2026-07-09 20:59:41,593 [INFO]   [Hard-FP] M4: 改判率=0.6154 (24/39)
+2026-07-09 20:59:41,594 [INFO] Hard-FP 指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\metrics_hard_fp_40.json
+2026-07-09 20:59:42,347 [INFO] 评论质量指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\comment_quality_metrics.json
+2026-07-09 20:59:42,348 [INFO] 基线对比已保存: E:\latex\projects\experiments\experiment6\results\evaluation\baseline_comparison.json
+2026-07-09 20:59:42,348 [INFO] 最佳方法: overall=M4, AUC=M3, Specificity=M4
+2026-07-09 20:59:42,349 [INFO] 最佳方法总结已保存: E:\latex\projects\experiments\experiment6\results\evaluation\best_method_summary.json
+2026-07-09 20:59:42,349 [INFO] 综合最佳: M4 (scores: {'M1': 0.5279, 'M2': 0.5009, 'M3': 0.5341, 'M4': 0.6193})
+2026-07-09 20:59:42,349 [INFO] --- I01-I16 评论生成指标 ---
+2026-07-09 20:59:43,338 [INFO] 评论生成指标已保存: E:\latex\projects\experiments\experiment6\results\evaluation\comment_generation_metrics.json
+2026-07-09 20:59:43,338 [INFO] ============================================================
+2026-07-09 21:00:55,157 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 21:00:55,157 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 21:00:56,073 [INFO] 开始生成图表...
+2026-07-09 21:00:56,074 [INFO] 图1: 实验五 B01-B16 F1 Heatmap
+2026-07-09 21:00:56,491 [INFO] 图2: 实验五 B01-B16 Specificity Heatmap
+2026-07-09 21:00:56,809 [INFO] 图3: 实验六 I01-I16 F1 Heatmap
+2026-07-09 21:00:57,129 [INFO] 图4: 实验六 I01-I16 Specificity Heatmap
+2026-07-09 21:00:57,448 [INFO] 图5: Baseline vs Improved Balanced Accuracy
+2026-07-09 21:00:57,855 [INFO] 图6: Baseline vs Improved FPR
+2026-07-09 21:00:58,201 [INFO] 图7: 最佳基线 vs 最佳改进 混淆矩阵
+2026-07-09 21:04:01,585 [INFO] 图7: 最佳基线 vs 最佳改进 混淆矩阵
+2026-07-09 21:04:01,896 [INFO] 图8: Review Comment Severity 分布
+2026-07-09 21:04:25,375 [INFO] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-09 21:04:25,375 [INFO] NumExpr defaulting to 8 threads.
+2026-07-09 21:04:25,658 [INFO] 实验报告已保存: E:\latex\projects\experiments\experiment6\results\experiment_report.txt

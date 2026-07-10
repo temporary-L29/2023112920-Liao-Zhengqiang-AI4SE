@@ -1,0 +1,38 @@
+{
+  "svm": {
+    "accuracy": 0.6851,
+    "precision": 0.6983,
+    "recall": 0.9156,
+    "f1": 0.7923,
+    "roc_auc": 0.7014,
+    "confusion_matrix": [
+      [
+        29,
+        89
+      ],
+      [
+        19,
+        206
+      ]
+    ],
+    "n_samples": 343
+  },
+  "randomforest": {
+    "accuracy": 0.656,
+    "precision": 0.656,
+    "recall": 1.0,
+    "f1": 0.7923,
+    "roc_auc": 0.6838,
+    "confusion_matrix": [
+      [
+        0,
+        118
+      ],
+      [
+        0,
+        225
+      ]
+    ],
+    "n_samples": 343
+  }
+}

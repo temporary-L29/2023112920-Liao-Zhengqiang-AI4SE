@@ -1,0 +1,44 @@
+{
+  "dataset_type": "seed",
+  "source": "experiment1",
+  "total_prs": 97,
+  "merged_count": 80,
+  "unmerged_count": 17,
+  "merge_rate": 0.8247,
+  "review_coverage": 0.9072,
+  "prs_with_review": 88,
+  "repo_distribution": {
+    "kubernetes/kubernetes": {
+      "total": 1,
+      "merged": 0,
+      "unmerged": 1,
+      "has_review": 0
+    },
+    "microsoft/vscode": {
+      "total": 88,
+      "merged": 77,
+      "unmerged": 11,
+      "has_review": 87
+    },
+    "facebook/react": {
+      "total": 2,
+      "merged": 0,
+      "unmerged": 2,
+      "has_review": 0
+    },
+    "huggingface/transformers": {
+      "total": 2,
+      "merged": 1,
+      "unmerged": 1,
+      "has_review": 1
+    },
+    "pandas-dev/pandas": {
+      "total": 4,
+      "merged": 2,
+      "unmerged": 2,
+      "has_review": 0
+    }
+  },
+  "prs_with_patch": 97,
+  "patch_coverage": 1.0
+}

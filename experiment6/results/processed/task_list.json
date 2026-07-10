@@ -1,0 +1,5766 @@
+{
+  "balanced": [
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3287887457",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3287887457_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3229821245",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3229821245_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2967077449",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2967077449_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "541157338",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_541157338_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "40975114",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_40975114_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3366714700",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3366714700_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3333959208",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3333959208_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3422250000",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3422250000_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1624255557",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1624255557_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3693524446",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3693524446_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3472785266",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3472785266_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3580454296",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3580454296_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3477795840",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795840_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1433924478",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1433924478_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3831812247",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3831812247_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3364422130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3364422130_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3518244682",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3518244682_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3202646739",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3202646739_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3947807865",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3947807865_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_2042905018_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3351639291_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3436798295",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3436798295_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2966102658",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_2966102658_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3156993991",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3156993991_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2121609886",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_2121609886_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3436249130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3436249130_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3452394814",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3452394814_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1105655674",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1105655674_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3329394468",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3329394468_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3397876020_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3672754292",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3672754292_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3460338353_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3953371066",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3953371066_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3530775397",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3530775397_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "542598369",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_542598369_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3872886350_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3551290851",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3551290851_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3182267002",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3182267002_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "645306337",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_645306337_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "283899736",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_283899736_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "621881169",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_621881169_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3845170447",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3845170447_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3315558023",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3315558023_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3276673085",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3276673085_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3426684252",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3426684252_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1095856888",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1095856888_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3429423552",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3429423552_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "967026",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_967026_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3395262663",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3395262663_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1508701118",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1508701118_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3540778322",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3540778322_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1464449691",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_1464449691_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3487987843",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3487987843_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3601978775_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3842487307",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3842487307_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3405304618_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "394158918",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_394158918_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1716310130",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1716310130_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365581_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_68716379_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_243938975_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3460529748",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3460529748_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3612414924",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3612414924_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3553625631_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3816419416",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3816419416_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "271203888",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271203888_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3645723789",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3645723789_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3357329833_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3147261276",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3147261276_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3477795485",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795485_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1679478752",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1679478752_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3273964787_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "271237560",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271237560_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3914554024",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3914554024_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3179365368",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365368_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3495136595",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3495136595_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3651173654",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3651173654_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3725363456",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3725363456_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2729464166",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2729464166_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3239088586",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3239088586_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_529633278_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3306725068",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3306725068_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3422303955_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3480984974",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480984974_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3482840650_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1609920986",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1609920986_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3790213231",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3790213231_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3777565263",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3777565263_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3891731588",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3891731588_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3552307086",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3552307086_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3421426323_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "371002143",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_371002143_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "882829689",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_882829689_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2103682116",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2103682116_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3349418756",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3349418756_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1576189200",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_1576189200_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1497261227",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1497261227_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "101835533",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_101835533_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480915146_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1332527071",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1332527071_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3184392604",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3184392604_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3850716762",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3850716762_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1354502259",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1354502259_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3854912847",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3854912847_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3770179201",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3770179201_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3098860574",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3098860574_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3300417770_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3295570862_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3999805416",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3999805416_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2577276375",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2577276375_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "1271235731",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1271235731_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3366156661",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3366156661_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3762105982",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3762105982_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2721751436",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_2721751436_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3444276721",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3444276721_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3857103136_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3219708075",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3219708075_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3415506931_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3266796678",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3266796678_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3812201363_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3287887457",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3287887457_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3229821245",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3229821245_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2967077449",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2967077449_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "541157338",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_541157338_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "40975114",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_40975114_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3366714700",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3366714700_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3333959208",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3333959208_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3422250000",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3422250000_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1624255557",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1624255557_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3693524446",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3693524446_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3472785266",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3472785266_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3580454296",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3580454296_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3477795840",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795840_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1433924478",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1433924478_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3831812247",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3831812247_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3364422130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3364422130_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3518244682",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3518244682_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3202646739",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3202646739_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3947807865",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3947807865_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_2042905018_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3351639291_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3436798295",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3436798295_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2966102658",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_2966102658_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3156993991",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3156993991_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2121609886",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_2121609886_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3436249130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3436249130_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3452394814",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3452394814_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1105655674",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1105655674_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3329394468",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3329394468_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3397876020_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3672754292",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3672754292_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3460338353_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3953371066",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3953371066_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3530775397",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3530775397_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "542598369",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_542598369_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3872886350_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3551290851",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3551290851_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3182267002",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3182267002_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "645306337",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_645306337_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "283899736",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_283899736_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "621881169",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_621881169_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3845170447",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3845170447_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3315558023",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3315558023_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3276673085",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3276673085_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3426684252",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3426684252_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1095856888",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1095856888_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3429423552",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3429423552_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "967026",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_967026_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3395262663",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3395262663_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1508701118",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1508701118_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3540778322",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3540778322_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1464449691",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_1464449691_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3487987843",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3487987843_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3601978775_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3842487307",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3842487307_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3405304618_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "394158918",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_394158918_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1716310130",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1716310130_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365581_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_68716379_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_243938975_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3460529748",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3460529748_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3612414924",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3612414924_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3553625631_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3816419416",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3816419416_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "271203888",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271203888_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3645723789",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3645723789_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3357329833_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3147261276",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3147261276_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3477795485",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795485_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1679478752",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1679478752_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3273964787_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "271237560",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271237560_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3914554024",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3914554024_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3179365368",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365368_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3495136595",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3495136595_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3651173654",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3651173654_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3725363456",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3725363456_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2729464166",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2729464166_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3239088586",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3239088586_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_529633278_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3306725068",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3306725068_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3422303955_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3480984974",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480984974_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3482840650_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1609920986",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1609920986_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3790213231",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3790213231_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3777565263",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3777565263_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3891731588",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3891731588_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3552307086",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3552307086_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3421426323_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "371002143",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_371002143_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "882829689",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_882829689_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2103682116",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2103682116_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3349418756",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3349418756_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1576189200",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_1576189200_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1497261227",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1497261227_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "101835533",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_101835533_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480915146_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1332527071",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1332527071_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3184392604",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3184392604_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3850716762",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3850716762_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1354502259",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1354502259_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3854912847",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3854912847_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3770179201",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3770179201_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3098860574",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3098860574_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3300417770_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3295570862_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3999805416",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3999805416_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2577276375",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2577276375_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "1271235731",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1271235731_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3366156661",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3366156661_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3762105982",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3762105982_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2721751436",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_2721751436_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3444276721",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3444276721_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3857103136_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3219708075",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3219708075_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3415506931_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3266796678",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3266796678_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3812201363_C5"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3287887457",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3287887457_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3229821245",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3229821245_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2967077449",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2967077449_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "541157338",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_541157338_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "40975114",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_40975114_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3366714700",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3366714700_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3333959208",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3333959208_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3422250000",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3422250000_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1624255557",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1624255557_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3693524446",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3693524446_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3472785266",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3472785266_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3580454296",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3580454296_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3477795840",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795840_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1433924478",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1433924478_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3831812247",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3831812247_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3364422130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3364422130_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3518244682",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3518244682_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3202646739",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3202646739_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3947807865",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3947807865_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_2042905018_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3351639291_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3436798295",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3436798295_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2966102658",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_2966102658_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3156993991",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3156993991_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2121609886",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_2121609886_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3436249130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3436249130_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3452394814",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3452394814_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1105655674",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1105655674_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3329394468",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3329394468_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3397876020_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3672754292",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3672754292_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3460338353_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3953371066",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3953371066_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3530775397",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3530775397_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "542598369",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_542598369_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3872886350_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3551290851",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3551290851_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3182267002",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3182267002_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "645306337",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_645306337_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "283899736",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_283899736_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "621881169",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_621881169_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3845170447",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3845170447_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3315558023",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3315558023_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3276673085",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3276673085_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3426684252",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3426684252_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1095856888",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1095856888_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3429423552",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3429423552_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "967026",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_967026_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3395262663",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3395262663_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1508701118",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1508701118_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3540778322",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3540778322_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1464449691",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_1464449691_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3487987843",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3487987843_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3601978775_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3842487307",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3842487307_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3405304618_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "394158918",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_394158918_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1716310130",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1716310130_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365581_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_68716379_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_243938975_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3460529748",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3460529748_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3612414924",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3612414924_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3553625631_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3816419416",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3816419416_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "271203888",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271203888_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3645723789",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3645723789_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3357329833_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3147261276",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3147261276_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3477795485",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795485_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1679478752",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1679478752_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3273964787_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "271237560",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271237560_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3914554024",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3914554024_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3179365368",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365368_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3495136595",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3495136595_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3651173654",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3651173654_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3725363456",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3725363456_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2729464166",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2729464166_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3239088586",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3239088586_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_529633278_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3306725068",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3306725068_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3422303955_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3480984974",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480984974_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3482840650_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1609920986",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1609920986_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3790213231",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3790213231_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3777565263",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3777565263_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3891731588",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3891731588_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3552307086",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3552307086_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3421426323_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "371002143",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_371002143_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "882829689",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_882829689_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2103682116",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2103682116_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3349418756",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3349418756_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1576189200",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_1576189200_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1497261227",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1497261227_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "101835533",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_101835533_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480915146_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1332527071",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1332527071_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3184392604",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3184392604_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3850716762",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3850716762_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1354502259",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1354502259_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3854912847",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3854912847_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3770179201",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3770179201_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3098860574",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3098860574_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3300417770_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3295570862_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3999805416",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3999805416_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2577276375",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2577276375_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "1271235731",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1271235731_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3366156661",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3366156661_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3762105982",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3762105982_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2721751436",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_2721751436_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3444276721",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3444276721_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3857103136_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3219708075",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3219708075_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3415506931_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3266796678",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3266796678_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3812201363_C6"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3287887457",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3287887457_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3229821245",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3229821245_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2967077449",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2967077449_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "541157338",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_541157338_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "40975114",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_40975114_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3366714700",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3366714700_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3333959208",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3333959208_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3422250000",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3422250000_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1624255557",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1624255557_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3693524446",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3693524446_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3472785266",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3472785266_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3580454296",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3580454296_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3477795840",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795840_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1433924478",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1433924478_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3831812247",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3831812247_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3364422130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3364422130_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3518244682",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3518244682_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3202646739",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3202646739_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3947807865",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3947807865_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_2042905018_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3351639291_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3436798295",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3436798295_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2966102658",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_2966102658_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3156993991",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3156993991_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2121609886",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_2121609886_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3436249130",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3436249130_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3452394814",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3452394814_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1105655674",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1105655674_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3329394468",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3329394468_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3397876020_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3672754292",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3672754292_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3460338353_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3953371066",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3953371066_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3530775397",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3530775397_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "542598369",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_542598369_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3872886350_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3551290851",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3551290851_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3182267002",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3182267002_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "645306337",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_645306337_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "283899736",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_283899736_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "621881169",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_621881169_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3845170447",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3845170447_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3315558023",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3315558023_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3276673085",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3276673085_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3426684252",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3426684252_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1095856888",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1095856888_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3429423552",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3429423552_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "967026",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_967026_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3395262663",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3395262663_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1508701118",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1508701118_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3540778322",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3540778322_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1464449691",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_1464449691_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3487987843",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3487987843_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3601978775_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3842487307",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3842487307_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3405304618_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "394158918",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_394158918_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1716310130",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1716310130_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365581_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_68716379_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_243938975_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3460529748",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3460529748_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3612414924",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3612414924_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3553625631_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3816419416",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3816419416_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "271203888",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271203888_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3645723789",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3645723789_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3357329833_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3147261276",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_3147261276_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3477795485",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3477795485_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1679478752",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1679478752_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3273964787_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "271237560",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_271237560_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3914554024",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3914554024_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3179365368",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3179365368_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3495136595",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3495136595_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3651173654",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_3651173654_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3725363456",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3725363456_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2729464166",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2729464166_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3239088586",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3239088586_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_529633278_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3306725068",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3306725068_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3422303955_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3480984974",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480984974_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3482840650_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1609920986",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1609920986_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3790213231",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3790213231_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3777565263",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3777565263_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3891731588",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3891731588_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3552307086",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3552307086_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3421426323_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "371002143",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_371002143_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "882829689",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_882829689_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2103682116",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_2103682116_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3349418756",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_3349418756_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1576189200",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "balanced_1576189200_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1497261227",
+      "repo": "langchain-ai/langchain",
+      "is_merged": true,
+      "context_key": "balanced_1497261227_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "101835533",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": true,
+      "context_key": "balanced_101835533_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3480915146_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1332527071",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1332527071_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3184392604",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3184392604_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3850716762",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3850716762_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1354502259",
+      "repo": "huggingface/transformers",
+      "is_merged": true,
+      "context_key": "balanced_1354502259_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3854912847",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3854912847_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3770179201",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3770179201_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3098860574",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3098860574_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3300417770_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_3295570862_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3999805416",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3999805416_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2577276375",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_2577276375_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "1271235731",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "balanced_1271235731_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3366156661",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3366156661_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3762105982",
+      "repo": "microsoft/vscode",
+      "is_merged": true,
+      "context_key": "balanced_3762105982_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2721751436",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "balanced_2721751436_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3444276721",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "balanced_3444276721_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3857103136_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3219708075",
+      "repo": "pandas-dev/pandas",
+      "is_merged": true,
+      "context_key": "balanced_3219708075_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "balanced_3415506931_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3266796678",
+      "repo": "facebook/react",
+      "is_merged": true,
+      "context_key": "balanced_3266796678_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "balanced_3812201363_C8"
+    }
+  ],
+  "hard_fp": [
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300417770_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3482840650_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3397876020_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3405304618_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3273964787_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_68716379_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3421426323_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3365028052",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3365028052_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3857103136_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3601978775_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "992742545",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_992742545_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3300424277",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300424277_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3286917182",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286917182_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3542177034",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3542177034_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3816275611",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3816275611_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3553625631_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3356788350",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3356788350_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3357329833_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_243938975_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295570862_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3179365581_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3812930366",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3812930366_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2608526550",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_2608526550_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3484358505",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3484358505_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3351639291_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3725363652",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3725363652_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_529633278_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "hardfp_2042905018_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3872886350_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3887288423",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3887288423_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3286955605",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286955605_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3812201363_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3460338353_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3832755202",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3832755202_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3295621094",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295621094_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3415506931_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3365574193",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3365574193_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3480915146_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3422303955_C5"
+    },
+    {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "pr_id": "3390724935",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3390724935_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300417770_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3482840650_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3397876020_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3405304618_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3273964787_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_68716379_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3421426323_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3365028052",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3365028052_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3857103136_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3601978775_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "992742545",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_992742545_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3300424277",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300424277_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3286917182",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286917182_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3542177034",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3542177034_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3816275611",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3816275611_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3553625631_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3356788350",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3356788350_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3357329833_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_243938975_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295570862_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3179365581_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3812930366",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3812930366_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2608526550",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_2608526550_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3484358505",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3484358505_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3351639291_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3725363652",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3725363652_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_529633278_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "hardfp_2042905018_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3872886350_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3887288423",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3887288423_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3286955605",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286955605_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3812201363_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3460338353_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3832755202",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3832755202_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3295621094",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295621094_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3415506931_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3365574193",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3365574193_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3480915146_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3422303955_C5"
+    },
+    {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "pr_id": "3390724935",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3390724935_C5"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300417770_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3482840650_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3397876020_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3405304618_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3273964787_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_68716379_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3421426323_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3365028052",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3365028052_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3857103136_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3601978775_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "992742545",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_992742545_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3300424277",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300424277_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3286917182",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286917182_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3542177034",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3542177034_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3816275611",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3816275611_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3553625631_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3356788350",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3356788350_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3357329833_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_243938975_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295570862_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3179365581_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3812930366",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3812930366_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2608526550",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_2608526550_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3484358505",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3484358505_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3351639291_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3725363652",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3725363652_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_529633278_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "hardfp_2042905018_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3872886350_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3887288423",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3887288423_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3286955605",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286955605_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3812201363_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3460338353_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3832755202",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3832755202_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3295621094",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295621094_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3415506931_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3365574193",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3365574193_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3480915146_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3422303955_C6"
+    },
+    {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "pr_id": "3390724935",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3390724935_C6"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3300417770",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300417770_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3482840650",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3482840650_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3397876020",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3397876020_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3405304618",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3405304618_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3273964787",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3273964787_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "68716379",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_68716379_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3421426323",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3421426323_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3365028052",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3365028052_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3857103136",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3857103136_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3601978775",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3601978775_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "992742545",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_992742545_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3300424277",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3300424277_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3286917182",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286917182_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3542177034",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3542177034_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3816275611",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3816275611_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3553625631",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3553625631_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3356788350",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3356788350_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3357329833",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3357329833_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "243938975",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_243938975_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3295570862",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295570862_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3179365581",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3179365581_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3812930366",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3812930366_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2608526550",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_2608526550_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3484358505",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3484358505_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3351639291",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3351639291_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3725363652",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3725363652_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "529633278",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_529633278_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "2042905018",
+      "repo": "langchain-ai/langchain",
+      "is_merged": false,
+      "context_key": "hardfp_2042905018_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3872886350",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3872886350_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3887288423",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3887288423_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3286955605",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3286955605_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3812201363",
+      "repo": "microsoft/vscode",
+      "is_merged": false,
+      "context_key": "hardfp_3812201363_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3460338353",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3460338353_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3832755202",
+      "repo": "kubernetes/kubernetes",
+      "is_merged": false,
+      "context_key": "hardfp_3832755202_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3295621094",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3295621094_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3415506931",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3415506931_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3365574193",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3365574193_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3480915146",
+      "repo": "facebook/react",
+      "is_merged": false,
+      "context_key": "hardfp_3480915146_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3422303955",
+      "repo": "pandas-dev/pandas",
+      "is_merged": false,
+      "context_key": "hardfp_3422303955_C8"
+    },
+    {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "pr_id": "3390724935",
+      "repo": "huggingface/transformers",
+      "is_merged": false,
+      "context_key": "hardfp_3390724935_C8"
+    }
+  ]
+}

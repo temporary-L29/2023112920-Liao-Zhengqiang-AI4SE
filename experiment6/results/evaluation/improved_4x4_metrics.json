@@ -1,0 +1,562 @@
+{
+  "I01": {
+    "method_id": "I01",
+    "prompt_type": "P5",
+    "context_type": "C5",
+    "n_valid": 48,
+    "n_total": 50,
+    "parse_rate": 0.96,
+    "accuracy": 0.625,
+    "precision": 0.5714,
+    "recall": 0.8696,
+    "f1": 0.6897,
+    "roc_auc": 0.6643,
+    "pr_auc": 0.6093,
+    "specificity": 0.4,
+    "balanced_accuracy": 0.6348,
+    "fpr": 0.6,
+    "confusion_matrix": [
+      [
+        10,
+        15
+      ],
+      [
+        3,
+        20
+      ]
+    ],
+    "tn": 10,
+    "fp": 15,
+    "fn": 3,
+    "tp": 20,
+    "unmerged_identified": 10,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.6871,
+    "avg_unmerged_risk_score": 0.315
+  },
+  "I02": {
+    "method_id": "I02",
+    "prompt_type": "P5",
+    "context_type": "C6",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_rate": 1.0,
+    "accuracy": 0.66,
+    "precision": 0.625,
+    "recall": 0.8,
+    "f1": 0.7018,
+    "roc_auc": 0.6864,
+    "pr_auc": 0.7029,
+    "specificity": 0.52,
+    "balanced_accuracy": 0.66,
+    "fpr": 0.48,
+    "confusion_matrix": [
+      [
+        13,
+        12
+      ],
+      [
+        5,
+        20
+      ]
+    ],
+    "tn": 13,
+    "fp": 12,
+    "fn": 5,
+    "tp": 20,
+    "unmerged_identified": 13,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.618,
+    "avg_unmerged_risk_score": 0.383
+  },
+  "I03": {
+    "method_id": "I03",
+    "prompt_type": "P5",
+    "context_type": "C7",
+    "n_valid": 47,
+    "n_total": 50,
+    "parse_rate": 0.94,
+    "accuracy": 0.6809,
+    "precision": 0.625,
+    "recall": 0.8696,
+    "f1": 0.7273,
+    "roc_auc": 0.7264,
+    "pr_auc": 0.6974,
+    "specificity": 0.5,
+    "balanced_accuracy": 0.6848,
+    "fpr": 0.5,
+    "confusion_matrix": [
+      [
+        12,
+        12
+      ],
+      [
+        3,
+        20
+      ]
+    ],
+    "tn": 12,
+    "fp": 12,
+    "fn": 3,
+    "tp": 20,
+    "unmerged_identified": 12,
+    "unmerged_total": 24,
+    "avg_merge_probability": 0.6628,
+    "avg_unmerged_risk_score": 0.3394
+  },
+  "I04": {
+    "method_id": "I04",
+    "prompt_type": "P5",
+    "context_type": "C8",
+    "n_valid": 47,
+    "n_total": 50,
+    "parse_rate": 0.94,
+    "accuracy": 0.6809,
+    "precision": 0.6364,
+    "recall": 0.875,
+    "f1": 0.7368,
+    "roc_auc": 0.6893,
+    "pr_auc": 0.6916,
+    "specificity": 0.4783,
+    "balanced_accuracy": 0.6766,
+    "fpr": 0.5217,
+    "confusion_matrix": [
+      [
+        11,
+        12
+      ],
+      [
+        3,
+        21
+      ]
+    ],
+    "tn": 11,
+    "fp": 12,
+    "fn": 3,
+    "tp": 21,
+    "unmerged_identified": 11,
+    "unmerged_total": 23,
+    "avg_merge_probability": 0.6509,
+    "avg_unmerged_risk_score": 0.3536
+  },
+  "I05": {
+    "method_id": "I05",
+    "prompt_type": "P6",
+    "context_type": "C5",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_rate": 1.0,
+    "accuracy": 0.6,
+    "precision": 0.5641,
+    "recall": 0.88,
+    "f1": 0.6875,
+    "roc_auc": 0.5376,
+    "pr_auc": 0.5186,
+    "specificity": 0.32,
+    "balanced_accuracy": 0.6,
+    "fpr": 0.68,
+    "confusion_matrix": [
+      [
+        8,
+        17
+      ],
+      [
+        3,
+        22
+      ]
+    ],
+    "tn": 8,
+    "fp": 17,
+    "fn": 3,
+    "tp": 22,
+    "unmerged_identified": 8,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.7318,
+    "avg_unmerged_risk_score": 0.2712
+  },
+  "I06": {
+    "method_id": "I06",
+    "prompt_type": "P6",
+    "context_type": "C6",
+    "n_valid": 48,
+    "n_total": 50,
+    "parse_rate": 0.96,
+    "accuracy": 0.6667,
+    "precision": 0.6111,
+    "recall": 0.9167,
+    "f1": 0.7333,
+    "roc_auc": 0.5998,
+    "pr_auc": 0.5471,
+    "specificity": 0.4167,
+    "balanced_accuracy": 0.6667,
+    "fpr": 0.5833,
+    "confusion_matrix": [
+      [
+        10,
+        14
+      ],
+      [
+        2,
+        22
+      ]
+    ],
+    "tn": 10,
+    "fp": 14,
+    "fn": 2,
+    "tp": 22,
+    "unmerged_identified": 10,
+    "unmerged_total": 24,
+    "avg_merge_probability": 0.686,
+    "avg_unmerged_risk_score": 0.314
+  },
+  "I07": {
+    "method_id": "I07",
+    "prompt_type": "P6",
+    "context_type": "C7",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_rate": 0.98,
+    "accuracy": 0.6327,
+    "precision": 0.5789,
+    "recall": 0.9167,
+    "f1": 0.7097,
+    "roc_auc": 0.7358,
+    "pr_auc": 0.7005,
+    "specificity": 0.36,
+    "balanced_accuracy": 0.6383,
+    "fpr": 0.64,
+    "confusion_matrix": [
+      [
+        9,
+        16
+      ],
+      [
+        2,
+        22
+      ]
+    ],
+    "tn": 9,
+    "fp": 16,
+    "fn": 2,
+    "tp": 22,
+    "unmerged_identified": 9,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.6937,
+    "avg_unmerged_risk_score": 0.3063
+  },
+  "I08": {
+    "method_id": "I08",
+    "prompt_type": "P6",
+    "context_type": "C8",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_rate": 1.0,
+    "accuracy": 0.64,
+    "precision": 0.6061,
+    "recall": 0.8,
+    "f1": 0.6897,
+    "roc_auc": 0.7144,
+    "pr_auc": 0.7053,
+    "specificity": 0.48,
+    "balanced_accuracy": 0.64,
+    "fpr": 0.52,
+    "confusion_matrix": [
+      [
+        12,
+        13
+      ],
+      [
+        5,
+        20
+      ]
+    ],
+    "tn": 12,
+    "fp": 13,
+    "fn": 5,
+    "tp": 20,
+    "unmerged_identified": 12,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.6484,
+    "avg_unmerged_risk_score": 0.3516
+  },
+  "I09": {
+    "method_id": "I09",
+    "prompt_type": "P7",
+    "context_type": "C5",
+    "n_valid": 48,
+    "n_total": 50,
+    "parse_rate": 0.96,
+    "accuracy": 0.5833,
+    "precision": 0.5676,
+    "recall": 0.84,
+    "f1": 0.6774,
+    "roc_auc": 0.6078,
+    "pr_auc": 0.6312,
+    "specificity": 0.3043,
+    "balanced_accuracy": 0.5722,
+    "fpr": 0.6957,
+    "confusion_matrix": [
+      [
+        7,
+        16
+      ],
+      [
+        4,
+        21
+      ]
+    ],
+    "tn": 7,
+    "fp": 16,
+    "fn": 4,
+    "tp": 21,
+    "unmerged_identified": 7,
+    "unmerged_total": 23,
+    "avg_merge_probability": 0.6992,
+    "avg_unmerged_risk_score": 0.3008
+  },
+  "I10": {
+    "method_id": "I10",
+    "prompt_type": "P7",
+    "context_type": "C6",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_rate": 1.0,
+    "accuracy": 0.6,
+    "precision": 0.5714,
+    "recall": 0.8,
+    "f1": 0.6667,
+    "roc_auc": 0.652,
+    "pr_auc": 0.6419,
+    "specificity": 0.4,
+    "balanced_accuracy": 0.6,
+    "fpr": 0.6,
+    "confusion_matrix": [
+      [
+        10,
+        15
+      ],
+      [
+        5,
+        20
+      ]
+    ],
+    "tn": 10,
+    "fp": 15,
+    "fn": 5,
+    "tp": 20,
+    "unmerged_identified": 10,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.6728,
+    "avg_unmerged_risk_score": 0.3278
+  },
+  "I11": {
+    "method_id": "I11",
+    "prompt_type": "P7",
+    "context_type": "C7",
+    "n_valid": 48,
+    "n_total": 50,
+    "parse_rate": 0.96,
+    "accuracy": 0.625,
+    "precision": 0.6,
+    "recall": 0.84,
+    "f1": 0.7,
+    "roc_auc": 0.7087,
+    "pr_auc": 0.7529,
+    "specificity": 0.3913,
+    "balanced_accuracy": 0.6157,
+    "fpr": 0.6087,
+    "confusion_matrix": [
+      [
+        9,
+        14
+      ],
+      [
+        4,
+        21
+      ]
+    ],
+    "tn": 9,
+    "fp": 14,
+    "fn": 4,
+    "tp": 21,
+    "unmerged_identified": 9,
+    "unmerged_total": 23,
+    "avg_merge_probability": 0.6642,
+    "avg_unmerged_risk_score": 0.3358
+  },
+  "I12": {
+    "method_id": "I12",
+    "prompt_type": "P7",
+    "context_type": "C8",
+    "n_valid": 50,
+    "n_total": 50,
+    "parse_rate": 1.0,
+    "accuracy": 0.66,
+    "precision": 0.6111,
+    "recall": 0.88,
+    "f1": 0.7213,
+    "roc_auc": 0.6632,
+    "pr_auc": 0.6352,
+    "specificity": 0.44,
+    "balanced_accuracy": 0.66,
+    "fpr": 0.56,
+    "confusion_matrix": [
+      [
+        11,
+        14
+      ],
+      [
+        3,
+        22
+      ]
+    ],
+    "tn": 11,
+    "fp": 14,
+    "fn": 3,
+    "tp": 22,
+    "unmerged_identified": 11,
+    "unmerged_total": 25,
+    "avg_merge_probability": 0.6616,
+    "avg_unmerged_risk_score": 0.3384
+  },
+  "I13": {
+    "method_id": "I13",
+    "prompt_type": "P8",
+    "context_type": "C5",
+    "n_valid": 48,
+    "n_total": 50,
+    "parse_rate": 0.96,
+    "accuracy": 0.625,
+    "precision": 0.6,
+    "recall": 0.75,
+    "f1": 0.6667,
+    "roc_auc": 0.6007,
+    "pr_auc": 0.5521,
+    "specificity": 0.5,
+    "balanced_accuracy": 0.625,
+    "fpr": 0.5,
+    "confusion_matrix": [
+      [
+        12,
+        12
+      ],
+      [
+        6,
+        18
+      ]
+    ],
+    "tn": 12,
+    "fp": 12,
+    "fn": 6,
+    "tp": 18,
+    "unmerged_identified": 12,
+    "unmerged_total": 24,
+    "avg_merge_probability": 0.6279,
+    "avg_unmerged_risk_score": 0.3742
+  },
+  "I14": {
+    "method_id": "I14",
+    "prompt_type": "P8",
+    "context_type": "C6",
+    "n_valid": 47,
+    "n_total": 50,
+    "parse_rate": 0.94,
+    "accuracy": 0.7234,
+    "precision": 0.7143,
+    "recall": 0.8,
+    "f1": 0.7547,
+    "roc_auc": 0.6927,
+    "pr_auc": 0.6649,
+    "specificity": 0.6364,
+    "balanced_accuracy": 0.7182,
+    "fpr": 0.3636,
+    "confusion_matrix": [
+      [
+        14,
+        8
+      ],
+      [
+        5,
+        20
+      ]
+    ],
+    "tn": 14,
+    "fp": 8,
+    "fn": 5,
+    "tp": 20,
+    "unmerged_identified": 14,
+    "unmerged_total": 22,
+    "avg_merge_probability": 0.6096,
+    "avg_unmerged_risk_score": 0.3904
+  },
+  "I15": {
+    "method_id": "I15",
+    "prompt_type": "P8",
+    "context_type": "C7",
+    "n_valid": 47,
+    "n_total": 50,
+    "parse_rate": 0.94,
+    "accuracy": 0.5957,
+    "precision": 0.5926,
+    "recall": 0.6667,
+    "f1": 0.6275,
+    "roc_auc": 0.6649,
+    "pr_auc": 0.6223,
+    "specificity": 0.5217,
+    "balanced_accuracy": 0.5942,
+    "fpr": 0.4783,
+    "confusion_matrix": [
+      [
+        12,
+        11
+      ],
+      [
+        8,
+        16
+      ]
+    ],
+    "tn": 12,
+    "fp": 11,
+    "fn": 8,
+    "tp": 16,
+    "unmerged_identified": 12,
+    "unmerged_total": 23,
+    "avg_merge_probability": 0.5857,
+    "avg_unmerged_risk_score": 0.4143
+  },
+  "I16": {
+    "method_id": "I16",
+    "prompt_type": "P8",
+    "context_type": "C8",
+    "n_valid": 49,
+    "n_total": 50,
+    "parse_rate": 0.98,
+    "accuracy": 0.6735,
+    "precision": 0.68,
+    "recall": 0.68,
+    "f1": 0.68,
+    "roc_auc": 0.7075,
+    "pr_auc": 0.694,
+    "specificity": 0.6667,
+    "balanced_accuracy": 0.6733,
+    "fpr": 0.3333,
+    "confusion_matrix": [
+      [
+        16,
+        8
+      ],
+      [
+        8,
+        17
+      ]
+    ],
+    "tn": 16,
+    "fp": 8,
+    "fn": 8,
+    "tp": 17,
+    "unmerged_identified": 16,
+    "unmerged_total": 24,
+    "avg_merge_probability": 0.5663,
+    "avg_unmerged_risk_score": 0.4337
+  }
+}

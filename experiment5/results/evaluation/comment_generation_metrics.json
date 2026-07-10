@@ -1,0 +1,18 @@
+{
+  "P2_C3": {
+    "avg_bleu": 0.2457,
+    "avg_rouge1": 0.1548,
+    "avg_rouge2": 0.021,
+    "avg_rougeL": 0.1347,
+    "n_generated": 185,
+    "n_with_real": 193
+  },
+  "P2_C4": {
+    "avg_bleu": 0.2514,
+    "avg_rouge1": 0.1602,
+    "avg_rouge2": 0.0181,
+    "avg_rougeL": 0.1416,
+    "n_generated": 182,
+    "n_with_real": 193
+  }
+}

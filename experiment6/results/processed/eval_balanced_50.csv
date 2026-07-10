@@ -1,0 +1,1935 @@
+﻿pr_id,pr_number,repo,title,body,pr_length,author,created_at,is_merged,merge_status,num_reviewers,review_decision,num_review_comments,num_inline_comments,review_comments_text,num_changed_files,total_additions,total_deletions,modified_functions,num_commits,commit_messages,changed_files_list,num_labels,label_names,has_ai_reviewer,has_ai_generated_code,is_merged_bool,pr_id_str
+3932473935,140006,kubernetes/kubernetes,Pod Certificates: Node-restriction support for signer names,"Kubelet's ability to generate service account tokens is restricted by the noderestriction admission plugin, which checks to make sure that the relevant pod actually mounts a token volume with the requested audience.
+
+This commit adds an analogous mechanism for Pod Certificates, restricting the signer names that Kubelet can request.
+
+The feature includes a similar authorizer-based override, where granting the ""request-podcertificate-signer"" verb for a given signer name allows bypassing the restriction.
+
+Prepared with Claude Code.
+
+
+
+/kind bug
+/kind api-change
+
+```release-note
+The NodeRestriction admission plugin now adds a defense-in-depth check for PodCertificateRequests.  A node may only create a PodCertificateRequest referring to a particular signer name if the pod actually mounts a podCertificate projected volume source that refers to that signer name, or if an authorization check for the user (verb=request-podcertificate-signer resource=<signerName>) succeeds.
+```
+
+",1060,ahmedtd,2026-06-25T04:04:45Z,True,merged,3,CHANGES_REQUESTED,58,33,"[Review by enj]: Mostly minor comments.
+[Review by enj]: More minor comments.
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Kube RBAC cannot easily express a resource with a `/` in it.
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Hmmm.  I know we have the weird signername encoding that we used in ClusterTrustBundles.
+
+> ClusterTrustBundles that are associated with a signer have a required naming prefix: take the signer name, replace slashes (/) with colons (:), and append a colon at the end.
+
+
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: The use case I am trying to enable here is someone running a daemonset that uses constrained impersonation to act as the node.  I think Istio ambient falls into this category.
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: the signer → resource-name-safe string munging is gross but if we have to do it being consistent with CTB is ok
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: https://github.com/kubernetes/kubernetes/pull/130485#issuecomment-2707416960 was the discussion around the shape of the check for tokens
+
+
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Suggestion from Jordan: ""request-serviceaccount-podcertificate-signer""
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Done.
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Done.  I applied the same munging as used for ClusterTrustBundle names.
+[Inline on test/integration/podcertificaterequests/podcertificate_integration_test.go L1000]: Use `test/integration/authutil/authutil.go` to reduce the boilerplate
+[Inline on plugin/pkg/admission/noderestriction/admission.go L929]: @liggitt should this check be behind its own FG or is opt-ing out via authz sufficient?
+[Inline on plugin/pkg/admission/noderestriction/admission_test.go LNone]: Do you need this `if` statement?
+[Inline on plugin/pkg/admission/noderestriction/admission_test.go LNone]: Test no opinion as well.
+[Inline on plugin/pkg/admission/noderestriction/admission_test.go LNone]: Assert that this called 0 or 1 times based on the test case.
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Extract the shared logic between this and the `request-serviceaccounts-token-audience` check (for example you are missing the version).
+[Inline on test/integration/podcertificaterequests/podcertificate_integration_test.go L1000]: Done.
+[Inline on plugin/pkg/admission/noderestriction/admission_test.go LNone]: No.  I've also collapsed this with the fake authorizer above, generalizing it to handle both token audiences and PCR signers.
+[Inline on plugin/pkg/admission/noderestriction/admission.go LNone]: Done.  (Good catch on the version, the new code takes the version from the admission attributes)
+[Inline on plugin/pkg/admission/noderestriction/admission_test.go LNone]: Done.
+[Inline on plugin/pkg/admission/noderestriction/",3,503,56,,1,Pod Certificates: Node-restriction support for signer names,"plugin/pkg/admission/noderestriction/admission.go, plugin/pkg/admission/noderestriction/admission_test.go, test/integration/podcertificaterequests/podcertificate_integration_test.go",12,"kind/bug, area/test, lgtm, release-note, size/XL, kind/api-change, sig/auth, approved, cncf-cla: yes, sig/testing, needs-priority, needs-triage",False,True,True,3932473935
+3832755202,139597,kubernetes/kubernetes,Remove GA feature gate SeparateTaintEvictionController,"## What type of PR is this?
+
+/kind cleanup
+
+## What this PR does / why we need it
+
+Removes the `SeparateTaintEvictionController` feature gate which has been GA and locked to default since v1.34, with a removal target of v1.37 (the current release).
+
+With `LockToDefault: true`, `!Enabled()` is always false, making all guarded code dead. This PR removes:
+- Gate definition (const, versioned spec, dependency entry)
+- Dead `!Enabled()` guard blocks in `NewNodeLifecycleController` and `Run`
+- Dead `taintManager` field and `tainteviction` import
+- Dead `taintEvictionController` local constant
+- `requiredFeatureGates` from taint eviction controller descriptor (controller now always starts)
+- `TestTaintEvictionControllerGating` test (tested removed gating logic)
+- Duplicate test cases in `lifecycle_test.go` (collapsed enabled/disabled pairs)
+
+## Which issue(s) this PR fixes
+
+KEP: https://kep.k8s.io/3902
+
+## Does this PR introduce a user-facing change?
+
+```release-note
+Removed the `SeparateTaintEvictionController` feature gate (GA since v1.34).
+```
+
+## Changes
+
+| File | Change |
+|------|--------|
+| `pkg/features/kube_features.go` | Remove gate definition (const + versioned spec + dependency) |
+| `pkg/controller/nodelifecycle/node_lifecycle_controller.go` | Remove dead guard blocks, taintManager field, constant, import |
+| `cmd/kube-controller-manager/app/core.go` | Remove requiredFeatureGates from descriptor |
+| `cmd/kube-controller-manager/app/controllermanager_test.go` | Remove TestTaintEvictionControllerGating, clean imports |
+| `test/integration/node/lifecycle_test.go` | Collapse duplicate test cases, remove gate setup, clean imports |
+| `test/compatibility_lifecycle/reference/versioned_feature_list.yaml` | Remove entry |
+| `test/compatibility_lifecycle/reference/feature_list.md` | Remove entry |
+
+## What I did NOT change
+
+- CHANGELOG entries (historical references)
+- `names.TaintEvictionController` constant in `controller_names.go` (still used by the standalone controller)
+
+## Test plan
+
+- [x] Zero Go references: `grep -rn SeparateTaintEvictionController --include='*.go' --exclude-dir=vendor` returns empty
+- [x] Zero YAML/MD references in lifecycle files
+- [x] Adversarial review: independent reviewer + red team attack (6/6 attacks survived)
+- [ ] CI: compatibility lifecycle tests
+- [ ] CI: integration tests (node/lifecycle)
+- [ ] CI: controller-manager unit tests
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",2518,jfeng18,2026-06-09T15:44:09Z,False,closed_not_merged,0,NONE,0,0,,7,34,209,,1,Remove GA feature gate SeparateTaintEvictionController,"cmd/kube-controller-manager/app/controllermanager_test.go, cmd/kube-controller-manager/app/core.go, pkg/controller/nodelifecycle/node_lifecycle_controller.go, pkg/features/kube_features.go, test/compatibility_lifecycle/reference/feature_list.md, test/compatibility_lifecycle/reference/versioned_feature_list.yaml, test/integration/node/lifecycle_test.go",12,"area/test, kind/cleanup, sig/node, sig/api-machinery, release-note, size/L, sig/apps, cncf-cla: yes, sig/testing, needs-ok-to-test, needs-priority, needs-triage",False,True,False,3832755202
+3264884652,35738,facebook/react,Fix typos across documentation markdown files,"## Summary
+
+Fix 34 typos across 16 markdown documentation files, including:
+- Spelling errors (`explicitlyu`, `errros`, `consdier`, `outweight`, `resister`, `compromised of`, `CreatFrom`)
+- Grammar fixes (subject-verb agreement, missing articles, missing words)
+- Punctuation corrections (missing periods, capitalization, apostrophes)
+- Factual correction (OVERVIEW.md listed ""5 numbers"" but 7 items followed)
+- Wrong word fixes (`effect` → `affect`, `it's` → `its`, `HIR form` → `SSA form`, `compiler` → `compiled`)
+
+### Files changed
+
+| File | Fixes |
+|------|-------|
+| `compiler/CLAUDE.md` | 2 |
+| `compiler/README.md` | 1 |
+| `compiler/docs/DESIGN_GOALS.md` | 4 |
+| `compiler/docs/DEVELOPMENT_GUIDE.md` | 1 |
+| `compiler/packages/babel-plugin-react-compiler/README.md` | 1 |
+| `compiler/packages/babel-plugin-react-compiler/src/Inference/MUTABILITY_ALIASING_MODEL.md` | 7 |
+| `compiler/packages/react-mcp-server/README.md` | 1 |
+| `compiler/packages/react-mcp-server/todo.md` | 1 |
+| `packages/dom-event-testing-library/README.md` | 1 |
+| `packages/eslint-plugin-react-hooks/src/code-path-analysis/README.md` | 1 |
+| `packages/react-devtools/CONTRIBUTING.md` | 1 |
+| `packages/react-devtools/OVERVIEW.md` | 2 |
+| `packages/react-devtools/README.md` | 1 |
+| `packages/react-server/README.md` | 7 |
+| `scripts/error-codes/README.md` | 1 |
+| `scripts/release/README.md` | 1 |
+
+## Test plan
+
+- [x] Changes are documentation-only (no code changes)
+- [x] Each fix was verified against the original file content
+- [x] No code blocks, identifiers, or technical terms were modified",1622,him2him2,2026-02-09T23:42:01Z,False,closed_not_merged,0,NONE,0,0,,16,32,32,,3,Fix typos across documentation markdown files | Merge branch 'main' into fix/docs-typos | Merge branch 'main' into fix/docs-typos,"compiler/CLAUDE.md, compiler/README.md, compiler/docs/DESIGN_GOALS.md, compiler/docs/DEVELOPMENT_GUIDE.md, compiler/packages/babel-plugin-react-compiler/README.md, compiler/packages/babel-plugin-react-compiler/src/Inference/MUTABILITY_ALIASING_MODEL.md, compiler/packages/react-mcp-server/README.md, compiler/packages/react-mcp-server/todo.md, packages/dom-event-testing-library/README.md, packages/eslint-plugin-react-hooks/src/code-path-analysis/README.md, packages/react-devtools/CONTRIBUTING.md, packages/react-devtools/OVERVIEW.md, packages/react-devtools/README.md, packages/react-server/README.md, scripts/error-codes/README.md, scripts/release/README.md",2,"CLA Signed, Resolution: Stale",False,True,False,3264884652
+3891731588,321924,microsoft/vscode,Try to fix a Copilot CLI test bug,https://dev.azure.com/monacotools/a6d41577-0fa3-498e-af22-257312ff0545/_build/results?buildId=448901&view=logs&j=15ec5277-fdc6-550c-b203-acb65f44f31c&t=d7b4dfce-7733-5a96-18dd-ea047bad2e00,221,alexr00,2026-06-18T13:36:31Z,False,closed_not_merged,2,APPROVED,3,1,"[Review by copilot-pull-request-reviewer[bot]]: ## Pull request overview
+
+This PR updates the Agents Window smoke test to address a Copilot CLI-specific UI behavior where the active view can auto-switch to a new untitled session, causing the expected response bubble to disappear from the DOM before assertions run.
+
+**Changes:**
+- Re-activates the committed Copilot CLI session after the second message completes to ensure the response bubble is present when asserting.
+- Removes the explicit per-provider second-turn timeout in favor of default waiting behavior.
+
+<details open>
+<summary>Show a summary per file</summary>
+
+| File | Description |
+| ---- | ----------- |
+| test/smoke/src/areas/agentsWindow/agentsWindow.test.ts | Adjusts Copilot CLI smoke test flow to re-select the correct session after msg2 so assertions target the right DOM. |
+</details>
+
+## Copilot's findings
+
+
+
+
+
+- **Files reviewed:** 1/1 changed files
+- **Comments generated:** 1
+
+
+
+[Inline on test/smoke/src/areas/agentsWindow/agentsWindow.test.ts L250]: The Copilot CLI second-turn timeout budget got reduced: `activateSessionByLabel(..., 60_000)` is now the only explicit wait before asserting, and `waitForAssistantText(session.reply2)` falls back to the default 60s (see `AgentsWindow.waitForAssistantText(..., timeoutMs = 60_000)`). If Copilot CLI still occasionally needs the previous larger budget, this change can reintroduce flaky timeouts by capping the post-msg2 stabilization/lookup at 60s.",1,11,2,,1,Try to fix a Copilot CLI test bug,test/smoke/src/areas/agentsWindow/agentsWindow.test.ts,0,,False,True,False,3891731588
+3725363456,36518,facebook/react,[rust-compiler] Allow Flow `TypeCastExpression` in `PatternLike`,"`PatternLike` already had the four TS cast wrapper variants
+(`TSAsExpression`, `TSSatisfiesExpression`, `TSNonNullExpression`,
+`TSTypeAssertion`) so that `(x as T) = ...` style assignment
+targets and parameter positions are representable. Flow's analogue
+of those wrappers is `TypeCastExpression`, produced by cast lvalues
+such as `(x: T) = e`. The round-trip corpus hits it through
+`error.todo-round2_fn_type_component_to_other.js`: the fixture
+generator parses `@flow` fixtures with `@babel/parser` (which has no
+Flow `component` syntax support) under `errorRecovery`, and the
+recovered parse of the component header yields an assignment whose
+left is a `TypeCastExpression` over the binding identifier. The
+round-trip test rejected this with:
+
+    Deserialization error: unknown variant `TypeCastExpression`,
+    expected one of `Identifier`, `ObjectPattern`, ... `TSTypeAssertion`
+
+Add `TypeCastExpression` as the sixth expression-like variant of
+`PatternLike`, reusing the existing
+`crate::expressions::TypeCastExpression` struct (which already
+matches Babel's `{ expression, typeAnnotation }` shape and is
+already handled on the expression side).
+
+Wire the new variant through every exhaustive `PatternLike` match
+the workspace requires, mirroring the existing TS wrapper
+handling at each site:
+
+- `react_compiler_ast/src/visitor.rs::walk_pattern`: recurse into
+  the inner expression.
+- `react_compiler_lowering/src/find_context_identifiers.rs`: record
+  the TS-faithful `[FindContextIdentifiers] Cannot handle Object
+  destructuring assignment target TypeCastExpression` Todo.
+- `react_compiler_lowering/src/build_hir.rs`: fall-through arms in
+  `pattern_like_loc`, `pattern_declares_name`,
+  `collect_binding_names_from_pattern`, `lower_assignment`, and the
+  inner-function-parameter walker.
+- `react_compiler/src/entrypoint/program.rs`: fall-through arms in
+  `calls_hooks_or_creates_jsx_in_pattern` and
+  `is_valid_props_annotation`.
+- `react_compiler/src/entrypoint/validate_source_locations.rs`:
+  fall-through arms in the original/generated pattern collectors.
+- `react_compiler_swc/src/convert_ast_reverse.rs`: convert to
+  `Pat::Expr` (mirrors TS wrappers); use `__unknown__` placeholder
+  in the assign-target path.
+- `react_compiler_oxc/src/convert_ast.rs` and
+  `react_compiler_oxc/src/convert_ast_reverse.rs`: equivalent
+  no-op / placeholder arms in the OXC frontend.
+
+No new behavior is introduced. The reverse converters fall through
+the same way they do for TS wrappers, and the Todo emission
+matches the TS reference behavior for an unsupported assignment-
+target wrapper.
+
+Fixes 1 round-trip parity failure:
+- error.todo-round2_fn_type_component_to_other.js
+
+Test plan:
+- bash compiler/scripts/test-babel-ast.sh:
+    Before: 1778/1780 round-trip (2 failures)
+    After:  1779/1780 round-trip (1 failure, 1 fixed)
+  Remaining failure (`lone-surrogate-string-values.js`) is unrelated;
+  handled in the next commit as a skip-list entry pending WTF-8
+  string-representation work.
+- cargo build: clean across the workspace.
+
+
+",3113,poteto,2026-05-21T17:54:57Z,True,merged,0,NONE,0,0,,14,68,19,,2,[rust-compiler] Preserve explicit `predicate: null` in function-like nodes | [rust-compiler] Allow Flow `TypeCastExpression` in `PatternLike`,"compiler/crates/react_compiler/src/entrypoint/program.rs, compiler/crates/react_compiler/src/entrypoint/validate_source_locations.rs, compiler/crates/react_compiler_ast/src/expressions.rs, compiler/crates/react_compiler_ast/src/patterns.rs, compiler/crates/react_compiler_ast/src/statements.rs, compiler/crates/react_compiler_ast/src/visitor.rs, compiler/crates/react_compiler_ast/tests/scope_resolution.rs, compiler/crates/react_compiler_lowering/src/build_hir.rs, compiler/crates/react_compiler_lowering/src/find_context_identifiers.rs, compiler/crates/react_compiler_oxc/src/convert_ast.rs, compiler/crates/react_compiler_oxc/src/convert_ast_reverse.rs, compiler/crates/react_compiler_reactive_scopes/src/codegen_reactive_function.rs, compiler/crates/react_compiler_swc/src/convert_ast.rs, compiler/crates/react_compiler_swc/src/convert_ast_reverse.rs",2,"CLA Signed, React Core Team",False,True,True,3725363456
+1576189200,12411,langchain-ai/langchain,feat: adaptive model for ChatOpenAI,"  - **Description:** Implementation of an OpenAIChatModel using OpenAI API. The enhancement proposed it to switch the OpenAI model context window based on the input of the users.
+ On API requests with an intensive usage of tokens, it can be useful to use the high context window model, like ""gpt-3.5-turbo=16k"". My experience on a project showed, we could use requests with a lot of variability on token usage, if the inputs of the prompt has a lot a variability. 
+In this regard, using an adaptative model for each request lead to a pricing optimization that is not negligible.
+  - **Dependencies:** any dependencies required for this change,
+  - **Tag maintainer:** for a quicker response, tag the relevant maintainer (see below),
+  - **Twitter handle:** https://twitter.com/GuillaumeDELEP5
+
+Thank you for a taking a look ! Looking forwards, any improvements or misconceptions I had while implementing.
+",948,gdelepoulle,2023-10-27T08:48:51Z,False,closed_not_merged,0,NONE,0,0,,3,60,2,,1,feat: adaptive model for ChatOpenAI to change model window context based on input tokens,"libs/langchain/langchain/chat_models/openai.py, libs/langchain/tests/integration_tests/chat_models/test_openai.py, libs/langchain/tests/unit_tests/chat_models/test_openai.py",0,,False,True,False,1576189200
+3421426323,36105,facebook/react,Add block-no-verify PreToolUse hook to .claude/settings.json,"## Summary
+
+Adds `block-no-verify@1.1.2` as a `PreToolUse` Bash hook in `.claude/settings.json`, alongside the existing `SessionStart` hook.
+
+## Details
+
+When an agent runs `git commit` or `git push` with the hook-bypass flag, it silently disables pre-commit, commit-msg, and pre-push hooks. `block-no-verify` reads `tool_input.command` from the Claude Code hook stdin, detects the hook-bypass flag across all git subcommands, and exits 2 to block.
+
+**Note on `deny: Bash(npx:*)`**: The deny list applies to what Claude Code can run via its Bash tool. Hooks run as system-level shell commands outside that permission scope, so this hook works correctly regardless.
+
+All existing `SessionStart` hooks and permissions are preserved unchanged.
+
+Closes #36104
+
+---
+
+_Disclosure: I am the author and maintainer of `block-no-verify`._
+",889,tupe12334,2026-03-19T18:24:57Z,False,closed_not_merged,0,NONE,0,0,,1,13,2,,1,feat: add block-no-verify PreToolUse hook to .claude/settings.json,.claude/settings.json,0,,False,True,False,3421426323
+3444276721,36139,facebook/react,[Fizz] Reduce chunk push overhead in HTML serialization,"I spent some time yesterday digging into RSC performance with Claude. I think there are two _much_ bigger issues to tackle than this (one being web vs. node streams and the other being an architectural bottleneck), but this PR did provide some nice wins in a variety of benchmarks.
+
+I have a separate improvement to Flight on another branch, but I'm a tad more skeptical of that PR. Plus, its gains were more modest.
+
+Benchmark (Node v24, Apple M1 Max, 1000 iterations, 100 warmup):
+
+   | Tree | Before (ops/s) | After (ops/s) | Δ |
+   | --- | --- | --- | --- |
+   | Small (10 el) | 37,959 | 48,257 | +27.1% |
+   | Medium (300 el, 3 Suspense, inline styles + data attrs) | 2,309 | 3,518 | +52.4% |
+   | Medium (300 el, no Suspense, inline styles + data attrs) | 2,404 | 3,725 | +54.9% |
+   | **Tailwind (300 el, 3 Suspense, className-only)** | **4,275** | **5,965** | **+39.5%** |
+   | Large (2500+ el, 12 Suspense) | 429 | 626 | +45.9% |
+
+This is just one small part of the pipeline, so it's not representative of major e2e gains.
+
+Below are Claude's notes–feel free to turn down this PR if you find its efficacy lacking. The `byteLengthOfChunk` change I'm a touch more nervous about, but if it's only used for heuristics this feels okay.
+
+------
+
+## Summary
+
+   Batches attribute and style serialization into single string pushes instead of 3-5 separate
+ `target.push()` calls per attribute. This reduces array operations, chunk count in segment buffers, and
+ downstream `Buffer.byteLength` and `writeChunk`/`encodeInto` call volume.
+
+   ## Motivation
+
+   Profiling `renderToPipeableStream` with V8's `--prof` showed that `pushAttribute` and
+ `pushStartGenericElement` were the top JS hot paths, with the dominant cost being the sheer number of
+ `target.push()` calls per element. A `<div>` with 6 attributes and a 6-property style object was doing
+ ~54 array pushes for attributes alone. Each push adds an item to the segment's chunk array, which then
+ has to be iterated by `finishedSegment` for byte sizing and by `flushSubtree` for encoding.
+
+   ## Changes
+
+   **Attribute push batching** (`ReactFizzConfigDOM.js`):
+   - `pushStringAttribute`: 5 pushes (`attributeSeparator`, `name`, `attributeAssign`, `escapedValue`,
+ `attributeEnd`) → 1 push with `' ' + name + '=""' + escapeTextForBrowser(value) + '""'`
+   - `pushBooleanAttribute`: 3 pushes → 1 push
+   - `pushStyleAttribute`: 4N+1 pushes (N = number of style properties) → 1 push. Builds the entire
+ `style=""...""` string before pushing.
+   - `pushAttribute` default case (data-*, aria-*, etc.), URL attributes, enumerated attributes, numeric
+ attributes, overloaded booleans: all consolidated from 3-5 pushes to 1.
+   - `processStyleName`: returns plain string instead of `PrecomputedChunk` to enable string concatenation
+ in style building.
+
+   **Text child merging** (`ReactFizzConfigDOM.js`):
+   - In `pushStartGenericElement` and `pushStartAnchor`: when children is a string and there's no
+ `dangerouslySetInnerHTML`, merge the `>` with the escaped text into a single string push.
+
+   **Byte length fast path** (`ReactServerStreamConfigNode.js`):
+   - `byteLengthOfChunk`: use `string.length` instead of `Buffer.byteLength(chunk, 'utf8')`. For ASCII
+ content (99%+ of HTML attribute/tag output), `.length === byte length`. The slight underestimate for
+ multi-byte characters is acceptable since `byteSize` is only used for heuristic decisions (outlining
+ threshold at 500 bytes, progressive chunk sizing).
+
+   ## Results
+
+   Benchmarked with `renderToPipeableStream` on Node v24.14.0, Apple M1 Max. Renders piped to a
+ byte-counting Writable (no I/O). 100 warmup, 1000 measured iterations, <1% coefficient of variation.
+
+   Output HTML is byte-identical before and after.
+
+   ## How did you test this change?
+
+   All existing Fizz and Server integration tests pass (4,088 tests across 150 suites). Verified HTML
+ output identity for elements with className, id, style objects, data-* attributes, escaped text content,
+ void elements, and SVG namespace attributes.",4150,switz,2026-03-25T10:15:57Z,False,closed_not_merged,1,CHANGES_REQUESTED,3,2,"[Review by gnoff]: If you open a change with just the attribute improvements I think we can land that. The innerHTML stuff needs a little more work and not sure if it's worth it. The byteLength i'd just leave out
+[Inline on packages/react-server/src/ReactServerStreamConfigNode.js L229]: This change should have broken something in ReactFlightServer. Suggests that we have some untested serialization path with large string serialization.
+
+Even if the rationale was true though we can't land this change because the layering implies you get back an accurate byteLength. We'd have to rename to getApproximateByteLength etc...
+
+Unless this is like the entirety of the perf win it doesn't seem worth the effort to rewrite the parts that use this length for approximating heuristics so let's just drop it.
+
+If you want to see what would be broken by this check out `emitTextChunk` in ReactFlightServer
+[Inline on packages/react-dom-bindings/src/server/ReactFizzConfigDOM.js L3941]: The reason it was written the way it was before is we try to avoid branching on hot paths as much as possible. In this case you are adding an extra if check to every element that has non string children because we check the innerHTML twice instead of once.
+
+There is probably a more dramatic refactor that could avoid the extra conditional and still allow for the avoidance of the extra chunk.",2,63,89,,1,[Fizz] Reduce chunk push overhead in HTML serialization,"packages/react-dom-bindings/src/server/ReactFizzConfigDOM.js, packages/react-server/src/ReactServerStreamConfigNode.js",2,"CLA Signed, Resolution: Stale",False,True,False,3444276721
+2577276375,38681,huggingface/transformers,Add Fireflies model to Transformers,"# What does this PR do?
+
+This PR adds a new custom Transformer-based language model architecture named **Fireflies** to the Hugging Face Transformers library. 
+
+Fireflies is a TransformerEncoder-based model designed for language modeling tasks, featuring configurable parameters such as number of layers, hidden dimensions, and attention heads.
+
+This addition includes:
+- `FirefliesConfig` to define model hyperparameters.
+- `FirefliesModel` implementing the model forward pass.
+- Integration with the Transformers model hub via the AutoModel mechanism.
+- Example tokenizer compatibility using GPT-2 tokenizer.
+- Support for training using the Trainer API with the Wikitext-2 dataset.
+
+## Motivation and Context
+
+This model architecture is introduced to provide users with a flexible encoder-based Transformer model alternative suitable for language modeling and research experiments. It aims to expand the model choices available in the Transformers library.
+
+## Dependencies
+
+- PyTorch
+- Transformers >= 4.30
+- Datasets
+
+## Before submitting
+
+- [x] This PR adds a new model and includes the required config, model, and integration files.
+- [x] I have read the [contributor guideline](https://github.com/huggingface/transformers/blob/main/CONTRIBUTING.md#create-a-pull-request).
+- [x] This contribution was discussed/approved in an issue or on the forum (please add link if applicable).
+- [x] Documentation has been updated accordingly.
+- [x] Tests have been added for new features (can add later).
+
+## Who can review?
+
+This PR can be reviewed by members knowledgeable in Transformer model implementations, particularly @zach-huggingface and @ArthurZucker who often review new model additions.
+
+",1766,Arynz-C,2025-06-09T03:43:30Z,False,closed_not_merged,0,NONE,0,0,,7,151,0,,2,Add Fireflies model to Transformers | Fix init file name and add Fireflies model implementation,"src/transformers/models/auto/configuration_auto.py, src/transformers/models/auto/modeling_auto.py, src/transformers/models/fireflies/__init__.py, src/transformers/models/fireflies/configuration_fireflies.py, src/transformers/models/fireflies/modeling_auto.py, src/transformers/models/fireflies/modeling_fireflies.py, tests/models/fireflies/test_modeling_fireflies.py",0,,False,True,False,2577276375
+3205035785,35617,facebook/react,[repo] init claude config,"## Overview
+
+Adds a claude setup that works with the nested /compiler setup.
+
+The constraints are:
+- when working in the root repo, don't use the compiler configs (easy)
+- when working in the compiler/ don't use the parent contigs (hard)
+
+The first one is easy: there's a claude.md and .claude directory in /compiler that is only loaded when you start a session from /compuler. The second one is hard, because if you start a session from /compiler, the parent claude files and skills are loaded.
+
+I was able to deny the permissions to the parent skills in settings.json, but the descriptions are still loaded into context and I don't think that's avoidable.
+
+To keep the parent claude file out of context, I created a hook hack: I moved all the non-compiler claude file context to instructions.md and added a SessionStart hook to cat the file into context if the cwd isn't the /compiler. Works well, but won't show it as part of the `/context` slash command.
+
+
+## Skills
+
+I also added a number of skills specific to the React repo:
+
+| Skill | Description |
+|-------|-------------|
+| `/extract-errors` |  `yarn extract-errors` |
+| `/feature-flags` | how feature flags work and `@gate`  |
+| `/fix` | linc and prettier |
+| `/flags` | `yarn flags` |
+| `/flow` | `yarn flow <variant>` |
+| `/test` | `yarn test-*` |
+| `/verify` | `run all the lints/tests/flow to verify` |
+
+### Example: Flow
+
+| before | after |
+|-----|-----|
+| <img width=""1076"" height=""442"" alt=""flow-before"" src=""https://github.com/user-attachments/assets/73eec143-d0af-4771-b501-c9dc29cc09ac"" /> | <img width=""1076"" height=""273"" alt=""flow-after"" src=""https://github.com/user-attachments/assets/292d33af-1d98-4252-9c08-744b33e88b86"" /> |
+
+### Example: Tests
+
+| before | after |
+|-----|-----|
+| <img width=""1048"" height=""607"" alt=""test-before"" src=""https://github.com/user-attachments/assets/aa558ccf-2cee-4d22-b1f1-e4221c5a59dd"" /> | <img width=""1075"" height=""359"" alt=""test-after"" src=""https://github.com/user-attachments/assets/eb795392-6f46-403f-b9bb-8851ed790165"" /> |
+
+
+
+
+
+",2111,rickhanlonii,2026-01-23T21:58:07Z,True,merged,2,APPROVED,2,0,[Review by jackpope]: Thanks for setting up the fundamentals. Let's land and see what else people run into 🚀,11,354,2,,1,init claude config,".claude/instructions.md, .claude/settings.json, .claude/skills/extract-errors/SKILL.md, .claude/skills/feature-flags/SKILL.md, .claude/skills/fix/SKILL.md, .claude/skills/flags/SKILL.md, .claude/skills/flow/SKILL.md, .claude/skills/test/SKILL.md, .claude/skills/verify/SKILL.md, CLAUDE.md, compiler/.claude/settings.json",2,"CLA Signed, React Core Team",False,True,True,3205035785
+3410261230,44797,huggingface/transformers,[`FA4`] Add kernels fallback,"Depends on #44887 and kernels being version `12.3`
+
+Works OOB with little changes! Example script for demonstration:
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+
+fa_version = 4
+#model_id = ""openai/gpt-oss-20b""
+model_id = ""meta-llama/Llama-3.2-3B-Instruct""
+
+
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    device_map=""auto"",
+    attn_implementation=f""flash_attention_{fa_version}"",
+).eval()
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+tokenizer.pad_token = tokenizer.eos_token
+inputs = tokenizer(
+    [""Hello, how are you?"", ""How are you? Tell me the name of the president of""],
+    padding=True,
+    padding_side=""left"",
+    return_tensors=""pt"",
+).to(model.device)
+
+outputs = model.generate(**inputs, max_new_tokens=50, do_sample=False)
+print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
+```",914,vasqu,2026-03-17T15:35:59Z,True,merged,1,APPROVED,1,0,[Review by ArthurZucker]: niice,2,1,4,,3,"fa4 kernels | Merge branch 'main' into fa4-kernel-fallback | revert hub changes, point to community","src/transformers/modeling_flash_attention_utils.py, src/transformers/modeling_utils.py",0,,False,True,True,3410261230
+3576625610,65354,pandas-dev/pandas,DEPR: followup warn on .at setitem when a new column expands the frame,"## Summary
+
+Follow-up to GH#48323 / #64753. The deprecation warning added in `_AtIndexer._warn_if_expanding` only checked the row axis, so `df.at[existing_row, new_col] = val` silently expanded the columns without firing the `Pandas4Warning`.
+
+- `_warn_if_expanding` now checks both `key[0]` against `obj.index` and `key[1]` against `obj.columns` for ndim=2. First axis that would expand fires the warning; early return avoids double-warning when both are new.
+- Added three tests in `TestAtSetItemWithExpansion` covering: new column on a plain-columns frame, new column on a frame with MultiIndex rows, and new tuple column on a frame with MultiIndex columns.
+
+## Test plan
+
+- [x] `pytest pandas/tests/indexing/test_at.py` — 49 passed
+- [x] `pytest pandas/tests/indexing/ pandas/tests/test_multilevel.py pandas/tests/indexes/multi/test_get_set.py` — 4714 passed, 2 skipped, 22 xfailed
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",1019,jbrockmendel,2026-04-24T02:10:37Z,True,merged,2,APPROVED,5,2,"[Inline on pandas/core/indexing.py L3241]: Shouldn't we short circuit if `is_expanding` was `True` from the first check iteration?
+[Inline on pandas/core/indexing.py L3241]: we do on L3255",3,52,21,,2,DEPR: warn on .at setitem when a new column expands the frame | DOC: avoid .at column-expansion warning in indexing.rst example,"doc/source/user_guide/indexing.rst, pandas/core/indexing.py, pandas/tests/indexing/test_at.py",1,Indexing,False,True,True,3576625610
+3580454296,138581,kubernetes/kubernetes,fix: the kubelet stats handler processes requests fo... in handler.go,"## Summary
+Fix high severity security issue in `pkg/kubelet/server/stats/handler.go`.
+
+## Vulnerability
+| Field | Value |
+|-------|-------|
+| **ID** | V-004 |
+| **Severity** | HIGH |
+| **Scanner** | multi_agent_ai |
+| **Rule** | `V-004` |
+| **File** | `pkg/kubelet/server/stats/handler.go:148` |
+
+**Description**: The kubelet stats handler processes requests for CPU and memory statistics for all pods on a node. Static analysis did not find explicit evidence of authorization middleware enforcement at this handler registration point. If the kubelet is not configured with webhook authorization mode (--authorization-mode=Webhook), any authenticated or potentially unauthenticated user with network access to the kubelet port (10250) can retrieve detailed resource usage metrics for all workloads on the node. The read-only kubelet port (10255) historically served these metrics without any authentication.
+
+## Changes
+- `pkg/kubelet/server/server.go`
+
+## Verification
+- [x] Build passes
+- [x] Scanner re-scan confirms fix
+- [x] LLM code review passed
+
+---
+*Automated security fix by [OrbisAI Security](https://orbisappsec.com)*
+",1199,orbisai0security,2026-04-24T17:12:21Z,False,closed_not_merged,2,COMMENTED,4,2,"[Inline on pkg/kubelet/server/server.go L485]: I don't agree with the premise of this PR. I do see the point that metrics reveal information, but there is plenty of information available to someone who has access to this endpoint. I don't think we should just cherry-pick stats, if anything. but honestly, I think continuing to treat access to the kubelet's endpoint as a privileged operation is the best approach. If anything ,we'd need a KEP and feature gate for this.
+[Inline on pkg/kubelet/server/server.go L485]: Thanks, that makes sense. I agree that this is probably too narrow if the intended model is that kubelet endpoint access is privileged overall, and cherry-picking stats would be inconsistent.
+
+I’ll close this PR for now. If this area needs to change, I understand it should probably go through a broader KEP/feature-gate discussion.",1,2,3,,1,fix: V-004 security vulnerability,pkg/kubelet/server/server.go,9,"area/kubelet, sig/node, size/XS, cncf-cla: yes, needs-ok-to-test, do-not-merge/release-note-label-needed, needs-priority, needs-triage, do-not-merge/needs-kind",False,True,False,3580454296
+3854912847,321141,microsoft/vscode,sessions: track preferred session type when no explicit user pick,"## What\n\nReworks how the Agents window decides which session type a new chat uses, so that the picker distinguishes an **explicit user pick** from the **preferred (first) session type** for the folder.\n\n### Picker (`sessionTypePicker.ts`)\n- The stored preference is now written **only** when the user explicitly picks a type — observing the active session's type no longer overwrites it.\n- `getUserPickedSessionType()` returns the explicit pick (or `undefined` if the user never picked / re-selected the default).\n- `getPreferredSessionType(folderUri)` returns the first entry in the folder's live session-type list, recomputed so it follows provider changes.\n- Re-selecting the **default (first)** type clears the stored pick (treated as ""no explicit preference"").\n\n### New chat widget (`newChatWidget.ts`)\n- New session creation resolves the type from the picker: the user pick when its provider can serve the folder, otherwise the preferred (first) type.\n- When there is no explicit pick, the draft tracks the preferred type and is recreated when the folder's session-type list changes (e.g. a late-registering agent host prepends a new type).\n\n## Why\n\nPreviously the stored ""last session type"" could be silently overwritten just by observing an active session, and a new chat would not follow the preferred default as providers register lazily.\n\n## Notes for reviewers\n- Persisted preference survives reload and is honored for new sessions.\n- Added unit tests in `sessionTypePicker.test.ts` covering: preferred follows session-type changes, user pick persists across reload, observing a session doesn't overwrite the pick, and re-selecting the default clears the stored pick.\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>",1814,sandy081,2026-06-12T13:18:35Z,True,merged,3,APPROVED,3,2,"[Review by copilot-pull-request-reviewer[bot]]: ## Pull request overview\n\nThis PR refines how the Agents window selects a session type for new chats by separating an **explicit user pick** from the folder’s **preferred default (first) session type**, and updating draft-session recreation behavior to track late provider/session-type changes.\n\n**Changes:**\n- Update `SessionTypePicker` to persist a session-type preference **only on explicit user selection**, expose `getUserPickedSessionType()`, and compute a live `getPreferredSessionType(folderUri)` as the folder’s first available type.\n- Update `NewChatWidget` draft creation to prefer the user’s explicit pick when servable; otherwise fall back to the preferred (first) type, and recreate drafts when preferred changes (when there is no explicit pick).\n- Add unit tests covering preferred-type tracking, persistence across reload, and default re-selection semantics.\n\n<details open>\n<summary>Show a summary per file</summary>\n\n| File | Description |\n| ---- | ----------- |\n| src/vs/sessions/contrib/chat/browser/sessionTypePicker.ts | Separates stored explicit pick from displayed active-session type; adds preferred-type computation and default re-selection storage behavior. |\n| src/vs/sessions/contrib/chat/browser/newChatWidget.ts | Resolves draft session type via explicit pick vs preferred default; adjusts provider-change recreation rules accordingly. |\n| src/vs/sessions/contrib/chat/test/browser/sessionTypePicker.test.ts | Adds coverage for preferred-type tracking and explicit-pick persistence/clearing behaviors. |\n</details>\n\n## Copilot's findings\n\n\n\n\n\n- **Files reviewed:** 3/3 changed files\n- **Comments generated:** 2 | [Inline on src/vs/sessions/contrib/chat/browser/sessionTypePicker.ts LNone]: Renaming the storage key to `sessions.lastSelectedSessionType1` will reset any existing persisted session-type preference on upgrade, and also makes the legacy parsing logic in `_readStoredPick()` effectively unreachable for existing users. If the reset isn’t intentional, keep the original key (or add an explicit migration path). | [Inline on src/vs/sessions/contrib/chat/browser/sessionTypePicker.ts LNone]: `_handleSelectedSessionType` only updates/clears the stored preference when the in-memory `_picked` changes. If an explicit pick is stored but the active session type differs (so `_picked` reflects the active session), explicitly clicking the default (first) item that is already checked will not clear the stored pick, and explicitly clicking a non-default checked item won’t persist it either. Storage updates should follow explicit user selection even when the visible pick doesn’t change (but you likely only want to fire `onDidSelectSessionType` when the in-memory pick actually changes to avoid unnecessary draft recreation).",3,316,38,"MockSessionsManagementService,STORAGE_KEY_LAST_SESSION_TYPE,TestSessionTypePicker,createFakeSession,createPicker,created,disposables,effectivePick,first,folder,instantiationService,isDefault,management,picker,preferred,reloaded,session,sessionType,storage,userPick,visiblePickChanged,workspace",4,sessions: track preferred session type when no explicit user pick | fix name | sessions: address review feedback on session type preference | fix name,"src/vs/sessions/contrib/chat/browser/newChatWidget.ts,src/vs/sessions/contrib/chat/browser/sessionTypePicker.ts,src/vs/sessions/contrib/chat/test/browser/sessionTypePicker.test.ts",0,,True,True,True,3854912847
+3392493503,64573,pandas-dev/pandas,TYP: Add type annotations to Index (pandas/core/indexes/base.py),"This one was a slog getting working.
+
+## Summary
+
+- Add parameter and return type annotations throughout `Index` in `pandas/core/indexes/base.py`, enabling both pyright and mypy type checking for the module
+- Remove `base.py` from pyright's exclude list in `pyright_reportGeneralTypeIssues.json`
+- Expand the `pandas.core.indexes.*` mypy wildcard in `pyproject.toml` into individual module entries, excluding `base` so it gets checked
+- Add `__getitem__` overloads (`SupportsIndex -> Any` vs `slice | np.ndarray | list[int] | list[bool] | Series -> Index`) to enable precise return types for callers
+- Tighten parameter types where possible (e.g. `Hashable` for label params, `Axes` for index-castable params, `Frequency` for freq params)
+- Fix `_raise_if_missing` and `_union` docstrings to match their actual signatures
+- Fix spillover `type: ignore` / `pyright: ignore` comments in ~28 other files caused by the newly precise types
+
+## Test plan
+
+- [x] mypy passes with 0 errors on `pandas/core/indexes/base.py` (and all spillover files)
+- [x] pyright passes with 0 errors on `pandas/core/indexes/base.py`
+- [x] All pre-commit hooks pass (ruff, ruff-format, etc.)
+- [ ] CI type checking passes
+- [ ] Existing test suite passes (no runtime changes)
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",1398,jbrockmendel,2026-03-13T00:26:00Z,True,merged,2,APPROVED,4,2,"[Review by mroeschke]: suggestion: For AI to tackle typing, it might be easier to tackle the more ""downstream"" files first (e.g. groupby, reshaping, etc.) then tackle more upstream functionality (core data structures, internals)
+[Inline on pandas/core/indexes/base.py LNone]: Can we narrow this to `Scalar`?
+[Inline on pandas/core/indexes/base.py LNone]: Scalar doesnt include pd.NA, and would also break on 3rd partys (which id be ok not worrying about).  I think Hashable is accurate, will update to that",32,479,324,,6,TYP: Add type annotations to Index (pandas/core/indexes/base.py) | TYP: Fix type: ignore comments after rebase | TYP: Fix pyright and mypy errors in base.py and frame.py after rebase | TYP: Move pyright ignore to correct line for searchsorted label arg | TYP: Narrow Index._na_value return type from object to Hashable | TYP: Remove stale type: ignore[no-untyped-call] comments after rebase,"pandas/core/apply.py, pandas/core/frame.py, pandas/core/generic.py, pandas/core/groupby/grouper.py, pandas/core/groupby/ops.py, pandas/core/indexes/base.py, pandas/core/indexes/category.py, pandas/core/indexes/datetimelike.py, pandas/core/indexes/interval.py, pandas/core/indexes/multi.py, pandas/core/indexes/range.py, pandas/core/internals/construction.py, pandas/core/methods/selectn.py, pandas/core/resample.py, pandas/core/reshape/melt.py, pandas/core/reshape/reshape.py, pandas/core/reshape/tile.py, pandas/core/series.py, pandas/core/sorting.py, pandas/io/formats/html.py, pandas/io/formats/style.py, pandas/io/stata.py, pandas/plotting/_matplotlib/converter.py, pandas/plotting/_matplotlib/core.py, pandas/plotting/_matplotlib/groupby.py, pandas/plotting/_matplotlib/hist.py, pandas/plotting/_matplotlib/timeseries.py, pandas/tests/groupby/methods/test_quantile.py, pandas/tests/indexes/period/test_indexing.py, pandas/tseries/holiday.py, pyproject.toml, pyright_reportGeneralTypeIssues.json",1,Typing,False,True,True,3392493503
+3850716762,321040,microsoft/vscode,Add code notify,"```Copilot Generated Description:``` Introduce a code notification feature with updates to the workbench layout and editor parts.
+
+",146,benibenj,2026-06-11T22:11:49Z,True,merged,2,APPROVED,2,0,[Review by copilot-pull-request-reviewer[bot]]: Copilot encountered an error and was unable to review this pull request. You can try again by re-requesting a review.,1,5,1,,1,Add code notify,.github/CODENOTIFY,0,,False,True,True,3850716762
+3365574193,64430,pandas-dev/pandas,BUG: Reuse a single `Selection` during table-format `HDFStore.select` reads,"Repeated reads from table-format HDF keys were constructing selection state twice per `select` call in the read path. This added unnecessary allocation/retention pressure and is consistent with the long-standing memory-growth behavior reported for repeated table reads.\n\n- **Read-path change**\n  - `AppendableFrameTable.read` now creates one `Selection` and reuses it for both:\n    - axis extraction (`_read_axes`)\n    - post-read filtering/reindexing (`process_axes`)\n  - `_read_axes` was updated to accept an existing `Selection` instead of rebuilding from `where/start/stop`.\n\n- **API/internal contract cleanup**\n  - `Table._read_axes` signature changed from `(where, start, stop)` to `(selection)`, making ownership of selection state explicit and avoiding duplicate construction.\n\n- **Regression coverage**\n  - Added a focused test in `pandas/tests/io/pytables/test_select.py` that monkeypatches `Selection.__init__` and asserts only one initialization per `temp_hdfstore.select(""df"")`, while verifying result equality.\n\n```python\n# before\nresult = self._read_axes(where=where, start=start, stop=stop)\nselection = Selection(self, where=where, start=start, stop=stop)\ndf = self.process_axes(df, selection=selection, columns=columns)\n\n# after\nselection = Selection(self, where=where, start=start, stop=stop)\nresult = self._read_axes(selection=selection)\ndf = self.process_axes(df, selection=selection, columns=columns)\n```\n\n<!-- START COPILOT CODING AGENT TIPS -->\n---\n\n✨ Let Copilot coding agent [set things up for you](https://github.com/pandas-dev/pandas/issues/new?title=✨+Set+up+Copilot+instructions&body=Configure%20instructions%20for%20this%20repository%20as%20documented%20in%20%5BBest%20practices%20for%20Copilot%20coding%20agent%20in%20your%20repository%5D%28https://gh.io/copilot-coding-agent-tips%29%2E%0A%0A%3COnboard%20this%20repo%3E&assignees=copilot) — coding agent works faster and does higher quality work when set up for your repo.\n",2029,Copilot,2026-03-06T21:13:16Z,False,closed_not_merged,0,NONE,0,0,,2,24,5,"_read_axes,counting_init,create_index,read,test_select,test_select_dtypes_timestamp,test_select_uses_single_selection",2,Initial plan | BUG: reuse Selection object in HDF table reads,"pandas/io/pytables.py,pandas/tests/io/pytables/test_select.py",0,,False,True,False,3365574193
+3812201363,320163,microsoft/vscode,chat: promote Codex Sandbox + Approval Policy to left-lane chips,"Promotes the **Codex agent host** sandbox + approval-policy session-config keys to dedicated left-lane chips in the chat input toolbar, matching the layout used by the Copilot CLI ""Default Approvals"" chip.\n\n## Result\n\nWhen a user selects **Codex - Agent Host** as the session target, the input toolbar's left lane shows:\n\n`Codex - Agent Host | Sandbox: <mode> | Approvals: <policy>`\n\n— consistently across the editor-window chat sidebar, the Agents window, the new-session view, and inside a running session.\n\n## Changes\n\n1. **`agentHost`: move `CodexSessionConfigKey` to `common/` layer** — so the workbench layer can import the schema definitions.\n2. **`chat`: add `maybeConfirmCodexSandboxLevel` warning helper** — fires the ""Enable Full Access (Dangerous)?"" dialog only when escalating from a safer sandbox; supports `Don't show again`.\n3. **`sessions`: wire Codex sandbox + approval-policy left-lane pickers** — adds 2 `Action2` picker classes (`OpenAgentHostCodexSandboxPickerAction`, `OpenAgentHostCodexApprovalPolicyPickerAction`).\n4. **`chat`: promote Codex sandbox + approval-policy to dedicated workbench chips** — registers them in `MenuId.ChatInputSecondary` / `Menus.NewSessionControl` with schema-validation guards via `isClaimedByDedicatedPicker` so any unknown variant gracefully falls back to the generic picker.\n5. **`sessions`: add component fixtures for Codex sandbox + approval pickers** — 9 variants × 2 themes = 18 screenshot baselines in the component explorer.\n6. **`sessions`: fix Codex picker fixture cropping** — overrides `container-type: size` so the chip CSS still applies without the `@container (max-width: 330px)` label-hiding rule triggering.\n\n## Verification\n\nManually verified in a launched Code OSS build (CDP + Playwright CLI driving) across all 4 surfaces:\n\n| Surface | Status |\n| --- | --- |\n| Editor window — new session | ✅ |\n| Editor window — running session | ✅ |\n| Agents window — new session | ✅ |\n| Agents window — running session | ✅ |\n| Sandbox picker opens with 3 options + descriptions | ✅ |\n| Approvals picker opens with 4 options + descriptions | ✅ |\n| Full Access warning dialog fires (and Cancel preserves prior value) | ✅ |\n| `Full Access` chip renders in warning styling (orange + warning icon) | ✅ |\n| Network chip auto-hides when sandbox = `danger-full-access` | ✅ |\n\n## Follow-up (not in this PR)\n\nAdd Folder / Worktree isolation chips to new Codex sessions (the Copilot CLI new-session UI already has them; Codex does not). Will be a separate PR after this one ships.\n\n---\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>\n",2670,Giuspepe,2026-06-05T18:58:53Z,False,closed_not_merged,1,COMMENTED,1,7,"[Review by copilot-pull-request-reviewer[bot]]: ## Pull request overview\n\n> [!NOTE]\n> Copilot was unable to run its full agentic suite in this review.\n\nPromotes Codex Agent Host `codex.sandboxMode` and `codex.approvalPolicy` session-config controls into dedicated left-lane chips (workbench chat input + sessions surfaces), including a “danger-full-access” confirmation flow with “Don’t show again”.\n\n**Changes:**\n- Add dedicated Codex Sandbox / Approval Policy picker actions and chip rendering (workbench + sessions), with schema-shape guards to fall back to the generic lane for unknown variants.\n- Introduce `maybeConfirmCodexSandboxLevel` warning dialog and a persisted “Don’t show again” key.\n- Move Codex session-config key declarations into `platform/agentHost/common` (node file becomes a re-export) and add component fixtures for visual baselines.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File | Description |\n| ---- | ----------- |\n| src/vs/workbench/contrib/chat/common/chatPermissionWarnings.ts | Adds Codex sandbox escalation confirmation dialog + suppression logic |\n| src/vs/workbench/contrib/chat/common/chatPermissionStorageKeys.ts | Adds persisted “don’t show again” storage key for Codex sandbox warning |\n| src/vs/workbench/contrib/chat/browser/widget/input/chatInputPart.ts | Wires new Codex picker actions to `CodexSessionConfigKey` properties |\n| src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker.ts | Adds Codex schema-guards, icons, warning styling, and gated selection |\n| src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker.contribution.ts | Registers new workbench `Action2` items for Codex Sandbox / Approval Policy |\n| src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionConfigPicker.ts | Registers sessions-side menu items + skips right-lane duplicates for Codex keys |\n| src/vs/sessions/contrib/providers/agentHost/browser/agentHostPermissionPickerDelegate.ts | Adds “well-known schema” predicates for Codex sandbox + approvals |\n| src/vs/sessions/contrib/providers/agentHost/browser/agentHostModePicker.ts | Adds extensibility hooks for trigger decoration and gated selection |\n| src/vs/sessions/contrib/providers/agentHost/browser/agentHostCodexSandboxPicker.ts | New sessions-side Codex sandbox picker with warning gating + icons |\n| src/vs/sessions/contrib/providers/agentHost/browser/agentHostCodexApprovalPolicyPicker.ts | New sessions-side Codex approval-policy picker |\n| src/vs/sessions/contrib/providers/agentHost/test/browser/agentHostCodexPickers.fixture.ts | Adds themed component fixtures for Codex chip/picker visuals |\n| src/vs/platform/agentHost/common/codexSessionConfigKeys.ts | New common home for Codex session-config keys + narrowers |\n| src/vs/platform/agentHost/node/codex/codexSessionConfigKeys.ts | Re-export shim to preserve existing node-layer imports |\n| .planning/codex-sandbox-chip-plan.md | Planning d...",14,1077,103,"AgentHostCodexApprovalPolicyPicker,AgentHostCodexSandboxPicker,CODEX_SANDBOX_DONT_SHOW_AGAIN_KEY,FakeCodexProvider,NEW_SESSION_CODEX_APPROVAL_PICKER_ID,NEW_SESSION_CODEX_SANDBOX_PICKER_ID,OpenAgentHostCodexApprovalPolicyPickerAction,OpenAgentHostCodexSandboxPickerAction,OpenAgentHostPermissionModePickerAction,PROVIDER_ID,REQUIRED_CODEX_APPROVAL_POLICY_VALUE,REQUIRED_CODEX_SANDBOX_VALUE,RUNNING_SESSION_CODEX_APPROVAL_PICKER_ID,RUNNING_SESSION_CODEX_SANDBOX_PICKER_ID,SESSION_ID,actionWidgetItems,approvalRender,bottomContainer,chipHost,confirmed,desc,enum,getConfigIcon,getSandboxIcon,hide,instantiationService,isCodexSupportedModel,isWellKnownAutoApproveSchema,isWellKnownClaudePermissionModeSchema,isWellKnownCodexApprovalPolicySchema,isWellKnownCodexSandboxSchema,list,makeCodexConfig,maybeConfirmElevatedPermissionLevel,narrowAdditionalDirectories,narrowApprovalPolicy,narrowBoolean,narrowReasoningEffort,narrowSandboxMode,narrowWebSearchMode,normalizeCodexModelId,picker,provider,rawId,registerAction2,renderOptionListPreview,renderPicker,resetShownCodexSandboxWarnings,result,row,sandboxRender,shownCodexSandboxFullAccessWarning,slashIndex,title,widgetContainer",7,plan: promote Codex Sandbox + Approval Policy chips to left toolbar lane | agentHost: move CodexSessionConfigKey to common/ layer | chat: add maybeConfirmCodexSandboxLevel warning helper | sessions: wire Codex sandbox + approval-policy left-lane pickers | chat: promote Codex sandbox + approval-policy to dedicated workbench chips | sessions: add component fixtures for Codex sandbox + approval pickers | sessions: fix Codex picker fixture cropping,".planning/codex-sandbox-chip-plan.md,src/vs/platform/agentHost/common/codexSessionConfigKeys.ts,src/vs/platform/agentHost/node/codex/codexSessionConfigKeys.ts,src/vs/sessions/contrib/providers/agentHost/browser/agentHostCodexApprovalPolicyPicker.ts,src/vs/sessions/contrib/providers/agentHost/browser/agentHostCodexSandboxPicker.ts,src/vs/sessions/contrib/providers/agentHost/browser/agentHostModePicker.ts,src/vs/sessions/contrib/providers/agentHost/browser/agentHostPermissionPickerDelegate.ts,src/vs/sessions/contrib/providers/agentHost/browser/agentHostSessionConfigPicker.ts,src/vs/sessions/contrib/providers/agentHost/test/browser/agentHostCodexPickers.fixture.ts,src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker.contribution.ts,src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostChatInputPicker.ts,src/vs/workbench/contrib/chat/browser/widget/input/chatInputPart.ts,src/vs/workbench/contrib/chat/common/chatPermissionStorageKeys.ts,src/vs/workbench/contrib/chat/common/chatPermissionWarnings.ts",0,,True,True,False,3812201363
+3770179201,319010,microsoft/vscode,fix: catch unhandled rejection in fire-and-forget intent telemetry (fixes #319005),"## 🔧 Error Fix
+
+### Summary
+
+**Error**: `unhandlederror-Unable to resolve chat model with CAPI family selection: gpt-4o-mini`
+
+**Root cause**: `collectIntentDetectionContextInternal` is an async telemetry-collection method called without `await` at two call sites. When the CAPI `/models` endpoint does not return a model with the `gpt-4o-mini` family, `getChatModelFromCapiFamily` throws. Because the returned promise is never awaited or caught, this surfaces as an unhandled promise rejection in error telemetry.
+
+The producers of the unhandled error are the two fire-and-forget call sites that discard the promise without attaching a rejection handler.
+
+Fixes microsoft/vscode#319005
+Recommended reviewer: `@vritant24`
+
+### Culprit Commit
+
+| Field | Value |
+|-------|-------|
+| Commit | [`ef061ccb`](https://github.com/microsoft/vscode/commit/ef061ccb0fc47d4a94b2c0fa1f2ba80a3231979a) |
+| Author | `@vritant24` |
+| Message | Rename copilot-fast/copilot-base to copilot-utility-small/copilot-utility |
+| Why | Introduced `CopilotUtilitySmallChatEndpoint` which hardcodes `CHAT_MODEL.GPT4OMINI` as the required CAPI family with no fallback. When the server omits this family, the throw propagates as an unhandled rejection through the existing unawaited call sites. |
+
+### Code Flow
+
+```mermaid
+sequenceDiagram
+    participant Handler as chatParticipantRequestHandler
+    participant Detector as intentDetector
+    participant Provider as endpointProviderImpl
+    participant Fetcher as modelMetadataFetcher
+
+    Handler->>Detector: collectIntentDetectionContextInternal() [no await]
+    Detector->>Provider: getChatEndpoint('copilot-utility-small')
+    Provider->>Fetcher: getChatModelFromCapiFamily('gpt-4o-mini')
+    Fetcher-->>Fetcher: _familyMap.get('gpt-4o-mini') returns undefined
+    Fetcher-->>Provider: throw Error(""Unable to resolve..."")
+    Provider-->>Detector: rejection propagates
+    Detector-->>Handler: unhandled rejection (no .catch())
+```
+
+### Affected Files
+
+| File | Role |
+|------|------|
+| `extensions/copilot/src/extension/prompt/node/intentDetector.tsx` | Fire-and-forget call site (line 137) — unhandled rejection producer |
+| `extensions/copilot/src/extension/prompt/node/chatParticipantRequestHandler.ts` | Fire-and-forget call site (line 249) — unhandled rejection producer |
+| `extensions/copilot/src/platform/endpoint/node/modelMetadataFetcher.ts` | Crash site — throws when family not in map |
+| `extensions/copilot/src/platform/endpoint/node/copilotChatEndpoint.ts` | Defines `CopilotUtilitySmallChatEndpoint` with hardcoded `gpt-4o-mini` family |
+
+### Repro Steps
+
+1. User is on a network/account where the CAPI `/models` endpoint does not return a model with family `gpt-4o-mini` (e.g., restricted model access, server-side rollout)
+2. User sends a chat message that triggers intent detection
+3. `collectIntentDetectionContextInternal` is called fire-and-forget
+4. `getChatModelFromCapiFamily('gpt-4o-mini')` throws because the family isn't in `_familyMap`
+5. The rejection is unhandled → surfaces as `unhandlederror` in telemetry
+
+### How the Fix Works
+
+**Chosen approach** (both call sites in `intentDetector.tsx:137` and `chatParticipantRequestHandler.ts:249`):
+
+Added `.catch(() => { })` to the fire-and-forget calls to `collectIntentDetectionContextInternal`. This prevents the unhandled promise rejection. The fix is at the producers of the unhandled error (the call sites that discard the promise without a rejection handler), not at the crash site (`modelMetadataFetcher.ts`). The `collectIntentDetectionContextInternal` method is purely a telemetry-collection helper — its failure should never surface as an unhandled error since no caller depends on its result.
+
+**Alternatives considered**:
+- Adding a try/catch inside `collectIntentDetectionContextInternal` itself — rejected because that would silence the error for any future caller that DOES await it, hiding potential issues from callers that care about the result.
+- Adding a fallback model in `CopilotUtilitySmallChatEndpoint` — rejected because the throw in `getChatModelFromCapiFamily` is intentional error reporting for model availability issues; the problem is purely that the callers don't handle the rejection on their fire-and-forget path.
+
+### Recommended Owner
+
+`@vritant24` — authored the commit that introduced `CopilotUtilitySmallChatEndpoint` with the hardcoded family and the code path that throws.
+
+
+
+
+> Generated by [errors-fix](https://github.com/microsoft/vscode-engineering/actions/runs/26647937816) · ● 61.2M · [◷](https://github.com/search?q=repo%3Amicrosoft%2Fvscode+%22gh-aw-workflow-id%3A+errors-fix%22&type=pullrequests)
+
+<!-- gh-aw-agentic-workflow: errors-fix, engine: copilot, version: 1.0.48, model: claude-opus-4.6, id: 26647937816, workflow_id: errors-fix, run: https://github.com/microsoft/vscode-engineering/actions/runs/26647937816 -->
+
+<!-- gh-aw-workflow-id: errors-fix -->",4996,vs-code-engineering[bot],2026-05-29T16:18:05Z,False,closed_not_merged,1,COMMENTED,2,0,"[Review by copilot-pull-request-reviewer[bot]]: Copilot encountered an error and was unable to review this pull request. You can try again by re-requesting a review.
+[Review by copilot-pull-request-reviewer[bot]]: Copilot encountered an error and was unable to review this pull request. You can try again by re-requesting a review.",2,2,2,,1,fix: catch unhandled rejection in fire-and-forget intent telemetry (fixes #319005),"extensions/copilot/src/extension/prompt/node/chatParticipantRequestHandler.ts, extensions/copilot/src/extension/prompt/node/intentDetector.tsx",2,"errors-fix, *error-fix-driving",False,True,False,3770179201
+3277015711,136988,kubernetes/kubernetes,kubectl explain: render externalDocs from OpenAPI v3 schemas,"#### What type of PR is this?
+
+/kind feature
+
+#### What this PR does / why we need it:
+
+CRD authors can set the externalDocs field in their [OpenAPI v3 schemas](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/)  to reference external documentation for their custom resources. However, kubectl explain did not surface this information to users.
+
+Render externalDocs metadata in the plaintext output of `kubectl explain`. When a schema or field includes an externalDocs section, it is now displayed as:
+
+```
+    EXTERNAL DOCS:
+        <description>
+        URL: <url>
+```
+
+This appears after the DESCRIPTION block for top-level resources and
+after the field description for individual fields. The section is
+omitted in short mode and when `externalDocs` is absent.
+
+#### Which issue(s) this PR is related to:
+
+https://github.com/kubernetes/kubernetes/pull/136977 adds `externalDocs` field (if declared on CRDs) to the responses that are consumed by `kubectl explain`.
+
+#### Special notes for your reviewer:
+
+It depends or acceptance of https://github.com/kubernetes/kubernetes/pull/136977
+
+#### Does this PR introduce a user-facing change?
+
+Yes. 
+
+```release-note
+kubectl explain: when a schema or field includes an externalDocs section, it is now displayed as:
+
+
+    EXTERNAL DOCS:
+        <description>
+        URL: <url>
+
+
+This appears after the DESCRIPTION block for top-level resources and
+after the field description for individual fields. The section is
+omitted in short mode and when `externalDocs` is absent.
+```
+
+#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
+",1830,pedjak,2026-02-12T16:24:48Z,True,merged,1,APPROVED,1,0,[Review by soltysh]: /approve,2,262,0,,1,kubectl explain: render externalDocs from OpenAPI v3 schemas,"staging/src/k8s.io/kubectl/pkg/explain/v2/templates/plaintext.tmpl, staging/src/k8s.io/kubectl/pkg/explain/v2/templates/plaintext_test.go",11,"priority/backlog, area/kubectl, lgtm, release-note, size/L, kind/feature, approved, sig/cli, cncf-cla: yes, ok-to-test, triage/accepted",False,True,True,3277015711
+1271172065,22086,huggingface/transformers,GPT-J specific half precision on CPU note,"This PR adds a note to the GPT-J model doc indicating that the half precision on CPU example is specific to the model, and doesn't generally apply. Related to https://github.com/huggingface/transformers/issues/21989",256,MKhalusova,2023-03-10T13:33:02Z,True,merged,1,APPROVED,3,1,"[Review by sgugger]: I'm really not sure this model actually runs on CPU since it does contain layernorms. I was thinking more of putting a CUDA device in the example.
+[Review by sgugger]: Thnaks a lot!
+[Inline on docs/source/en/model_doc/gptj.mdx LNone]: Here we should always use `""cuda""` since there will be an error on CPU anyway.",1,13,11,,4,re: #21989 | update re: #21989 | removed cpu option | make style,docs/source/en/model_doc/gptj.mdx,0,,False,True,True,1271172065
+3651173654,138907,kubernetes/kubernetes,Remove locked GA feature gates (sig-api-machinery),"#### What type of PR is this?
+
+/kind cleanup
+
+#### What this PR does / why we need it:
+
+Removes 8 sig-api-machinery feature gates that have been locked to their default value for 3+ releases, per the [feature gate policy](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/feature-gates.md#ga-features).
+
+| Gate | Locked since |
+| --- | --- |
+| `RetryGenerateName` | v1.32 |
+| `BtreeWatchCache` | v1.33 |
+| `OrderedNamespaceDeletion` | v1.34 |
+| `StreamingCollectionEncodingToJSON` | v1.34 |
+| `StreamingCollectionEncodingToProtobuf` | v1.34 |
+| `APIServerTracing` | v1.34 |
+| `ResilientWatchCacheInitialization` | v1.34 |
+| `ConsistentListFromCache` | v1.34 |
+
+`CustomResourceFieldSelectors` (locked v1.32) and `CRDValidationRatcheting` (locked v1.33) are also eligible but were skipped from this PR. They include broader changes better handled in dedicated PRs.
+
+This PR is AI generated, I've verified the changes. 
+
+#### Which issue(s) this PR is related to:
+
+N/A
+
+#### Does this PR introduce a user-facing change?
+
+```release-note
+Removed locked GA feature gates `RetryGenerateName`, `BtreeWatchCache`, `OrderedNamespaceDeletion`, `StreamingCollectionEncodingToJSON`, `StreamingCollectionEncodingToProtobuf`, `APIServerTracing`, `ResilientWatchCacheInitialization`, and `ConsistentListFromCache`.
+```
+
+#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+```docs
+NONE
+```
+",1544,Jefftree,2026-05-08T17:35:10Z,True,merged,2,COMMENTED,4,2,"[Inline on staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher_test.go L655]: @serathius removing the gate would remove the option to compare with the non b-tree approach but we shouldn't need that path anymore right?
+[Inline on staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher_test.go L655]: No need. ",27,214,1129,,8,Remove locked GA feature gate OrderedNamespaceDeletion | Remove locked GA feature gate StreamingCollectionEncodingToJSON | Remove locked GA feature gate StreamingCollectionEncodingToProtobuf | Remove locked GA feature gate RetryGenerateName | Remove locked GA feature gate BtreeWatchCache | Remove locked GA feature gate APIServerTracing | Remove locked GA feature gate ResilientWatchCacheInitialization | Remove locked GA feature gate ConsistentListFromCache,"pkg/controller/namespace/deletion/namespaced_resources_deleter.go, pkg/controlplane/apiserver/config.go, pkg/features/kube_features.go, pkg/registry/core/pod/strategy.go, pkg/registry/core/rest/storage_core_generic.go, staging/src/k8s.io/apiextensions-apiserver/pkg/apiserver/customresource_handler.go, staging/src/k8s.io/apiserver/pkg/features/kube_features.go, staging/src/k8s.io/apiserver/pkg/registry/generic/registry/store.go, staging/src/k8s.io/apiserver/pkg/registry/generic/registry/store_test.go, staging/src/k8s.io/apiserver/pkg/server/config.go, staging/src/k8s.io/apiserver/pkg/server/genericapiserver.go, staging/src/k8s.io/apiserver/pkg/server/options/coreapi.go, staging/src/k8s.io/apiserver/pkg/server/options/tracing.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher_test.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher_whitebox_test.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/delegator.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/delegator/interface.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/store/store.go, staging/src/k8s.io/apiserver/pkg/storage/cacher/watch_cache_test.go, staging/src/k8s.io/apiserver/pkg/storage/etcd3/store.go, staging/src/k8s.io/apiserver/pkg/storage/storagebackend/factory/etcd3.go, staging/src/k8s.io/apiserver/pkg/storage/testing/store_tests.go, staging/src/k8s.io/apiserver/pkg/util/webhook/authentication.go, staging/src/k8s.io/kube-aggregator/pkg/apiserver/handler_proxy.go, test/compatibility_lifecycle/reference/feature_list.md, test/compatibility_lifecycle/reference/versioned_feature_list.yaml",13,"kind/cleanup, area/apiserver, lgtm, sig/node, sig/api-machinery, release-note, size/XXL, sig/apps, approved, cncf-cla: yes, needs-priority, needs-triage, sig/etcd",False,True,True,3651173654
+1433924478,7686,langchain-ai/langchain,feat(chains): adding ElasticsearchDatabaseChain for interacting with analytics database,"This pull request adds a ElasticsearchDatabaseChain chain for interacting with analytics database, in the manner of the SQLDatabaseChain.
+
+It can be used in this way:
+
+```py
+from elasticsearch import Elasticsearch
+
+from langchain.chains.elasticsearch_database import ElasticsearchDatabaseChain
+from langchain.chat_models import ChatOpenAI
+
+client = Elasticsearch(""http://localhost:9200"")
+
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+llm = ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model_name='gpt-3.5-turbo-16k')
+
+db_chain = ElasticsearchDatabaseChain.from_llm(llm=llm, db=client, verbose=False, sample_documents_in_index_info=10)
+
+result = db_chain.run(question)
+print(result)
+```
+
+Maintainer: @samber
+Twitter handler: samuelberthe
+
+@baskaryan",876,samber,2023-07-13T23:55:46Z,True,merged,1,COMMENTED,5,4,"[Review by baskaryan]: thanks for pr @samber! a few comments
+[Inline on langchain/chains/elasticsearch_database/base.py LNone]: can delete, was on other class for backwards compatibility
+[Inline on langchain/chains/elasticsearch_database/base.py LNone]: lets delete if not needed
+[Inline on langchain/chains/elasticsearch_database/base.py LNone]: should we just call it database for consistency
+[Inline on langchain/chains/elasticsearch_database/prompts.py LNone]: delete commented out prompts",5,484,2,,10,feat(chains): adding ElasticsearchDatabaseChain for interacting with analytics database | feat(chain): removing commented code | feat(chain): adding doc and linting | feat(chain): adding doc about elasticsearch_database_chain | cr | lint | nit | lint | type | lint,"docs/extras/modules/chains/additional/elasticsearch_database.ipynb, langchain/chains/elasticsearch_database/__init__.py, langchain/chains/elasticsearch_database/base.py, langchain/chains/elasticsearch_database/prompts.py, langchain/output_parsers/json.py",0,,False,True,True,1433924478
+3357329833,44459,huggingface/transformers,fix: make Mllama cross attention mask compatible with torch.compile,"## Summary
+
+Fixes #44458
+
+PR #42848 introduced a regression where `torch.compile` on `MllamaForConditionalGeneration` fails with a C++ compile error from the torch inductor backend (`'tmp2' was not declared in this scope`).
+
+The root cause is that `_prepare_cross_attention_mask` uses `repeat_interleave` and `masked_fill` with bool conversion, which trigger a codegen bug in torch's CPU inductor when compiled. This PR replaces these operations with compile-friendly alternatives:
+
+- **`repeat_interleave`** → `unsqueeze` + `expand` + `reshape` (same pattern used by `repeat_kv` throughout the codebase)
+- **`masked_fill` with bool conversion** → simple arithmetic multiplication (`(1 - mask) * min_dtype`), which produces identical results for binary (0/1) masks
+
+Both replacements are numerically equivalent for the expected input range and avoid the problematic inductor C++ code generation path.
+
+## Test Plan
+
+- [ ] Verified `_prepare_cross_attention_mask` output equivalence: for binary (0/1) input masks, the new implementation produces identical results to the original
+- [ ] The fix addresses the `CppCompileError` reported in #44458 when running `torch.compile(model.forward)` followed by `model.generate()`
+
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",1350,weiguangli-io,2026-03-05T07:58:28Z,False,closed_not_merged,1,COMMENTED,3,2,"[Review by vasqu]: Honestly not sure if this really solves it but can you check @jiqing-feng, will take a look if not
+
+Also we need a test for this
+[Inline on src/transformers/models/mllama/modeling_mllama.py L60]: ```suggestion
+    # Use expand + reshape instead of repeat_interleave for better torch.compile compatibility
+    cross_attention_mask = cross_attention_mask.unsqueeze(-1).expand(-1, -1, -1, -1, num_vision_tokens)
+    cross_attention_mask = cross_attention_mask.reshape(batch_size, 1, text_total_length, -1)
+```
+[Inline on src/transformers/models/mllama/modeling_mllama.py L64]: I'm surprised this would cause an issue, masked fill should be faster than this",2,95,7,,2,fix: make Mllama cross attention mask preparation compatible with torch.compile | test: add tests for _prepare_cross_attention_mask torch.compile compatibility,"src/transformers/models/mllama/modeling_mllama.py, tests/models/mllama/test_modeling_mllama.py",0,,False,True,False,3357329833
+3543855575,36300,facebook/react,[eslint-plugin-react-hooks] Skip TSQualifiedName chains inside typeof,"## Summary
+
+Fixes #27335.
+
+`exhaustive-deps` skipped references whose parent was a `TSTypeQuery` (e.g. `typeof foo`) or `TSTypeReference` (e.g. `Foo`). That correctly handled direct usage, but nested type paths like `typeof foo.bar` slipped through: in the AST the root identifier's parent is a `TSQualifiedName`, not the outer `TSTypeQuery`, so the reference was recorded as a missing dependency.
+
+```tsx
+function Dummy() {
+  const [foo, setFoo] = useState<{bar: number}>({bar: 42});
+  useEffect(() => {
+    const square = (x: typeof foo.bar) => x * x;
+    setFoo(previous => ({...previous, bar: square(previous.bar)}));
+  }, []);
+  //  ^ before: ""React Hook useEffect has a missing dependency: 'foo'.""
+  //    after:  no lint error — `typeof foo.bar` is purely type-level.
+}
+```
+
+Walking up through `TSQualifiedName` before checking the ancestor kind covers arbitrary-depth chains (`typeof a.b.c`, etc.).
+
+## How did you test this change?
+
+Added a regression case to `ESLintRuleExhaustiveDeps-test.js` exercising the exact repro from the issue.
+
+- `ESLintRuleExhaustiveDeps-test.js`: **3652 passed / 0 failed** (3644 baseline + new case × 2 ESLint versions × 4 parser configs).
+- `ESLintRulesOfHooks-test.js`: **1420 passed / 0 failed** (unaffected, verified).
+- `yarn flow dom-node` — clean.
+- `yarn linc` — clean.
+- `yarn prettier` — clean.
+
+🤖 Generated with [Ora Studio](https://studio.oratelecom.net)
+
+---
+_Vibe Coded by Ousama Ben Younes_
+_Developed With Ora Studio (Claude Code)_
+",1557,ousamabenyounes,2026-04-17T07:39:39Z,False,closed_not_merged,0,NONE,0,0,,5,180,0,,2,[compiler] Fix false positive refs-rule errors when forwarding props.ref | [compiler] Add regression test for ref+non-ref prop access (#34342),"compiler/packages/babel-plugin-react-compiler/src/Validation/ValidateNoRefAccessInRender.ts, compiler/packages/babel-plugin-react-compiler/src/__tests__/fixtures/compiler/allow-accessing-non-ref-prop-alongside-props-ref.expect.md, compiler/packages/babel-plugin-react-compiler/src/__tests__/fixtures/compiler/allow-accessing-non-ref-prop-alongside-props-ref.js, compiler/packages/babel-plugin-react-compiler/src/__tests__/fixtures/compiler/allow-forwarding-props-ref-does-not-taint-sibling-props.expect.md, compiler/packages/babel-plugin-react-compiler/src/__tests__/fixtures/compiler/allow-forwarding-props-ref-does-not-taint-sibling-props.js",1,CLA Signed,False,True,False,3543855575
+3487987843,65060,pandas-dev/pandas,TST: Add regression test for read_csv memory_map with multi-char sep,"## Summary
+- Adds regression test for GH#34577: `read_table`/`read_csv` with `memory_map=True` and a multi-character separator used to raise `TypeError: cannot use a string pattern on a bytes-like object`
+- The bug was fixed in #47175 but no test was added for this specific case
+- closes #34577
+
+## Test plan
+- [x] `pytest pandas/tests/io/parser/test_python_parser_only.py::test_memory_map_multichar_sep` passes
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",544,jbrockmendel,2026-04-04T01:07:50Z,True,merged,1,APPROVED,1,0,,1,16,0,,2,TST: Add regression test for read_csv memory_map with multi-char sep (GH#34577) | TST: Fix EncodingWarning in test_memory_map_multichar_sep,pandas/tests/io/parser/test_python_parser_only.py,1,Testing,False,True,True,3487987843
+3816419416,320242,microsoft/vscode,agentHost: speed up opening cold sessions with subagent history,"## Problem
+
+Switching to a cold (previously-evicted) local Agent Host session was slow to render. `AgentHostSessionHandler.provideChatSessionContent` blocks on `_enrichHistoryWithSubagentCalls`, which subscribed to each subagent child session **serially**. On the server, every subagent restore re-fetched the full SDK event log and re-ran `mapSessionEvents` over the entire parent transcript just to pull out one subagent's  so a session with N subagent tool calls (task / rubber-duck / research) paid N serial round-trips and N full re-mappings of the  O(       events)). The enrichment was introduced in #308592.N log (turns 
+
+## Changes
+
+- **Memoize** `getEvents()` + `mapSessionEvents()` on `CopilotAgentSession`, shared by `getMessages`/`getSubagentMessages` and invalidated on any live activity (`_emitAction`) and on dispose. The open-time burst of subagent reads collapses from N full mappings to one.
+- **Parallelize** subagent history enrichment in `_enrichHistoryWithSubagentCalls` (`Promise.all`), preserving insertion order.
+- **Timing logs** around the restore phases (`restoreSession` metadata/messages/resolveConfig, per-subagent restore, mapped-events build, client-side enrich) so the breakdown is visible when diagnosing open latency.
+
+## Validation
+
+- `compile-check-ts-native` clean
+- Unit: CopilotAgentSession (111), CopilotAgent (46), AgentHost browser suite (922) passing
+- Integration: `turnExecution.integrationTest` including the subagent routing test passing
+
+## Follow-ups (not in this PR)
+
+- `restoreSession` still awaits `_resolveCreatedSessionConfig` (git branch probing) before returning the snapshot, though it's only needed for the auto-approve/session-config picker, not for rendering  could be deferred off the critical path like `_attachGitState`.history 
+- Duplicate `getSessionMetadata` SDK call (once in `_getSessionMetadataForRestore`, again inside `_resumeSession`).
+
+(Written by Copilot)",1995,roblourens,2026-06-06T16:36:02Z,False,closed_not_merged,1,COMMENTED,3,2,"[Review by copilot-pull-request-reviewer[bot]]: ## Pull request overview
+
+This PR improves the perceived latency when reopening “cold” (evicted) local Agent Host sessions by reducing redundant work during history restore and by making subagent history enrichment concurrent. It targets the restore hot-path used by the workbench’s agent-session UI so that sessions with many subagent tool calls don’t pay repeated serial round-trips and repeated event-log mappings.
+
+**Changes:**
+- Parallelizes subagent child-session restore during history enrichment and splices the resulting inner tool calls back into the parent response parts.
+- Memoizes `getEvents()` + `mapSessionEvents()` in `CopilotAgentSession` so `getMessages`/`getSubagentMessages` share a single mapping during session open.
+- Adds timing breakdown logs for restore phases (restore session + per-subagent load + event mapping).
+
+<details open>
+<summary>Show a summary per file</summary>
+
+| File | Description |
+| ---- | ----------- |
+| src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionHandler.ts | Parallel subagent enrichment and refactors child-session restore into a helper that always releases subscriptions. |
+| src/vs/platform/agentHost/node/copilot/copilotAgentSession.ts | Adds mapped-events memoization shared across message/subagent queries and logs mapping timings. |
+| src/vs/platform/agentHost/node/agentService.ts | Adds restore-phase timing logs for session restore and subagent turn loading. |
+</details>
+
+## Copilot's findings
+
+
+
+
+
+- **Files reviewed:** 3/3 changed files
+- **Comments generated:** 2
+
+
+
+[Inline on src/vs/platform/agentHost/node/copilot/copilotAgentSession.ts L364]: The new JSDoc for `_mappedSessionEvents` links to a non-existent symbol (`_invalidateMappedEvents`) and also claims invalidation happens “on dispose”, but there’s no dispose hook calling the invalidation helper. This makes the doc misleading and breaks editor navigation.
+[Inline on src/vs/platform/agentHost/node/copilot/copilotAgentSession.ts L994]: `_getMappedSessionEvents` memoizes the *promise* returned by `_computeMappedSessionEvents`. If `getEvents()` or `mapSessionEvents()` throws once (transient RPC/file error), the rejected promise is cached and all future `getMessages`/`getSubagentMessages` calls will keep failing without retry until a live action happens to invalidate it. Clearing the cache on rejection keeps behavior closer to the previous non-memoized implementation and avoids permanently wedging cold-session restore.",3,149,56,,1,agentHost: speed up opening cold sessions with subagent history,"src/vs/platform/agentHost/node/agentService.ts, src/vs/platform/agentHost/node/copilot/copilotAgentSession.ts, src/vs/workbench/contrib/chat/browser/agentSessions/agentHost/agentHostSessionHandler.ts",0,,False,True,False,3816419416
+3480984974,36193,facebook/react,Bump lodash from 4.17.21 to 4.18.1 in /scripts/devtools,"Bumps [lodash](https://github.com/lodash/lodash) from 4.17.21 to 4.18.1.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href=""https://github.com/lodash/lodash/releases"">lodash's releases</a>.</em></p>
+<blockquote>
+<h2>4.18.1</h2>
+<h2>Bugs</h2>
+<p>Fixes a <code>ReferenceError</code> issue in <code>lodash</code> <code>lodash-es</code> <code>lodash-amd</code> and <code>lodash.template</code> when using the <code>template</code> and <code>fromPairs</code> functions from the modular builds. See <a href=""https://redirect.github.com/lodash/lodash/issues/6167#issuecomment-4165269769"">lodash/lodash#6167</a></p>
+<p>These defects were related to how lodash distributions are built from the main branch using <a href=""https://github.com/lodash-archive/lodash-cli"">https://github.com/lodash-archive/lodash-cli</a>. When internal dependencies change inside lodash functions, equivalent updates need to be made to a mapping in the lodash-cli. (hey, it was ahead of its time once upon a time!). We know this, but we missed it in the last release. It's the kind of thing that passes in CI, but fails bc the build is not the same thing you tested.</p>
+<p>There is no diff on main for this, but you can see the diffs for each of the npm packages on their respective branches:</p>
+<ul>
+<li><code>lodash</code>: <a href=""https://github.com/lodash/lodash/compare/4.18.0-npm...4.18.1-npm"">https://github.com/lodash/lodash/compare/4.18.0-npm...4.18.1-npm</a></li>
+<li><code>lodash-es</code>: <a href=""https://github.com/lodash/lodash/compare/4.18.0-es...4.18.1-es"">https://github.com/lodash/lodash/compare/4.18.0-es...4.18.1-es</a></li>
+<li><code>lodash-amd</code>: <a href=""https://github.com/lodash/lodash/compare/4.18.0-amd...4.18.1-amd"">https://github.com/lodash/lodash/compare/4.18.0-amd...4.18.1-amd</a></li>
+<li><code>lodash.template</code><a href=""https://github.com/lodash/lodash/compare/4.18.0-npm-packages...4.18.1-npm-packages"">https://github.com/lodash/lodash/compare/4.18.0-npm-packages...4.18.1-npm-packages</a></li>
+</ul>
+<h2>4.18.0</h2>
+<h2>v4.18.0</h2>
+<p><strong>Full Changelog</strong>: <a href=""https://github.com/lodash/lodash/compare/4.17.23...4.18.0"">https://github.com/lodash/lodash/compare/4.17.23...4.18.0</a></p>
+<h3>Security</h3>
+<p><strong><code>_.unset</code> / <code>_.omit</code></strong>: Fixed prototype pollution via <code>constructor</code>/<code>prototype</code> path traversal (<a href=""https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"">GHSA-f23m-r3pf-42rh</a>, <a href=""https://github.com/lodash/lodash/commit/fe8d32eda854377349a4f922ab7655c8e5df9a0b"">fe8d32e</a>). Previously, array-wrapped path segments and primitive roots could bypass the existing guards, allowing deletion of properties from built-in prototypes. Now <code>constructor</code> and <code>prototype</code> are blocked unconditionally as non-terminal path keys, matching <code>baseSet</code>. Calls that previously returned <code>true</code> and deleted the property now return <code>false</code> and leave the target untouched.</p>
+<p><strong><code>_.template</code></strong>: Fixed code injection via <code>imports</code> keys (<a href=""https://github.com/lodash/lodash/security/advisories/GHSA-r5fr-rjxr-66jc"">GHSA-r5fr-rjxr-66jc</a>, CVE-2026-4800, <a href=""https://github.com/lodash/lodash/commit/879aaa93132d78c2f8d20c60279da9f8b21576d6"">879aaa9</a>). Fixes an incomplete patch for CVE-2021-23337. The <code>variable</code> option was validated against <code>reForbiddenIdentifierChars</code> but <code>importsKeys</code> was left unguarded, allowing code injection via the same <code>Function()</code> constructor sink. <code>imports</code> keys containing forbidden identifier characters now throw <code>&quot;Invalid imports option passed into _.template&quot;</code>.</p>
+<h3>Docs</h3>
+<ul>
+<li>Add security notice for <code>_.template</code> in threat model and API docs (<a href=""https://redirect.github.com/lodash/lodash/pull/6099"">#6099</a>)</li>
+<li>Document <code>lower &gt; upper</code> behavior in <code>_.random</code> (<a href=""https://redirect.github.com/lodash/lodash/pull/6115"">#6115</a>)</li>
+<li>Fix quotes in <code>_.compact</code> jsdoc (<a href=""https://redirect.github.com/lodash/lodash/pull/6090"">#6090</a>)</li>
+</ul>
+<h3><code>lodash.*</code> modular packages</h3>
+<p><a href=""https://redirect.github.com/lodash/lodash/pull/6157"">Diff</a></p>
+<p>We have also regenerated and published a select number of the <code>lodash.*</code> modular packages.</p>
+<p>These modular packages had fallen out of sync significantly from the minor/patch updates to lodash. Specifically, we have brought the following packages up to parity w/ the latest lodash release because they have had CVEs on them in the past:</p>
+<ul>
+<li><a href=""https://www.npmjs.com/package/lodash.orderby"">lodash.orderby</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.tonumber"">lodash.tonumber</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.trim"">lodash.trim</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.trimend"">lodash.trimend</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.sortedindexby"">lodash.sortedindexby</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.zipobjectdeep"">lodash.zipobjectdeep</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.unset"">lodash.unset</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.omit"">lodash.omit</a></li>
+<li><a href=""https://www.npmjs.com/package/lodash.template"">lodash.template</a></li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href=""https://github.com/lodash/lodash/commit/cb0b9b9212521c08e3eafe7c8cb0af1b42b6649e""><code>cb0b9b9</code></a> release(patch): bump main to 4.18.1 (<a href=""https://redirect.github.com/lodash/lodash/issues/6177"">#6177</a>)</li>
+<li><a href=""https://github.com/lodash/lodash/commit/75535f57883b7225adb96de1cfc1cd4169cfcb51""><code>75535f5</code></a> chore: prune stale advisory refs (<a href=""https://redirect.github.com/lodash/lodash/issues/6170"">#6170</a>)</li>
+<li><a href=""https://github.com/lodash/lodash/commit/62e91bc6a39c98d85b9ada8c44d40593deaf82a4""><code>62e91bc</code></a> docs: remove n_ Node.js &lt; 6 REPL note from README (<a href=""https://redirect.github.com/lodash/lodash/issues/6165"">#6165</a>)</li>
+<li><a href=""https://github.com/lodash/lodash/commit/59be2de61f8aa9461c7856533b51d31b7d8babc4""><code>59be2de</code></a> release(minor): bump to 4.18.0 (<a href=""https://redirect.github.com/lodash/lodash/issues/6161"">#6161</a>)</li>
+<li><a href=""https://github.com/lodash/lodash/commit/af634573030f979194871da7c68f79420992f53d""><code>af63457</code></a> fix: broken tests for _.template 879aaa9</li>
+<li><a href=""https://github.com/lodash/lodash/commit/1073a7693e1727e0cf3641e5f71f75ddcf8de7c0""><code>1073a76</code></a> fix: linting issues</li>
+<li><a href=""https://github.com/lodash/lodash/commit/879aaa93132d78c2f8d20c60279da9f8b21576d6""><code>879aaa9</code></a> fix: validate imports keys in _.template</li>
+<li><a href=""https://github.com/lodash/lodash/commit/fe8d32eda854377349a4f922ab7655c8e5df9a0b""><code>fe8d32e</code></a> fix: block prototype pollution in baseUnset via constructor/prototype traversal</li>
+<li><a href=""https://github.com/lodash/lodash/commit/18ba0a32f42fd02117f096b032f89c984173462d""><code>18ba0a3</code></a> refactor(fromPairs): use baseAssignValue for consistent assignment (<a href=""https://redirect.github.com/lodash/lodash/issues/6153"">#6153</a>)</li>
+<li><a href=""https://github.com/lodash/lodash/commit/b8190803d48d60b8c80ad45d39125f32fa618cb2""><code>b819080</code></a> ci: add dist sync validation workflow (<a href=""https://redirect.github.com/lodash/lodash/issues/6137"">#6137</a>)</li>
+<li>Additional commits viewable in <a href=""https://github.com/lodash/lodash/compare/4.17.21...4.18.1"">compare view</a></li>
+</ul>
+</details>
+<br />
+",7955,dependabot[bot],2026-04-02T08:05:58Z,False,closed_not_merged,0,NONE,0,0,,1,3,3,,1,Bump lodash from 4.17.21 to 4.18.1 in /scripts/devtools,scripts/devtools/yarn.lock,3,"CLA Signed, dependencies, javascript",False,True,False,3480984974
+3250664793,43771,huggingface/transformers,fix: Add MXFP4 MoE/attention backward kernels,"## Summary
+<!-- Add a brief summary of changes -->
+
+## Related Issue
+Fixes #40170
+
+**Issue:** Add MXFP4 MoE/attention backward kernels
+**URL:** https://github.com/huggingface/transformers/issues/40170
+
+## Problem
+## A Call To Action!
+
+The Hugging Face community needs you! 🫵 
+
+The `GPT-OSS` model was recently added using `mxfp4` weights. These 4-bit weights are tiny and highly performant on H100/B100/50xx GPUs, but we only have kernels for **forward** passes. This means that users can't train `GPT-OSS` unless they convert the weights to `bfloat16`. This uses 4X more memory, and reduces speed enormously!
+
+We want **native** `mxfp4` training, but that means we need **backward** kernels too. Ideally, these kernels should also support GPUs that don't have FP4 hardware, so users can still benefit from reduced memory usage during training, even if the computation has to be done in FP8 or `bfloat16`.
+
+### Custom Kernels: An extremely short introduction
+
+`transformers` uses the [Kernels](https://github.com/huggingface/kernels) library to load custom kernels. The critical kernel is the MoE kernel, because attention weights are stored in `bfloat16` for `GPT-OSS`.  This kernel lives on the Hub, in the [triton-kernels repo](https://huggingface.co/kernels-community/triton_kernels). The forward kernel is in the [matmul_ogs file](https://huggingface.co/kernels-community/triton_kernels/blob/main/torch-ext/triton_kernels/matmul_ogs.py), but the backward kernel should probably go in its own file.
+
+This won't be easy - the kernels are written in [Triton](https://triton-lang.org/main/index.html), so this is not a good issue for beginners! This will probably be overwhelming if you don't have some experience with raw CUDA or Triton programming already.
+
+Once the hard work of writing the kernel is done, we can help with integrating it into Transformers (there's a [work-in-progress blogpost](https://github.com/huggingface/blog/pull/2971) about this). We can help with serious attempts, but please don't just throw a code agent at the problem or something (you can use a code agent to help with writing and testing the kernel, but only if you're competent enough to evaluate and bugfix its outputs!)
+
+## Solution
+
+This PR implements backward pass support for MXFP4 quantized weights, enabling LoRA/adapter fine-tuning without dequantizing to BF16.
+
+### Key Components
+
+1. **SwiGLU Backward Kernel** (`mxfp4_backward.py`)
+   - Triton kernel for GPU with optimized memory access patterns
+   - PyTorch fallback for CPU/unsupported hardware
+   - Handles saturation limits correctly (zeros gradients where clamped)
+
+2. **MatmulOGS Autograd Wrapper** (`MatmulOGSFunction`)
+   - `torch.autograd.Function` wrapper for `triton_kernels.matmul_ogs`
+   - Computes gradients for input activations (dX)
+   - On-the-fly MXFP4 dequantization in backward (no permanent BF16 storage)
+
+3. **MoE Routing Gradient Inversion**
+   - Gradient of gather → scatter
+   - Gradient of scatter → gather
+   - Properly handles expert histograms and token routing
+
+4. **Training Mode Integration**
+   - `Mxfp4GptOssExperts.enable_training_mode()` / `disable_training_mode()`
+   - `Mxfp4HfQuantizer.is_trainable` now returns `True`
+   - `Mxfp4HfQuantizer.enable_training_mode(model)` helper method
+
+### Limitations (Documented)
+- Weight gradients (dW) are **NOT** supported - quantized weights must remain frozen
+- This enables LoRA/adapter fine-tuning, not full fine-tuning
+- For full fine-tuning, use `dequantize=True` in quantization config
+
+## Tests
+
+Added comprehensive test suite in `tests/quantization/mxfp4/test_mxfp4_backward.py`:
+
+| Test Class | Coverage |
+|------------|----------|
+| `SwiGLUBackwardTest` | Shape correctness, gradcheck, saturation handling, Triton vs PyTorch |
+| `Mxfp4DequantizationTest` | Output shape, value range validation |
+| `MoEBackwardTest` | Routing gradient inversion |
+| `TrainingIntegrationTest` | `is_trainable=True`, training mode toggle |
+| `NumericalGradientTest` | Finite difference gradient verification |
+
+Also added `benchmarks/benchmark_mxfp4_backward.py` for performance comparison.
+
+## Checklist
+- [x] Code follows project style guidelines
+- [x] Tests added/updated and passing
+- [x] Documentation updated (if applicable)
+- [x] Self-review completed
+
+## Additional Notes
+
+### Usage Example
+```python
+from transformers import AutoModelForCausalLM, Mxfp4Config
+
+# Load MXFP4 model
+model = AutoModelForCausalLM.from_pretrained(
+    ""model-id"",
+    quantization_config=Mxfp4Config()
+)
+
+# Enable training mode for MXFP4 layers
+model.quantizer.enable_training_mode(model)
+
+# Now gradients flow through MXFP4 layers for LoRA training
+```
+
+### Performance
+- Weights stay in MXFP4 format (4x memory savings vs BF16)
+- Triton backward kernel provides ~2x speedup over PyTorch fallback
+- On-the-fly dequantization only during backward pass
+",4900,leoneperdigao,2026-02-05T15:12:21Z,False,closed_not_merged,0,NONE,0,0,,6,1525,4,,5,fix: Add MXFP4 MoE/attention backward kernels | style: Apply ruff formatting | Merge branch 'main' into hf/40170-add-mxfp4-moeattention-backward-kernels | Merge branch 'main' into hf/40170-add-mxfp4-moeattention-backward-kernels | Merge branch 'main' into hf/40170-add-mxfp4-moeattention-backward-kernels,"benchmarks/benchmark_mxfp4_backward.py, src/transformers/integrations/__init__.py, src/transformers/integrations/mxfp4.py, src/transformers/integrations/mxfp4_backward.py, src/transformers/quantizers/quantizer_mxfp4.py, tests/quantization/mxfp4/test_mxfp4_backward.py",1,Code agent slop,False,True,False,3250664793
+3762105982,318743,microsoft/vscode,Log aggregate input image dimensions for Copilot telemetry,"## Summary\n- Add aggregate input image dimension measurements to Copilot image telemetry: `maxImageWidth`, `maxImageHeight`, `maxImagePixels`, and `totalImagePixels`.\n\n## Related\nFollow-up to #317785. ",263,federicobrancasi,2026-05-28T12:57:00Z,True,merged,2,APPROVED,2,3,"[Review by copilot-pull-request-reviewer[bot]]: ## Pull request overview\n\nThis PR extends Copilot image telemetry to include aggregate input image dimension measurements (max width/height, max pixels, total pixels) across message data URLs and image references, enabling better performance/health analysis without sending image content.\n\n**Changes:**\n- Add byte-based image dimension parsing helpers (PNG/GIF/JPEG/WebP) and reuse them from base64 parsing.\n- Extend image telemetry aggregation to compute max/total dimension-derived pixel counts for supported image inputs.\n- Add/update unit tests and update GDPR telemetry measurement declarations for the new fields.\n\n<details>\n<summary>Show a summary per file</summary>\n\n| File | Description |\n| ---- | ----------- |\n| extensions/copilot/src/util/common/imageUtils.ts | Adds byte-based dimension parsing + refactors base64 parsing to reuse it. |\n| extensions/copilot/src/platform/image/common/imageTelemetry.ts | Aggregates dimension measurements and adds byte extraction from reference payloads. |\n| extensions/copilot/src/platform/image/common/test/imageTelemetry.spec.ts | Adds coverage for dimension aggregation and failure/unsupported cases. |\n| extensions/copilot/src/platform/image/common/test/testImageData.ts | Adds a small PNG byte/data-url generator for tests. |\n| extensions/copilot/src/platform/endpoint/node/test/automodeService.spec.ts | Updates automode telemetry test expectations to include dimension measurements. |\n| extensions/copilot/src/platform/endpoint/node/automodeService.ts | Declares new dimension measurement fields in GDPR telemetry blocks. |\n| extensions/copilot/src/extension/prompt/node/chatMLFetcherTelemetry.ts | Declares new dimension measurement fields in GDPR telemetry blocks. |\n</details>\n\n## Copilot's findings\n\n\n\n<details>\n<summary>Comments suppressed due to low confidence (1)</summary>\n\n**extensions/copilot/src/util/common/imageUtils.ts:122**\n* `getWebPDimensionsFromBytes` reads fixed offsets (e.g. `binaryData[26]`, `binaryData[29]`, etc.) without validating that the buffer is long enough for the detected chunk type. With a truncated but header-matching WebP, bitwise ops on `undefined` coerce to 0 and can return incorrect non-zero dimensions. Add per-variant length guards before reading these offsets and throw when insufficient data is present.\n```\n	if (chunkHeader === 'VP8 ') {\n		const width = (binaryData[26] | (binaryData[27] << 8)) & 0x3FFF;\n		const height = (binaryData[28] | (binaryData[29] << 8)) & 0x3FFF;\n		return { width, height };\n	} else if (chunkHeader === 'VP8L') {\n```\n</details>\n\n\n- **Files reviewed:** 7/7 changed files\n- **Comments generated:** 3 | [Inline on extensions/copilot/src/util/common/imageUtils.ts L60]: `getPngDimensionsFromBytes` validates only the first 4 signature bytes, but then unconditionally constructs a `DataView` at `byteOffset + 16` with length 8. For truncated/partial data that still matches the prefix, th...",7,330,28,"addImageDimensions,addImageTelemetryInput,base64ToBytes,binary,byteValues,bytes,chunkHeader,createEmptyImageTelemetryMeasurements,createPngBytes,createPngDataUrl,data,dataView,describe,getBase64ByteLength,getByteData,getByteLength,getGifDimensions,getGifDimensionsFromBytes,getImageDimensions,getImageDimensionsFromBytes,getImageDimensionsFromDataUrl,getImageTelemetryInputFromUrl,getImageTelemetryMeasurementsFromReferences,getJpegDimensions,getJpegDimensionsFromBytes,getMimeType,getPngDimensions,getPngDimensionsFromBytes,getWebPDimensions,getWebPDimensionsFromBytes,hasAsciiSequence,hasBytes,isArrayIndexKey,isByteValue,isValidDimension,keys,length,marker,measurements,messageMeasurements,normalizeMimeType,normalizedMimeType,objectValue,parsed,pixels,pngSignaturePrefix,readAscii,referenceMeasurements,segmentLength,sortedKeys",5,Log aggregate input image dimensions for Copilot telemetry | Address image dimension telemetry review feedback | Merge branch 'main' into fb/copilot-image-dimensions | Merge branch 'main' into fb/copilot-image-dimensions | Merge branch 'main' into fb/copilot-image-dimensions,"extensions/copilot/src/extension/prompt/node/chatMLFetcherTelemetry.ts,extensions/copilot/src/platform/endpoint/node/automodeService.ts,extensions/copilot/src/platform/endpoint/node/test/automodeService.spec.ts,extensions/copilot/src/platform/image/common/imageTelemetry.ts,extensions/copilot/src/platform/image/common/test/imageTelemetry.spec.ts,extensions/copilot/src/platform/image/common/test/testImageData.ts,extensions/copilot/src/util/common/imageUtils.ts",0,,True,True,True,3762105982
+3329394468,35908,facebook/react,Bump rollup from 3.29.5 to 3.30.0,"Bumps [rollup](https://github.com/rollup/rollup) from 3.29.5 to 3.30.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href=""https://github.com/rollup/rollup/releases"">rollup's releases</a>.</em></p>
+<blockquote>
+<h2>v3.30.0</h2>
+<h2>3.30.0</h2>
+<p><em>2026-02-22</em></p>
+<h3>Features</h3>
+<ul>
+<li>Throw when the generated bundle contains paths that would leave the output directory (<a href=""https://redirect.github.com/rollup/rollup/issues/6276"">#6276</a>)</li>
+</ul>
+<h3>Pull Requests</h3>
+<ul>
+<li><a href=""https://redirect.github.com/rollup/rollup/pull/6276"">#6276</a>: Validate bundle stays within output dir (<a href=""https://github.com/lukastaegert""><code>@​lukastaegert</code></a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Changelog</summary>
+<p><em>Sourced from <a href=""https://github.com/rollup/rollup/blob/v3.30.0/CHANGELOG.md"">rollup's changelog</a>.</em></p>
+<blockquote>
+<h2>3.30.0</h2>
+<p><em>2026-02-22</em></p>
+<h3>Features</h3>
+<ul>
+<li>Throw when the generated bundle contains paths that would leave the output directory (<a href=""https://redirect.github.com/rollup/rollup/issues/6276"">#6276</a>)</li>
+</ul>
+<h3>Pull Requests</h3>
+<ul>
+<li><a href=""https://redirect.github.com/rollup/rollup/pull/6276"">#6276</a>: Validate bundle stays within output dir (<a href=""https://github.com/lukastaegert""><code>@​lukastaegert</code></a>)</li>
+</ul>
+</blockquote>
+</details>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href=""https://github.com/rollup/rollup/commit/d91d5e11becc2f16d3a493231fb5bf48f74758a9""><code>d91d5e1</code></a> 3.30.0</li>
+<li><a href=""https://github.com/rollup/rollup/commit/967740910dc90f3c928c91642f2b80c1ed40d60b""><code>9677409</code></a> Update release script for backports</li>
+<li><a href=""https://github.com/rollup/rollup/commit/c8cf1f9c48c516285758c1e11f08a54f304fd44e""><code>c8cf1f9</code></a> Validate bundle stays within output dir (<a href=""https://redirect.github.com/rollup/rollup/issues/6276"">#6276</a>)</li>
+<li>See full diff in <a href=""https://github.com/rollup/rollup/compare/v3.29.5...v3.30.0"">compare view</a></li>
+</ul>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=rollup&package-manager=npm_and_yarn&previous-version=3.29.5&new-version=3.30.0)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+You can trigger a rebase of this PR by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot show <dependency name> ignore conditions` will show all of the ignore conditions of the specified dependency
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/facebook/react/network/alerts).
+
+</details>
+
+> **Note**
+> Automatic rebases have been disabled on this pull request as it has been open for over 30 days.
+",3823,dependabot[bot],2026-02-26T07:05:58Z,False,closed_not_merged,0,NONE,0,0,,2,5,6,,1,Bump rollup from 3.29.5 to 3.30.0,"package.json, yarn.lock",3,"CLA Signed, dependencies, javascript",False,True,False,3329394468
+1097402336,19840,huggingface/transformers,Fix OOM in config doctest,"# What does this PR do?
+
+This model is too large to be tested (OOM).
+```python
+    >>> # Initializing a model (with random weights) from the gpt-neox-20b style configuration
+    >>> model = GPTNeoXModel(configuration)  # doctest: +SKIP
+```",270,ydshieh,2022-10-24T12:25:10Z,True,merged,1,APPROVED,1,0,"[Review by sgugger]: LGTM, thanks for fixing!",1,2,2,,1,Fix OOM in doctest,src/transformers/models/gpt_neox/configuration_gpt_neox.py,0,,False,True,True,1097402336
+3315794752,137198,kubernetes/kubernetes,docs: AI-generated documentation update for kubernetes,"## AI Documentation Sync
+
+This PR updates the following documentation files:
+- `README.md`
+- `CONTRIBUTING.md`
+
+**Confidence Score**: 78%
+
+---
+*Created by [DCEA](https://github.com/Rohit27305/dce) — AI Documentation Agent*",276,Rohit27305,2026-02-23T12:34:34Z,False,closed_not_merged,0,NONE,0,0,,2,265,81,,2,docs: update README.md via AI documentation agent | docs: update CONTRIBUTING.md via AI documentation agent,"CONTRIBUTING.md, README.md",8,"size/L, cncf-cla: no, needs-ok-to-test, do-not-merge/release-note-label-needed, needs-priority, needs-triage, do-not-merge/needs-sig, do-not-merge/needs-kind",False,True,False,3315794752
+3436071061,64785,pandas-dev/pandas,PERF: avoid boxing in Term.type for PeriodArray/IntervalArray,"## Summary
+- `Term.type` accessed `.values.dtype` which triggers `external_values()` → `astype(object)` → `_box_values()` for PeriodArray and IntervalArray, boxing every element into a Python object. This was called ~14 times during expression tree construction.
+- Use `.dtype` directly (O(1) for Series/ndarray) and return `object` dtype explicitly for Period/Interval to preserve eval routing behavior.
+- ~200x speedup for `DataFrame.query` on Period-dtype columns.
+
+closes #35247
+
+## Test plan
+- [x] Added `test_query_period_dtype` — queries on Period-dtype column across all engine/parser combos
+- [x] Added `test_query_interval_dtype` — queries on Interval-dtype column
+- [x] Full eval/query test suite passes (11,579 tests)
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",854,jbrockmendel,2026-03-23T20:48:18Z,True,merged,1,APPROVED,1,0,,3,33,6,,2,PERF: avoid boxing in Term.type for PeriodArray/IntervalArray (#35247) | TST: simplify test_query_interval_dtype to work with all parsers,"doc/source/whatsnew/v3.1.0.rst, pandas/core/computation/ops.py, pandas/tests/frame/test_query_eval.py",1,Performance,False,True,True,3436071061
+1949536977,23765,langchain-ai/langchain,feat(community): add support for tool_calls response,"When `model_kwargs={""tools"": tools}` are passed to `ChatLiteLLM`, they are executed, but the response is not recognized correctly
+
+Let's add `tool_calls` to the `additional_kwargs`
+
+Thank you for contributing to LangChain!
+
+## ChatAnthropic
+
+I used the following example to verify the output of llm with tools:
+
+```python
+from langchain_core.pydantic_v1 import BaseModel, Field
+from langchain_anthropic import ChatAnthropic
+
+class GetWeather(BaseModel):
+    '''Get the current weather in a given location'''
+
+    location: str = Field(..., description=""The city and state, e.g. San Francisco, CA"")
+
+class GetPopulation(BaseModel):
+    '''Get the current population in a given location'''
+
+    location: str = Field(..., description=""The city and state, e.g. San Francisco, CA"")
+
+llm = ChatAnthropic(model=""claude-3-sonnet-20240229"")
+llm_with_tools = llm.bind_tools([GetWeather, GetPopulation])
+ai_msg = llm_with_tools.invoke(""Which city is hotter today and which is bigger: LA or NY?"")
+print(ai_msg.tool_calls)
+```
+
+I get the following response:
+
+```json
+[{'name': 'GetWeather', 'args': {'location': 'Los Angeles, CA'}, 'id': 'toolu_01UfDA89knrhw3vFV9X47neT'}, {'name': 'GetWeather', 'args': {'location': 'New York, NY'}, 'id': 'toolu_01NrYVRYae7m7z7tBgyPb3Gd'}, {'name': 'GetPopulation', 'args': {'location': 'Los Angeles, CA'}, 'id': 'toolu_01EPFEpDgzL6vV2dTpD9SVP5'}, {'name': 'GetPopulation', 'args': {'location': 'New York, NY'}, 'id': 'toolu_01B5J6tPJXgwwfhQX9BHP2dt'}]
+```
+
+## LiteLLM
+
+Based on https://litellm.vercel.app/docs/completion/function_call
+
+```python
+from langchain_core.pydantic_v1 import BaseModel, Field
+from langchain_core.utils.function_calling import convert_to_openai_tool
+import litellm
+
+class GetWeather(BaseModel):
+    '''Get the current weather in a given location'''
+
+    location: str = Field(..., description=""The city and state, e.g. San Francisco, CA"")
+
+class GetPopulation(BaseModel):
+    '''Get the current population in a given location'''
+
+    location: str = Field(..., description=""The city and state, e.g. San Francisco, CA"")
+
+prompt = ""Which city is hotter today and which is bigger: LA or NY?""
+tools = [convert_to_openai_tool(GetWeather), convert_to_openai_tool(GetPopulation)]
+
+response = litellm.completion(model=""claude-3-sonnet-20240229"", messages=[{'role': 'user', 'content': prompt}], tools=tools)
+print(response.choices[0].message.tool_calls)
+```
+
+```python
+[ChatCompletionMessageToolCall(function=Function(arguments='{""location"": ""Los Angeles, CA""}', name='GetWeather'), id='toolu_01HeDWV5vP7BDFfytH5FJsja', type='function'), ChatCompletionMessageToolCall(function=Function(arguments='{""location"": ""New York, NY""}', name='GetWeather'), id='toolu_01EiLesUSEr3YK1DaE2jxsQv', type='function'), ChatCompletionMessageToolCall(function=Function(arguments='{""location"": ""Los Angeles, CA""}', name='GetPopulation'), id='toolu_01Xz26zvkBDRxEUEWm9pX6xa', type='function'), ChatCompletionMessageToolCall(function=Function(arguments='{""location"": ""New York, NY""}', name='GetPopulation'), id='toolu_01SDqKnsLjvUXuBsgAZdEEpp', type='function')]
+```
+
+## ChatLiteLLM
+
+When I try the following
+
+```python
+from langchain_core.pydantic_v1 import BaseModel, Field
+from langchain_core.utils.function_calling import convert_to_openai_tool
+from langchain_community.chat_models import ChatLiteLLM
+
+class GetWeather(BaseModel):
+    '''Get the current weather in a given location'''
+
+    location: str = Field(..., description=""The city and state, e.g. San Francisco, CA"")
+
+class GetPopulation(BaseModel):
+    '''Get the current population in a given location'''
+
+    location: str = Field(..., description=""The city and state, e.g. San Francisco, CA"")
+
+prompt = ""Which city is hotter today and which is bigger: LA or NY?""
+tools = [convert_to_openai_tool(GetWeather), convert_to_openai_tool(GetPopulation)]
+
+llm = ChatLiteLLM(model=""claude-3-sonnet-20240229"", model_kwargs={""tools"": tools})
+ai_msg = llm.invoke(prompt)
+print(ai_msg)
+print(ai_msg.tool_calls)
+```
+
+```python
+content=""Okay, let's find out the current weather and populations for Los Angeles and New York City:"" response_metadata={'token_usage': Usage(prompt_tokens=329, completion_tokens=193, total_tokens=522), 'model': 'claude-3-sonnet-20240229', 'finish_reason': 'tool_calls'} id='run-748b7a84-84f4-497e-bba1-320bd4823937-0'
+[]
+```
+
+---
+
+When I apply the changes of this PR, the output is
+
+```json
+[{'name': 'GetWeather', 'args': {'location': 'Los Angeles, CA'}, 'id': 'toolu_017D2tGjiaiakB1HadsEFZ4e'}, {'name': 'GetWeather', 'args': {'location': 'New York, NY'}, 'id': 'toolu_01WrDpJfVqLkPejWzonPCbLW'}, {'name': 'GetPopulation', 'args': {'location': 'Los Angeles, CA'}, 'id': 'toolu_016UKyYrVAV9Pz99iZGgGU7V'}, {'name': 'GetPopulation', 'args': {'location': 'New York, NY'}, 'id': 'toolu_01Sgv1imExFX1oiR1Cw88zKy'}]
+```
+
+If no one reviews your PR within a few days, please @-mention one of baskaryan, efriis, eyurtsev, ccurme, vbarda, hwchase17.
+",5101,igor-drozdov,2024-07-02T13:39:56Z,True,merged,1,APPROVED,1,0,"[Review by ccurme]: Thanks @igor-drozdov.
+
+By the way, there is a standard attribute on `AIMessage` that is intended to house tool calls. See for example here:
+
+https://github.com/langchain-ai/langchain/blob/338cef35b479b47bd4c3d9b3a24739a62d4af1e2/libs/partners/openai/langchain_openai/chat_models/base.py#L110-L131
+
+If we were to update litellm to (1) read tool calls off of AIMessage, and (2) store tool calls on AIMessage, then we could automatically use litellm in some of the newer agent frameworks (see for example [langgraph](https://langchain-ai.github.io/langgraph/tutorials/introduction/)).",1,7,3,,1,feat(community): add support for tool_calls response,libs/community/langchain_community/chat_models/litellm.py,0,,False,True,True,1949536977
+3345314566,64370,pandas-dev/pandas,PERF: left join fastpath,"Written by claude, reviewed manually by me.  But I don't do a ton of joins myself, so I'd like to get @rhshadrach to take a look.
+
+```
+rng = np.random.default_rng(42)
+N_LEFT, N_RIGHT = 5_000_000, 200_000
+left  = pd.DataFrame({""id"": rng.integers(0, N_RIGHT, N_LEFT, dtype=np.int64)})
+right = pd.DataFrame({""id"": np.arange(N_RIGHT, dtype=np.int64), ""v"": rng.random(N_RIGHT)})
+
+%timeit pd.merge(left, right, on=""id"", how=""left"", sort=False)
+183 ms ± 6.11 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)  # <- main
+78.2 ms ± 1.61 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)  # <- PR
+```",635,jbrockmendel,2026-03-02T17:48:08Z,True,merged,1,APPROVED,1,0,[Review by rhshadrach]: lgtm,2,13,3,,2,PERF: left join fastpath | whatsnew,"doc/source/whatsnew/v3.1.0.rst, pandas/core/reshape/merge.py",2,"Performance, Reshaping",False,True,True,3345314566
+3530775397,65231,pandas-dev/pandas,ENH: Make BaseMaskedArray methods 2D-compatible,"## Summary
+
+- Make `_rank` and `_quantile` on `BaseMaskedArray` handle 2D arrays correctly, preparing for the eventual `_supports_2d=True` flag flip on `BaseMaskedDtype`
+- `_rank`: support 2D via column-by-column ranking through the 1D `_rank` path
+- `_quantile`: implement 2D mask logic using `self.isna().all(axis=1)` to identify all-NA rows
+
+This is the first in a series of smaller PRs making individual `BaseMaskedArray` methods 2D-compatible. Subsequent methods (`__array_ufunc__`, `_arith_method`, `_cmp_method`, `fillna`, `interpolate`) will follow in separate PRs to keep review scope manageable.
+
+## Test plan
+
+- [x] New tests in \`pandas/tests/arrays/masked/test_2d.py\` covering both method changes
+- [x] Existing masked array tests still pass
+- [x] Pre-commit hooks pass
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)",894,jbrockmendel,2026-04-14T21:59:14Z,False,closed_not_merged,0,NONE,0,0,,2,188,8,,4,ENH: Make BaseMaskedArray methods 2D-compatible | TST: Update test for 2D masked array arithmetic support | TYP: Fix mypy errors in BaseMaskedArray 2D methods | REF: Narrow PR scope to _rank and _quantile only,"pandas/core/arrays/masked.py, pandas/tests/arrays/masked/test_2d.py",3,"Enhancement, NA - MaskedArrays, Stale",False,True,False,3530775397
+3310237262,44196,huggingface/transformers,Fix #43881: glm-4v-9b loading failed,"Fixes #43881
+
+## Summary
+This PR fixes: glm-4v-9b loading failed
+
+## Changes
+```
+src/transformers/configuration_utils.py | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+```
+
+## Testing
+Please review the changes carefully. The fix was verified against the existing test suite.
+
+---
+*This PR was created with the assistance of Claude Sonnet 4.6 by Anthropic | effort: low. Happy to make any adjustments!*",458,danielalanbates,2026-02-21T04:41:02Z,False,closed_not_merged,0,NONE,0,0,,1,12,1,,1,Fix #43881: preserve generation params in PretrainedConfig for backward compatibility,src/transformers/configuration_utils.py,1,Code agent slop,False,True,False,3310237262
+1679478752,16039,langchain-ai/langchain,community: add new gpt-3.5-turbo-1106 finetuned for cost calculation,"**Description:** Added the new gpt-3.5-turbo-1106 for **finetuned** cost calculation, 
+**Issue:** no issue found open
+
+By the information in OpenAI the pricing is the same as the older model (0613)",268,nirkopler,2024-01-15T15:43:11Z,True,merged,1,APPROVED,1,0,"[Review by hwchase17]: i think we should also have this in langchain_openai, but i dont see the callback there yet",1,2,0,,1,Update openai_info.py,libs/community/langchain_community/callbacks/openai_info.py,0,,False,True,True,1679478752
+3553625631,65306,pandas-dev/pandas,BUG: Fix AttributeError for str[i]/str[slice] on ArrowExtensionArray,"- [x] closes #65112\n- [x] Tests added and passed\n- [ ] All code checks passed\n- [x] Added type annotations to new arguments/methods/functions.\n- [x] Added an entry in the latest `doc/source/whatsnew/v3.1.0.rst` file\n- [x] I have reviewed and followed all the contribution guidelines\n- [x] If I used AI to develop this pull request, I prompted it to follow `AGENTS.md`.\n\n## Problem\n\n`Series.str[0]` (or any integer/slice indexing via the `.str` accessor) raises `AttributeError` on `ArrowExtensionArray`, which is the backing array when `convert_dtypes(dtype_backend=""pyarrow"")` is used on string data.\n\n```python\n>>> ser = pd.Series([""abc"", ""def""]).convert_dtypes(dtype_backend=""pyarrow"")\n>>> ser.str[0]\n# AttributeError: 'ArrowExtensionArray' object has no attribute '_str_getitem'\n```\n\n## Root cause\n\nThe `.str` accessor `__getitem__` calls `_str_getitem` on the backing array. `ArrowExtensionArray` inherits from `ArrowStringArrayMixin` which has `_str_get` and `_str_slice`, but `_str_getitem` was never added. It previously existed via `BaseStringArrayMethods`, which was removed in #62155 (pandas 3.0).\n\n## Fix\n\nAdd `_str_getitem(self, key: int | slice) -> Self` to `ArrowStringArrayMixin`, delegating to `_str_get` for integer keys and `_str_slice` for slice keys — matching the `ObjectStringArrayMixin` implementation.\n\n## AI Disclosure\n\nI used GitHub Copilot (Claude Sonnet 4.6) as an assistant. I prompted it to follow `AGENTS.md`. I identified the root cause, reviewed all generated code.",1595,tinezivic,2026-04-20T04:08:09Z,False,closed_not_merged,0,NONE,0,0,,3,48,0,"_str_get,_str_getitem,_str_pad,_str_replace,test_string_slice_get_syntax,test_string_slice_get_syntax_arrow_extension_array,test_string_slice_out_of_bounds_nested",2,BUG: Fix AttributeError for str[i] on ArrowExtensionArray (GH#65112) | TYP: Add type annotation to _str_getitem,"doc/source/whatsnew/v3.1.0.rst,pandas/core/arrays/_arrow_string_mixins.py,pandas/tests/strings/test_strings.py",0,,False,True,False,3553625631
+3147261276,43120,huggingface/transformers,[`GPT OSS`] Fix false flag,"#42736 removed flex attn support but it turns out that #41083 added support for it in flex attention. There were typos that indicated wrong support for attn flavors, sorry about that should've noticed it / checked it properly.
+
+So gpt oss does not support sdpa but everything else (limited FA support to the specific kernel).",353,vasqu,2026-01-05T19:22:48Z,True,merged,1,APPROVED,1,0,[Review by Cyrilvallez]: Yes thanks!,2,1,2,,1,fix,"src/transformers/models/gpt_oss/modeling_gpt_oss.py, src/transformers/models/gpt_oss/modular_gpt_oss.py",0,,False,True,True,3147261276
+1497261227,10051,langchain-ai/langchain,Add XMLOutputParser,"**Description**
+Adds new output parser, this time enabling the output of LLM to be of an XML format. Seems to be particularly useful together with Claude model. 
+Addresses [issue 9820](https://github.com/langchain-ai/langchain/issues/9820).
+
+**Twitter handle**
+@deepsense_ai @matt_wosinski",313,mateusz-wosinski-ds,2023-08-31T14:13:14Z,True,merged,1,APPROVED,3,1,"[Review by hwchase17]: interesting so this still parses it to a single string? wouldnt it make more sense to parse to a list of dictionaries or something? eg the json loader doesnt return a json string, it returns the result of calling `json.load`
+[Inline on libs/langchain/tests/unit_tests/output_parsers/test_xml_parser.py LNone]: stray print statement",5,465,0,,13,First version of the xml parser | Instruct the model what tags should be present in the XML output | Fix linting errors | Added test; changed the way of parsing | PR comments | Use Claude instead of OpenAI models; PR comments | Linter fixes | Use pytest.raises | Change output format from string to dict | Remove empty cell | Fix linter | One more example in the notebook | Updated notebook,"docs/extras/modules/model_io/output_parsers/xml.ipynb, libs/langchain/langchain/output_parsers/__init__.py, libs/langchain/langchain/output_parsers/format_instructions.py, libs/langchain/langchain/output_parsers/xml.py, libs/langchain/tests/unit_tests/output_parsers/test_xml_parser.py",0,,False,True,True,1497261227
+3266796678,35741,facebook/react,[DevTools] Fix memory leak when unmounting hoistables,"## Summary
+
+For Host Hoistables we have may have many devtools instances to choose from as the nearest instance since React Float may have deduplicated the public host instance. We keep an internal map from the public host instance to the chosen devtools instance. When we were unmounting a Host Hoistable, we pick the next Fiber that's also referencing the same public host instance.
+
+Unfortunately we were using the wrong values when moving those pointers. This wasn't caught by Flow since our `HostInstance` type is any object so you can assign anything to it and assign it to anything (here we assigned a `DevToolsInstance` to a `HostInstance`).
+
+We could improve type safety for those operations but it's quite involved. It's the only bug where we currently accidentally assign these two types. If this happens more often, we can harden the types.
+
+Also ensures element inspection works when unmounting Hoist Hoistables. You'd have to actually inspect the DOM node to notice the bug. The memory leak you always get so I choose that bug as the headline.
+
+Found with Claude + Opus 4.6
+
+## How did you test this change?
+
+- [x] Added test (1st commit has previous behavior)",1241,eps1lon,2026-02-10T11:36:23Z,True,merged,1,APPROVED,1,0,,2,56,1,,2,Current behavior | [DevTools] Fix memory leak when unmounting hoistables,"packages/react-devtools-shared/src/__tests__/store-test.js, packages/react-devtools-shared/src/backend/fiber/renderer.js",2,"CLA Signed, React Core Team",False,True,True,3266796678
+2042905018,25832,langchain-ai/langchain,core[minor]: Add msg content formatting util,"Fixes #25813 
+
+Direct usage
+```python
+from langchain_core.messages import format_messages_as, AIMessage, HumanMessage, ToolMessage, SystemMessage
+
+messages = [
+    SystemMessage([{""type"": ""text"", ""text"": ""foo""}]),
+    {""role"": ""user"", ""content"": [{""type"": ""text"", ""text"": ""whats in this""}, {""type"": ""image_url"", ""image_url"": {""url"": ""data:image/png;base64,'/9j/4AAQSk'""}}]},
+    AIMessage("""", tool_calls=[{""name"": ""analyze"", ""args"": {""baz"": ""buz""}, ""id"": ""1"", ""type"": ""tool_call""}]),
+    ToolMessage(""foobar"", tool_call_id=""1"", name=""bar""), 
+    {""role"": ""assistant"", ""content"": ""thats nice""},
+]
+oai_strings = format_messages_as(messages, format=""openai"", text=""string"")
+# -> [
+#     SystemMessage(content='foo'),
+#     HumanMessage(content=[{'type': 'text', 'text': 'whats in this'}, {'type': 'image_url', 'image_url': {'url': ""data:image/png;base64,'/9j/4AAQSk'""}}]),
+#     AIMessage(content='', tool_calls=[{'name': 'analyze', 'args': {'baz': 'buz'}, 'id': '1', 'type': 'tool_call'}]),
+#     ToolMessage(content='foobar', name='bar', tool_call_id='1'),
+#     AIMessage(content='thats nice')
+# ]
+
+anthropic_blocks = format_messages_as(messages, format=""anthropic"", text=""block"")
+# -> [
+#     SystemMessage(content=[{'type': 'text', 'text': 'foo'}]),
+#     HumanMessage(content=[{'type': 'text', 'text': 'whats in this'}, {'type': 'image', 'source': {'type': 'base64', 'media_type': 'image/png', 'data': ""'/9j/4AAQSk'""}}]),
+#     AIMessage(content=[{'type': 'tool_use', 'input': {'baz': 'buz'}, 'id': '1', 'name': 'analyze'}], tool_calls=[{'name': 'analyze', 'args': {'baz': 'buz'}, 'id': '1', 'type': 'tool_call'}]),
+#     HumanMessage(content=[{'type': 'tool_result', 'content': 'foobar', 'tool_use_id': '1', 'is_error': False}]),
+#     AIMessage(content=[{'type': 'text', 'text': 'thats nice'}])
+# ]
+```
+
+Chaining
+```python
+  from langchain_core.messages import format_messages
+  from langchain.chat_models import init_chat_model
+  formatter = format_messages(format=""langchain-openai"", text_format=""string"")
+  llm = init_chat_model() | formatter
+  llm.invoke(
+      [{""role"": ""user"", ""content"": ""how are you""}],
+      config={""model"": ""gpt-4o""},
+  )
+  # -> AIMessage([""I am good...""], ...)
+  llm.invoke(
+      [{""role"": ""user"", ""content"": ""whats your name""}],
+      config={""model"": ""claude-3-5-sonnet-20240620""}
+  )
+  # -> AIMessage([""My name is...], ...)
+```",2457,baskaryan,2024-08-29T00:01:35Z,False,closed_not_merged,3,APPROVED,20,11,"[Review by efriis]: light preferences commented. Also looks good as is
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: could we do `content_format` or something instead of `text`?
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: and the above could be ""provider"" or something
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: content_format feels a little too broad given it only relates to text blocks — text_format?
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: sure!
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: ```suggestion
+def format_messages(
+```
+? 🌝
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: ```suggestion
+    format: Literal[""openai"", ""anthropic"", ""openai_text"", ""anthropic_text""],
+```
+might be confusing to have `text_format` option if we ever introduce something else that doesn't offer one or the other
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: don't we also have a `convert_messages_to_dict` somewhere that does the same thing? Would that kind of naming make more sense?
+
+Might make it clearer this is only meant to handle conversion to dicts (incase anyone tries to add conversions to custom sdks at some point)
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: something that doesn't offer string or block options?
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: watcha mean meant to handle conversion to dict?
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: yep - for example if new_model_provider_c only supports blocks and not string content in their api for some reason. Or anthropic introduces a block_2 format. Keeping it 1-dimensional is easier to maintain in that case.
+[Inline on libs/core/langchain_core/messages/utils.py LNone]: it formats the contents as openai/anthropic dicts, not <insert some model provider sdk> basemodel/protobuf/etc types for theirs.",6,1766,21,,17,core[minor]: Add msg content formatting util | fmt | fmt | Merge branch 'master' into bagatur/format_content_as | wip transform | Merge branch 'master' into bagatur/format_content_as | fmt | fmt | fmt | fmt | Merge branch 'master' into bagatur/format_content_as | Merge branch 'master' into bagatur/format_content_as | Merge branch 'master' into bagatur/format_content_as | fmt | fmt | fmt | merge,"libs/core/langchain_core/messages/__init__.py, libs/core/langchain_core/messages/utils.py, libs/core/tests/unit_tests/messages/test_imports.py, libs/core/tests/unit_tests/messages/test_utils.py, libs/langchain/langchain/chat_models/base.py, libs/partners/anthropic/langchain_anthropic/chat_models.py",0,,False,True,False,2042905018
+3540778322,36285,facebook/react,[react-native-renderer] Delete Paper (legacy) renderer,"## Summary
+
+The Paper renderer is no longer used in React Native. This commit removes all remaining Paper source code, tests, build system references, and Paper backward-compatibility branches in shared code.
+
+Deleted Paper-only source files:
+- ReactNativeRenderer.js, ReactNativeInjection.js, ReactFiberConfigNative.js
+- ReactNativeComponentTree.js, ReactNativeEventEmitter.js
+- ReactNativeFiberHostComponent.js, ReactNativeGlobalResponderHandler.js
+- ReactNativeAttributePayload.js, NativeMethodsMixinUtils.js
+- ReactFiberConfig.native.js (reconciler fork)
+- index.js (Paper entry point)
+
+Cleaned up shared files:
+- ReactNativePublicCompat.js: removed _nativeTag checks, UIManager/ legacySendAccessibilityEvent Paper fallbacks
+- ReactNativeFiberInspector.js: removed getInspectorDataForViewTag, UIManager.measure fallback, Paper branch in getInspectorDataForViewAtPoint
+- ReactFiberConfigFabric.js: removed _nativeTag backward compat in getPublicInstance, removed getInspectorDataForViewTag from devtools config
+- ReactNativeTypes.js: removed ReactNativeType (Paper API type)
+
+Cleaned up build system:
+- inlinedHostConfigs.js: removed shortName 'native' config
+- forks.js: removed dead 'react-native-renderer' case
+- Deleted ReactNative.js shim and Paper-only test mocks
+
+## How did you test this change?
+
+Manually synced the renderer to RN and passed all Fantom tests.
+
+Manually verified the differences in the generated `ReactFabric-dev.js` file. Only Paper compat logic has been removed.
+
+<details>
+<summary>diff</summary> 
+
+```diff
+--- /tmp/react-fabric-baseline/ReactFabric-dev.js	2026-04-16 16:42:42
++++ build/react-native/implementations/ReactFabric-dev.js	2026-04-16 18:08:43
+@@ -30,43 +30,19 @@
+         : emptyObject;
+     }
+     function createHierarchy(fiberHierarchy) {
+-      return fiberHierarchy.map(function (fiber$jscomp$0) {
++      return fiberHierarchy.map(function (fiber) {
+         return {
+-          name: getComponentNameFromType(fiber$jscomp$0.type),
++          name: getComponentNameFromType(fiber.type),
+           getInspectorData: function () {
+             return {
+-              props: getHostProps(fiber$jscomp$0),
++              props: getHostProps(fiber),
+               measure: function (callback) {
+-                var hostFiber = findCurrentHostFiber(fiber$jscomp$0);
+-                if (
+-                  (hostFiber =
+-                    null != hostFiber &&
+-                    null !== hostFiber.stateNode &&
+-                    hostFiber.stateNode.node)
+-                )
++                var hostFiber = findCurrentHostFiber(fiber);
++                (hostFiber =
++                  null != hostFiber &&
++                  null !== hostFiber.stateNode &&
++                  hostFiber.stateNode.node) &&
+                   nativeFabricUIManager.measure(hostFiber, callback);
+-                else {
+-                  hostFiber = ReactNativePrivateInterface.UIManager;
+-                  var JSCompiler_temp_const = hostFiber.measure,
+-                    JSCompiler_inline_result;
+-                  a: {
+-                    for (var fiber = fiber$jscomp$0; fiber; ) {
+-                      null !== fiber.stateNode &&
+-                        5 === fiber.tag &&
+-                        (JSCompiler_inline_result = findNodeHandle(
+-                          fiber.stateNode
+-                        ));
+-                      if (JSCompiler_inline_result) break a;
+-                      fiber = fiber.child;
+-                    }
+-                    JSCompiler_inline_result = null;
+-                  }
+-                  return JSCompiler_temp_const.call(
+-                    hostFiber,
+-                    JSCompiler_inline_result,
+-                    callback
+-                  );
+-                }
+               }
+             };
+           }
+@@ -1805,18 +1781,6 @@
+       }
+       return null;
+     }
+-    function doesFiberContain(parentFiber, childFiber) {
+-      for (
+-        var parentFiberAlternate = parentFiber.alternate;
+-        null !== childFiber;
+-
+-      ) {
+-        if (childFiber === parentFiber || childFiber === parentFiberAlternate)
+-          return !0;
+-        childFiber = childFiber.return;
+-      }
+-      return !1;
+-    }
+     function traverseVisibleHostChildren(
+       child,
+       searchWithinHosts,
+@@ -16986,44 +16950,6 @@
+     function getCurrentFiberForDevTools() {
+       return current;
+     }
+-    function findNodeHandle(componentOrHandle) {
+-      var owner = current;
+-      null !== owner &&
+-        isRendering &&
+-        null !== owner.stateNode &&
+-        (owner.stateNode._warnedAboutRefsInRender ||
+-          console.error(
+-            ""%s is accessing findNodeHandle inside its render(). render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead."",
+-            getComponentNameFromType(owner.type) || ""A component""
+-          ),
+-        (owner.stateNode._warnedAboutRefsInRender = !0));
+-      if (null == componentOrHandle) return null;
+-      if (""number"" === typeof componentOrHandle) return componentOrHandle;
+-      if (componentOrHandle._nativeTag) return componentOrHandle._nativeTag;
+-      if (
+-        null != componentOrHandle.canonical &&
+-        null != componentOrHandle.canonical.nativeTag
+-      )
+-        return componentOrHandle.canonical.nativeTag;
+-      if (
+-        (owner =
+-          ReactNativePrivateInterface.getNativeTagFromPublicInstance(
+-            componentOrHandle
+-          ))
+-      )
+-        return owner;
+-      componentOrHandle = findHostInstanceWithWarning(
+-        componentOrHandle,
+-        ""findNodeHandle""
+-      );
+-      return null == componentOrHandle
+-        ? componentOrHandle
+-        : null != componentOrHandle._nativeTag
+-          ? componentOrHandle._nativeTag
+-          : ReactNativePrivateInterface.getNativeTagFromPublicInstance(
+-              componentOrHandle
+-            );
+-    }
+     function getNodeFromInternalInstanceHandle(internalInstanceHandle) {
+       return (
+         internalInstanceHandle &&
+@@ -17134,12 +17060,9 @@
+         }
+         return instance.canonical.publicInstance;
+       }
+-      return null != instance.containerInfo &&
+-        null != instance.containerInfo.publicInstance
++      return null != instance.containerInfo
+         ? instance.containerInfo.publicInstance
+-        : null != instance._nativeTag
+-          ? instance
+-          : null;
++        : null;
+     }
+     function getPublicInstanceFromHostFiber(fiber) {
+       fiber = getPublicInstance(fiber.stateNode);
+@@ -18017,7 +17940,6 @@
+       DefaultEventPriority = 32,
+       IdleEventPriority = 268435456,
+       searchTarget = null,
+-      instanceCache = new Map(),
+       bind = Function.prototype.bind,
+       valueStack = [];
+     var fiberStack = [];
+@@ -20041,24 +19963,19 @@
+         _nativeFabricUIManage.unstable_getCurrentEventPriority,
+       extraDevToolsConfig = {
+         getInspectorDataForInstance: getInspectorDataForInstance,
+-        getInspectorDataForViewTag: function (viewTag) {
+-          viewTag = instanceCache.get(viewTag) || null;
+-          return getInspectorDataForInstance(viewTag);
+-        },
+         getInspectorDataForViewAtPoint: function (
+           inspectedView,
+           locationX,
+           locationY,
+           callback
+         ) {
+-          var closestInstance = null,
+-            fabricNode =
+-              ReactNativePrivateInterface.getNodeFromPublicInstance(
+-                inspectedView
+-              );
+-          fabricNode
++          var closestInstance = null;
++          (inspectedView =
++            ReactNativePrivateInterface.getNodeFromPublicInstance(
++              inspectedView
++            ))
+             ? nativeFabricUIManager.findNodeAtPoint(
+-                fabricNode,
++                inspectedView,
+                 locationX,
+                 locationY,
+                 function (internalInstanceHandle) {
+@@ -20109,32 +20026,9 @@
+                   }
+                 }
+               )
+-            : null != inspectedView._internalFiberInstanceHandleDEV
+-              ? ReactNativePrivateInterface.UIManager.findSubviewIn(
+-                  findNodeHandle(inspectedView),
+-                  [locationX, locationY],
+-                  function (nativeViewTag, left, top, width, height) {
+-                    var inspectorData = getInspectorDataForInstance(
+-                      instanceCache.get(nativeViewTag) || null
+-                    );
+-                    callback(
+-                      assign({}, inspectorData, {
+-                        pointerY: locationY,
+-                        frame: {
+-                          left: left,
+-                          top: top,
+-                          width: width,
+-                          height: height
+-                        },
+-                        touchedViewTag: nativeViewTag,
+-                        closestPublicInstance: nativeViewTag
+-                      })
+-                    );
+-                  }
+-                )
+-              : console.error(
+-                  ""getInspectorDataForViewAtPoint expects to receive a host component""
+-                );
++            : console.error(
++                ""getInspectorDataForViewAtPoint expects to receive a host component""
++              );
+         }
+       },
+       getViewConfigForType =
+@@ -20368,23 +20262,12 @@
+       );
+     };
+     exports.dispatchCommand = function (handle, command, args) {
+-      var nativeTag =
+-        null != handle._nativeTag
+-          ? handle._nativeTag
+-          : ReactNativePrivateInterface.getNativeTagFromPublicInstance(handle);
+-      null == nativeTag
+-        ? console.error(
++      handle = ReactNativePrivateInterface.getNodeFromPublicInstance(handle);
++      null != handle
++        ? nativeFabricUIManager.dispatchCommand(handle, command, args)
++        : console.error(
+             ""dispatchCommand was called with a ref that isn't a native component. Use React.forwardRef to get access to the underlying native component""
+-          )
+-        : ((handle =
+-            ReactNativePrivateInterface.getNodeFromPublicInstance(handle)),
+-          null != handle
+-            ? nativeFabricUIManager.dispatchCommand(handle, command, args)
+-            : ReactNativePrivateInterface.UIManager.dispatchViewManagerCommand(
+-                nativeTag,
+-                command,
+-                args
+-              ));
++          );
+     };
+     exports.findHostInstance_DEPRECATED = function (componentOrHandle) {
+       var owner = current;
+@@ -20402,14 +20285,46 @@
+         : componentOrHandle.canonical &&
+             componentOrHandle.canonical.publicInstance
+           ? componentOrHandle.canonical.publicInstance
+-          : componentOrHandle._nativeTag
+-            ? componentOrHandle
+-            : findHostInstanceWithWarning(
+-                componentOrHandle,
+-                ""findHostInstance_DEPRECATED""
+-              );
++          : findHostInstanceWithWarning(
++              componentOrHandle,
++              ""findHostInstance_DEPRECATED""
++            );
+     };
+-    exports.findNodeHandle = findNodeHandle;
++    exports.findNodeHandle = function (componentOrHandle) {
++      var owner = current;
++      null !== owner &&
++        isRendering &&
++        null !== owner.stateNode &&
++        (owner.stateNode._warnedAboutRefsInRender ||
++          console.error(
++            ""%s is accessing findNodeHandle inside its render(). render() should be a pure function of props and state. It should never access something that requires stale data from the previous render, such as refs. Move this logic to componentDidMount and componentDidUpdate instead."",
++            getComponentNameFromType(owner.type) || ""A component""
++          ),
++        (owner.stateNode._warnedAboutRefsInRender = !0));
++      if (null == componentOrHandle) return null;
++      if (""number"" === typeof componentOrHandle) return componentOrHandle;
++      if (
++        null != componentOrHandle.canonical &&
++        null != componentOrHandle.canonical.nativeTag
++      )
++        return componentOrHandle.canonical.nativeTag;
++      if (
++        (owner =
++          ReactNativePrivateInterface.getNativeTagFromPublicInstance(
++            componentOrHandle
++          ))
++      )
++        return owner;
++      componentOrHandle = findHostInstanceWithWarning(
++        componentOrHandle,
++        ""findNodeHandle""
++      );
++      return null == componentOrHandle
++        ? componentOrHandle
++        : ReactNativePrivateInterface.getNativeTagFromPublicInstance(
++            componentOrHandle
++          );
++    };
+     exports.getNodeFromInternalInstanceHandle =
+       getNodeFromInternalInstanceHandle;
+     exports.getPublicInstanceFromInternalInstanceHandle = function (
+@@ -20433,14 +20348,6 @@
+         : null;
+     };
+     exports.isChildPublicInstance = function (parentInstance, childInstance) {
+-      if (
+-        parentInstance._internalFiberInstanceHandleDEV &&
+-        childInstance._internalFiberInstanceHandleDEV
+-      )
+-        return doesFiberContain(
+-          parentInstance._internalFiberInstanceHandleDEV,
+-          childInstance._internalFiberInstanceHandleDEV
+-        );
+       parentInstance =
+         ReactNativePrivateInterface.getInternalInstanceHandleFromPublicInstance(
+           parentInstance
+@@ -20449,9 +20356,27 @@
+         ReactNativePrivateInterface.getInternalInstanceHandleFromPublicInstance(
+           childInstance
+         );
+-      return null != parentInstance && null != childInstance
+-        ? doesFiberContain(parentInstance, childInstance)
+-        : !1;
++      if (null != parentInstance && null != childInstance) {
++        a: {
++          for (
++            var parentFiberAlternate = parentInstance.alternate;
++            null !== childInstance;
++
++          ) {
++            if (
++              childInstance === parentInstance ||
++              childInstance === parentFiberAlternate
++            ) {
++              parentInstance = !0;
++              break a;
++            }
++            childInstance = childInstance.return;
++          }
++          parentInstance = !1;
++        }
++        return parentInstance;
++      }
++      return !1;
+     };
+     exports.render = function (
+       element,
+@@ -20521,22 +20446,12 @@
+       return element;
+     };
+     exports.sendAccessibilityEvent = function (handle, eventType) {
+-      var nativeTag =
+-        null != handle._nativeTag
+-          ? handle._nativeTag
+-          : ReactNativePrivateInterface.getNativeTagFromPublicInstance(handle);
+-      null == nativeTag
+-        ? console.error(
++      handle = ReactNativePrivateInterface.getNodeFromPublicInstance(handle);
++      null != handle
++        ? nativeFabricUIManager.sendAccessibilityEvent(handle, eventType)
++        : console.error(
+             ""sendAccessibilityEvent was called with a ref that isn't a native component. Use React.forwardRef to get access to the underlying native component""
+-          )
+-        : ((handle =
+-            ReactNativePrivateInterface.getNodeFromPublicInstance(handle)),
+-          null != handle
+-            ? nativeFabricUIManager.sendAccessibilityEvent(handle, eventType)
+-            : ReactNativePrivateInterface.legacySendAccessibilityEvent(
+-                nativeTag,
+-                eventType
+-              ));
++          );
+     };
+     exports.stopSurface = function (containerTag) {
+       var root = roots.get(containerTag);
+```
+
+</details>",16071,rubennorte,2026-04-16T17:10:29Z,True,merged,1,APPROVED,1,0,[Review by hoxyq]: Can't believe it is happening,35,16,4703,,1,[react-native-renderer] Delete Paper (legacy) renderer,"packages/react-native-renderer/index.js, packages/react-native-renderer/src/NativeMethodsMixinUtils.js, packages/react-native-renderer/src/ReactFiberConfigFabric.js, packages/react-native-renderer/src/ReactFiberConfigNative.js, packages/react-native-renderer/src/ReactNativeAttributePayload.js, packages/react-native-renderer/src/ReactNativeComponentTree.js, packages/react-native-renderer/src/ReactNativeEventEmitter.js, packages/react-native-renderer/src/ReactNativeFiberHostComponent.js, packages/react-native-renderer/src/ReactNativeFiberInspector.js, packages/react-native-renderer/src/ReactNativeGlobalResponderHandler.js, packages/react-native-renderer/src/ReactNativeInjection.js, packages/react-native-renderer/src/ReactNativePublicCompat.js, packages/react-native-renderer/src/ReactNativeRenderer.js, packages/react-native-renderer/src/ReactNativeTypes.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/BatchedBridge.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/ExceptionsManager.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/Platform.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/RCTEventEmitter.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/ReactNativePrivateInterface.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/TextInputState.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/UIManager.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/flattenStyle.js, packages/react-native-renderer/src/__mocks__/react-native/Libraries/ReactPrivate/legacySendAccessibilityEvent.js, packages/react-native-renderer/src/__tests__/ReactFabric-test.internal.js, packages/react-native-renderer/src/__tests__/ReactFabricAndNative-test.internal.js, packages/react-native-renderer/src/__tests__/ReactNativeAttributePayload-test.internal.js, packages/react-native-renderer/src/__tests__/ReactNativeEvents-test.internal.js, packages/react-native-renderer/src/__tests__/ReactNativeMount-test.internal.js, packages/react-native-renderer/src/__tests__/createReactNativeComponentClass-test.internal.js, packages/react-reconciler/src/forks/ReactFiberConfig.native.js, packages/react/src/__tests__/ReactMismatchedVersions-test.js, scripts/flow/react-native-host-hooks.js, scripts/rollup/forks.js, scripts/rollup/shims/react-native/ReactNative.js, scripts/shared/inlinedHostConfigs.js",1,CLA Signed,False,True,True,3540778322
+3953371066,323406,microsoft/vscode,Bump version to 1.128.0,Automated version bump after release branch creation.\n\n1.127.0 → 1.128.0 (copilot → 0.56.0)\n\n**How this bump was generated:**\n- `node --experimental-strip-types scripts/vscode-version-bump/bump-version-fields.ts <repo>`\n\nTriggered by [workflow run](https://github.com/microsoft/vscode-engineering/actions/runs/28351804819),345,vs-code-engineering[bot],2026-06-29T06:00:17Z,True,merged,3,APPROVED,3,0,[Review by copilot-pull-request-reviewer[bot]]: Copilot can't review bot-authored pull requests automatically. A user with Copilot access can request a review manually.,4,8,8,,2,Bump version to 1.128.0 | signing commit,"extensions/copilot/package-lock.json,extensions/copilot/package.json,package-lock.json,package.json",0,,True,True,True,3953371066
+3364422130,64424,pandas-dev/pandas,TST: Add test for GH#57702 - pd.array and pd.Series str dtype consistency,"## Summary
+Add test to verify that `pd.array` and `pd.Series` handle `dtype=str` consistently when `None` values are present. Both should preserve `None`/`NA` values and return `object` dtype instead of converting `None` to the string `'None'`.
+
+The fix for this issue was already implemented in the codebase, but test coverage was missing.
+
+Closes #57702
+
+## Test plan
+- [x] Test added for pd.array and pd.Series consistency with dtype=str and None values
+- [x] Pre-commit hooks pass
+- [x] Code follows pandas contribution guidelines
+- [x] AI usage declared
+
+🤖 I used AI (Claude) to assist with this PR",676,logiop,2026-03-06T15:41:30Z,False,closed_not_merged,1,COMMENTED,6,3,"[Inline on pandas/core/arrays/numpy_.py L151]: would it be viable to make ensure_string_array support 2D directly?  then again, how do we get here with 2D?
+[Inline on pandas/core/generic.py L11751]: seems unrelated?
+[Inline on pandas/tests/frame/indexing/test_setitem.py L1509]: utcfromtimestamp is deprecated
+
+also this seems unrelated to the rest of the PR",7,106,1,,12,Add tests for GH#55136 - datetime conversion with .dt.to_pydatetime() and .astype() | Merge pull request #1 from logiop/fix/issue-55136-datetime-conversion-tests | BUG: Fix GH#57702 - Make pd.array consistent with pd.Series for None with dtype=str | Merge pull request #2 from logiop/fix/gh-57702-array-str-dtype | BUG: GH#53098 - Validate numeric_only parameter is boolean in reduction operations | Merge pull request #3 from logiop/fix/gh-53098-numeric-only-validation | TST: GH#55423 - Add regression test for tz-aware datetime dtype preservation in setitem with expansion | Merge pull request #4 from logiop/fix/gh-55423-tz-aware-dtype-regression | TST: Add test for GH#57702 - pd.array and pd.Series str dtype consistency | TST: Fix indentation bug in test_astype_int_na_string | TST: Remove duplicate test from test_numpy.py | TST: Fix regex pattern in test_astype_datetime_raises_typeerror,"doc/source/whatsnew/v3.1.0.rst, pandas/core/arrays/numpy_.py, pandas/core/generic.py, pandas/tests/arrays/test_array.py, pandas/tests/frame/indexing/test_setitem.py, pandas/tests/frame/test_reductions.py, pandas/tests/series/methods/test_astype.py",1,Needs Tests,False,True,False,3364422130
+3440478495,138005,kubernetes/kubernetes,Add AGENTS.md,"Introduce guidance for AI agents using the open format https://agents.md/
+
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/devel/development.md#development-guide
+2. Please label this pull request according to what type of issue you are addressing, especially if this is a release targeted pull request. For reference on required PR/issue labels, read here:
+https://git.k8s.io/community/contributors/devel/sig-release/release.md#issuepr-kind-label
+3. Ensure you have added or ran the appropriate tests for your PR: https://git.k8s.io/community/contributors/devel/sig-testing/testing.md
+4. If you want *faster* PR reviews, read how: https://git.k8s.io/community/contributors/guide/pull-requests.md#best-practices-for-faster-reviews
+5. If the PR is unfinished, see how to mark it: https://git.k8s.io/community/contributors/guide/pull-requests.md#marking-unfinished-pull-requests
+-->
+
+#### What type of PR is this?
+
+<!--
+Add one of the following kinds:
+/kind bug
+/kind dependency
+/kind cleanup
+/kind documentation
+/kind feature
+
+Optionally add one or more of the following kinds if applicable:
+/kind api-change
+/kind deprecation
+/kind failing-test
+/kind flake
+/kind regression
+-->
+
+#### What this PR does / why we need it:
+
+#### Which issue(s) this PR is related to:
+<!--
+Please link relevant issues to help with tracking.
+
+To automatically close the linked issue(s) when this PR is merged,
+add the word ""Fixes"" before the issue number or link.
+Do not use ""Fixes"" if the PR is of kind `failing-test` or `flake`.
+
+Reference KEPs when applicable in addition to specific issues.
+
+Examples:
+Fixes #<issue number>
+<issue link> (issue in a different repository)
+KEP: https://github.com/kubernetes/enhancements/issues/<kep-issue-number>
+
+If there is no associated issue, then write ""N/A"".
+-->
+
+#### Special notes for your reviewer:
+
+#### Does this PR introduce a user-facing change?
+<!--
+If no, just write ""NONE"" in the release-note block below.
+If yes, a release note is required:
+Enter your extended release note in the block below. If the PR requires additional action from users switching to the new release, include the string ""action required"".
+
+For more information on release notes see: https://git.k8s.io/community/contributors/guide/release-notes.md
+-->
+```release-note
+
+```
+
+#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:
+
+<!--
+This section can be blank if this pull request does not require a release note.
+
+When adding links which point to resources within git repositories, like
+KEPs or supporting documentation, please reference a specific commit and avoid
+linking directly to the master branch. This ensures that links reference a
+specific point in time, rather than a document that may change over time.
+
+See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files
+
+Please use the following format for linking documentation:
+- [KEP]: <link>
+- [Usage]: <link>
+- [Other doc]: <link>
+-->
+```docs
+
+```
+",3367,ameukam,2026-03-24T16:41:23Z,True,merged,4,COMMENTED,49,28,"[Review by BenTheElder]: Every line in this will consume tokens for all development in this repo. 
+Let's keep it focused. Most of the content here is redundant currently.
+[Inline on AGENTS.md LNone]: Why? em-dash is a perfectly cromulent character. And we're explicitly NOT trying to hide when LLMs are used, in fact we require disclosure ...
+[Inline on AGENTS.md LNone]: Is this a good use of tokens?
+[Inline on AGENTS.md LNone]: I assume it already has been trained on ""kubernetes"" and ""k8s"", and we already cover most of these details in the README.md. IME virtually all models have some awareness of this project, kubectl, etc.
+I don't think the model needs to know about the Apache 2 License here (versus the boilerplate header comment below)
+[Inline on AGENTS.md LNone]: Isn't this standard? Do we really need to specify this?
+[Inline on AGENTS.md LNone]: You rarely actually want to run this.
+[Inline on AGENTS.md LNone]: Let's just tell it to use the makefile? The makefile is self-documenting.
+[Inline on AGENTS.md LNone]: Most of this section seems redundant to the ""critical constraints"" section
+[Inline on AGENTS.md LNone]: I don't think we should assume that contributors are OK auto-approving any commands. Let's leave that to the harness.
+[Inline on AGENTS.md LNone]: I think we can delete the whole ""Permissions"" section.
+[Inline on AGENTS.md LNone]: I don't think we're ever cursing in the comments? Let's not suggest that.
+[Inline on AGENTS.md LNone]: ```suggestion
+- **Boilerplate required.** Every `.go` file needs the license header from `hack/boilerplate/boilerplate.go.txt`.
+```
+
+(avoid duplicating information, we want it to use the license header text from here, not fabricate it)
+[Inline on AGENTS.md LNone]: This comment doesn't seem very actionable. 
+
+If we want to teach it about OWNERS, we should probably link to go.k8s.io/OWNERS, but I'm not sure we need to, that's mostly a problem for the human submitting the PR. And even an automated agent will need to respond to the comments outlining this on the pull request, not at the time of writing a patch.
+[Inline on AGENTS.md LNone]: This seems like it would be better suited to a file closer to / in the featuregates package. 
+Most changes are not touching featuregates and don't need to spend tokens on this.
+[Inline on AGENTS.md LNone]: Applied
+[Inline on AGENTS.md LNone]: Fixed
+[Inline on AGENTS.md LNone]: removed
+[Inline on AGENTS.md LNone]: Fixed
+[Inline on AGENTS.md LNone]: Not really. Removed
+[Inline on AGENTS.md LNone]: Removed
+[Inline on AGENTS.md LNone]: removed
+[Inline on AGENTS.md LNone]: Removed
+[Inline on AGENTS.md LNone]: Removed
+[Inline on AGENTS.md LNone]: Removed
+[Inline on AGENTS.md LNone]: Removed
+[Inline on AGENTS.md LNone]: Updated
+[Inline on AGENTS.md L27]: I really think we should put a short summary of our AI contribution policy here.
+
+Two things I actually created skills for:
+a) writing a Kubernetes style commit message that does not add Co-authored-by: Claude.
+b) Opening up a pul",2,29,2,,2,Add AGENTS.md | AGENTS.md: trim to universal constraints and commands,".gitignore, AGENTS.md",9,"kind/documentation, lgtm, size/M, release-note-none, approved, cncf-cla: yes, priority/important-longterm, sig/architecture, triage/accepted",False,True,True,3440478495
+3999805416,36939,facebook/react,  [react-devtools] AI chat assistant in the Profiler,"## Summary
+
+Profiling data is dense and hard to interpret, you can see *that* a commit was slow, but working out *why* (wasted renders, effect cost, what scheduled the update, what the user did to trigger it) takes expertise and manual digging. This PR adds an AI chat tab to the Profiler that answers those questions from the recorded session.
+
+This is intentionally the **complete feature as a draft** so it can be tested end-to-end. If there's interest in landing it, I'll split it into a reviewable stack (e.g provider layer → chat UI + agent loop → profiler tools → interaction capture → perf-tracks capture).
+
+## How did you test this change?
+
+**Unit tests** (all green, `yarn test-build-devtools`): new tests covering the provider layer , the `console.timeStamp`
+capture (pass-through, caps, stacking-safe restore), and the phase tools. `yarn prettier`, `yarn lint`, `yarn flow dom-node` clean.
+
+**End-to-end, zero credentials needed** (local Ollama):
+- `yarn build-for-devtools`
+- `cd packages/react-devtools-extensions && yarn build:chrome`
+- load chrome/build/unpacked via chrome://extensions (Developer mode)
+- `OLLAMA_ORIGINS=""chrome-extension://*"" ollama serve   # any local model`
+- You can use `qwen3-coder:30b` to confirm but still need larger model for better analysis.
+- Codex subscription and Ollama Cloud also supported
+
+
+https://github.com/user-attachments/assets/0a69ec75-861a-4746-aef2-93fee2ea17ab
+
+",1497,denniscual0217,2026-07-06T15:01:56Z,False,closed_not_merged,0,NONE,0,0,,45,6544,41,,32,"[react-devtools] Add AI chat to the Profiler | [react-devtools] AI chat: agentic tools, interaction capture, and skills | [react-devtools] AI chat: render assistant responses as markdown | [react-devtools] AI chat: component inspection tool and selection context chip | [react-devtools] AI chat: read component source code via source maps | [react-devtools] AI chat: use 1-based commit numbers matching the Profiler UI | [react-devtools] AI chat: no context from auto-selected commit; add get_commits | [react-devtools] AI chat: rename tab to Chat with AI icon; highlight code | [react-devtools] AI chat: fix streaming scroll jitter and main-thread churn | [react-devtools] AI chat: correct error for Ollama origin rejection | [react-devtools] AI chat: reliable source resolution on real apps | [react-devtools] AI chat: keep source reads fresh across recordings | [react-devtools] AI chat: surface commit effect durations | [react-devtools] AI chat settings: free-form model field, kimi-k2.7 default | [react-devtools] AI chat settings: allow clearing the model field | [react-devtools] AI chat: plan provider architecture v2 | [react-devtools] AI chat: provider architecture v2 (P0 core refactor) | [react-devtools] AI chat: OpenAI Codex via ChatGPT subscription (P1) | [react-devtools] AI chat: await resolveRequest in the dispatcher | [react-devtools] AI chat: scope guardrail in the system prompt | [react-devtools] AI chat: session reconstruction is in guardrail scope | [react-devtools] AI chat: Codex reads auth.json directly, no stored tokens | [react-devtools] AI chat: zero-touch Codex auth via native messaging | [react-devtools] AI chat: Codex auth is a single auto-saving field | [react-devtools] AI chat: roadmap for Performance Tracks capture (v3) | [react-devtools] AI chat: Performance Tracks design doc | [react-devtools] AI chat: unit tests for the provider layer (R1) | [react-devtools] AI chat: capture React Performance Track spans (T1) | [react-devtools] AI chat: expose Performance Track spans to the chat (T2) | [react-devtools] AI chat: fold perf-tracks plan into ROADMAP statuses | [react-devtools] AI chat: trim narration comments to codebase norm | [react-devtools] AI chat: stop tracking the working roadmap","packages/react-devtools-shared/src/__tests__/aiChatPerfTrackTools-test.js, packages/react-devtools-shared/src/__tests__/aiChatProviders-test.js, packages/react-devtools-shared/src/__tests__/performanceTrackCapture-test.js, packages/react-devtools-shared/src/backend/agent.js, packages/react-devtools-shared/src/backend/fiber/renderer.js, packages/react-devtools-shared/src/backend/performanceTrackCapture.js, packages/react-devtools-shared/src/backend/types.js, packages/react-devtools-shared/src/constants.js, packages/react-devtools-shared/src/devtools/ProfilerStore.js, packages/react-devtools-shared/src/devtools/aiChat/agentLoop.js, packages/react-devtools-shared/src/devtools/aiChat/client.js, packages/react-devtools-shared/src/devtools/aiChat/codexAuth.js, packages/react-devtools-shared/src/devtools/aiChat/profileSummary.js, packages/react-devtools-shared/src/devtools/aiChat/profilerTools.js, packages/react-devtools-shared/src/devtools/aiChat/providerRuntime.js, packages/react-devtools-shared/src/devtools/aiChat/providers.js, packages/react-devtools-shared/src/devtools/aiChat/skills.js, packages/react-devtools-shared/src/devtools/aiChat/sourceFiles.js, packages/react-devtools-shared/src/devtools/aiChat/toolRegistry.js, packages/react-devtools-shared/src/devtools/aiChat/types.js, packages/react-devtools-shared/src/devtools/aiChat/useAIProviderConfig.js, packages/react-devtools-shared/src/devtools/aiChat/useSkills.js, packages/react-devtools-shared/src/devtools/aiChat/wire/openaiChat.js, packages/react-devtools-shared/src/devtools/aiChat/wire/openaiResponses.js, packages/react-devtools-shared/src/devtools/store.js, packages/react-devtools-shared/src/devtools/views/Icon.js, packages/react-devtools-shared/src/devtools/views/Profiler/AIChatContext.js, packages/react-devtools-shared/src/devtools/views/Profiler/AIChatPane.css, packages/react-devtools-shared/src/devtools/views/Profiler/AIChatPane.js, packages/react-devtools-shared/src/devtools/views/Profiler/ChatMarkdown.css, packages/react-devtools-shared/src/devtools/views/Profiler/ChatMarkdown.js, packages/react-devtools-shared/src/devtools/views/Profiler/Profiler.js, packages/react-devtools-shared/src/devtools/views/Profiler/ProfilerContext.js, packages/react-devtools-shared/src/devtools/views/Profiler/types.js, packages/react-devtools-shared/src/devtools/views/Profiler/utils.js, packages/react-devtools-shared/src/devtools/views/Settings/AISettings.js, packages/react-devtools-shared/src/devtools/views/Settings/ProfilerSettings.js, packages/react-devtools-shared/src/devtools/views/Settings/SettingsModal.js, packages/react-devtools-shared/src/devtools/views/Settings/SettingsShared.css, packages/react-devtools-shell/src/app/UserList/UserForm.js, packages/react-devtools-shell/src/app/UserList/UserList.css, packages/react-devtools-shell/src/app/UserList/UserList.js, packages/react-devtools-shell/src/app/UserList/UserListApp.js, packages/react-devtools-shell/src/app/UserList/index.js, packages/react-devtools-shell/src/app/index.js",0,,False,True,False,3999805416
+3601978775,138675,kubernetes/kubernetes,Improve ipamperf documentation,"#### What type of PR is this?\n\n/kind documentation\n\n#### What this PR does / why we need it:\n\nThis PR reviews and improves test/integration/ipamperf documentation for clarity, grammar, and consistency.\n\nThe changes include:\n\n- fixing grammar and spelling errors in the README\n- standardizing capitalization for terms like API server, QPS, CPU, and ID\n- correcting the profiling output description to mention both CPU and memory profile files\n- keeping the README usage example consistent with test-performance.sh help output\n- updating related user-facing flag descriptions in the ipamperf test package\n\n#### Which issue(s) this PR fixes:\n\nNone\n\n#### Special notes for your reviewer:\n\nThis was updated after reviewing the trivial edits policy. I reviewed the entire ipamperf README and related help text instead of limiting the PR to isolated typo fixes.\n\nI used Codex to help prepare this PR update, and I reviewed the resulting changes.\n\n#### Does this PR introduce a user-facing change?\n\n```release-note\nNONE\n```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\nNone\n\n#### Validation:\n\n- git diff --check -- test/integration/ipamperf/README.md test/integration/ipamperf/test-performance.sh test/integration/ipamperf/main_test.go\n- rg -n typo and terminology checks across the modified files\n- GOCACHE=/private/tmp/go-build-cache go test ./test/integration/ipamperf -run ^$ fails because etcd is not installed in PATH for integration tests",1519,mattsu2020,2026-04-29T11:36:10Z,False,closed_not_merged,0,NONE,0,0,,1,4,4,,1,Fix ipamperf README typos,test/integration/ipamperf/README.md,10,"area/test,sig/network,kind/documentation,size/XS,release-note-none,cncf-cla: yes,sig/testing,needs-ok-to-test,needs-priority,needs-triage",False,True,False,3601978775

@@ -1,4 +1,4 @@
-# 实验三：基于大语言模型的人类编写代码代码审查
+# 实验四：基于大语言模型的人类编写代码代码审查
 
 ## 概述
 
@@ -10,6 +10,9 @@
 - **4 种 Prompt × 4 种上下文 × 50 条测试 PR = 800 次 API 调用**
 - 数据来源：实验二的 test split
 - LLM 后端：DeepSeek API（OpenAI 兼容接口）
+- 每次调用同时完成两个任务：
+  - **Merge Prediction**：预测 PR 是否可能被 merge
+  - **Review Comment Generation**：生成初步代码审查意见
 
 ### 核心约束
 
@@ -28,7 +31,7 @@
 ## 项目结构
 
 ```
-experiment3/
+experiment4/
 ├── README.md
 ├── src/
 │   ├── config.py            # 集中配置
@@ -152,6 +155,10 @@ python src/run_all.py --all    # 运行除 API 调用外的所有步骤
 - BLEU、ROUGE-1、ROUGE-2、ROUGE-L
 - 平均生成评论数
 - Severity 分布
+- 最佳生成样例
+- 无真实评论样本上模型是否仍生成评论
+
+说明：真实 `review_comments_text` 只作为生成任务评价 reference，不进入目标 PR 的 prompt。
 
 ## 关键输出文件
 

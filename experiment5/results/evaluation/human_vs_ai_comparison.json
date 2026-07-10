@@ -1,0 +1,66 @@
+{
+  "traditional_ml": {
+    "svm": {
+      "human_test": {
+        "accuracy": 0.7238,
+        "f1": 0.7786,
+        "roc_auc": 0.7788
+      },
+      "ai_test": {
+        "accuracy": 0.6851,
+        "f1": 0.7923,
+        "roc_auc": 0.7014
+      },
+      "delta_accuracy": -0.0387,
+      "delta_f1": 0.0137,
+      "delta_roc_auc": -0.0774
+    },
+    "randomforest": {
+      "human_test": {
+        "accuracy": 0.7429,
+        "f1": 0.82,
+        "roc_auc": 0.8062
+      },
+      "ai_test": {
+        "accuracy": 0.656,
+        "f1": 0.7923,
+        "roc_auc": 0.6838
+      },
+      "delta_accuracy": -0.0869,
+      "delta_f1": -0.0277,
+      "delta_roc_auc": -0.1224
+    }
+  },
+  "llm": {
+    "P2_C3": {
+      "human_sample_50": {
+        "accuracy": 0.7,
+        "f1": 0.8051948051948052,
+        "roc_auc": 0.5424448217317488
+      },
+      "ai_test": {
+        "accuracy": 0.7041,
+        "f1": 0.8127,
+        "roc_auc": 0.5813
+      },
+      "delta_accuracy": 0.0041,
+      "delta_f1": 0.0075
+    },
+    "P2_C4": {
+      "human_sample_50": {
+        "accuracy": 0.673469387755102,
+        "f1": 0.7894736842105263,
+        "roc_auc": 0.6433691756272402
+      },
+      "ai_test": {
+        "accuracy": 0.6932,
+        "f1": 0.8067,
+        "roc_auc": 0.6324
+      },
+      "delta_accuracy": 0.0197,
+      "delta_f1": 0.0172
+    }
+  },
+  "note": "实验三 (Code2Vec/CodeBERT) 未实现，标记为 N/A",
+  "experiment3_status": "N/A (not implemented)"
+}

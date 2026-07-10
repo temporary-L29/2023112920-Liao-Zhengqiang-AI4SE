@@ -1,0 +1,48 @@
+{
+  "dataset_type": "repaired",
+  "version": "enhanced (repaired, vscode downsampled from 164 to 60)",
+  "total_prs": 343,
+  "merged_count": 225,
+  "unmerged_count": 118,
+  "merge_rate": 0.656,
+  "review_coverage": 0.5627,
+  "prs_with_review": 193,
+  "repo_distribution": {
+    "kubernetes/kubernetes": {
+      "total": 54,
+      "merged": 29,
+      "unmerged": 25,
+      "has_review": 29
+    },
+    "facebook/react": {
+      "total": 52,
+      "merged": 18,
+      "unmerged": 34,
+      "has_review": 13
+    },
+    "huggingface/transformers": {
+      "total": 82,
+      "merged": 48,
+      "unmerged": 34,
+      "has_review": 53
+    },
+    "pandas-dev/pandas": {
+      "total": 84,
+      "merged": 67,
+      "unmerged": 17,
+      "has_review": 30
+    },
+    "microsoft/vscode": {
+      "total": 60,
+      "merged": 54,
+      "unmerged": 6,
+      "has_review": 60
+    },
+    "langchain-ai/langchain": {
+      "total": 11,
+      "merged": 9,
+      "unmerged": 2,
+      "has_review": 8
+    }
+  }
+}

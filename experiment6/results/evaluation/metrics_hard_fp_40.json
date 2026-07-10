@@ -1,0 +1,178 @@
+{
+  "classification": {
+    "M1": {
+      "method_id": "M1",
+      "prompt_type": "P5",
+      "context_type": "C5",
+      "n_valid": 40,
+      "n_total": 40,
+      "parse_rate": 1.0,
+      "accuracy": 0.4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": null,
+      "pr_auc": null,
+      "specificity": 0.4,
+      "balanced_accuracy": 0.2,
+      "fpr": 0.6,
+      "confusion_matrix": [
+        [
+          16,
+          24
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tn": 16,
+      "fp": 24,
+      "fn": 0,
+      "tp": 0,
+      "unmerged_identified": 16,
+      "unmerged_total": 40,
+      "avg_merge_probability": 0.6322,
+      "avg_unmerged_risk_score": 0.3765
+    },
+    "M2": {
+      "method_id": "M2",
+      "prompt_type": "P6",
+      "context_type": "C5",
+      "n_valid": 40,
+      "n_total": 40,
+      "parse_rate": 1.0,
+      "accuracy": 0.1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": null,
+      "pr_auc": null,
+      "specificity": 0.1,
+      "balanced_accuracy": 0.05,
+      "fpr": 0.9,
+      "confusion_matrix": [
+        [
+          4,
+          36
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tn": 4,
+      "fp": 36,
+      "fn": 0,
+      "tp": 0,
+      "unmerged_identified": 4,
+      "unmerged_total": 40,
+      "avg_merge_probability": 0.7537,
+      "avg_unmerged_risk_score": 0.2475
+    },
+    "M3": {
+      "method_id": "M3",
+      "prompt_type": "P7",
+      "context_type": "C6",
+      "n_valid": 40,
+      "n_total": 40,
+      "parse_rate": 1.0,
+      "accuracy": 0.275,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": null,
+      "pr_auc": null,
+      "specificity": 0.275,
+      "balanced_accuracy": 0.1375,
+      "fpr": 0.725,
+      "confusion_matrix": [
+        [
+          11,
+          29
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tn": 11,
+      "fp": 29,
+      "fn": 0,
+      "tp": 0,
+      "unmerged_identified": 11,
+      "unmerged_total": 40,
+      "avg_merge_probability": 0.6137,
+      "avg_unmerged_risk_score": 0.3862
+    },
+    "M4": {
+      "method_id": "M4",
+      "prompt_type": "P8",
+      "context_type": "C8",
+      "n_valid": 39,
+      "n_total": 40,
+      "parse_rate": 0.975,
+      "accuracy": 0.6154,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": null,
+      "pr_auc": null,
+      "specificity": 0.6154,
+      "balanced_accuracy": 0.3077,
+      "fpr": 0.3846,
+      "confusion_matrix": [
+        [
+          24,
+          15
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tn": 24,
+      "fp": 15,
+      "fn": 0,
+      "tp": 0,
+      "unmerged_identified": 24,
+      "unmerged_total": 39,
+      "avg_merge_probability": 0.4856,
+      "avg_unmerged_risk_score": 0.5177
+    }
+  },
+  "corrections": {
+    "M1": {
+      "method_id": "M1",
+      "total_fp_samples": 40,
+      "unmerged_in_sample": 40,
+      "correctly_rejected": 16,
+      "correction_rate": 0.4,
+      "still_false_positive": 24
+    },
+    "M2": {
+      "method_id": "M2",
+      "total_fp_samples": 40,
+      "unmerged_in_sample": 40,
+      "correctly_rejected": 4,
+      "correction_rate": 0.1,
+      "still_false_positive": 36
+    },
+    "M3": {
+      "method_id": "M3",
+      "total_fp_samples": 40,
+      "unmerged_in_sample": 40,
+      "correctly_rejected": 11,
+      "correction_rate": 0.275,
+      "still_false_positive": 29
+    },
+    "M4": {
+      "method_id": "M4",
+      "total_fp_samples": 39,
+      "unmerged_in_sample": 39,
+      "correctly_rejected": 24,
+      "correction_rate": 0.6154,
+      "still_false_positive": 15
+    }
+  }
+}

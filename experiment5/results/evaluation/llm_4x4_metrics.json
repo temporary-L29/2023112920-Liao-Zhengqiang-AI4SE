@@ -1,0 +1,338 @@
+{
+  "B01": {
+    "combo": "B01",
+    "prompt_type": "P1",
+    "context_type": "C1",
+    "n_valid": 50,
+    "accuracy": 0.48,
+    "precision": 0.4898,
+    "recall": 0.96,
+    "f1": 0.6486,
+    "roc_auc": 0.5024,
+    "confusion_matrix": [
+      [
+        0,
+        25
+      ],
+      [
+        1,
+        24
+      ]
+    ]
+  },
+  "B02": {
+    "combo": "B02",
+    "prompt_type": "P1",
+    "context_type": "C2",
+    "n_valid": 50,
+    "accuracy": 0.56,
+    "precision": 0.5333,
+    "recall": 0.96,
+    "f1": 0.6857,
+    "roc_auc": 0.5704,
+    "confusion_matrix": [
+      [
+        4,
+        21
+      ],
+      [
+        1,
+        24
+      ]
+    ]
+  },
+  "B03": {
+    "combo": "B03",
+    "prompt_type": "P1",
+    "context_type": "C3",
+    "n_valid": 50,
+    "accuracy": 0.56,
+    "precision": 0.5349,
+    "recall": 0.92,
+    "f1": 0.6765,
+    "roc_auc": 0.5736,
+    "confusion_matrix": [
+      [
+        5,
+        20
+      ],
+      [
+        2,
+        23
+      ]
+    ]
+  },
+  "B04": {
+    "combo": "B04",
+    "prompt_type": "P1",
+    "context_type": "C4",
+    "n_valid": 50,
+    "accuracy": 0.56,
+    "precision": 0.5333,
+    "recall": 0.96,
+    "f1": 0.6857,
+    "roc_auc": 0.6352,
+    "confusion_matrix": [
+      [
+        4,
+        21
+      ],
+      [
+        1,
+        24
+      ]
+    ]
+  },
+  "B05": {
+    "combo": "B05",
+    "prompt_type": "P2",
+    "context_type": "C1",
+    "n_valid": 50,
+    "accuracy": 0.52,
+    "precision": 0.5102,
+    "recall": 1.0,
+    "f1": 0.6757,
+    "roc_auc": 0.5064,
+    "confusion_matrix": [
+      [
+        1,
+        24
+      ],
+      [
+        0,
+        25
+      ]
+    ]
+  },
+  "B06": {
+    "combo": "B06",
+    "prompt_type": "P2",
+    "context_type": "C2",
+    "n_valid": 50,
+    "accuracy": 0.56,
+    "precision": 0.5333,
+    "recall": 0.96,
+    "f1": 0.6857,
+    "roc_auc": 0.5208,
+    "confusion_matrix": [
+      [
+        4,
+        21
+      ],
+      [
+        1,
+        24
+      ]
+    ]
+  },
+  "B07": {
+    "combo": "B07",
+    "prompt_type": "P2",
+    "context_type": "C3",
+    "n_valid": 50,
+    "accuracy": 0.52,
+    "precision": 0.5111,
+    "recall": 0.92,
+    "f1": 0.6571,
+    "roc_auc": 0.5,
+    "confusion_matrix": [
+      [
+        3,
+        22
+      ],
+      [
+        2,
+        23
+      ]
+    ]
+  },
+  "B08": {
+    "combo": "B08",
+    "prompt_type": "P2",
+    "context_type": "C4",
+    "n_valid": 50,
+    "accuracy": 0.54,
+    "precision": 0.5238,
+    "recall": 0.88,
+    "f1": 0.6567,
+    "roc_auc": 0.5712,
+    "confusion_matrix": [
+      [
+        5,
+        20
+      ],
+      [
+        3,
+        22
+      ]
+    ]
+  },
+  "B09": {
+    "combo": "B09",
+    "prompt_type": "P3",
+    "context_type": "C1",
+    "n_valid": 50,
+    "accuracy": 0.48,
+    "precision": 0.4878,
+    "recall": 0.8,
+    "f1": 0.6061,
+    "roc_auc": 0.444,
+    "confusion_matrix": [
+      [
+        4,
+        21
+      ],
+      [
+        5,
+        20
+      ]
+    ]
+  },
+  "B10": {
+    "combo": "B10",
+    "prompt_type": "P3",
+    "context_type": "C2",
+    "n_valid": 50,
+    "accuracy": 0.52,
+    "precision": 0.5128,
+    "recall": 0.8,
+    "f1": 0.625,
+    "roc_auc": 0.5584,
+    "confusion_matrix": [
+      [
+        6,
+        19
+      ],
+      [
+        5,
+        20
+      ]
+    ]
+  },
+  "B11": {
+    "combo": "B11",
+    "prompt_type": "P3",
+    "context_type": "C3",
+    "n_valid": 49,
+    "accuracy": 0.5714,
+    "precision": 0.5556,
+    "recall": 0.8,
+    "f1": 0.6557,
+    "roc_auc": 0.5525,
+    "confusion_matrix": [
+      [
+        8,
+        16
+      ],
+      [
+        5,
+        20
+      ]
+    ]
+  },
+  "B12": {
+    "combo": "B12",
+    "prompt_type": "P3",
+    "context_type": "C4",
+    "n_valid": 50,
+    "accuracy": 0.58,
+    "precision": 0.5556,
+    "recall": 0.8,
+    "f1": 0.6557,
+    "roc_auc": 0.5968,
+    "confusion_matrix": [
+      [
+        9,
+        16
+      ],
+      [
+        5,
+        20
+      ]
+    ]
+  },
+  "B13": {
+    "combo": "B13",
+    "prompt_type": "P4",
+    "context_type": "C1",
+    "n_valid": 50,
+    "accuracy": 0.44,
+    "precision": 0.4681,
+    "recall": 0.88,
+    "f1": 0.6111,
+    "roc_auc": 0.4296,
+    "confusion_matrix": [
+      [
+        0,
+        25
+      ],
+      [
+        3,
+        22
+      ]
+    ]
+  },
+  "B14": {
+    "combo": "B14",
+    "prompt_type": "P4",
+    "context_type": "C2",
+    "n_valid": 50,
+    "accuracy": 0.6,
+    "precision": 0.5581,
+    "recall": 0.96,
+    "f1": 0.7059,
+    "roc_auc": 0.588,
+    "confusion_matrix": [
+      [
+        6,
+        19
+      ],
+      [
+        1,
+        24
+      ]
+    ]
+  },
+  "B15": {
+    "combo": "B15",
+    "prompt_type": "P4",
+    "context_type": "C3",
+    "n_valid": 50,
+    "accuracy": 0.58,
+    "precision": 0.5455,
+    "recall": 0.96,
+    "f1": 0.6957,
+    "roc_auc": 0.6328,
+    "confusion_matrix": [
+      [
+        5,
+        20
+      ],
+      [
+        1,
+        24
+      ]
+    ]
+  },
+  "B16": {
+    "combo": "B16",
+    "prompt_type": "P4",
+    "context_type": "C4",
+    "n_valid": 50,
+    "accuracy": 0.54,
+    "precision": 0.5227,
+    "recall": 0.92,
+    "f1": 0.6667,
+    "roc_auc": 0.52,
+    "confusion_matrix": [
+      [
+        4,
+        21
+      ],
+      [
+        2,
+        23
+      ]
+    ]
+  }
+}

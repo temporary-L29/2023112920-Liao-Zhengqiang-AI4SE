@@ -1,0 +1,30 @@
+2026-07-10 16:17:20,451 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-10 16:17:20,451 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-10 16:34:11,307 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-10 16:37:38,181 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-10 16:37:38,181 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-10 16:38:49,284 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-10 16:38:49,285 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-10 16:46:42,720 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-10 16:51:44,396 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-10 16:53:46,484 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-10 16:55:07,263 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-10 16:56:14,618 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-10 16:57:43,809 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-10 17:05:49,368 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-07-10 17:10:14,884 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-16 14:18:46,365 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-16 14:18:46,365 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-16 14:44:36,007 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-16 14:44:36,007 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-16 14:44:37,842 [WARNING] experiment2: tree-sitter 语言包导入失败: No module named 'tree_sitter_python'，将全部使用 lexical fallback
+2026-07-16 14:55:44,001 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-16 14:55:44,002 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-16 14:55:45,144 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-16 14:59:00,204 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-16 14:59:00,205 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-16 14:59:01,249 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-16 15:16:39,801 [INFO] numexpr.utils: Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-07-16 15:16:39,803 [INFO] numexpr.utils: NumExpr defaulting to 8 threads.
+2026-07-16 15:16:40,939 [INFO] experiment7: Starting code review server on 127.0.0.1:8765
+2026-07-16 15:20:12,183 [INFO] experiment2: tree-sitter 初始化完成: 6 种语言可用 (['.go', '.js', '.jsx', '.py', '.ts', '.tsx'])

@@ -1,0 +1,27 @@
+# Experiment 7: CLI Intelligent Code Review Tool
+# Core
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.0.0
+
+# CLI
+rich>=13.0.0
+typer>=0.12.0
+
+# Data
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ML (experiment 2 adapter)
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# LLM (experiment 6 adapter, optional)
+openai>=1.0.0
+
+# Testing
+pytest>=8.0.0
+httpx>=0.27.0
+
+# Utilities
+python-dotenv>=1.0.0

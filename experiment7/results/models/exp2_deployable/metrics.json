@@ -1,0 +1,29 @@
+{
+  "sample_counts": {
+    "train": 977,
+    "val": 210,
+    "test": 210
+  },
+  "models": {
+    "exp2-rf-deployable": {
+      "test_metrics": {
+        "accuracy": 0.7381,
+        "precision": 0.741,
+        "recall": 0.9111,
+        "f1_score": 0.8173,
+        "roc_auc": 0.7144
+      },
+      "training_seconds": 0.768
+    },
+    "exp2-svm-deployable": {
+      "test_metrics": {
+        "accuracy": 0.6381,
+        "precision": 0.7658,
+        "recall": 0.6296,
+        "f1_score": 0.6911,
+        "roc_auc": 0.6983
+      },
+      "training_seconds": 0.212
+    }
+  }
+}
